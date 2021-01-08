@@ -49,11 +49,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo优化配置(更新中)</title>
-    <url>/2021/01/07/hexo%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE(%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>hexo+PicGo+gitee图床</title>
     <url>/2021/01/05/hexo-PicGo-gitee%E5%9B%BE%E5%BA%8A/</url>
     <content><![CDATA[<p><strong>前言</strong>：我尝试了好几种床图，不是在电脑端加载不出来，就是有各种各样的限制，最后找到了gitee，因为服务器在国内，访问速度也是比较快，空间也没有限制，算是比较理想的一种吧。一开始我用vscode+PicGo插件，等到快成的时候，图片是上传上去了，但是加载不出来，我尝试了<code>sm.ms</code>和<code>github</code>，最后抛弃了<code>vsCode+PicGo</code>插件，选择了<code>PicGo客户端和gitee</code>。</p>
@@ -85,6 +80,11 @@
       </tags>
   </entry>
   <entry>
+    <title>hexo优化配置(更新中)</title>
+    <url>/2021/01/07/hexo%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE(%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>hexo备份与恢复</title>
     <url>/2021/01/04/hexo%E5%A4%87%E4%BB%BD%E4%B8%8E%E6%81%A2%E5%A4%8D/</url>
     <content><![CDATA[<h2 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h2><ol>
@@ -104,6 +104,32 @@
       </categories>
       <tags>
         <tag>hexo</tag>
+        <tag>next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo插入图片</title>
+    <url>/2021/01/05/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</url>
+    <content><![CDATA[<h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><ol>
+<li>在blog的本地文件的根目录中打开git Bash，然后执行<br><code>    npm install hexo-asset-image --save</code></li>
+<li>打开blog根目录下的配置文件_config.yml，修改<br><code>post_asset_folder: true  //由false改为true</code><br>此时，当执行<code>hexo n 文章名</code>的时候，会在_post目录下新建同名的一个文件夹和一个后缀名为<code>.md</code>的文件<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105173654.png"><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105173920.png"></li>
+<li>打开<code>/node_modules/hexo-asset-image/index.js</code> 用下面代码替换<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#39;use strict&#39;;</span><br><span class="line">var cheerio &#x3D; require(&#39;cheerio&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; http:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;14480345&#x2F;how-to-get-the-nth-occurrence-in-a-string</span><br><span class="line">function getPosition(str, m, i) &#123;</span><br><span class="line">  return str.split(m, i).join(m).length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var version &#x3D; String(hexo.version).split(&#39;.&#39;);</span><br><span class="line">hexo.extend.filter.register(&#39;after_post_render&#39;, function(data)&#123;</span><br><span class="line">  var config &#x3D; hexo.config;</span><br><span class="line">  if(config.post_asset_folder)&#123;</span><br><span class="line">        var link &#x3D; data.permalink;</span><br><span class="line">    if(version.length &gt; 0 &amp;&amp; Number(version[0]) &#x3D;&#x3D; 3)</span><br><span class="line">       var beginPos &#x3D; getPosition(link, &#39;&#x2F;&#39;, 1) + 1;</span><br><span class="line">    else</span><br><span class="line">       var beginPos &#x3D; getPosition(link, &#39;&#x2F;&#39;, 3) + 1;</span><br><span class="line">    &#x2F;&#x2F; In hexo 3.1.1, the permalink of &quot;about&quot; page is like &quot;...&#x2F;about&#x2F;index.html&quot;.</span><br><span class="line">    var endPos &#x3D; link.lastIndexOf(&#39;&#x2F;&#39;) + 1;</span><br><span class="line">    link &#x3D; link.substring(beginPos, endPos);</span><br><span class="line"></span><br><span class="line">    var toprocess &#x3D; [&#39;excerpt&#39;, &#39;more&#39;, &#39;content&#39;];</span><br><span class="line">    for(var i &#x3D; 0; i &lt; toprocess.length; i++)&#123;</span><br><span class="line">      var key &#x3D; toprocess[i];</span><br><span class="line"> </span><br><span class="line">      var $ &#x3D; cheerio.load(data[key], &#123;</span><br><span class="line">        ignoreWhitespace: false,</span><br><span class="line">        xmlMode: false,</span><br><span class="line">        lowerCaseTags: false,</span><br><span class="line">        decodeEntities: false</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      $(&#39;img&#39;).each(function()&#123;</span><br><span class="line">        if ($(this).attr(&#39;src&#39;))&#123;</span><br><span class="line">            &#x2F;&#x2F; For windows style path, we replace &#39;\&#39; to &#39;&#x2F;&#39;.</span><br><span class="line">            var src &#x3D; $(this).attr(&#39;src&#39;).replace(&#39;\\&#39;, &#39;&#x2F;&#39;);</span><br><span class="line">            if(!&#x2F;http[s]*.*|\&#x2F;\&#x2F;.*&#x2F;.test(src) &amp;&amp;</span><br><span class="line">               !&#x2F;^\s*\&#x2F;&#x2F;.test(src)) &#123;</span><br><span class="line">              &#x2F;&#x2F; For &quot;about&quot; page, the first part of &quot;src&quot; can&#39;t be removed.</span><br><span class="line">              &#x2F;&#x2F; In addition, to support multi-level local directory.</span><br><span class="line">              var linkArray &#x3D; link.split(&#39;&#x2F;&#39;).filter(function(elem)&#123;</span><br><span class="line">                return elem !&#x3D; &#39;&#39;;</span><br><span class="line">              &#125;);</span><br><span class="line">              var srcArray &#x3D; src.split(&#39;&#x2F;&#39;).filter(function(elem)&#123;</span><br><span class="line">                return elem !&#x3D; &#39;&#39; &amp;&amp; elem !&#x3D; &#39;.&#39;;</span><br><span class="line">              &#125;);</span><br><span class="line">              if(srcArray.length &gt; 1)</span><br><span class="line">                srcArray.shift();</span><br><span class="line">              src &#x3D; srcArray.join(&#39;&#x2F;&#39;);</span><br><span class="line">              $(this).attr(&#39;src&#39;, config.root + link + src);</span><br><span class="line">              console.info&amp;&amp;console.info(&quot;update link as:--&gt;&quot;+config.root + link + src);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            console.info&amp;&amp;console.info(&quot;no src attr, skipped...&quot;);</span><br><span class="line">            console.info&amp;&amp;console.info($(this));</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      data[key] &#x3D; $.html();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+<li>把自己想用的图片放在新建的文件夹(文章名的文件夹)中，在<code>test.md</code>中引用是<code>![](图片的文件名)</code><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105183827.png"></li>
+</ol>
+<h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><ol>
+<li>在<code>\blog\source</code>目录下新建<code>image</code>文件夹<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105184557.png"></li>
+<li>把想要插入的图片都放入<code>image</code>文件夹下</li>
+<li>在插入图片的位置引用<code>![](/image/图片名)</code>即可</li>
+</ol>
+<p><strong>注</strong>：按照这种方式插入可能会在本地图片加载不出来，上传后就可以加载出来了；若上传后还加载不出来，检查blog根目录下的配置文件<code>_config.yml</code>的<code>post_asset_folder:</code>是否为<code>false</code></p>
+<h4 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h4><p>用图床实现插入图片，也是最推荐的一种，具体见<a href="https://romanticqq.top/2021/01/05/hexo-PicGo-gitee%E5%9B%BE%E5%BA%8A/">hexo+PicGo+gitee图床</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>图床</tag>
         <tag>next</tag>
       </tags>
   </entry>
@@ -152,32 +178,6 @@
       </categories>
       <tags>
         <tag>hexo</tag>
-        <tag>next</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo插入图片</title>
-    <url>/2021/01/05/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</url>
-    <content><![CDATA[<h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><ol>
-<li>在blog的本地文件的根目录中打开git Bash，然后执行<br><code>    npm install hexo-asset-image --save</code></li>
-<li>打开blog根目录下的配置文件_config.yml，修改<br><code>post_asset_folder: true  //由false改为true</code><br>此时，当执行<code>hexo n 文章名</code>的时候，会在_post目录下新建同名的一个文件夹和一个后缀名为<code>.md</code>的文件<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105173654.png"><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105173920.png"></li>
-<li>打开<code>/node_modules/hexo-asset-image/index.js</code> 用下面代码替换<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#39;use strict&#39;;</span><br><span class="line">var cheerio &#x3D; require(&#39;cheerio&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; http:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;14480345&#x2F;how-to-get-the-nth-occurrence-in-a-string</span><br><span class="line">function getPosition(str, m, i) &#123;</span><br><span class="line">  return str.split(m, i).join(m).length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var version &#x3D; String(hexo.version).split(&#39;.&#39;);</span><br><span class="line">hexo.extend.filter.register(&#39;after_post_render&#39;, function(data)&#123;</span><br><span class="line">  var config &#x3D; hexo.config;</span><br><span class="line">  if(config.post_asset_folder)&#123;</span><br><span class="line">        var link &#x3D; data.permalink;</span><br><span class="line">    if(version.length &gt; 0 &amp;&amp; Number(version[0]) &#x3D;&#x3D; 3)</span><br><span class="line">       var beginPos &#x3D; getPosition(link, &#39;&#x2F;&#39;, 1) + 1;</span><br><span class="line">    else</span><br><span class="line">       var beginPos &#x3D; getPosition(link, &#39;&#x2F;&#39;, 3) + 1;</span><br><span class="line">    &#x2F;&#x2F; In hexo 3.1.1, the permalink of &quot;about&quot; page is like &quot;...&#x2F;about&#x2F;index.html&quot;.</span><br><span class="line">    var endPos &#x3D; link.lastIndexOf(&#39;&#x2F;&#39;) + 1;</span><br><span class="line">    link &#x3D; link.substring(beginPos, endPos);</span><br><span class="line"></span><br><span class="line">    var toprocess &#x3D; [&#39;excerpt&#39;, &#39;more&#39;, &#39;content&#39;];</span><br><span class="line">    for(var i &#x3D; 0; i &lt; toprocess.length; i++)&#123;</span><br><span class="line">      var key &#x3D; toprocess[i];</span><br><span class="line"> </span><br><span class="line">      var $ &#x3D; cheerio.load(data[key], &#123;</span><br><span class="line">        ignoreWhitespace: false,</span><br><span class="line">        xmlMode: false,</span><br><span class="line">        lowerCaseTags: false,</span><br><span class="line">        decodeEntities: false</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      $(&#39;img&#39;).each(function()&#123;</span><br><span class="line">        if ($(this).attr(&#39;src&#39;))&#123;</span><br><span class="line">            &#x2F;&#x2F; For windows style path, we replace &#39;\&#39; to &#39;&#x2F;&#39;.</span><br><span class="line">            var src &#x3D; $(this).attr(&#39;src&#39;).replace(&#39;\\&#39;, &#39;&#x2F;&#39;);</span><br><span class="line">            if(!&#x2F;http[s]*.*|\&#x2F;\&#x2F;.*&#x2F;.test(src) &amp;&amp;</span><br><span class="line">               !&#x2F;^\s*\&#x2F;&#x2F;.test(src)) &#123;</span><br><span class="line">              &#x2F;&#x2F; For &quot;about&quot; page, the first part of &quot;src&quot; can&#39;t be removed.</span><br><span class="line">              &#x2F;&#x2F; In addition, to support multi-level local directory.</span><br><span class="line">              var linkArray &#x3D; link.split(&#39;&#x2F;&#39;).filter(function(elem)&#123;</span><br><span class="line">                return elem !&#x3D; &#39;&#39;;</span><br><span class="line">              &#125;);</span><br><span class="line">              var srcArray &#x3D; src.split(&#39;&#x2F;&#39;).filter(function(elem)&#123;</span><br><span class="line">                return elem !&#x3D; &#39;&#39; &amp;&amp; elem !&#x3D; &#39;.&#39;;</span><br><span class="line">              &#125;);</span><br><span class="line">              if(srcArray.length &gt; 1)</span><br><span class="line">                srcArray.shift();</span><br><span class="line">              src &#x3D; srcArray.join(&#39;&#x2F;&#39;);</span><br><span class="line">              $(this).attr(&#39;src&#39;, config.root + link + src);</span><br><span class="line">              console.info&amp;&amp;console.info(&quot;update link as:--&gt;&quot;+config.root + link + src);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            console.info&amp;&amp;console.info(&quot;no src attr, skipped...&quot;);</span><br><span class="line">            console.info&amp;&amp;console.info($(this));</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      data[key] &#x3D; $.html();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
-<li>把自己想用的图片放在新建的文件夹(文章名的文件夹)中，在<code>test.md</code>中引用是<code>![](图片的文件名)</code><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105183827.png"></li>
-</ol>
-<h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><ol>
-<li>在<code>\blog\source</code>目录下新建<code>image</code>文件夹<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105184557.png"></li>
-<li>把想要插入的图片都放入<code>image</code>文件夹下</li>
-<li>在插入图片的位置引用<code>![](/image/图片名)</code>即可</li>
-</ol>
-<p><strong>注</strong>：按照这种方式插入可能会在本地图片加载不出来，上传后就可以加载出来了；若上传后还加载不出来，检查blog根目录下的配置文件<code>_config.yml</code>的<code>post_asset_folder:</code>是否为<code>false</code></p>
-<h4 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h4><p>用图床实现插入图片，也是最推荐的一种，具体见<a href="https://romanticqq.top/2021/01/05/hexo-PicGo-gitee%E5%9B%BE%E5%BA%8A/">hexo+PicGo+gitee图床</a></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>图床</tag>
         <tag>next</tag>
       </tags>
   </entry>

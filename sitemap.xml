@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://romanticqq.top/2021/01/08/Python%E5%AD%A6%E4%B9%A0(1%20day)/</loc>
+    <loc>https://romanticqq.top/2021/01/05/hexo-PicGo-gitee%E5%9B%BE%E5%BA%8A/</loc>
     
     <lastmod>2021-01-08</lastmod>
     
   </url>
   
   <url>
-    <loc>https://romanticqq.top/2021/01/05/hexo-PicGo-gitee%E5%9B%BE%E5%BA%8A/</loc>
+    <loc>https://romanticqq.top/2021/01/08/Python%E5%AD%A6%E4%B9%A0(1%20day)/</loc>
     
     <lastmod>2021-01-08</lastmod>
     
@@ -72,14 +72,14 @@
   </url>
   
   <url>
-    <loc>https://romanticqq.top/google5e79a31eb19e1434.html</loc>
+    <loc>https://romanticqq.top/baidu_verify_code-wmM3n7u2hd.html</loc>
     
     <lastmod>2021-01-08</lastmod>
     
   </url>
   
   <url>
-    <loc>https://romanticqq.top/baidu_verify_code-wmM3n7u2hd.html</loc>
+    <loc>https://romanticqq.top/google5e79a31eb19e1434.html</loc>
     
     <lastmod>2021-01-08</lastmod>
     
@@ -107,13 +107,6 @@
     <priority>1.0</priority>
   </url>
 
-  
-  <url>
-    <loc>https://romanticqq.top/tags/Python/</loc>
-    <lastmod>2021-01-08</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.6</priority>
-  </url>
   
   <url>
     <loc>https://romanticqq.top/tags/hexo/</loc>
@@ -151,6 +144,13 @@
   </url>
   
   <url>
+    <loc>https://romanticqq.top/tags/Python/</loc>
+    <lastmod>2021-01-08</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>https://romanticqq.top/tags/next/</loc>
     <lastmod>2021-01-08</lastmod>
     <changefreq>daily</changefreq>
@@ -160,14 +160,14 @@
 
   
   <url>
-    <loc>https://romanticqq.top/categories/Python/</loc>
+    <loc>https://romanticqq.top/categories/hexo/</loc>
     <lastmod>2021-01-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://romanticqq.top/categories/hexo/</loc>
+    <loc>https://romanticqq.top/categories/Python/</loc>
     <lastmod>2021-01-08</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.6</priority>

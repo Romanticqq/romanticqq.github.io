@@ -13,10 +13,6 @@ function resolve(name, file = '') {
   return `${dir}/${file}`;
 }
 
-function parse(line, attr) {
-  return line.split(attr)[1].replace(';', '').trim();
-}
-
 function highlightTheme(name) {
   const file = resolve('highlight.js', `styles/${name}.css`);
   const css = fs.readFileSync(file).toString();
@@ -28,9 +24,9 @@ function highlightTheme(name) {
     return match;
   });
   rule.split('\n').forEach(line => {
-    if (line.includes('background:')) background = parse(line, 'background:');
-    else if (line.includes('background-color:')) background = parse(line, 'background-color:');
-    else if (line.includes('color:')) foreground = parse(line, 'color:');
+    if (line.includes('background:')) background = line.split('background:')[1];
+    else if (line.includes('background-color:')) background = line.split('background-color:')[1];
+    else if (line.includes('color:')) foreground = line.split('color:')[1];
   });
   return {
     file,

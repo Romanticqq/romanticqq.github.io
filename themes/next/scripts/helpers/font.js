@@ -18,7 +18,7 @@ module.exports = function() {
   });
 
   fontFamilies = fontFamilies.map(name => name.trim().replace(/\s/g, '+') + fontStyles);
-  fontFamilies = [...new Set(fontFamilies)].join('%7C');
+  fontFamilies = [...new Set(fontFamilies)].join('|');
 
   // Merge extra parameters to the final processed font string
   return fontFamilies ? `<link rel="stylesheet" href="${fontHost}/css?family=${fontFamilies}&display=swap&subset=latin,latin-ext">` : '';

@@ -64,44 +64,46 @@
   for $type in $note-types {
     &.{$type} {
       if ($note-style == 'flat') {
-        background: $note-bg[$type];
+        background: lookup('$note-bg-' + $type);
         if (hexo-config('darkmode')) {
           @media (prefers-color-scheme: dark) {
-            background: mix($note-bg[$type], $body-bg-color-dark, 10%);
+            background: mix(lookup('$note-bg-' + $type), $body-bg-color-dark, 10%);
           }
         }
       }
 
       if ($note-style == 'modern') {
-        background: $note-modern-bg[$type];
-        border-color: $note-modern-border[$type];
-        color: $note-modern-text[$type];
+        background: lookup('$note-modern-bg-' + $type);
+        border-color: lookup('$note-modern-border-' + $type);
+        color: lookup('$note-modern-text-' + $type);
 
-        a:not(.btn) {
-          border-bottom-color: $note-modern-text[$type];
-          color: $note-modern-text[$type];
+        a, span.exturl {
+          &:not(.btn) {
+            border-bottom-color: lookup('$note-modern-text-' + $type);
+            color: lookup('$note-modern-text-' + $type);
 
-          &:hover {
-            border-bottom-color: $note-modern-hover[$type];
-            color: $note-modern-hover[$type];
+            &:hover {
+              border-bottom-color: lookup('$note-modern-hover-' + $type);
+              color: lookup('$note-modern-hover-' + $type);
+            }
           }
         }
       }
 
       if ($note-style != 'modern') {
-        border-left-color: $note-border[$type];
+        border-left-color: lookup('$note-border-' + $type);
 
         h2, h3, h4, h5, h6 {
-          color: $note-text[$type];
+          color: lookup('$note-text-' + $type);
         }
       }
 
       if ($note-icons) {
         &:not(.no-icon)::before {
-          font-family-icons($note-icon[$type]);
+          font-family-icons(lookup('$note-icon-' + $type));
 
           if ($note-style != 'modern') {
-            color: $note-text[$type];
+            color: lookup('$note-text-' + $type);
           }
         }
       }

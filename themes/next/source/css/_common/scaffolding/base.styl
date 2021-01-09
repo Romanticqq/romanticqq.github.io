@@ -32,10 +32,10 @@ for $headline in (1 .. 6) {
 }
 
 p {
-  margin: 0 0 20px;
+  margin: 0 0 20px 0;
 }
 
-a {
+a, span.exturl {
   border-bottom: 1px solid $link-decoration-color;
   color: var(--link-color);
   outline: 0;
@@ -46,6 +46,9 @@ a {
     border-bottom-color: var(--link-hover-color);
     color: var(--link-hover-color);
   }
+
+  // For spanned external links.
+  cursor: pointer;
 }
 
 iframe, img, video, embed {

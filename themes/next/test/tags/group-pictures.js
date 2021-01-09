@@ -4,9 +4,6 @@ require('chai').should();
 const Hexo = require('hexo');
 const hexo = new Hexo();
 
-const link = '<div class="group-picture-column"><a href="https://theme-next.js.org/"><img src="/images/sample.png"></a></div>';
-const image = '<div class="group-picture-column"><img src="/images/sample.png"></div>';
-
 describe('group-pictures', () => {
   const groupPicture = require('../../scripts/tags/group-pictures')(hexo);
 
@@ -16,7 +13,7 @@ describe('group-pictures', () => {
     groupPicture(['3-1'], `
 ![](/images/sample.png)
 ![](/images/sample.png)
-![](/images/sample.png)`).should.eql(`<div class="group-picture"><div class="group-picture-row">${image}${image}${image}</div></div>`);
+![](/images/sample.png)`).should.eql('<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img src="/images/sample.png"></div><div class="group-picture-column"><img src="/images/sample.png"></div><div class="group-picture-column"><img src="/images/sample.png"></div></div></div>');
   });
 
   it('layout 5-2', () => {
@@ -25,7 +22,7 @@ describe('group-pictures', () => {
 ![](/images/sample.png)
 ![](/images/sample.png)
 ![](/images/sample.png)
-![](/images/sample.png)`).should.eql(`<div class="group-picture"><div class="group-picture-row">${image}${image}</div><div class="group-picture-row">${image}</div><div class="group-picture-row">${image}${image}</div></div>`);
+![](/images/sample.png)`).should.eql('<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img src="/images/sample.png"></div><div class="group-picture-column"><img src="/images/sample.png"></div></div><div class="group-picture-row"><div class="group-picture-column"><img src="/images/sample.png"></div></div><div class="group-picture-row"><div class="group-picture-column"><img src="/images/sample.png"></div><div class="group-picture-column"><img src="/images/sample.png"></div></div></div>');
   });
 
   it('remove text', () => {
@@ -34,22 +31,7 @@ describe('group-pictures', () => {
 Text
 ![](/images/sample.png)
 Text
-![](/images/sample.png)`).should.eql(`<div class="group-picture"><div class="group-picture-row">${image}${image}${image}</div></div>`);
-  });
-
-  it('set hyperlinks', () => {
-    groupPicture(['4-3'], `
-![](/images/sample.png)
-[![](/images/sample.png)](https://theme-next.js.org/)
-[![](/images/sample.png)](https://theme-next.js.org/)
-![](/images/sample.png)`).should.eql(`<div class="group-picture"><div class="group-picture-row">${image}${link}</div><div class="group-picture-row">${link}${image}</div></div>`);
-  });
-
-  it('set hyperlinks 2', () => {
-    groupPicture(['3-1'], `
-![](/images/sample.png)
-[![](/images/sample.png)](https://theme-next.js.org/)
-![](/images/sample.png)`).should.eql(`<div class="group-picture"><div class="group-picture-row">${image}${link}${image}</div></div>`);
+![](/images/sample.png)`).should.eql('<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img src="/images/sample.png"></div><div class="group-picture-column"><img src="/images/sample.png"></div><div class="group-picture-column"><img src="/images/sample.png"></div></div></div>');
   });
 
   it('no layout', () => {
@@ -58,6 +40,6 @@ Text
 ![](/images/sample.png)
 ![](/images/sample.png)
 ![](/images/sample.png)
-![](/images/sample.png)`).should.eql(`<div class="group-picture"><div class="group-picture-row">${image}${image}${image}</div><div class="group-picture-row">${image}${image}</div></div>`);
+![](/images/sample.png)`).should.eql('<div class="group-picture"><div class="group-picture-row"><div class="group-picture-column"><img src="/images/sample.png"></div><div class="group-picture-column"><img src="/images/sample.png"></div><div class="group-picture-column"><img src="/images/sample.png"></div></div><div class="group-picture-row"><div class="group-picture-column"><img src="/images/sample.png"></div><div class="group-picture-column"><img src="/images/sample.png"></div></div></div>');
   });
 });

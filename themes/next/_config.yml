@@ -9,7 +9,7 @@
 # See: https://theme-next.js.org/docs/theme-settings/
 # ---------------------------------------------------------------
 
-# Allow to cache content generation.
+# Allow to cache content generation. Introduced in NexT v6.0.0.
 cache:
   enable: true
 
@@ -60,7 +60,7 @@ favicon:
 custom_logo: #/uploads/custom-logo.jpg
 
 # Creative Commons 4.0 International License.
-# See: https://creativecommons.org/about/cclicenses/
+# See: https://creativecommons.org/share-your-work/licensing-types-examples
 # Available values of license: by | by-nc | by-nc-nd | by-nc-sa | by-nd | by-sa | zero
 # You can set a language value if you prefer a translated version of CC license, e.g. deed.zh
 # CC licenses are available in 39 languages, you can find the specific and correct abbreviation you need on https://creativecommons.org
@@ -167,11 +167,10 @@ links:
 
 # Table of Contents in the Sidebar
 # Front-matter variable (unsupport wrap expand_all).
-#取消对文章目录的自动编号
 toc:
   enable: true
   # Automatically add list number to toc.
-  number: false   # 修改这个为false，取消对文章目录的自动编号
+  number: false # 修改这个为false，取消对文章目录的自动编号
   # If true, all words will placed on next lines if header width longer then sidebar width.
   wrap: false
   # If true, all level of TOC in a post will be displayed, rather than the activated part of it.
@@ -198,8 +197,8 @@ chat:
 language_switcher: false
 
 footer:
-  # Specify the year when the site was setup. If not defined, current year will be used.
-  #since: 2020
+  # Specify the date when the site was setup. If not defined, current year will be used.
+  #since: 2015
 
   # Icon between year and copyright info.
   icon:
@@ -251,7 +250,6 @@ post_meta:
 
 # Post wordcount display settings
 # Dependencies: https://github.com/next-theme/hexo-word-counter
-#添加字数统计与阅读时长
 symbols_count_time:
   separated_meta: true
   item_text_total: true
@@ -264,11 +262,11 @@ tag_icon: true
 
 # Donate (Sponsor) settings
 # Front-matter variable (unsupport animation).
-reward_settings: # 打赏
+reward_settings:
   # If true, a donate button will be displayed in every article by default.
-  enable: true
+  enable: true 
   animation: false
-  comment: Buy me a coffee
+  #comment: Buy me a coffee
 
 reward:
   wechatpay: /images/wechatpay.png
@@ -315,7 +313,7 @@ post_navigation: left
 # ---------------------------------------------------------------
 
 # TagCloud settings for tags page.
-tagcloud:  # 标签页标签字体大小
+tagcloud:
   min: 15 # Minimun font size in px
   max: 15 # Maxium font size in px
   amount: 200 # Total amount of tags
@@ -335,10 +333,6 @@ calendar:
   singleEvents: true
   maxResults: 250
 
-# 百度分享
-#baidushare:
-#type: slide 
-#baidushare: true
 
 # ---------------------------------------------------------------
 # Misc Theme Settings
@@ -372,7 +366,7 @@ codeblock:
     dark: prism-dark
   # Add copy button on codeblock
   copy_button:
-    enable: true #代码复制
+    enable: true
     # Available values: default | flat | mac
     style:
 
@@ -415,7 +409,7 @@ github_banner:
 #   light | light italic | normal | normal italic | bold | bold italic
 # Be aware that setting too much fonts will cause site running slowly
 # ---------------------------------------------------------------
-# Web Safe fonts are recommended for `global` (and `title`):
+# To avoid space between header and sidebar in scheme Pisces / Gemini, Web Safe fonts are recommended for `global` (and `title`):
 # Arial | Tahoma | Helvetica | Times New Roman | Courier New | Verdana | Georgia | Palatino | Garamond | Comic Sans MS | Trebuchet MS
 # ---------------------------------------------------------------
 
@@ -464,6 +458,9 @@ font:
 # See: https://theme-next.js.org/docs/theme-settings/seo
 # ---------------------------------------------------------------
 
+# Disable Baidu transformation on mobile devices.
+disable_baidu_transformation: false
+
 # If true, site-subtitle will be added to index page.
 # Remember to set up your site-subtitle in Hexo `_config.yml` (e.g. subtitle: Subtitle)
 index_with_subtitle: false
@@ -472,11 +469,11 @@ index_with_subtitle: false
 exturl: false
 
 # Google Webmaster tools verification.
-# See: https://developers.google.com/search
+# See: https://www.google.com/webmasters
 google_site_verification:
 
 # Bing Webmaster tools verification.
-# See: https://www.bing.com/webmasters
+# See: https://www.bing.com/webmaster
 bing_site_verification:
 
 # Yandex Webmaster tools verification.
@@ -486,6 +483,9 @@ yandex_site_verification:
 # Baidu Webmaster tools verification.
 # See: https://ziyuan.baidu.com/site
 baidu_site_verification:
+
+# Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO.
+baidu_push: false
 
 
 # ---------------------------------------------------------------
@@ -507,8 +507,6 @@ math:
 
   mathjax:
     enable: false
-    # Available values: none | ams | all
-    tags: none
 
   katex:
     enable: false
@@ -520,16 +518,16 @@ math:
 pjax: false
 
 # FancyBox is a tool that offers a nice and elegant way to add zooming functionality for images.
-# For more information: https://fancyapps.com/fancybox/
+# For more information: https://fancyapps.com/fancybox
 fancybox: false
 
 # A JavaScript library for zooming images like Medium.
 # Warning: Do not enable both `fancybox` and `mediumzoom`.
-# For more information: https://medium-zoom.francoischalifour.com
+# For more information: https://github.com/francoischalifour/medium-zoom
 mediumzoom: false
 
 # Vanilla JavaScript plugin for lazyloading images.
-# For more information: https://apoorv.pro/lozad.js/demo/
+# For more information: https://github.com/ApoorvSaxena/lozad.js
 lazyload: false
 
 # Pangu Support
@@ -538,7 +536,7 @@ lazyload: false
 pangu: false
 
 # Quicklink Support
-# For more information: https://getquick.link
+# For more information: https://github.com/GoogleChromeLabs/quicklink
 # Front-matter variable (unsupport home archive).
 quicklink:
   enable: false
@@ -570,10 +568,10 @@ comments:
   # Available values: tabs | buttons
   style: tabs
   # Choose a comment system to be displayed by default.
-  # Available values: disqus | disqusjs | changyan | livere | gitalk | utterances
+  # Available values: changyan | disqus | disqusjs | gitalk | livere | valine
   active: valine
   # Setting `true` means remembering the comment system selected by the visitor.
-  storage: false
+  storage: true
   # Lazyload all comment systems.
   lazyload: false
   # Modify texts or order for any navs, here are some examples.
@@ -585,17 +583,18 @@ comments:
     #  order: -2
 
 # Disqus
-# For more information: https://disqus.com
 disqus:
   enable: false
   shortname:
-  count: true # 是否显示评论数量
+  count: true
 
 # DisqusJS
-# For more information: https://disqusjs.skk.moe
+# Alternative Disqus - Render comment component using Disqus API.
+# Demo: https://suka.js.org/DisqusJS/
+# For more information: https://github.com/SukkaW/DisqusJS
 disqusjs:
   enable: false
-  # API Endpoint of Disqus API (https://disqus.com/api/docs/).
+  # API Endpoint of Disqus API (https://disqus.com/api/).
   # Leave api empty if you are able to connect to Disqus API. Otherwise you need a reverse proxy for it.
   # For example:
   # api: https://disqus.skk.moe/disqus/
@@ -604,19 +603,35 @@ disqusjs:
   shortname: # See: https://disqus.com/admin/settings/general/
 
 # Changyan
-# For more information: https://changyan.kuaizhan.com
 changyan:
   enable: false
   appid:
   appkey:
 
+# Valine
+# For more information: https://valine.js.org, https://github.com/xCss/Valine
+valine:
+  enable: true
+  appId: xNMoCPKoU65B9o0BLctVe85i-gzGzoHsz # Your leancloud application appid
+  appKey: d0xVq4jv0qePbR946C0ytdJ8 # Your leancloud application appkey
+  serverURLs: https://romanticqq.top # When the custom domain name is enabled, fill it in here
+  placeholder: Just go go # Comment box placeholder
+  avatar: mm # Gravatar style
+  meta: [nick, mail, link] # Custom comment header
+  pageSize: 10 # Pagination size
+  lang: # Language, available values: en, zh-cn
+  visitor: false # Article reading statistic
+  comment_count: true # If false, comment count will only be displayed in post page, not in home page
+  recordIP: false # Whether to record the commenter IP
+  enableQQ: false # Whether to enable the Nickname box to automatically get QQ Nickname and QQ Avatar
+  requiredFields: [] # Set required fields: [nick] | [nick, mail]
+
 # LiveRe comments system
 # You can get your uid from https://livere.com/insight/myCode (General web site)
-livere_uid: #MTAyMC80OTI0MS8yNTczNQ== # <your_uid>
-
+livere_uid: # <your_uid>
 
 # Gitalk
-# For more information: https://gitalk.github.io
+# For more information: https://gitalk.github.io, https://github.com/gitalk/gitalk
 gitalk:
   enable: false
   github_id: # GitHub repo owner
@@ -629,20 +644,6 @@ gitalk:
   # If you want everyone visiting your site to see a uniform language, you can set a force language value
   # Available values: en | es-ES | fr | ru | zh-CN | zh-TW
   language:
-
-# Utterances
-# For more information: https://utteranc.es
-utterances:
-  enable: false
-  repo: # Github repository name
-  # Available values: pathname | url | title | og:title
-  issue_term: pathname
-  # Available values: github-light | github-dark | preferred-color-scheme | github-dark-orange | icy-dark | dark-blue | photon-dark | boxy-light
-  theme: github-light
-
-# Isso
-# For more information: https://posativ.org/isso/
-isso: # <data_isso>
 
 
 # ---------------------------------------------------------------
@@ -668,7 +669,6 @@ add_this_id:
 # ---------------------------------------------------------------
 
 # Google Analytics
-# See: https://analytics.google.com
 google_analytics:
   tracking_id: # <app_id>
   # By default, NexT will load an external gtag.js script on your site.
@@ -676,25 +676,24 @@ google_analytics:
   only_pageview: false
 
 # Baidu Analytics
-# See: https://tongji.baidu.com
 baidu_analytics: # <app_id>
 
 # Growingio Analytics
-# See: https://www.growingio.com
 growingio_analytics: # <project_id>
 
-# Cloudflare Web Analytics
-# See: https://www.cloudflare.com/web-analytics/
-cloudflare_analytics:
+# CNZZ count
+cnzz_siteid:
 
 # Show number of visitors of each article.
-# You can visit https://www.leancloud.cn to get AppID and AppKey.
+# You can visit https://leancloud.cn to get AppID and AppKey.
+# AppID and AppKey are recommended to be the same as valine's for counter compatibility.
+# Warning: Do not enable both `valine.visitor` and `leancloud_visitors`.
 leancloud_visitors:
   enable: false
-  app_id: YBLyBo7edrnXp6YxGlBFR2hR-gzGzoHsz # <your app id>
-  app_key: 0hwa2PE8tikdOMyMIRlMsEd9 # <your app key>
+  app_id: # <your app id>
+  app_key: # <your app key>
   # Required for apps from CN region
-  server_url: https://yblybo7e.lc-cn-n1-shared.com # <your server url>
+  server_url: # <your server url>
   # Dependencies: https://github.com/theme-next/hexo-leancloud-counter-security
   # If you don't care about security in leancloud counter and just want to use it directly
   # (without hexo-leancloud-counter-security plugin), set `security` to `false`.
@@ -710,9 +709,9 @@ firestore:
   projectId: # Required
 
 # Show Views / Visitors of the website / page with busuanzi.
-# For more information: http://ibruce.info/2015/04/04/busuanzi/
-busuanzi_count:     #不蒜子统计
-  enable: true
+# Get more information on http://ibruce.info/2015/04/04/busuanzi
+busuanzi_count:
+  enable: true   #不蒜子统计
   total_visitors: true
   total_visitors_icon: fa fa-user
   total_views: true
@@ -747,6 +746,9 @@ local_search:
   # Preload the search data when the page loads.
   preload: false
 
+# Swiftype Search API Key
+swiftype_key:
+
 
 # ---------------------------------------------------------------
 # Chat Services
@@ -754,20 +756,20 @@ local_search:
 # ---------------------------------------------------------------
 
 # Chatra Support
-# For more information: https://chatra.com
+# See: https://chatra.io
 # Dashboard: https://app.chatra.io/settings/general
 chatra:
   enable: false
   async: true
   id: # Visit Dashboard to get your ChatraID
-  #embed: # Unfinished experimental feature for developers. See: https://chatra.com/help/api/#injectto
+  #embed: # Unfinished experimental feature for developers. See: https://chatra.io/help/api/#injectto
 
 # Tidio Support
-# For more information: https://www.tidio.com
-# Dashboard: https://www.tidio.com/panel/dashboard
+# See: https://www.tidiochat.com
+# Dashboard: https://www.tidiochat.com/panel/dashboard
 tidio:
   enable: false
-  key: # Public Key, get it from dashboard. See: https://www.tidio.com/panel/settings/developer
+  key: # Public Key, get it from dashboard. See: https://www.tidiochat.com/panel/settings/developer
 
 
 # ---------------------------------------------------------------
@@ -775,11 +777,11 @@ tidio:
 # See: https://theme-next.js.org/docs/tag-plugins/
 # ---------------------------------------------------------------
 
-# Note tag (bootstrap callout)
+# Note tag (bs-callout)
 note:
   # Note tag style values:
-  #  - simple    bootstrap callout old alert style. Default.
-  #  - modern    bootstrap callout new (v2-v3) alert style.
+  #  - simple    bs-callout old alert style. Default.
+  #  - modern    bs-callout new (v2-v3) alert style.
   #  - flat      flat callout style with background, like on Mozilla or StackOverflow.
   #  - disabled  disable all CSS styles import of note tag.
   style: simple
@@ -831,7 +833,7 @@ motion:
 # Progress bar in the top during page loading.
 # For more information: https://github.com/rstacruz/nprogress
 nprogress:
-  enable: true
+  enable: false
   spinner: true
 
 # Canvas ribbon
@@ -850,7 +852,7 @@ canvas_ribbon:
 #! ==============================================================
 
 # It's recommended to use the same version as in `_vendors.yml` to avoid potential problems.
-# Remember to use the HTTPS protocol of CDN links when you enable HTTPS on your site.
+# Remember to use the https protocol of CDN links when you enable https on your site.
 vendors:
   # The CDN provider of NexT internal scripts.
   # Available values: local | jsdelivr | unpkg | cdnjs
@@ -909,6 +911,9 @@ vendors:
   disqusjs_js:
   disqusjs_css:
 
+  # Valine
+  valine:
+
   # Gitalk
   gitalk_js:
   gitalk_css:
@@ -920,9 +925,6 @@ vendors:
   # Algolia Search
   algolia_search:
   instant_search:
-
-  # PDF
-  pdfobject:
 
   # Mermaid
   mermaid:
@@ -938,22 +940,7 @@ vendors:
   # Canvas ribbon
   canvas_ribbon:
 
-# 腾讯公益404    
-valine:
-  enable: true # 设置为true开启
-  appid: xNMoCPKoU65B9o0BLctVe85i-gzGzoHsz # 填写leancloud应用的appid
-  appkey: d0xVq4jv0qePbR946C0ytdJ8 # 填写leancloud应用的appkey
-  notify: true # 开启新留言邮件通知
-  verify: false # 不开启验证
-  placeholder: 留下你的爪印吧~ # 留言框里的文字
-  avatar:  # 头像
-  guest_info: nick,mail # 留言框需要的访客信息输入
-  pageSize: 10 # 单页留言条数
-  language:  # language, available values: en, zh-cn
-  visitor: false # 访客记录我已经在配置中开启过了，这里设false
-  comment_count: true # 在首页显示评论数量
 # Assets
-# Accelerate delivery of static files using a CDN
 css: css
 js: js
 images: images

@@ -6,4 +6,3 @@ CSS: source/css/**/*
 📖 Docs: docs/**/*
 Layout: layout/**/*
 🌍 i18n: languages/**/*
-Actions: .github/workflows/**/*

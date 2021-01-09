@@ -49,6 +49,11 @@
       </tags>
   </entry>
   <entry>
+    <title>hexo优化配置(更新中)</title>
+    <url>/2021/01/07/hexo%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE(%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>hexo+PicGo+gitee图床</title>
     <url>/2021/01/05/hexo-PicGo-gitee%E5%9B%BE%E5%BA%8A/</url>
     <content><![CDATA[<p><strong>前言</strong>：我尝试了好几种床图，不是在电脑端加载不出来，就是有各种各样的限制，最后找到了gitee，因为服务器在国内，访问速度也是比较快，空间也没有限制，算是比较理想的一种吧。一开始我用vscode+PicGo插件，等到快成的时候，图片是上传上去了，但是加载不出来，我尝试了<code>sm.ms</code>和<code>github</code>，最后抛弃了<code>vsCode+PicGo</code>插件，选择了<code>PicGo客户端和gitee</code>。</p>
@@ -80,23 +85,15 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo优化配置(更新中)</title>
-    <url>/2021/01/07/hexo%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE(%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>hexo备份与恢复</title>
-    <url>/2021/01/04/hexo%E5%A4%87%E4%BB%BD%E4%B8%8E%E6%81%A2%E5%A4%8D/</url>
-    <content><![CDATA[<h2 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h2><ol>
-<li>在github的博客仓库创建新的分支<strong>backup</strong></li>
-<li>打开git Bash Here，输入 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-git-backup --save</span><br></pre></td></tr></table></figure></li>
-<li>添加提交设置：打开blog/_config.yml在最后添加<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">backup:</span><br><span class="line">type: git</span><br><span class="line">repository:</span><br><span class="line">github: git@github.com:Romanticqq&#x2F;romanticqq.github.io.git,backup(提交的github地址,分支名)</span><br></pre></td></tr></table></figure></li>
-<li>当要对代码备份时，执行<code>hexo d</code>即备份成功</li>
-</ol>
-<h2 id="恢复"><a href="#恢复" class="headerlink" title="恢复"></a>恢复</h2><ol>
-<li>把github的博客仓库<strong>backup</strong>分支的内容下载到本地</li>
-<li>依次执行下列命令 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git</span><br></pre></td></tr></table></figure></li>
-<li>本地文件恢复，<code>hexo s</code>开启本地服务，在浏览器输入<code>http://localhost:4000</code>测试是否正常</li>
+    <title>hexo绑定域名</title>
+    <url>/2021/01/05/hexo%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/</url>
+    <content><![CDATA[<ol>
+<li><strong>注册域名</strong><br>可以挑选<a href="https://cloud.tencent.com/">腾讯云</a>或<a href="https://www.aliyun.com/">阿里云</a>，或则其余任何一家进行域名注册</li>
+<li><strong>获取github仓库IP</strong><br>打开<code>cmd</code>,<code>ping 仓库名.github.io</code>,获取IP<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105215709.png"><br>我的这个ping的有点问题，但方法没错</li>
+<li><strong>域名和IP绑定</strong><br>找到控制台，点解析<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105220220.png"><br>然后点击修改，按照下面图片提示<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105220540.png"></li>
+<li><strong>创建CNAME文件</strong><br>在<code>blog/source</code>目录创建<code>CNAME(无后缀名)</code>,把申请的域名填入即可<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105215242.png"></li>
+<li><strong>域名和github仓库绑定</strong><br>打开存放博客的仓库，点击<code>settings</code>,找到<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105214939.png"><br>在输入框输入申请的域名，然后点击<code>save</code></li>
+<li><strong>访问</strong><br>域名，IP，https://仓库名.github.io，三则都可访问</li>
 </ol>
 ]]></content>
       <categories>
@@ -134,15 +131,18 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo绑定域名</title>
-    <url>/2021/01/05/hexo%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/</url>
-    <content><![CDATA[<ol>
-<li><strong>注册域名</strong><br>可以挑选<a href="https://cloud.tencent.com/">腾讯云</a>或<a href="https://www.aliyun.com/">阿里云</a>，或则其余任何一家进行域名注册</li>
-<li><strong>获取github仓库IP</strong><br>打开<code>cmd</code>,<code>ping 仓库名.github.io</code>,获取IP<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105215709.png"><br>我的这个ping的有点问题，但方法没错</li>
-<li><strong>域名和IP绑定</strong><br>找到控制台，点解析<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105220220.png"><br>然后点击修改，按照下面图片提示<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105220540.png"></li>
-<li><strong>创建CNAME文件</strong><br>在<code>blog/source</code>目录创建<code>CNAME(无后缀名)</code>,把申请的域名填入即可<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105215242.png"></li>
-<li><strong>域名和github仓库绑定</strong><br>打开存放博客的仓库，点击<code>settings</code>,找到<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105214939.png"><br>在输入框输入申请的域名，然后点击<code>save</code></li>
-<li><strong>访问</strong><br>域名，IP，https://仓库名.github.io，三则都可访问</li>
+    <title>hexo备份与恢复</title>
+    <url>/2021/01/04/hexo%E5%A4%87%E4%BB%BD%E4%B8%8E%E6%81%A2%E5%A4%8D/</url>
+    <content><![CDATA[<h2 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h2><ol>
+<li>在github的博客仓库创建新的分支<strong>backup</strong></li>
+<li>打开git Bash Here，输入 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-git-backup --save</span><br></pre></td></tr></table></figure></li>
+<li>添加提交设置：打开blog/_config.yml在最后添加<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">backup:</span><br><span class="line">type: git</span><br><span class="line">repository:</span><br><span class="line">github: git@github.com:Romanticqq&#x2F;romanticqq.github.io.git,backup(提交的github地址,分支名)</span><br></pre></td></tr></table></figure></li>
+<li>当要对代码备份时，执行<code>hexo d</code>即备份成功</li>
+</ol>
+<h2 id="恢复"><a href="#恢复" class="headerlink" title="恢复"></a>恢复</h2><ol>
+<li>把github的博客仓库<strong>backup</strong>分支的内容下载到本地</li>
+<li>依次执行下列命令 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git</span><br></pre></td></tr></table></figure></li>
+<li>本地文件恢复，<code>hexo s</code>开启本地服务，在浏览器输入<code>http://localhost:4000</code>测试是否正常</li>
 </ol>
 ]]></content>
       <categories>

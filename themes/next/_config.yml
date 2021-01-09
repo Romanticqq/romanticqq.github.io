@@ -88,6 +88,7 @@ menu:
   #schedule: /schedule/ || fa fa-calendar
   sitemap: /sitemap.xml || fa fa-sitemap
   commonweal: /404/ || fa fa-heartbeat
+  guestbook: /guestbook/ || fa fa-book
 
 # Enable / Disable menu icons / item badges.
 menu_settings:
@@ -622,8 +623,8 @@ valine:
   lang: # Language, available values: en, zh-cn
   visitor: false # Article reading statistic
   comment_count: true # If false, comment count will only be displayed in post page, not in home page
-  recordIP: false # Whether to record the commenter IP
-  enableQQ: false # Whether to enable the Nickname box to automatically get QQ Nickname and QQ Avatar
+  recordIP: true # Whether to record the commenter IP
+  enableQQ: true # Whether to enable the Nickname box to automatically get QQ Nickname and QQ Avatar
   requiredFields: [] # Set required fields: [nick] | [nick, mail]
 
 # LiveRe comments system

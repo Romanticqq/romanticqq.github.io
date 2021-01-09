@@ -1,5 +1,5 @@
 ---
-title: Python学习(1 day)
+title: Python学习(1day)
 date: 2021-01-08 10:55:56
 tags:
     - Python

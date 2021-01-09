@@ -18,14 +18,13 @@
 
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.1/css/all.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/animate.css@3.1.1/animate.min.css">
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.css">
-  <script src="//cdn.jsdelivr.net/npm/nprogress@0.2.0/nprogress.js"></script>
 
 <script class="hexo-configurations">
     var NexT = window.NexT || {};
-    var CONFIG = {"hostname":"romanticqq.top","root":"/","images":"/images","scheme":"Gemini","version":"8.1.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":false,"lazyload":false,"nav":null},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
+    var CONFIG = {"hostname":"romanticqq.top","root":"/","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
-<meta name="description" content="前言：我尝试了好几种床图，不是在电脑端加载不出来，就是有各种各样的限制，最后找到了gitee，因为服务器在国内，访问速度也是比较快，空间也没有限制，算是比较理想的一种吧。一开始我用vscode+PicGo插件，等到快成的时候，图片是上传上去了，但是加载不出来，我尝试了sm.ms和github，最后抛弃了vsCode+PicGo插件，选择了PicGo客户端和gitee。  注册gitee账号去官网注">
+
+  <meta name="description" content="前言：我尝试了好几种床图，不是在电脑端加载不出来，就是有各种各样的限制，最后找到了gitee，因为服务器在国内，访问速度也是比较快，空间也没有限制，算是比较理想的一种吧。一开始我用vscode+PicGo插件，等到快成的时候，图片是上传上去了，但是加载不出来，我尝试了sm.ms和github，最后抛弃了vsCode+PicGo插件，选择了PicGo客户端和gitee。  注册gitee账号去官网注">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hexo+PicGo+gitee图床">
 <meta property="og:url" content="https://romanticqq.top/2021/01/05/hexo-PicGo-gitee%E5%9B%BE%E5%BA%8A/index.html">
@@ -63,8 +62,11 @@
     lang   : 'zh-CN'
   };
 </script>
-<title>hexo+PicGo+gitee图床 | RomanticQq</title>
+
+  <title>hexo+PicGo+gitee图床 | RomanticQq</title>
   
+
+
 
 
 
@@ -104,7 +106,7 @@
   </style>
 </noscript>
 
-  <script type="text/javascript" src="/love.js"></script>
+    <script type="text/javascript" src="/love.js"></script>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
@@ -114,7 +116,7 @@
     <header class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-container">
   <div class="site-nav-toggle">
-    <div class="toggle" aria-label="切换导航栏" role="button">
+    <div class="toggle" aria-label="切换导航栏">
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
         <span class="toggle-line"></span>
@@ -142,13 +144,41 @@
 
 <nav class="site-nav">
   <ul class="main-menu menu">
-        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
-        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
-        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
-        <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
-        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
-        <li class="menu-item menu-item-sitemap"><a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a></li>
-        <li class="menu-item menu-item-commonweal"><a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a></li>
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-about">
+
+    <a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+        <li class="menu-item menu-item-sitemap">
+
+    <a href="/sitemap.xml" rel="section"><i class="fa fa-sitemap fa-fw"></i>站点地图</a>
+
+  </li>
+        <li class="menu-item menu-item-commonweal">
+
+    <a href="/404/" rel="section"><i class="fa fa-heartbeat fa-fw"></i>公益 404</a>
+
+  </li>
       <li class="menu-item menu-item-search">
         <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
         </a>
@@ -159,7 +189,8 @@
 
 
   <div class="search-pop-overlay">
-    <div class="popup search-popup"><div class="search-header">
+    <div class="popup search-popup">
+        <div class="search-header">
   <span class="search-icon">
     <i class="fa fa-search"></i>
   </span>
@@ -168,7 +199,7 @@
            placeholder="搜索..." spellcheck="false"
            type="search" class="search-input">
   </div>
-  <span class="popup-btn-close" role="button">
+  <span class="popup-btn-close">
     <i class="fa fa-times-circle"></i>
   </span>
 </div>
@@ -184,7 +215,7 @@
 </div>
         
   
-  <div class="toggle sidebar-toggle" role="button">
+  <div class="toggle sidebar-toggle">
     <span class="toggle-line"></span>
     <span class="toggle-line"></span>
     <span class="toggle-line"></span>
@@ -204,11 +235,11 @@
 
       <div class="sidebar-panel-container">
         <!--noindex-->
-        <div class="post-toc-wrap sidebar-panel">
-        </div>
+        <section class="post-toc-wrap sidebar-panel">
+        </section>
         <!--/noindex-->
 
-        <div class="site-overview-wrap sidebar-panel">
+        <section class="site-overview-wrap sidebar-panel">
           <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="RomanticQq"
       src="/images/avatar.jpg">
@@ -252,7 +283,7 @@
 
 
 
-        </div>
+        </section>
       </div>
     </div>
   </aside>
@@ -262,7 +293,7 @@
     </header>
 
     
-  <div class="back-to-top" role="button">
+  <div class="back-to-top">
     <i class="fa fa-arrow-up"></i>
     <span>0%</span>
   </div>
@@ -275,7 +306,9 @@
 
 
     <div class="main-inner post posts-expand">
+      
 
+      
 
   
 
@@ -336,6 +369,20 @@
       <span class="post-meta-item-text">阅读次数：</span>
       <span id="busuanzi_value_page_pv"></span>
     </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/01/05/hexo-PicGo-gitee%E5%9B%BE%E5%BA%8A/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/01/05/hexo-PicGo-gitee%E5%9B%BE%E5%BA%8A/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
       </div>
       <div class="post-meta">
     <span class="post-meta-item" title="本文字数">
@@ -386,7 +433,7 @@
 
     <footer class="post-footer">
           <div class="reward-container">
-  <div>Buy me a coffee</div>
+  <div></div>
   <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
     赞赏
   </button>
@@ -451,6 +498,8 @@
 
 
 
+      
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -473,14 +522,18 @@
     });
   }
 </script>
-</div>
+
+    </div>
   </main>
 
   <footer class="footer">
     <div class="footer-inner">
+      
 
+      
 
 <div class="copyright">
+  
   &copy; 
   <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
@@ -534,32 +587,25 @@
 <script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
 
   
-<script src="/js/local-search.js"></script>
+
+
+
+
+  <script src="/js/local-search.js"></script>
 
 
 
 
 
-  <script>
-    NProgress.configure({
-      showSpinner: true
-    });
-    NProgress.start();
-    document.addEventListener('readystatechange', () => {
-      if (document.readyState === 'interactive') {
-        NProgress.inc(0.8);
-      }
-      if (document.readyState === 'complete') {
-        NProgress.done();
-      }
-    });
-    document.addEventListener('pjax:send', () => {
-      NProgress.start();
-    });
-    document.addEventListener('pjax:success', () => {
-      NProgress.done();
-    });
-  </script>
+
+
+
+
+
+
+
+
+
 
   
   <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
@@ -567,6 +613,25 @@
 
 
 
+
+
+
+
+  
+
+  
+
+<script>
+NexT.utils.loadComments('#valine-comments', () => {
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
+    new Valine(Object.assign({"enable":true,"appId":"xNMoCPKoU65B9o0BLctVe85i-gzGzoHsz","appKey":"d0xVq4jv0qePbR946C0ytdJ8","serverURLs":"https://romanticqq.top","placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":false,"comment_count":true,"recordIP":false,"enableQQ":false,"requiredFields":[]}, {
+      el: '#valine-comments',
+      path: "/2021/01/05/hexo-PicGo-gitee%E5%9B%BE%E5%BA%8A/",
+      serverURLs: "https://romanticqq.top"
+    }));
+  }, window.Valine);
+});
+</script>
 
 </body>
 </html>

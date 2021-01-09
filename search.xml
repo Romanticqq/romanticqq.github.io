@@ -80,34 +80,6 @@
       </tags>
   </entry>
   <entry>
-    <title>hexo优化配置(更新中)</title>
-    <url>/2021/01/07/hexo%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE(%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>hexo备份与恢复</title>
-    <url>/2021/01/04/hexo%E5%A4%87%E4%BB%BD%E4%B8%8E%E6%81%A2%E5%A4%8D/</url>
-    <content><![CDATA[<h2 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h2><ol>
-<li>在github的博客仓库创建新的分支<strong>backup</strong></li>
-<li>打开git Bash Here，输入 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-git-backup --save</span><br></pre></td></tr></table></figure></li>
-<li>添加提交设置：打开blog/_config.yml在最后添加<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">backup:</span><br><span class="line">type: git</span><br><span class="line">repository:</span><br><span class="line">github: git@github.com:Romanticqq&#x2F;romanticqq.github.io.git,backup(提交的github地址,分支名)</span><br></pre></td></tr></table></figure></li>
-<li>当要对代码备份时，执行<code>hexo d</code>即备份成功</li>
-</ol>
-<h2 id="恢复"><a href="#恢复" class="headerlink" title="恢复"></a>恢复</h2><ol>
-<li>把github的博客仓库<strong>backup</strong>分支的内容下载到本地</li>
-<li>依次执行下列命令 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git</span><br></pre></td></tr></table></figure></li>
-<li>本地文件恢复，<code>hexo s</code>开启本地服务，在浏览器输入<code>http://localhost:4000</code>测试是否正常</li>
-</ol>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>next</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo插入图片</title>
     <url>/2021/01/05/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</url>
     <content><![CDATA[<h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><ol>
@@ -182,14 +154,26 @@
       </tags>
   </entry>
   <entry>
-    <title>学习Python遇到的坑(更新中)</title>
-    <url>/2021/01/08/%E5%AD%A6%E4%B9%A0Python%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91(%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
-    <content><![CDATA[]]></content>
+    <title>hexo备份与恢复</title>
+    <url>/2021/01/04/hexo%E5%A4%87%E4%BB%BD%E4%B8%8E%E6%81%A2%E5%A4%8D/</url>
+    <content><![CDATA[<h2 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h2><ol>
+<li>在github的博客仓库创建新的分支<strong>backup</strong></li>
+<li>打开git Bash Here，输入 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-git-backup --save</span><br></pre></td></tr></table></figure></li>
+<li>添加提交设置：打开blog/_config.yml在最后添加<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">backup:</span><br><span class="line">type: git</span><br><span class="line">repository:</span><br><span class="line">github: git@github.com:Romanticqq&#x2F;romanticqq.github.io.git,backup(提交的github地址,分支名)</span><br></pre></td></tr></table></figure></li>
+<li>当要对代码备份时，执行<code>hexo d</code>即备份成功</li>
+</ol>
+<h2 id="恢复"><a href="#恢复" class="headerlink" title="恢复"></a>恢复</h2><ol>
+<li>把github的博客仓库<strong>backup</strong>分支的内容下载到本地</li>
+<li>依次执行下列命令 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git</span><br></pre></td></tr></table></figure></li>
+<li>本地文件恢复，<code>hexo s</code>开启本地服务，在浏览器输入<code>http://localhost:4000</code>测试是否正常</li>
+</ol>
+]]></content>
       <categories>
-        <category>Python</category>
+        <category>hexo</category>
       </categories>
       <tags>
-        <tag>Python</tag>
+        <tag>hexo</tag>
+        <tag>next</tag>
       </tags>
   </entry>
   <entry>
@@ -230,6 +214,22 @@
       <tags>
         <tag>hexo</tag>
         <tag>next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo优化配置(更新中)</title>
+    <url>/2021/01/07/hexo%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE(%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>学习Python遇到的坑(更新中)</title>
+    <url>/2021/01/08/%E5%AD%A6%E4%B9%A0Python%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91(%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
       </tags>
   </entry>
 </search>

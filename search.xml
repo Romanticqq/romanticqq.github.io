@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Python2和Python3的区别(更新中)</title>
+    <url>/2021/01/10/Python2%E5%92%8CPython3%E7%9A%84%E5%8C%BA%E5%88%AB(%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
+    <content><![CDATA[<ol>
+<li>在Python2中，/得到的是一个整数;在Python3中得到是一个浮点数</li>
+<li>在python2中0o和0开始的数字都是8进制;在Python3中只有0o表示8进制</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python学习(1day)</title>
     <url>/2021/01/08/Python%E5%AD%A6%E4%B9%A0(1day)/</url>
     <content><![CDATA[<h2 id="Pycharm基本使用"><a href="#Pycharm基本使用" class="headerlink" title="Pycharm基本使用"></a>Pycharm基本使用</h2><h2 id="Pycharm基本语法"><a href="#Pycharm基本语法" class="headerlink" title="Pycharm基本语法"></a>Pycharm基本语法</h2><ol>
@@ -67,6 +82,25 @@
       </tags>
   </entry>
   <entry>
+    <title>Python学习(3day)</title>
+    <url>/2021/01/10/Python%E5%AD%A6%E4%B9%A0(3day)/</url>
+    <content><![CDATA[<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><ol>
+<li><h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">+:加</span><br><span class="line">-:减</span><br><span class="line">*:乘</span><br><span class="line">/:除(结果可以是<span class="built_in">float</span>)</span><br><span class="line">%:取余</span><br><span class="line">**:幂运算 eg: print(<span class="number">2</span>**<span class="number">3</span>) <span class="comment">#打印2的3次幂</span></span><br><span class="line">//:整除(向下取整)</span><br><span class="line">注：</span><br><span class="line"><span class="comment"># 可用幂运算进行开方运算</span></span><br><span class="line">eg:print(<span class="number">81</span>**(<span class="number">1</span>/<span class="number">2</span>)) <span class="comment">#打印的是81开平方的结果，即为9</span></span><br><span class="line"><span class="comment"># 在Python2中，/得到的是一个整数;在Python3中得到是一个浮点数</span></span><br><span class="line"><span class="comment"># 在开发中使用括号来表示优先级,比较清晰</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="算术运算符在字符串中的使用"><a href="#算术运算符在字符串中的使用" class="headerlink" title="算术运算符在字符串中的使用"></a>算术运算符在字符串中的使用</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在字符串中有限度的支持加法和乘法运算符</span></span><br><span class="line">print(<span class="string">&quot;hello&quot;</span>+<span class="string">&quot;world&quot;</span>)   <span class="comment"># 结果为 helloworld(用于拼接字符串)</span></span><br><span class="line">print(<span class="string">&quot;hello&quot;</span>*<span class="number">2</span>)         <span class="comment"># 结果为 hellohello</span></span><br><span class="line">注：字符串和数字是不能相加的</span><br><span class="line">print(<span class="string">&quot;a&quot;</span>+<span class="number">1</span>) <span class="comment"># 会报错</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="number">1</span> <span class="comment"># 单个变量赋值</span></span><br><span class="line">m,n=<span class="number">1</span>,<span class="number">2</span> <span class="comment"># 多个变量赋值(拆包),且当等号左右两侧个数不相等时会报错</span></span><br><span class="line">o*,p,q=<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span> <span class="comment">#加*表示可变长度,把4,5分别赋给p,q,其余全部赋值给o</span></span><br><span class="line">m=<span class="string">&#x27;hello&#x27;</span>,<span class="string">&#x27;world&#x27;</span> <span class="comment"># 元组赋值</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 比较运算符</span></span><br><span class="line">&gt;:大于</span><br><span class="line">&lt;:小于</span><br><span class="line">&gt;=:大于等于</span><br><span class="line">&lt;=:小于等于</span><br><span class="line">!=:不等于(在python2&lt;&gt;也表示不等于，python3不支持)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 比较运算符在字符串中的使用</span></span><br><span class="line">print(<span class="string">&#x27;a&#x27;</span>&lt;<span class="string">&#x27;b&#x27;</span>) <span class="comment"># 结果为true 按照ASCII码进行比较</span></span><br><span class="line">print(<span class="string">&#x27;abc&#x27;</span>&lt;<span class="string">&#x27;b&#x27;</span>) <span class="comment"># 结果为true,直接字符a,b相比得出结果</span></span><br><span class="line">print(<span class="string">&#x27;abc&#x27;</span>==<span class="string">&#x27;abc&#x27;</span>) <span class="comment"># 结果为true</span></span><br><span class="line">在数字和字符串之间做==为true,做!=比较为false</span><br></pre></td></tr></table></figure></li>
+<li>逻辑运算符<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">and</span>:逻辑与</span><br><span class="line"><span class="keyword">or</span>:逻辑或</span><br><span class="line"><span class="keyword">not</span>:逻辑非</span><br><span class="line"></span><br><span class="line"><span class="comment">#规则</span></span><br><span class="line">逻辑与规则:只有一个运算数是<span class="literal">False</span>,结果就为<span class="literal">False</span></span><br><span class="line">逻辑或规则:只有一个运算数是<span class="literal">True</span>,结果就为<span class="literal">True</span></span><br><span class="line">优先级:<span class="keyword">not</span> &gt; <span class="keyword">and</span> &gt; <span class="keyword">or</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#逻辑运算符的取值问题(逻辑运算结果不一定是bool值)</span></span><br><span class="line">print(<span class="number">3</span> <span class="keyword">and</span> <span class="string">&#x27;Hello&#x27;</span> <span class="keyword">and</span> <span class="number">0</span> <span class="keyword">and</span> <span class="number">2</span>) </span><br><span class="line"><span class="comment"># 结果为0(按照逻辑与的运算规则,有False则False)</span></span><br><span class="line">print(<span class="number">3</span> <span class="keyword">or</span> <span class="number">0</span>)</span><br><span class="line"><span class="comment"># 结果为3,逻辑或运算当有一个是True时，后面的将不会被执行</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#逻辑运算符的短路问题</span></span><br><span class="line"><span class="number">4</span> &gt; <span class="number">3</span> <span class="keyword">and</span> print(<span class="string">&#x27;hello world&#x27;</span>) </span><br><span class="line"><span class="comment"># 打印hello world</span></span><br><span class="line"><span class="number">4</span> &gt; <span class="number">3</span> <span class="keyword">or</span> print(<span class="string">&#x27;hello world&#x27;</span>) </span><br><span class="line"><span class="comment"># print将会短路，因为逻辑或前面已经是True,后面将不会被执行</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&amp;:按位与(都为<span class="number">1</span>取<span class="number">1</span>,否则取<span class="number">0</span>)</span><br><span class="line">|:按位或(有<span class="number">1</span>取<span class="number">1</span>,否则取<span class="number">0</span>)</span><br><span class="line">^:按位异或(不同取<span class="number">1</span>,相同取<span class="number">0</span>)</span><br><span class="line">~:按位取反(<span class="number">0</span>取<span class="number">1</span>,<span class="number">1</span>取<span class="number">0</span>)</span><br><span class="line">&lt;&lt;:左移(向左移,后面补<span class="number">0</span>)</span><br><span class="line">&gt;&gt;:右移(向右移,数据会丢失)</span><br><span class="line"><span class="comment"># 左移:x左移a位结果为x乘以2的a次方</span></span><br><span class="line"><span class="comment"># 右移:x右移a位结果为x除以2的a次方(取整)</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo+PicGo+gitee图床</title>
     <url>/2021/01/05/hexo-PicGo-gitee%E5%9B%BE%E5%BA%8A/</url>
     <content><![CDATA[<p><strong>前言</strong>：我尝试了好几种床图，不是在电脑端加载不出来，就是有各种各样的限制，最后找到了gitee，因为服务器在国内，访问速度也是比较快，空间也没有限制，算是比较理想的一种吧。一开始我用vscode+PicGo插件，等到快成的时候，图片是上传上去了，但是加载不出来，我尝试了<code>sm.ms</code>和<code>github</code>，最后抛弃了<code>vsCode+PicGo</code>插件，选择了<code>PicGo客户端和gitee</code>。</p>
@@ -96,11 +130,6 @@
         <tag>Typora</tag>
         <tag>图床</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>hexo优化配置(更新中)</title>
-    <url>/2021/01/07/hexo%E4%BC%98%E5%8C%96%E9%85%8D%E7%BD%AE(%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>hexo备份与恢复</title>

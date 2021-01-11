@@ -323,7 +323,7 @@
 <li><h3 id="元组-Tuple"><a href="#元组-Tuple" class="headerlink" title="元组(Tuple)"></a>元组(Tuple)</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># (),有序，元素任意，元素不可变</span></span><br></pre></td></tr></table></figure></li>
 <li><h3 id="列表-List"><a href="#列表-List" class="headerlink" title="列表(List)"></a>列表(List)</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># [],有序，元素任意，元素可变</span></span><br><span class="line"><span class="comment"># 与C语言的数组相似，不同的是C语言的数据类型要相同，list可以不同</span></span><br></pre></td></tr></table></figure></li>
 <li><h3 id="字典-Dictionary"><a href="#字典-Dictionary" class="headerlink" title="字典(Dictionary)"></a>字典(Dictionary)</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># &#123;&#125;，无序，元素任意，元素可变</span></span><br><span class="line"><span class="comment"># 元素键值对存在</span></span><br></pre></td></tr></table></figure>
-<code>Python</code><br><code>Python</code><br><code>Python</code><br><code>Python</code><br><code>Python</code><br><code>Python</code><br><code>Python</code><br><code>Python</code><br><code>Python</code><br>元祖用圆括号，列表用方括号，字典用花括号<br>元祖有序，列表有序，字典无序<br>元祖不可变，列表可变，字典可变<br>元祖元素任意，列表元素任意，字典元素键值对</li>
+</li>
 </ol>
 ]]></content>
       <categories>

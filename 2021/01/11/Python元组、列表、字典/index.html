@@ -24,22 +24,18 @@
     var CONFIG = {"hostname":"romanticqq.top","root":"/","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="元组1234&#96;&#96;&#96;2. ### 列表&#96;&#96;&#96;Python1. 当我们保存                                         字典123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354&#96;&#96;&#96;4. ### 元组、列表、字典的区别&#96;">
+  <meta name="description" content="元组1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859&#96;&#96;&#96;2. ### 列表&#96;&#96;&#96;Python1. 当我们保存多个数据时可以使用列表(列表近似于C语言的数组)2. 使用[]表示一个列表，列表里的每一个数据表示元素，中间用逗号隔开">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python元组、列表、字典">
 <meta property="og:url" content="https://romanticqq.top/2021/01/11/Python%E5%85%83%E7%BB%84%E3%80%81%E5%88%97%E8%A1%A8%E3%80%81%E5%AD%97%E5%85%B8/index.html">
 <meta property="og:site_name" content="RomanticQq">
-<meta property="og:description" content="元组1234&#96;&#96;&#96;2. ### 列表&#96;&#96;&#96;Python1. 当我们保存                                         字典123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354&#96;&#96;&#96;4. ### 元组、列表、字典的区别&#96;">
+<meta property="og:description" content="元组1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556575859&#96;&#96;&#96;2. ### 列表&#96;&#96;&#96;Python1. 当我们保存多个数据时可以使用列表(列表近似于C语言的数组)2. 使用[]表示一个列表，列表里的每一个数据表示元素，中间用逗号隔开">
 <meta property="og:locale" content="zh_CN">
-<meta property="og:image" content="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111164602.png">
-<meta property="og:image" content="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111165444.png">
-<meta property="og:image" content="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111172836.png">
 <meta property="article:published_time" content="2021-01-11T05:54:58.000Z">
-<meta property="article:modified_time" content="2021-01-12T04:52:05.788Z">
+<meta property="article:modified_time" content="2021-01-12T06:46:26.841Z">
 <meta property="article:author" content="RomanticQq">
 <meta property="article:tag" content="Python">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111164602.png">
 
 
 <link rel="canonical" href="https://romanticqq.top/2021/01/11/Python%E5%85%83%E7%BB%84%E3%80%81%E5%88%97%E8%A1%A8%E3%80%81%E5%AD%97%E5%85%B8/">
@@ -249,7 +245,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">18</span>
+          <span class="site-state-item-count">19</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -347,7 +343,7 @@
           <i class="far fa-calendar-check"></i>
         </span>
         <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-01-12 12:52:05" itemprop="dateModified" datetime="2021-01-12T12:52:05+08:00">2021-01-12</time>
+        <time title="修改时间：2021-01-12 14:46:26" itemprop="dateModified" datetime="2021-01-12T14:46:26+08:00">2021-01-12</time>
       </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -388,7 +384,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>300</span>
+      <span>1.2k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -407,49 +403,8 @@
     
     <div class="post-body" itemprop="articleBody">
         <ol>
-<li><h3 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"><span class="number">2.</span> <span class="comment">### 列表</span></span><br><span class="line">```Python</span><br><span class="line"><span class="number">1.</span> 当我们保存</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-</li>
-</ol>
-<ol start="3">
-<li><h3 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="number">4.</span> <span class="comment">### 元组、列表、字典的区别</span></span><br><span class="line">```Python</span><br><span class="line"><span class="number">1.</span>元组(Tuple)</span><br><span class="line"><span class="comment"># (),有序，元素任意，元素不可变</span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span>列表(List)</span><br><span class="line"><span class="comment"># [],有序，元素任意，元素可变</span></span><br><span class="line"><span class="comment"># 与C语言的数组相似，不同的是C语言的数据类型要相同，list可以不同</span></span><br><span class="line"></span><br><span class="line"><span class="number">3.</span>字典(Dictionary)</span><br><span class="line"><span class="comment"># &#123;&#125;，无序，元素任意，元素可变</span></span><br><span class="line"><span class="comment"># 元素键值对存在</span></span><br></pre></td></tr></table></figure>
-<img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111164602.png"><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111165444.png"><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111172836.png"></li>
+<li><h3 id="元组"><a href="#元组" class="headerlink" title="元组"></a>元组</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"><span class="number">2.</span> <span class="comment">### 列表</span></span><br><span class="line">```Python</span><br><span class="line"><span class="number">1.</span> 当我们保存多个数据时可以使用列表(列表近似于C语言的数组)</span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> 使用[]表示一个列表，列表里的每一个数据表示元素，中间用逗号隔开</span><br><span class="line">[<span class="string">&#x27;xiaoming&#x27;</span>,<span class="number">18</span>,<span class="string">&#x27;河南&#x27;</span>] <span class="comment"># 即表示一个列表，数据类型可以不同</span></span><br><span class="line"></span><br><span class="line"><span class="number">3.</span> 可以使用<span class="built_in">list</span>(可迭代对象),将可迭代对象转换成一个列表</span><br><span class="line">eg：</span><br><span class="line">x=<span class="built_in">list</span>((<span class="string">&#x27;张三&#x27;</span>,<span class="string">&#x27;李四&#x27;</span>,<span class="string">&#x27;王五&#x27;</span>))</span><br><span class="line">print(x) <span class="comment"># 打印结果：[&#x27;张三&#x27;, &#x27;李四&#x27;, &#x27;王五&#x27;]</span></span><br><span class="line"></span><br><span class="line"><span class="number">4.</span> 可以通过下标获取修改列表即对列表进行切片</span><br><span class="line"></span><br><span class="line"><span class="number">5.</span> 增加列表元素</span><br><span class="line">append <span class="comment"># 在列表末尾加一个元素</span></span><br><span class="line">insert <span class="comment"># 在指定位置插入元素</span></span><br><span class="line">extend <span class="comment"># 将可迭代对象添加到末尾</span></span><br><span class="line"></span><br><span class="line"><span class="number">6.</span> 删除列表元素</span><br><span class="line">remove <span class="comment"># 删除列表指定元素</span></span><br><span class="line">clear <span class="comment"># 清空列表</span></span><br><span class="line"><span class="keyword">del</span> <span class="comment">#删除一个列表元素</span></span><br><span class="line"></span><br><span class="line"><span class="number">7.</span> 查询列表元素</span><br><span class="line">index <span class="comment"># 返回指定元素下标,不存在会报错</span></span><br><span class="line">count <span class="comment"># 返回指定元素的个数</span></span><br><span class="line"></span><br><span class="line"><span class="number">8.</span> 修改元素</span><br><span class="line">用下标定位到元素,直接赋值</span><br><span class="line"></span><br><span class="line"><span class="number">9.</span> 调用列表的sort方法进行排序</span><br><span class="line">顺序排序:默认循序排序</span><br><span class="line">逆序排序:x.sort(reverse=<span class="literal">True</span>)</span><br><span class="line"></span><br><span class="line"><span class="number">10.</span> 内置函数<span class="built_in">sorted</span>排序</span><br><span class="line">新生成一个列表</span><br><span class="line"><span class="comment"># 注：sort排序是改变原列表的序列,sorted新生成一个列表</span></span><br><span class="line"></span><br><span class="line"><span class="number">11.</span> 列表逆序</span><br><span class="line">reverse:用函数</span><br><span class="line">x.[::-<span class="number">1</span>]:用切片法</span><br><span class="line"></span><br><span class="line"><span class="number">12.</span> 复制列表</span><br><span class="line">y=x <span class="comment"># x,y指向了同一个内存地址,会相互影响</span></span><br><span class="line">copy <span class="comment"># 新列表和原列表数据相同,内存地址不同,不会相互影响</span></span><br><span class="line"></span><br><span class="line"><span class="number">13.</span> 使用<span class="keyword">for</span>...<span class="keyword">in</span>对列表进行循环遍历时,尽量不要对列表进行删除操作</span><br><span class="line"></span><br><span class="line"><span class="number">14.</span> 列表的嵌套</span><br><span class="line">[<span class="number">1</span>,<span class="number">2</span>,[<span class="number">3</span>,<span class="number">4</span>],[<span class="number">4</span>,<span class="number">5</span>,<span class="number">6</span>]] <span class="comment"># 列表可以嵌套使用</span></span><br><span class="line"></span><br><span class="line"><span class="number">15.</span> 带下标进行<span class="keyword">for</span>...<span class="keyword">in</span>循环(一般用<span class="keyword">while</span>)</span><br><span class="line"><span class="keyword">for</span> i,room <span class="keyword">in</span> <span class="built_in">enumerate</span>(rooms) <span class="comment"># enumerate是关键字</span></span><br><span class="line"></span><br><span class="line"><span class="number">16.</span> 列表推导式</span><br><span class="line"><span class="comment"># 用列表推导式创建一个列表,产生列表条件简单的时候使用</span></span><br><span class="line">nums=[i <span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">10</span>)] <span class="comment"># 产生0-9,这10个数据的列表</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="字典"><a href="#字典" class="headerlink" title="字典"></a>字典</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">```</span><br><span class="line"><span class="number">4.</span> <span class="comment">### 元组、列表、字典的区别</span></span><br><span class="line">```Python</span><br><span class="line"><span class="number">1.</span>元组(Tuple)</span><br><span class="line"><span class="comment"># (),有序，元素任意，元素不可变</span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span>列表(List)</span><br><span class="line"><span class="comment"># [],有序，元素任意，元素可变</span></span><br><span class="line"><span class="comment"># 与C语言的数组相似，不同的是C语言的数据类型要相同，list可以不同</span></span><br><span class="line"></span><br><span class="line"><span class="number">3.</span>字典(Dictionary)</span><br><span class="line"><span class="comment"># &#123;&#125;，无序，元素任意，元素可变</span></span><br><span class="line"><span class="comment"># 元素键值对存在</span></span><br></pre></td></tr></table></figure></li>
 </ol>
 
     </div>
@@ -570,14 +525,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">17k</span>
+    <span title="站点总字数">18k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">16 分钟</span>
+    <span title="站点阅读时长">17 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">

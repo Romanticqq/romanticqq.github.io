@@ -120,61 +120,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Python学习(1day)</title>
-    <url>/2021/01/08/Python%E5%AD%A6%E4%B9%A0(1day)/</url>
-    <content><![CDATA[<h2 id="Pycharm基本使用"><a href="#Pycharm基本使用" class="headerlink" title="Pycharm基本使用"></a>Pycharm基本使用</h2><ol>
-<li>双击shift键(或Ctrl+shift+A)，会弹出全局搜索窗口</li>
-<li>快速格式化代码 Ctrl+shift+L</li>
-<li>快速复制粘贴选中代码 Ctrl+D</li>
-<li>移动一行代码 Ctrl+shift+上下箭头</li>
-<li>光标定位到一行开头Fn+左箭头，定位到一行结尾Fn+右箭头</li>
-</ol>
-<h2 id="Pycharm基本语法"><a href="#Pycharm基本语法" class="headerlink" title="Pycharm基本语法"></a>Pycharm基本语法</h2><ol>
-<li>注释<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 单行注释</span></span><br><span class="line"><span class="comment"># ptint(&quot;Hello Python&quot;)  //用# 或ctrl+/</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 多行注释</span></span><br><span class="line"><span class="comment"># print(&quot;你好&quot;)</span></span><br><span class="line"><span class="comment"># print(&quot;您好&quot;) //先选中，然后用Ctrl+/</span></span><br></pre></td></tr></table></figure></li>
-<li>变量<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 变量直接赋值</span></span><br><span class="line">msg=<span class="string">&quot;abc&quot;</span></span><br></pre></td></tr></table></figure></li>
-<li>input输入<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">msg=<span class="built_in">input</span>(<span class="string">&quot;请输入&quot;</span>)</span><br><span class="line"><span class="comment"># msg为变量名</span></span><br><span class="line"><span class="comment"># input括号里为输入提示信息</span></span><br></pre></td></tr></table></figure></li>
-<li>del删除<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">del</span>(msg)</span><br><span class="line"><span class="comment"># msg：删除的变量名</span></span><br></pre></td></tr></table></figure></li>
-<li>标识符规则</li>
-</ol>
-<ul>
-<li>由字母，数字，下划线组成</li>
-<li>开头不能是数字</li>
-<li>不能是Python关键字</li>
-</ul>
-<ol start="6">
-<li>数据类型</li>
-</ol>
-<ul>
-<li>str(字符串)</li>
-<li>Number(数字)<ul>
-<li>整数</li>
-<li>浮点数</li>
-<li>复数<code>msg=1+2j</code></li>
-</ul>
-</li>
-<li>bool(布尔值)</li>
-<li>None(空值)</li>
-<li>list(列表)</li>
-<li>tuple(元组)</li>
-<li>dict(字典)</li>
-<li>set(集合)<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#使用type获取数据类型</span></span><br><span class="line">msg=<span class="number">123</span></span><br><span class="line">print(<span class="built_in">type</span>(a))</span><br></pre></td></tr></table></figure></li>
-</ul>
-<ol start="7">
-<li>数据运算符的分类(与C语言一直的省略)<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 求幂 **</span></span><br><span class="line">print(<span class="number">2</span>**<span class="number">3</span>) <span class="comment"># 2的3次幂</span></span><br><span class="line"><span class="comment"># 取整 //</span></span><br><span class="line">print(<span class="number">12</span>//<span class="number">5</span>) <span class="comment"># 12对5取整</span></span><br></pre></td></tr></table></figure></li>
-<li>符合运算符(写法与C一致)<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=a+b</span><br><span class="line">等价于</span><br><span class="line">a+=b</span><br></pre></td></tr></table></figure></li>
-<li>关系运算符(与C一致)<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">== != &gt; &lt; &gt;= &lt;=</span><br></pre></td></tr></table></figure></li>
-<li>常用位运算符(将数字转化为二进制进行运算)<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&amp; <span class="comment"># 按位与</span></span><br><span class="line">| <span class="comment"># 按位或</span></span><br><span class="line">^ <span class="comment"># 按位异或</span></span><br><span class="line">~ <span class="comment"># 按位取反</span></span><br><span class="line">&lt;&lt; <span class="comment"># 左移位</span></span><br><span class="line">&gt;&gt; <span class="comment"># 右移位</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python运算符</title>
     <url>/2021/01/12/Python%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
     <content><![CDATA[<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><ol>
@@ -439,5 +384,71 @@
     <title>Python经典问题</title>
     <url>/2021/01/12/Python%E7%BB%8F%E5%85%B8%E9%97%AE%E9%A2%98/</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>Pycharm基本使用</title>
+    <url>/2021/01/08/Pycharm%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h2 id="Pycharm基本使用"><a href="#Pycharm基本使用" class="headerlink" title="Pycharm基本使用"></a>Pycharm基本使用</h2><ol>
+<li>双击shift键(或Ctrl+shift+A)，会弹出全局搜索窗口</li>
+<li>快速格式化代码 Ctrl+shift+L</li>
+<li>快速复制粘贴选中代码 Ctrl+D</li>
+<li>移动一行代码 Ctrl+shift+上下箭头</li>
+<li>光标定位到一行开头Fn+左箭头，定位到一行结尾Fn+右箭头</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python基本语法</title>
+    <url>/2021/01/08/Python%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="Python基本语法"><a href="#Python基本语法" class="headerlink" title="Python基本语法"></a>Python基本语法</h2><ol>
+<li>注释<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 单行注释</span></span><br><span class="line"><span class="comment"># ptint(&quot;Hello Python&quot;)  //用# 或ctrl+/</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 多行注释</span></span><br><span class="line"><span class="comment"># print(&quot;你好&quot;)</span></span><br><span class="line"><span class="comment"># print(&quot;您好&quot;) //先选中，然后用Ctrl+/</span></span><br></pre></td></tr></table></figure></li>
+<li>变量<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 变量直接赋值</span></span><br><span class="line">msg=<span class="string">&quot;abc&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li>input输入<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">msg=<span class="built_in">input</span>(<span class="string">&quot;请输入&quot;</span>)</span><br><span class="line"><span class="comment"># msg为变量名</span></span><br><span class="line"><span class="comment"># input括号里为输入提示信息</span></span><br></pre></td></tr></table></figure></li>
+<li>del删除<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">del</span>(msg)</span><br><span class="line"><span class="comment"># msg：删除的变量名</span></span><br></pre></td></tr></table></figure></li>
+<li>标识符规则</li>
+</ol>
+<ul>
+<li>由字母，数字，下划线组成</li>
+<li>开头不能是数字</li>
+<li>不能是Python关键字</li>
+</ul>
+<ol start="6">
+<li>数据类型</li>
+</ol>
+<ul>
+<li>str(字符串)</li>
+<li>Number(数字)<ul>
+<li>整数</li>
+<li>浮点数</li>
+<li>复数<code>msg=1+2j</code></li>
+</ul>
+</li>
+<li>bool(布尔值)</li>
+<li>None(空值)</li>
+<li>list(列表)</li>
+<li>tuple(元组)</li>
+<li>dict(字典)</li>
+<li>set(集合)<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#使用type获取数据类型</span></span><br><span class="line">msg=<span class="number">123</span></span><br><span class="line">print(<span class="built_in">type</span>(a))</span><br></pre></td></tr></table></figure></li>
+</ul>
+<ol start="7">
+<li>数据运算符的分类(与C语言一直的省略)<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 求幂 **</span></span><br><span class="line">print(<span class="number">2</span>**<span class="number">3</span>) <span class="comment"># 2的3次幂</span></span><br><span class="line"><span class="comment"># 取整 //</span></span><br><span class="line">print(<span class="number">12</span>//<span class="number">5</span>) <span class="comment"># 12对5取整</span></span><br></pre></td></tr></table></figure></li>
+<li>符合运算符(写法与C一致)<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=a+b</span><br><span class="line">等价于</span><br><span class="line">a+=b</span><br></pre></td></tr></table></figure></li>
+<li>关系运算符(与C一致)<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">== != &gt; &lt; &gt;= &lt;=</span><br></pre></td></tr></table></figure></li>
+<li>常用位运算符(将数字转化为二进制进行运算)<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&amp; <span class="comment"># 按位与</span></span><br><span class="line">| <span class="comment"># 按位或</span></span><br><span class="line">^ <span class="comment"># 按位异或</span></span><br><span class="line">~ <span class="comment"># 按位取反</span></span><br><span class="line">&lt;&lt; <span class="comment"># 左移位</span></span><br><span class="line">&gt;&gt; <span class="comment"># 右移位</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
   </entry>
 </search>

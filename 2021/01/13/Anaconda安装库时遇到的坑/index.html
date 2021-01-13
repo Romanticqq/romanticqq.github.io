@@ -24,21 +24,21 @@
     var CONFIG = {"hostname":"romanticqq.top","root":"/","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="种一棵树最好的时间是十年前,其次是现在!">
-<meta property="og:type" content="website">
-<meta property="og:title" content="关于">
-<meta property="og:url" content="https://romanticqq.top/about/index.html">
+  <meta name="description" content="注意要在安装库文件的目录下使用cmd，然后用命令安装 当安装完库成功后,import库发现不存在,可能是因为库的安装路径不在当前Python库的搜索路径内,所以没被找到.解决方法:(1)把库的路径加入搜索路径内;(2)当安装Anaconda使,自带了Python,因此删掉自己安装的Python后再重新安装库即可，这样就会自动安装在搜索目录下了(新手尽量只装一个Python)">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Anaconda安装库时遇到的坑">
+<meta property="og:url" content="https://romanticqq.top/2021/01/13/Anaconda%E5%AE%89%E8%A3%85%E5%BA%93%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/index.html">
 <meta property="og:site_name" content="RomanticQq">
-<meta property="og:description" content="种一棵树最好的时间是十年前,其次是现在!">
+<meta property="og:description" content="注意要在安装库文件的目录下使用cmd，然后用命令安装 当安装完库成功后,import库发现不存在,可能是因为库的安装路径不在当前Python库的搜索路径内,所以没被找到.解决方法:(1)把库的路径加入搜索路径内;(2)当安装Anaconda使,自带了Python,因此删掉自己安装的Python后再重新安装库即可，这样就会自动安装在搜索目录下了(新手尽量只装一个Python)">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-01-09T05:23:35.000Z">
-<meta property="article:modified_time" content="2021-01-09T08:15:26.430Z">
+<meta property="article:published_time" content="2021-01-13T05:37:47.000Z">
+<meta property="article:modified_time" content="2021-01-13T14:43:57.809Z">
 <meta property="article:author" content="RomanticQq">
-<meta property="article:tag" content="RomanticQq">
+<meta property="article:tag" content="机器学习">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://romanticqq.top/about/">
+<link rel="canonical" href="https://romanticqq.top/2021/01/13/Anaconda%E5%AE%89%E8%A3%85%E5%BA%93%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/">
 
 
 <script class="page-configurations">
@@ -46,13 +46,12 @@
   CONFIG.page = {
     sidebar: "",
     isHome : false,
-    isPost : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>关于 | RomanticQq
-</title>
+  <title>Anaconda安装库时遇到的坑 | RomanticQq</title>
   
 
 
@@ -299,47 +298,176 @@
 </noscript>
 
 
-    <div class="main-inner page posts-expand">
+    <div class="main-inner post posts-expand">
       
-  
-  
 
       
 
-    
-    
-    
-    <div class="post-block" lang="zh-CN">
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://romanticqq.top/2021/01/13/Anaconda%E5%AE%89%E8%A3%85%E5%BA%93%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="RomanticQq">
+      <meta itemprop="description" content="种一棵树最好的时间是十年前,其次是现在!">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RomanticQq">
+    </span>
       <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Anaconda安装库时遇到的坑
+        </h1>
 
-<h1 class="post-title" itemprop="name headline">关于
-</h1>
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
 
-<div class="post-meta-container">
+      <time title="创建时间：2021-01-13 13:37:47 / 修改时间：22:43:57" itemprop="dateCreated datePublished" datetime="2021-01-13T13:37:47+08:00">2021-01-13</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a>
+        </span>
+    </span>
+
   
-
+    <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span id="busuanzi_value_page_pv"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/01/13/Anaconda%E5%AE%89%E8%A3%85%E5%BA%93%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/01/13/Anaconda%E5%AE%89%E8%A3%85%E5%BA%93%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>187</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
 </div>
 
-</header>
+        </div>
+      </header>
 
-      
-      
-      
-      <div class="post-body">
-          
-      </div>
-      
-      
-      
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <ol>
+<li>注意要在安装库文件的目录下使用cmd，然后用命令安装</li>
+<li>当安装完库成功后,import库发现不存在,可能是因为库的安装路径不在当前Python库的搜索路径内,所以没被找到.<br>解决方法:<br>(1)把库的路径加入搜索路径内;<br>(2)当安装Anaconda使,自带了Python,因此删掉自己安装的Python后再重新安装库即可，这样就会自动安装在搜索目录下了(新手尽量只装一个Python)</li>
+</ol>
+
     </div>
-    
 
     
     
     
+
+    <footer class="post-footer">
+          <div class="reward-container">
+  <div></div>
+  <button onclick="document.querySelector('.post-reward').classList.toggle('active');">
+    赞赏
+  </button>
+  <div class="post-reward">
+      <div>
+        <img src="/images/wechatpay.png" alt="RomanticQq 微信">
+        <span>微信</span>
+      </div>
+      <div>
+        <img src="/images/alipay.png" alt="RomanticQq 支付宝">
+        <span>支付宝</span>
+      </div>
+
+  </div>
+</div>
+
+          
+
+<div class="post-copyright">
+<ul>
+  <li class="post-copyright-author">
+      <strong>本文作者： </strong>RomanticQq
+  </li>
+  <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="https://romanticqq.top/2021/01/13/Anaconda%E5%AE%89%E8%A3%85%E5%BA%93%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/" title="Anaconda安装库时遇到的坑">https://romanticqq.top/2021/01/13/Anaconda安装库时遇到的坑/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+          <div class="post-tags">
+              <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" rel="tag"><i class="fa fa-tag"></i> 机器学习</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/01/12/Python%E4%B8%AD%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/" rel="prev" title="Python中浅拷贝和深拷贝">
+                  <i class="fa fa-chevron-left"></i> Python中浅拷贝和深拷贝
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
 
 
       
+    <div class="comments" id="valine-comments"></div>
 
 <script>
   window.addEventListener('tabs:register', () => {
@@ -466,7 +594,7 @@ NexT.utils.loadComments('#valine-comments', () => {
   NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
     new Valine(Object.assign({"enable":true,"appId":"ORzagqYYRfQlmQ4SmiwKbGLQ-gzGzoHsz","appKey":"hcSjYLbTafwrerxKE9BLrn16","serverURLs":null,"placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":false,"comment_count":true,"recordIP":true,"enableQQ":true,"requiredFields":[]}, {
       el: '#valine-comments',
-      path: "/about/",
+      path: "/2021/01/13/Anaconda%E5%AE%89%E8%A3%85%E5%BA%93%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/",
       serverURLs: "https://orzagqyy.api.lncldglobal.com"
     }));
   }, window.Valine);

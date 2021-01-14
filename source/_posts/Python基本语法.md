@@ -1,12 +1,11 @@
 ---
-title: Python学习(1day)
+title: Python基本语法
 date: 2021-01-08 10:55:56
 tags:
     - Python
 categories: Python
 ---
-## Pycharm基本使用
-## Pycharm基本语法
+## Python基本语法
 1. 注释
 ```python
 # 单行注释
@@ -79,4 +78,20 @@ a+=b
 ~ # 按位取反
 << # 左移位
 >> # 右移位
+```
+11. print
+```python
+print(a,b,c); 
+# 可以打印一个或多个变量或字符串
+print(value1,value2,value3,,sep=' ',end='\n')
+# sep值用来设定输出时多个值之间的连接符，默认是空格
+# end值用来设定输出结束时的结束符，默认是换行
+# sep,end两者都是以键值对的形式出现
+```
+12. input
+```python
+msg=input("提示信息") 
+# input括号里保存的是提示信息
+# 输入的信息会保存在变量msg
+# 无论输入的是什么，msg的数据类型都为str
 ```

@@ -1,27 +1,12 @@
 ---
-title: Python学习(2day)
+title: Python中进制和数据类型转换
 date: 2021-01-09 22:02:28
 tags:
     - Python
 categories: Python
 ---
-1. ### print
-```python
-print(a,b,c); 
-# 可以打印一个或多个变量或字符串
-print(value1,value2,value3,,sep=' ',end='\n')
-# sep值用来设定输出时多个值之间的连接符，默认是空格
-# end值用来设定输出结束时的结束符，默认是换行
-# sep,end两者都是以键值对的形式出现
-```
-2. ### input
-```python
-msg=input("提示信息") 
-# input括号里保存的是提示信息
-# 输入的信息会保存在变量msg
-# 无论输入的是什么，msg的数据类型都为str
-```
-3. ### 二、八、十六进制转换
+
+1. ### 二、八、十六进制转换
 ```python
   二进制:前缀,0b;0b11;每个位最大不能超过1
   八进制:前缀,0o;0o17;每个位最大不能超过7

@@ -613,8 +613,8 @@ changyan:
 # For more information: https://valine.js.org, https://github.com/xCss/Valine
 valine:
   enable: true
-  appId: xNMoCPKoU65B9o0BLctVe85i-gzGzoHsz # Your leancloud application appid
-  appKey: d0xVq4jv0qePbR946C0ytdJ8 # Your leancloud application appkey
+  appId: ORzagqYYRfQlmQ4SmiwKbGLQ-gzGzoHsz
+  appKey: hcSjYLbTafwrerxKE9BLrn16
   serverURLs: # When the custom domain name is enabled, fill it in here
   placeholder: Just go go # Comment box placeholder
   avatar: mm # Gravatar style

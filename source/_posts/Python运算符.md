@@ -1,6 +1,6 @@
 ---
-title: Python学习(3day)
-date: 2021-01-10 10:54:42
+title: Python运算符
+date: 2021-01-12 12:48:58
 tags:
     - Python
 categories: Python
@@ -51,7 +51,7 @@ print('abc'<'b') # 结果为true,直接字符a,b相比得出结果
 print('abc'=='abc') # 结果为true
 在数字和字符串之间做==为true,做!=比较为false
 ```
-5. 逻辑运算符
+5. ### 逻辑运算符
 ```Python
 and:逻辑与
 or:逻辑或

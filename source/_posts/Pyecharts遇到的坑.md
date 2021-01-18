@@ -23,5 +23,5 @@ bar_1 = Bar("每天被领劵的数量",width=1500,height=600)
 ```python
 pip install pyecharts # 默认安装高版本
 pip uninstall pyecharts # 卸载pycharts(无论任何版本)
-pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pyecharts==0.5.10 # 安装0.5.10版本
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pyecharts==0.5.5 # 安装0.5.5
 ```

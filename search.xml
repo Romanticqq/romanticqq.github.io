@@ -158,7 +158,7 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
 <p>还有</p>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bar_1 = Bar(<span class="string">&quot;每天被领劵的数量&quot;</span>,width=<span class="number">1500</span>,height=<span class="number">600</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在0.5.x版本下就是正确的，在1.x版本下就是错误的</span></span><br></pre></td></tr></table></figure>
 <p>在用<code>pip</code>命令安装时默认安装的是高版本，下面是卸载<code>Pyecharts</code>的命令和安装低版本的命令</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install pyecharts <span class="comment"># 默认安装高版本</span></span><br><span class="line">pip uninstall pyecharts <span class="comment"># 卸载pycharts(无论任何版本)</span></span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pyecharts==<span class="number">0.5</span><span class="number">.10</span> <span class="comment"># 安装0.5.10版本</span></span><br></pre></td></tr></table></figure>]]></content>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install pyecharts <span class="comment"># 默认安装高版本</span></span><br><span class="line">pip uninstall pyecharts <span class="comment"># 卸载pycharts(无论任何版本)</span></span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pyecharts==<span class="number">0.5</span><span class="number">.5</span> <span class="comment"># 安装0.5.5</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>机器学习</category>
       </categories>

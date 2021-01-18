@@ -249,13 +249,13 @@
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">8</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -308,7 +308,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://romanticqq.top/2021/01/15/%E8%AE%B0%E4%B8%80%E4%BB%B6%E5%B0%8F%E4%BA%8B/">
+    <link itemprop="mainEntityOfPage" href="https://romanticqq.top/2021/01/18/Pyecharts%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -322,7 +322,7 @@
       <header class="post-header">
         <h2 class="post-title" itemprop="name headline">
           
-            <a href="/2021/01/15/%E8%AE%B0%E4%B8%80%E4%BB%B6%E5%B0%8F%E4%BA%8B/" class="post-title-link" itemprop="url">记一件小事</a>
+            <a href="/2021/01/18/Pyecharts%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/" class="post-title-link" itemprop="url">Pyecharts遇到的坑</a>
         </h2>
 
         <div class="post-meta-container">
@@ -334,7 +334,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-01-15 23:17:48 / 修改时间：23:20:08" itemprop="dateCreated datePublished" datetime="2021-01-15T23:17:48+08:00">2021-01-15</time>
+      <time title="创建时间：2021-01-18 15:33:01 / 修改时间：15:45:12" itemprop="dateCreated datePublished" datetime="2021-01-18T15:33:01+08:00">2021-01-18</time>
     </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
@@ -342,7 +342,7 @@
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E7%94%9F%E6%B4%BB%E5%B0%8F%E6%9D%82%E8%AE%B0/" itemprop="url" rel="index"><span itemprop="name">生活小杂记</span></a>
+          <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a>
         </span>
     </span>
 
@@ -355,8 +355,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2021/01/15/%E8%AE%B0%E4%B8%80%E4%BB%B6%E5%B0%8F%E4%BA%8B/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/01/15/%E8%AE%B0%E4%B8%80%E4%BB%B6%E5%B0%8F%E4%BA%8B/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/01/18/Pyecharts%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/01/18/Pyecharts%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -368,7 +368,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>10</span>
+      <span>458</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -386,15 +386,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-          小朋友，不要有太强的好奇心哦！
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/01/15/%E8%AE%B0%E4%B8%80%E4%BB%B6%E5%B0%8F%E4%BA%8B/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
+          <p>因为Pyecharts高版本不兼容低版本的问题，相同的语法在不同的版本就可能会出现一个能正常运行而一个出现报错的情况<br>常见的有导包时就有可能出现错误</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyecharts.charts <span class="keyword">import</span> Bar,Pie,Line <span class="comment"># 1.x版本的语法</span></span><br><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> Bar,Pie,Line <span class="comment"># 0.5.x版本的语法</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#若交换使用就会报错 </span></span><br></pre></td></tr></table></figure>
+<p>还有</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bar_1 = Bar(<span class="string">&quot;每天被领劵的数量&quot;</span>,width=<span class="number">1500</span>,height=<span class="number">600</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在0.5.x版本下就是正确的，在1.x版本下就是错误的</span></span><br></pre></td></tr></table></figure>
+<p>在用<code>pip</code>命令安装时默认安装的是高版本，下面是卸载<code>Pyecharts</code>的命令和安装低版本的命令</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install pyecharts <span class="comment"># 默认安装高版本</span></span><br><span class="line">pip uninstall pyecharts <span class="comment"># 卸载pycharts(无论任何版本)</span></span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pyecharts==<span class="number">0.5</span><span class="number">.10</span> <span class="comment"># 安装0.5.10版本</span></span><br></pre></td></tr></table></figure>
       
     </div>
 
@@ -654,10 +651,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-01-15 12:26:31 / 修改时间：23:07:19" itemprop="dateCreated datePublished" datetime="2021-01-15T12:26:31+08:00">2021-01-15</time>
+      <time title="创建时间：2021-01-15 12:26:31" itemprop="dateCreated datePublished" datetime="2021-01-15T12:26:31+08:00">2021-01-15</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-01-16 21:01:35" itemprop="dateModified" datetime="2021-01-16T21:01:35+08:00">2021-01-16</time>
+      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
@@ -738,7 +741,7 @@
 <ol start="3">
 <li><h4 id="同步和异步"><a href="#同步和异步" class="headerlink" title="同步和异步"></a>同步和异步</h4>&nbsp;&nbsp;&nbsp;&nbsp;同步:代码按照前后顺序一行一行的执行；<br>&nbsp;&nbsp;&nbsp;&nbsp;异步：同时执行多行代码；<br>&nbsp;&nbsp;&nbsp;&nbsp;注：异步代码总是在同步代码之后执行；</li>
 </ol>
-<p>&nbsp;&nbsp;&nbsp;&nbsp;现在的前后端交互采取前后端分离，我们会采用异步的JavaScript和XML或JSON格式来完成数据的局部刷新。因为它是异步的，所以不xuyao9等待整个页面的刷新，只需要发送一个异步请求，什么时候请求的内容过来了，什么时候刷新局部页面</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;现在的前后端交互采取前后端分离，我们会采用异步的JavaScript和XML或JSON格式来完成数据的局部刷新。因为它是异步的，所以不等待整需要个页面的刷新，只需要发送一个异步请求，什么时候请求的内容过来了，什么时候刷新局部页面</p>
 <ol start="4">
 <li><h4 id="Ajax介绍"><a href="#Ajax介绍" class="headerlink" title="Ajax介绍"></a>Ajax介绍</h4>&nbsp;&nbsp;&nbsp;&nbsp;传统的项目前后端不分离，用户触发一个http请求服务器，然后服务器收到之后再做出响应给用户，并且返回一个新的页面，也就是说交互都是通过页面刷新或页面跳转来实现的。</li>
 </ol>
@@ -1524,14 +1527,14 @@ client代码<figure class="highlight html"><table><tr><td class="gutter"><pre><s
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">33k</span>
+    <span title="站点总字数">34k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">30 分钟</span>
+    <span title="站点阅读时长">31 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">

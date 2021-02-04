@@ -12,11 +12,29 @@
       </tags>
   </entry>
   <entry>
-    <title>2015年程序设计复试真题</title>
+    <title>重邮程序设计复试真题(部分)</title>
     <url>/2021/02/04/2015%E5%B9%B4%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%A4%8D%E8%AF%95%E7%9C%9F%E9%A2%98/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<p>2015年：</p>
+<ol>
+<li>求num各数字之和；</li>
+<li>测试字符C在字符号串S中出现的次数；</li>
+<li>中国有句俗话叫“三天打鱼两天晒网”。某人1990年1月1日起开始“三天打鱼两天晒网”，问这个人在以后的某一天中是打鱼还是晒网</li>
+</ol>
+<p>2017年：</p>
+<ol>
+<li>选择分支结构，注意ceil函数</li>
+<li>汉诺塔问题</li>
+<li>字符串交换问题：字符串以A开头和以K结尾的单词进行交换</li>
+<li>百钱买百鸡问题：百鸡问题：鸡翁一值钱五，鸡母一值钱三，鸡雏三值钱一。百钱买百鸡，问鸡翁、鸡母、鸡雏各几何？</li>
+<li>最大约数辗转相除法；</li>
+<li>文件操作：将数据写入fname.txt中</li>
+<li>螺旋方阵</li>
+<li>求方程组近似根：弦截法</li>
+<li>斐波那契数列递归实现</li>
+</ol>
+]]></content>
       <categories>
-        <category>重邮复试</category>
+        <category>C语言</category>
       </categories>
       <tags>
         <tag>F021程序设计</tag>

@@ -1,17 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>03题目中重复的数字</title>
-    <url>/2021/01/13/03%E9%A2%98%E7%9B%AE%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%97/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>剑指offer</category>
-      </categories>
-      <tags>
-        <tag>剑指offer</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>重邮程序设计复试真题(部分)</title>
     <url>/2021/02/04/2015%E5%B9%B4%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%A4%8D%E8%AF%95%E7%9C%9F%E9%A2%98/</url>
     <content><![CDATA[<p>2015年：</p>
@@ -38,6 +27,18 @@
       </categories>
       <tags>
         <tag>F021程序设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C语言函数数组传值</title>
+    <url>/2021/01/13/C%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0%E6%95%B0%E7%BB%84%E4%BC%A0%E5%80%BC/</url>
+    <content><![CDATA[<p>C语言中,向函数传值的问题</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 方法一</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span>* number)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> number[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">	duplicate(number);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> *number)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,number[<span class="number">0</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//方法二</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> number[])</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> number[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">	duplicate(number);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> number[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,number[<span class="number">0</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>C语言</category>
+      </categories>
+      <tags>
+        <tag>C语言</tag>
       </tags>
   </entry>
   <entry>
@@ -166,18 +167,6 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>C语言函数数组传值</title>
-    <url>/2021/01/13/C%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0%E6%95%B0%E7%BB%84%E4%BC%A0%E5%80%BC/</url>
-    <content><![CDATA[<p>C语言中,向函数传值的问题</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 方法一</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span>* number)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> number[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">	duplicate(number);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> *number)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,number[<span class="number">0</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//方法二</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> number[])</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> number[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">	duplicate(number);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> number[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,number[<span class="number">0</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>C语言</category>
-      </categories>
-      <tags>
-        <tag>C语言</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Pycharm基本使用</title>
     <url>/2021/01/08/Pycharm%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h2 id="Pycharm基本使用"><a href="#Pycharm基本使用" class="headerlink" title="Pycharm基本使用"></a>Pycharm基本使用</h2><ol>
@@ -266,6 +255,22 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
+    <title>Python中进制和数据类型转换</title>
+    <url>/2021/01/09/Python%E4%B8%AD%E8%BF%9B%E5%88%B6%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</url>
+    <content><![CDATA[<ol>
+<li><h3 id="二、八、十六进制转换"><a href="#二、八、十六进制转换" class="headerlink" title="二、八、十六进制转换"></a>二、八、十六进制转换</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">  二进制:前缀,0b;<span class="number">0b11</span>;每个位最大不能超过<span class="number">1</span></span><br><span class="line">  八进制:前缀,0o;<span class="number">0o17</span>;每个位最大不能超过<span class="number">7</span></span><br><span class="line">十六进制:前缀,0x;<span class="number">0x1f</span>;每个位最大不能超过f</span><br><span class="line"><span class="comment"># 注：在python2中0o和0开始的数字都是8进制</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 手算转换</span></span><br><span class="line"><span class="number">2</span>进制转换为<span class="number">8</span>：从后向前<span class="number">3</span>位一组进行</span><br><span class="line"><span class="number">2</span>进制转换为<span class="number">16</span>：从后向前<span class="number">4</span>位一组进行</span><br><span class="line"><span class="number">2</span>,<span class="number">8</span>,<span class="number">16</span>进制转换成十进制，都是按照幂次，然后相加进行计算</span><br><span class="line"><span class="number">10</span>进制转换成<span class="number">2</span>进制：除留余数法</span><br><span class="line"></span><br><span class="line"><span class="comment"># 机算</span></span><br><span class="line">a=<span class="number">12</span> <span class="comment">#10进制数</span></span><br><span class="line"><span class="built_in">bin</span>(a) <span class="comment"># 将10进制数转换成2进制</span></span><br><span class="line"><span class="built_in">oct</span>(a) <span class="comment"># 将10进制数转换成8进制</span></span><br><span class="line"><span class="built_in">hex</span>(a) <span class="comment"># 将10进制数转换成16进制</span></span><br><span class="line">注：当a不等于数字时会报错</span><br></pre></td></tr></table></figure></li>
+<li>数据类型之间的转换<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#转换函数</span></span><br><span class="line">msg=<span class="built_in">int</span>(msg) </span><br><span class="line"><span class="comment"># 将不是int型的变量转换成int型的变量</span></span><br><span class="line"><span class="comment"># 其余类型写法相同，如float</span></span><br><span class="line"><span class="comment"># 当被转换的msg不是纯数字会转换失败，报错 </span></span><br><span class="line">msg=<span class="built_in">int</span>(x,y)</span><br><span class="line"><span class="comment"># 将字符串x,按照y进制转换成10进制数</span></span><br><span class="line">eg:</span><br><span class="line">msg=<span class="built_in">int</span>(<span class="string">&#x27;abc&#x27;</span>,<span class="number">16</span>) <span class="comment"># 将字符串&#x27;abc&#x27;按照16进制数转换成10进制数</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 转换原因</span></span><br><span class="line">不同的数据类型有时候不能进行运算</span><br><span class="line"></span><br><span class="line"><span class="comment"># True False</span></span><br><span class="line">在进行数据运算时,<span class="literal">True</span>=<span class="number">1</span>,<span class="literal">False</span>=<span class="number">0</span>;</span><br><span class="line">eg:</span><br><span class="line">print(<span class="literal">True</span> + <span class="number">1</span>)  <span class="comment"># 结果为2</span></span><br></pre></td></tr></table></figure></li>
+<li>转换成布尔值<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在数字里，只有0会被转换成False</span></span><br><span class="line"><span class="comment"># 在字符串里只有空字符串会被转换成False,空格串也会被转换成True</span></span><br><span class="line"><span class="comment"># None会被转换为False,eg:bool(None),打印出来是False</span></span><br><span class="line"><span class="comment"># 空数据类型会被转换成False,如[],(),&#123;&#125;等</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python分支语句和循环语句</title>
     <url>/2021/01/10/Python%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5%E5%92%8C%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/</url>
     <content><![CDATA[<h2 id="分支语句"><a href="#分支语句" class="headerlink" title="分支语句"></a>分支语句</h2><ol>
@@ -283,37 +288,6 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
 <li><h3 id="循环语句注意事项"><a href="#循环语句注意事项" class="headerlink" title="循环语句注意事项"></a>循环语句注意事项</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> Python中没有i++或i--,只能i+=<span class="number">1</span></span><br><span class="line"><span class="number">2.</span> 常用<span class="built_in">range</span>内置类生成一个整数区间进行循环</span><br><span class="line"><span class="number">3.</span> <span class="built_in">range</span>生成的整数区间以前一个数开始，以后一个数的前一个整数结束</span><br><span class="line"><span class="number">4.</span> <span class="keyword">in</span>后面是一个可迭代的对象,目前接触到的接迭代的对象:字符串,列表,字典,元组,集合,<span class="built_in">range</span></span><br><span class="line"><span class="number">5.</span> Python中没有do...<span class="keyword">while</span>...</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python中进制和数据类型转换</title>
-    <url>/2021/01/09/Python%E4%B8%AD%E8%BF%9B%E5%88%B6%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</url>
-    <content><![CDATA[<ol>
-<li><h3 id="二、八、十六进制转换"><a href="#二、八、十六进制转换" class="headerlink" title="二、八、十六进制转换"></a>二、八、十六进制转换</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">  二进制:前缀,0b;<span class="number">0b11</span>;每个位最大不能超过<span class="number">1</span></span><br><span class="line">  八进制:前缀,0o;<span class="number">0o17</span>;每个位最大不能超过<span class="number">7</span></span><br><span class="line">十六进制:前缀,0x;<span class="number">0x1f</span>;每个位最大不能超过f</span><br><span class="line"><span class="comment"># 注：在python2中0o和0开始的数字都是8进制</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 手算转换</span></span><br><span class="line"><span class="number">2</span>进制转换为<span class="number">8</span>：从后向前<span class="number">3</span>位一组进行</span><br><span class="line"><span class="number">2</span>进制转换为<span class="number">16</span>：从后向前<span class="number">4</span>位一组进行</span><br><span class="line"><span class="number">2</span>,<span class="number">8</span>,<span class="number">16</span>进制转换成十进制，都是按照幂次，然后相加进行计算</span><br><span class="line"><span class="number">10</span>进制转换成<span class="number">2</span>进制：除留余数法</span><br><span class="line"></span><br><span class="line"><span class="comment"># 机算</span></span><br><span class="line">a=<span class="number">12</span> <span class="comment">#10进制数</span></span><br><span class="line"><span class="built_in">bin</span>(a) <span class="comment"># 将10进制数转换成2进制</span></span><br><span class="line"><span class="built_in">oct</span>(a) <span class="comment"># 将10进制数转换成8进制</span></span><br><span class="line"><span class="built_in">hex</span>(a) <span class="comment"># 将10进制数转换成16进制</span></span><br><span class="line">注：当a不等于数字时会报错</span><br></pre></td></tr></table></figure></li>
-<li>数据类型之间的转换<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#转换函数</span></span><br><span class="line">msg=<span class="built_in">int</span>(msg) </span><br><span class="line"><span class="comment"># 将不是int型的变量转换成int型的变量</span></span><br><span class="line"><span class="comment"># 其余类型写法相同，如float</span></span><br><span class="line"><span class="comment"># 当被转换的msg不是纯数字会转换失败，报错 </span></span><br><span class="line">msg=<span class="built_in">int</span>(x,y)</span><br><span class="line"><span class="comment"># 将字符串x,按照y进制转换成10进制数</span></span><br><span class="line">eg:</span><br><span class="line">msg=<span class="built_in">int</span>(<span class="string">&#x27;abc&#x27;</span>,<span class="number">16</span>) <span class="comment"># 将字符串&#x27;abc&#x27;按照16进制数转换成10进制数</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 转换原因</span></span><br><span class="line">不同的数据类型有时候不能进行运算</span><br><span class="line"></span><br><span class="line"><span class="comment"># True False</span></span><br><span class="line">在进行数据运算时,<span class="literal">True</span>=<span class="number">1</span>,<span class="literal">False</span>=<span class="number">0</span>;</span><br><span class="line">eg:</span><br><span class="line">print(<span class="literal">True</span> + <span class="number">1</span>)  <span class="comment"># 结果为2</span></span><br></pre></td></tr></table></figure></li>
-<li>转换成布尔值<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在数字里，只有0会被转换成False</span></span><br><span class="line"><span class="comment"># 在字符串里只有空字符串会被转换成False,空格串也会被转换成True</span></span><br><span class="line"><span class="comment"># None会被转换为False,eg:bool(None),打印出来是False</span></span><br><span class="line"><span class="comment"># 空数据类型会被转换成False,如[],(),&#123;&#125;等</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python可变数据类型和不可变数据类型</title>
-    <url>/2021/01/12/Python%E5%8F%AF%E5%8F%98%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E4%B8%8D%E5%8F%AF%E5%8F%98%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
-    <content><![CDATA[<p>Python中的数据分为可变数据类型和不可变数据类型</p>
-<h3 id="可变数据类型"><a href="#可变数据类型" class="headerlink" title="可变数据类型"></a>可变数据类型</h3><p>定义：如果修改值，内存地址不会发生变化<br>可变数据类型:列表,字典,集合</p>
-<h3 id="不可变数据类型"><a href="#不可变数据类型" class="headerlink" title="不可变数据类型"></a>不可变数据类型</h3><p>定义：如果修改值，内存地址会发生变化<br>可变数据类型:字符串,数字,元组</p>
-<h3 id="看图理解"><a href="#看图理解" class="headerlink" title="看图理解"></a>看图理解</h3><p><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111164602.png"><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111165444.png"></p>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -364,6 +338,21 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
 <li>print<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(a,b,c); </span><br><span class="line"><span class="comment"># 可以打印一个或多个变量或字符串</span></span><br><span class="line">print(value1,value2,value3,,sep=<span class="string">&#x27; &#x27;</span>,end=<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line"><span class="comment"># sep值用来设定输出时多个值之间的连接符，默认是空格</span></span><br><span class="line"><span class="comment"># end值用来设定输出结束时的结束符，默认是换行</span></span><br><span class="line"><span class="comment"># sep,end两者都是以键值对的形式出现</span></span><br></pre></td></tr></table></figure></li>
 <li>input<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">msg=<span class="built_in">input</span>(<span class="string">&quot;提示信息&quot;</span>) </span><br><span class="line"><span class="comment"># input括号里保存的是提示信息</span></span><br><span class="line"><span class="comment"># 输入的信息会保存在变量msg</span></span><br><span class="line"><span class="comment"># 无论输入的是什么，msg的数据类型都为str</span></span><br></pre></td></tr></table></figure></li>
 </ol>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python可变数据类型和不可变数据类型</title>
+    <url>/2021/01/12/Python%E5%8F%AF%E5%8F%98%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E4%B8%8D%E5%8F%AF%E5%8F%98%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+    <content><![CDATA[<p>Python中的数据分为可变数据类型和不可变数据类型</p>
+<h3 id="可变数据类型"><a href="#可变数据类型" class="headerlink" title="可变数据类型"></a>可变数据类型</h3><p>定义：如果修改值，内存地址不会发生变化<br>可变数据类型:列表,字典,集合</p>
+<h3 id="不可变数据类型"><a href="#不可变数据类型" class="headerlink" title="不可变数据类型"></a>不可变数据类型</h3><p>定义：如果修改值，内存地址会发生变化<br>可变数据类型:字符串,数字,元组</p>
+<h3 id="看图理解"><a href="#看图理解" class="headerlink" title="看图理解"></a>看图理解</h3><p><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111164602.png"><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111165444.png"></p>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -434,6 +423,29 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
+    <title>hexo备份与恢复</title>
+    <url>/2021/01/04/hexo%E5%A4%87%E4%BB%BD%E4%B8%8E%E6%81%A2%E5%A4%8D/</url>
+    <content><![CDATA[<h2 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h2><ol>
+<li>在github的博客仓库创建新的分支<strong>backup</strong></li>
+<li>打开git Bash Here，输入 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-git-backup --save</span><br></pre></td></tr></table></figure></li>
+<li>添加提交设置：打开blog/_config.yml在最后添加<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">backup:</span><br><span class="line">type: git</span><br><span class="line">repository:</span><br><span class="line">github: git@github.com:Romanticqq&#x2F;romanticqq.github.io.git,backup(提交的github地址,分支名)</span><br></pre></td></tr></table></figure></li>
+<li>当要对代码备份时，执行<code>hexo d</code>即备份成功</li>
+</ol>
+<h2 id="恢复"><a href="#恢复" class="headerlink" title="恢复"></a>恢复</h2><ol>
+<li>把github的博客仓库<strong>backup</strong>分支的内容下载到本地</li>
+<li>依次执行下列命令 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git</span><br></pre></td></tr></table></figure></li>
+<li>本地文件恢复，<code>hexo s</code>开启本地服务，在浏览器输入<code>http://localhost:4000</code>测试是否正常</li>
+</ol>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo+PicGo+gitee图床</title>
     <url>/2021/01/05/hexo-PicGo-gitee%E5%9B%BE%E5%BA%8A/</url>
     <content><![CDATA[<p><strong>前言</strong>：我尝试了好几种床图，不是在电脑端加载不出来，就是有各种各样的限制，最后找到了gitee，因为服务器在国内，访问速度也是比较快，空间也没有限制，算是比较理想的一种吧。一开始我用vscode+PicGo插件，等到快成的时候，图片是上传上去了，但是加载不出来，我尝试了<code>sm.ms</code>和<code>github</code>，最后抛弃了<code>vsCode+PicGo</code>插件，选择了<code>PicGo客户端和gitee</code>。</p>
@@ -465,19 +477,21 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>hexo备份与恢复</title>
-    <url>/2021/01/04/hexo%E5%A4%87%E4%BB%BD%E4%B8%8E%E6%81%A2%E5%A4%8D/</url>
-    <content><![CDATA[<h2 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h2><ol>
-<li>在github的博客仓库创建新的分支<strong>backup</strong></li>
-<li>打开git Bash Here，输入 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-git-backup --save</span><br></pre></td></tr></table></figure></li>
-<li>添加提交设置：打开blog/_config.yml在最后添加<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">backup:</span><br><span class="line">type: git</span><br><span class="line">repository:</span><br><span class="line">github: git@github.com:Romanticqq&#x2F;romanticqq.github.io.git,backup(提交的github地址,分支名)</span><br></pre></td></tr></table></figure></li>
-<li>当要对代码备份时，执行<code>hexo d</code>即备份成功</li>
+    <title>hexo插入图片</title>
+    <url>/2021/01/05/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</url>
+    <content><![CDATA[<h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><ol>
+<li>在blog的本地文件的根目录中打开git Bash，然后执行<br><code>    npm install hexo-asset-image --save</code></li>
+<li>打开blog根目录下的配置文件_config.yml，修改<br><code>post_asset_folder: true  //由false改为true</code><br>此时，当执行<code>hexo n 文章名</code>的时候，会在_post目录下新建同名的一个文件夹和一个后缀名为<code>.md</code>的文件<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105173654.png"><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105173920.png"></li>
+<li>打开<code>/node_modules/hexo-asset-image/index.js</code> 用下面代码替换<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#39;use strict&#39;;</span><br><span class="line">var cheerio &#x3D; require(&#39;cheerio&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; http:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;14480345&#x2F;how-to-get-the-nth-occurrence-in-a-string</span><br><span class="line">function getPosition(str, m, i) &#123;</span><br><span class="line">  return str.split(m, i).join(m).length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var version &#x3D; String(hexo.version).split(&#39;.&#39;);</span><br><span class="line">hexo.extend.filter.register(&#39;after_post_render&#39;, function(data)&#123;</span><br><span class="line">  var config &#x3D; hexo.config;</span><br><span class="line">  if(config.post_asset_folder)&#123;</span><br><span class="line">        var link &#x3D; data.permalink;</span><br><span class="line">    if(version.length &gt; 0 &amp;&amp; Number(version[0]) &#x3D;&#x3D; 3)</span><br><span class="line">       var beginPos &#x3D; getPosition(link, &#39;&#x2F;&#39;, 1) + 1;</span><br><span class="line">    else</span><br><span class="line">       var beginPos &#x3D; getPosition(link, &#39;&#x2F;&#39;, 3) + 1;</span><br><span class="line">    &#x2F;&#x2F; In hexo 3.1.1, the permalink of &quot;about&quot; page is like &quot;...&#x2F;about&#x2F;index.html&quot;.</span><br><span class="line">    var endPos &#x3D; link.lastIndexOf(&#39;&#x2F;&#39;) + 1;</span><br><span class="line">    link &#x3D; link.substring(beginPos, endPos);</span><br><span class="line"></span><br><span class="line">    var toprocess &#x3D; [&#39;excerpt&#39;, &#39;more&#39;, &#39;content&#39;];</span><br><span class="line">    for(var i &#x3D; 0; i &lt; toprocess.length; i++)&#123;</span><br><span class="line">      var key &#x3D; toprocess[i];</span><br><span class="line"> </span><br><span class="line">      var $ &#x3D; cheerio.load(data[key], &#123;</span><br><span class="line">        ignoreWhitespace: false,</span><br><span class="line">        xmlMode: false,</span><br><span class="line">        lowerCaseTags: false,</span><br><span class="line">        decodeEntities: false</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      $(&#39;img&#39;).each(function()&#123;</span><br><span class="line">        if ($(this).attr(&#39;src&#39;))&#123;</span><br><span class="line">            &#x2F;&#x2F; For windows style path, we replace &#39;\&#39; to &#39;&#x2F;&#39;.</span><br><span class="line">            var src &#x3D; $(this).attr(&#39;src&#39;).replace(&#39;\\&#39;, &#39;&#x2F;&#39;);</span><br><span class="line">            if(!&#x2F;http[s]*.*|\&#x2F;\&#x2F;.*&#x2F;.test(src) &amp;&amp;</span><br><span class="line">               !&#x2F;^\s*\&#x2F;&#x2F;.test(src)) &#123;</span><br><span class="line">              &#x2F;&#x2F; For &quot;about&quot; page, the first part of &quot;src&quot; can&#39;t be removed.</span><br><span class="line">              &#x2F;&#x2F; In addition, to support multi-level local directory.</span><br><span class="line">              var linkArray &#x3D; link.split(&#39;&#x2F;&#39;).filter(function(elem)&#123;</span><br><span class="line">                return elem !&#x3D; &#39;&#39;;</span><br><span class="line">              &#125;);</span><br><span class="line">              var srcArray &#x3D; src.split(&#39;&#x2F;&#39;).filter(function(elem)&#123;</span><br><span class="line">                return elem !&#x3D; &#39;&#39; &amp;&amp; elem !&#x3D; &#39;.&#39;;</span><br><span class="line">              &#125;);</span><br><span class="line">              if(srcArray.length &gt; 1)</span><br><span class="line">                srcArray.shift();</span><br><span class="line">              src &#x3D; srcArray.join(&#39;&#x2F;&#39;);</span><br><span class="line">              $(this).attr(&#39;src&#39;, config.root + link + src);</span><br><span class="line">              console.info&amp;&amp;console.info(&quot;update link as:--&gt;&quot;+config.root + link + src);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            console.info&amp;&amp;console.info(&quot;no src attr, skipped...&quot;);</span><br><span class="line">            console.info&amp;&amp;console.info($(this));</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      data[key] &#x3D; $.html();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+<li>把自己想用的图片放在新建的文件夹(文章名的文件夹)中，在<code>test.md</code>中引用是<code>![](图片的文件名)</code><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105183827.png"></li>
 </ol>
-<h2 id="恢复"><a href="#恢复" class="headerlink" title="恢复"></a>恢复</h2><ol>
-<li>把github的博客仓库<strong>backup</strong>分支的内容下载到本地</li>
-<li>依次执行下列命令 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git</span><br></pre></td></tr></table></figure></li>
-<li>本地文件恢复，<code>hexo s</code>开启本地服务，在浏览器输入<code>http://localhost:4000</code>测试是否正常</li>
+<h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><ol>
+<li>在<code>\blog\source</code>目录下新建<code>image</code>文件夹<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105184557.png"></li>
+<li>把想要插入的图片都放入<code>image</code>文件夹下</li>
+<li>在插入图片的位置引用<code>![](/image/图片名)</code>即可</li>
 </ol>
+<p><strong>注</strong>：按照这种方式插入可能会在本地图片加载不出来，上传后就可以加载出来了；若上传后还加载不出来，检查blog根目录下的配置文件<code>_config.yml</code>的<code>post_asset_folder:</code>是否为<code>false</code></p>
+<h4 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h4><p>用图床实现插入图片，也是最推荐的一种，具体见<a href="https://romanticqq.top/2021/01/05/hexo-PicGo-gitee%E5%9B%BE%E5%BA%8A/">hexo+PicGo+gitee图床</a></p>
 ]]></content>
       <categories>
         <category>hexo</category>
@@ -485,6 +499,7 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       <tags>
         <tag>hexo</tag>
         <tag>next</tag>
+        <tag>图床</tag>
       </tags>
   </entry>
   <entry>
@@ -508,69 +523,14 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>hexo插入图片</title>
-    <url>/2021/01/05/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</url>
-    <content><![CDATA[<h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><ol>
-<li>在blog的本地文件的根目录中打开git Bash，然后执行<br><code>    npm install hexo-asset-image --save</code></li>
-<li>打开blog根目录下的配置文件_config.yml，修改<br><code>post_asset_folder: true  //由false改为true</code><br>此时，当执行<code>hexo n 文章名</code>的时候，会在_post目录下新建同名的一个文件夹和一个后缀名为<code>.md</code>的文件<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105173654.png"><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105173920.png"></li>
-<li>打开<code>/node_modules/hexo-asset-image/index.js</code> 用下面代码替换<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#39;use strict&#39;;</span><br><span class="line">var cheerio &#x3D; require(&#39;cheerio&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; http:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;14480345&#x2F;how-to-get-the-nth-occurrence-in-a-string</span><br><span class="line">function getPosition(str, m, i) &#123;</span><br><span class="line">  return str.split(m, i).join(m).length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var version &#x3D; String(hexo.version).split(&#39;.&#39;);</span><br><span class="line">hexo.extend.filter.register(&#39;after_post_render&#39;, function(data)&#123;</span><br><span class="line">  var config &#x3D; hexo.config;</span><br><span class="line">  if(config.post_asset_folder)&#123;</span><br><span class="line">        var link &#x3D; data.permalink;</span><br><span class="line">    if(version.length &gt; 0 &amp;&amp; Number(version[0]) &#x3D;&#x3D; 3)</span><br><span class="line">       var beginPos &#x3D; getPosition(link, &#39;&#x2F;&#39;, 1) + 1;</span><br><span class="line">    else</span><br><span class="line">       var beginPos &#x3D; getPosition(link, &#39;&#x2F;&#39;, 3) + 1;</span><br><span class="line">    &#x2F;&#x2F; In hexo 3.1.1, the permalink of &quot;about&quot; page is like &quot;...&#x2F;about&#x2F;index.html&quot;.</span><br><span class="line">    var endPos &#x3D; link.lastIndexOf(&#39;&#x2F;&#39;) + 1;</span><br><span class="line">    link &#x3D; link.substring(beginPos, endPos);</span><br><span class="line"></span><br><span class="line">    var toprocess &#x3D; [&#39;excerpt&#39;, &#39;more&#39;, &#39;content&#39;];</span><br><span class="line">    for(var i &#x3D; 0; i &lt; toprocess.length; i++)&#123;</span><br><span class="line">      var key &#x3D; toprocess[i];</span><br><span class="line"> </span><br><span class="line">      var $ &#x3D; cheerio.load(data[key], &#123;</span><br><span class="line">        ignoreWhitespace: false,</span><br><span class="line">        xmlMode: false,</span><br><span class="line">        lowerCaseTags: false,</span><br><span class="line">        decodeEntities: false</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      $(&#39;img&#39;).each(function()&#123;</span><br><span class="line">        if ($(this).attr(&#39;src&#39;))&#123;</span><br><span class="line">            &#x2F;&#x2F; For windows style path, we replace &#39;\&#39; to &#39;&#x2F;&#39;.</span><br><span class="line">            var src &#x3D; $(this).attr(&#39;src&#39;).replace(&#39;\\&#39;, &#39;&#x2F;&#39;);</span><br><span class="line">            if(!&#x2F;http[s]*.*|\&#x2F;\&#x2F;.*&#x2F;.test(src) &amp;&amp;</span><br><span class="line">               !&#x2F;^\s*\&#x2F;&#x2F;.test(src)) &#123;</span><br><span class="line">              &#x2F;&#x2F; For &quot;about&quot; page, the first part of &quot;src&quot; can&#39;t be removed.</span><br><span class="line">              &#x2F;&#x2F; In addition, to support multi-level local directory.</span><br><span class="line">              var linkArray &#x3D; link.split(&#39;&#x2F;&#39;).filter(function(elem)&#123;</span><br><span class="line">                return elem !&#x3D; &#39;&#39;;</span><br><span class="line">              &#125;);</span><br><span class="line">              var srcArray &#x3D; src.split(&#39;&#x2F;&#39;).filter(function(elem)&#123;</span><br><span class="line">                return elem !&#x3D; &#39;&#39; &amp;&amp; elem !&#x3D; &#39;.&#39;;</span><br><span class="line">              &#125;);</span><br><span class="line">              if(srcArray.length &gt; 1)</span><br><span class="line">                srcArray.shift();</span><br><span class="line">              src &#x3D; srcArray.join(&#39;&#x2F;&#39;);</span><br><span class="line">              $(this).attr(&#39;src&#39;, config.root + link + src);</span><br><span class="line">              console.info&amp;&amp;console.info(&quot;update link as:--&gt;&quot;+config.root + link + src);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            console.info&amp;&amp;console.info(&quot;no src attr, skipped...&quot;);</span><br><span class="line">            console.info&amp;&amp;console.info($(this));</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      data[key] &#x3D; $.html();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
-<li>把自己想用的图片放在新建的文件夹(文章名的文件夹)中，在<code>test.md</code>中引用是<code>![](图片的文件名)</code><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105183827.png"></li>
-</ol>
-<h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><ol>
-<li>在<code>\blog\source</code>目录下新建<code>image</code>文件夹<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105184557.png"></li>
-<li>把想要插入的图片都放入<code>image</code>文件夹下</li>
-<li>在插入图片的位置引用<code>![](/image/图片名)</code>即可</li>
-</ol>
-<p><strong>注</strong>：按照这种方式插入可能会在本地图片加载不出来，上传后就可以加载出来了；若上传后还加载不出来，检查blog根目录下的配置文件<code>_config.yml</code>的<code>post_asset_folder:</code>是否为<code>false</code></p>
-<h4 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h4><p>用图床实现插入图片，也是最推荐的一种，具体见<a href="https://romanticqq.top/2021/01/05/hexo-PicGo-gitee%E5%9B%BE%E5%BA%8A/">hexo+PicGo+gitee图床</a></p>
-]]></content>
+    <title>js文件的写法</title>
+    <url>/2021/03/09/js%E6%96%87%E4%BB%B6%E7%9A%84%E5%86%99%E6%B3%95/</url>
+    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">owner</span>)</span>&#123;</span><br><span class="line">	owner.btn=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		alert(<span class="string">&quot;aaa&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;(<span class="built_in">window</span>.test=&#123;&#125;)) <span class="comment">//test是js的文件名</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>hexo</category>
+        <category>前端</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
-        <tag>图床</tag>
-        <tag>next</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>搭建hexo个人博客</title>
-    <url>/2021/01/03/%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
-    <content><![CDATA[<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ol>
-<li>下载<a href="https://nodejs.org/en/">node.js</a></li>
-<li>下载<a href="https://git-scm.com/downloads">git</a></li>
-<li>配置环境变量<ol>
-<li>在node.js的安装目录下创建的创建两个文件夹，分别为node_global和node_cache</li>
-<li>配置：此电脑/属性/高级系统设置/环境变量,先找到用户环境变量Path，然后点击编辑，新建，把node_global的绝对路径添加上去，确定</li>
-<li>然后找到系统环境变量的Path,点击编辑、新建，把nodejs的安装目录的绝对路径添加上去 </li>
-</ol>
-</li>
-<li>更换node.js的源<ol>
-<li>设置淘宝镜像源<br><code>npm config set registry https://registry.npm.taobao.org</code></li>
-<li>查看使用的镜像源<br><code>npm config get registry</code></li>
-<li>安装淘宝镜像源<br><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></li>
-</ol>
-<strong>注</strong>：可以更改也可以不更改，更换成国内的源后下载速度会变快，更改后以后执行npm命令要换成cnpm</li>
-</ol>
-<h2 id="在本地搭建hexo"><a href="#在本地搭建hexo" class="headerlink" title="在本地搭建hexo"></a>在本地搭建hexo</h2><ol>
-<li>在本地的任何一个磁盘创建一个文件夹blog(名字随意起)，为本地存储博客的文件夹</li>
-<li>依次执行下列代码<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure></li>
-<li>访问<code>http://localhost:4000</code></li>
-</ol>
-<h2 id="选择自己喜欢的主题"><a href="#选择自己喜欢的主题" class="headerlink" title="选择自己喜欢的主题"></a>选择自己喜欢的主题</h2><ol>
-<li>打开<a href="https://hexo.io/themes/">hexo主题</a>官网，选择自己喜欢的主题下载</li>
-<li>下载完成后放在博客本地的文件夹里面，路径如：F:\blog\themes</li>
-<li>修改配置文件F:\blog_config.yml<br>搜索：<strong>theme</strong>关键字<br>修改theme后的主题名，例如<br><code>theme: next</code>(切记：冒号和next之间有一个空格)</li>
-<li>再次访问<code>http://localhost:4000</code>，看主题是否发生了变化,若主题改变了则说明主题修改成功了。</li>
-<li>此时，博客本地搭建的已经成功了！</li>
-</ol>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>next</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -616,15 +576,43 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>解决innerHTML不能解析数据</title>
-    <url>/2021/01/15/%E8%A7%A3%E5%86%B3innerHTML%E4%B8%8D%E8%83%BD%E8%A7%A3%E6%9E%90%E6%95%B0%E6%8D%AE/</url>
-    <content><![CDATA[<p>当使用<code>document.(&#39;div&#39;).innerHTML=`` </code>向页面追加内容时可能会出现变量不解析的情况。<br>正确姿势：<code>=</code>后面是<code>``</code>,而不是单引号或双引号,只有<code>``</code>才能解析。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">document.querySelector(&#x27;div&#x27;).innerHTML=`<span class="tag">&lt;<span class="name">h2</span>&gt;</span>编号：$&#123;resp.id&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span>`	</span><br></pre></td></tr></table></figure>]]></content>
+    <title>搭建hexo个人博客</title>
+    <url>/2021/01/03/%E6%90%AD%E5%BB%BAhexo%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</url>
+    <content><![CDATA[<h2 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h2><ol>
+<li>下载<a href="https://nodejs.org/en/">node.js</a></li>
+<li>下载<a href="https://git-scm.com/downloads">git</a></li>
+<li>配置环境变量<ol>
+<li>在node.js的安装目录下创建的创建两个文件夹，分别为node_global和node_cache</li>
+<li>配置：此电脑/属性/高级系统设置/环境变量,先找到用户环境变量Path，然后点击编辑，新建，把node_global的绝对路径添加上去，确定</li>
+<li>然后找到系统环境变量的Path,点击编辑、新建，把nodejs的安装目录的绝对路径添加上去 </li>
+</ol>
+</li>
+<li>更换node.js的源<ol>
+<li>设置淘宝镜像源<br><code>npm config set registry https://registry.npm.taobao.org</code></li>
+<li>查看使用的镜像源<br><code>npm config get registry</code></li>
+<li>安装淘宝镜像源<br><code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></li>
+</ol>
+<strong>注</strong>：可以更改也可以不更改，更换成国内的源后下载速度会变快，更改后以后执行npm命令要换成cnpm</li>
+</ol>
+<h2 id="在本地搭建hexo"><a href="#在本地搭建hexo" class="headerlink" title="在本地搭建hexo"></a>在本地搭建hexo</h2><ol>
+<li>在本地的任何一个磁盘创建一个文件夹blog(名字随意起)，为本地存储博客的文件夹</li>
+<li>依次执行下列代码<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure></li>
+<li>访问<code>http://localhost:4000</code></li>
+</ol>
+<h2 id="选择自己喜欢的主题"><a href="#选择自己喜欢的主题" class="headerlink" title="选择自己喜欢的主题"></a>选择自己喜欢的主题</h2><ol>
+<li>打开<a href="https://hexo.io/themes/">hexo主题</a>官网，选择自己喜欢的主题下载</li>
+<li>下载完成后放在博客本地的文件夹里面，路径如：F:\blog\themes</li>
+<li>修改配置文件F:\blog_config.yml<br>搜索：<strong>theme</strong>关键字<br>修改theme后的主题名，例如<br><code>theme: next</code>(切记：冒号和next之间有一个空格)</li>
+<li>再次访问<code>http://localhost:4000</code>，看主题是否发生了变化,若主题改变了则说明主题修改成功了。</li>
+<li>此时，博客本地搭建的已经成功了！</li>
+</ol>
+]]></content>
       <categories>
-        <category>前端</category>
+        <category>hexo</category>
       </categories>
       <tags>
-        <tag>前端</tag>
+        <tag>hexo</tag>
+        <tag>next</tag>
       </tags>
   </entry>
   <entry>
@@ -640,25 +628,15 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>记一件小事</title>
-    <url>/2021/01/15/%E8%AE%B0%E4%B8%80%E4%BB%B6%E5%B0%8F%E4%BA%8B/</url>
-    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="Oh, this is an invalid password. Check and try again, please." data-whm="OOPS, these decrypted content may changed, but you can still have a look.">
-  <script id="hbeData" type="hbeData" data-hmacdigest="6e40ebbb62661a017787ac88c56fc1a7dd4a45242a6e078092286fe1a3ec3f2e">d5484afaed7e46d78b0f5f89be19c3a0ff611584d8ce808e33873c40b2d967ec6241bf61f730332fb3ae2b50f8d7833a86ccd088a8d6f7f0cc20a58c8c80df823cba08a8ecb357097d705064ed35e6ebfa11138ea39c34533e63b8fc15e33bb00164660e766b9c7fba4fbcca56bbb8d15c7c358c7ae684ea3bb7286250cccb0241ac5863bdb8d82bf677564305c55e8dfbf2ba5a332f063f58397c06f1b240a96b6f7b022b017f821fdf1bcb2bf93a5f8254d88e3f7acf0de5fc5b3c60d231ed09227facfd271df4f0739f089b664800</script>
-  <div class="hbe hbe-content">
-    <div class="hbe hbe-input hbe-input-default">
-      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
-      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
-        <span class="hbe hbe-input-label-content hbe-input-label-content-default">输入密码，查看文章</span>
-      </label>
-    </div>
-  </div>
-</div>
-<script src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+    <title>解决innerHTML不能解析数据</title>
+    <url>/2021/01/15/%E8%A7%A3%E5%86%B3innerHTML%E4%B8%8D%E8%83%BD%E8%A7%A3%E6%9E%90%E6%95%B0%E6%8D%AE/</url>
+    <content><![CDATA[<p>当使用<code>document.(&#39;div&#39;).innerHTML=`` </code>向页面追加内容时可能会出现变量不解析的情况。<br>正确姿势：<code>=</code>后面是<code>``</code>,而不是单引号或双引号,只有<code>``</code>才能解析。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">document.querySelector(&#x27;div&#x27;).innerHTML=`<span class="tag">&lt;<span class="name">h2</span>&gt;</span>编号：$&#123;resp.id&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span>`	</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>生活小杂记</category>
+        <category>前端</category>
       </categories>
       <tags>
-        <tag>生活小杂记</tag>
+        <tag>前端</tag>
       </tags>
   </entry>
 </search>

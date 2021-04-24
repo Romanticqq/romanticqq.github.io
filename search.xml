@@ -30,6 +30,21 @@
       </tags>
   </entry>
   <entry>
+    <title>Anaconda安装库时遇到的坑</title>
+    <url>/2021/01/13/Anaconda%E5%AE%89%E8%A3%85%E5%BA%93%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</url>
+    <content><![CDATA[<ol>
+<li>注意要在安装库文件的目录下使用cmd，然后用命令安装</li>
+<li>当安装完库成功后,import库发现不存在,可能是因为库的安装路径不在当前Python库的搜索路径内,所以没被找到.<br>解决方法:<br>(1)把库的路径加入搜索路径内;<br>(2)当安装Anaconda使,自带了Python,因此删掉自己安装的Python后再重新安装库即可，这样就会自动安装在搜索目录下了(新手尽量只装一个Python)</li>
+</ol>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>C语言函数数组传值</title>
     <url>/2021/01/13/C%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0%E6%95%B0%E7%BB%84%E4%BC%A0%E5%80%BC/</url>
     <content><![CDATA[<p>C语言中,向函数传值的问题</p>
@@ -136,18 +151,21 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>Anaconda安装库时遇到的坑</title>
-    <url>/2021/01/13/Anaconda%E5%AE%89%E8%A3%85%E5%BA%93%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</url>
-    <content><![CDATA[<ol>
-<li>注意要在安装库文件的目录下使用cmd，然后用命令安装</li>
-<li>当安装完库成功后,import库发现不存在,可能是因为库的安装路径不在当前Python库的搜索路径内,所以没被找到.<br>解决方法:<br>(1)把库的路径加入搜索路径内;<br>(2)当安装Anaconda使,自带了Python,因此删掉自己安装的Python后再重新安装库即可，这样就会自动安装在搜索目录下了(新手尽量只装一个Python)</li>
+    <title>Pycharm基本使用</title>
+    <url>/2021/01/08/Pycharm%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h2 id="Pycharm基本使用"><a href="#Pycharm基本使用" class="headerlink" title="Pycharm基本使用"></a>Pycharm基本使用</h2><ol>
+<li>双击shift键(或Ctrl+shift+A)，会弹出全局搜索窗口</li>
+<li>快速格式化代码 Ctrl+shift+L</li>
+<li>快速复制粘贴选中代码 Ctrl+D</li>
+<li>移动一行代码 Ctrl+shift+上下箭头</li>
+<li>光标定位到一行开头Fn+左箭头，定位到一行结尾Fn+右箭头</li>
 </ol>
 ]]></content>
       <categories>
-        <category>机器学习</category>
+        <category>Python</category>
       </categories>
       <tags>
-        <tag>机器学习</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -164,24 +182,6 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </categories>
       <tags>
         <tag>机器学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Pycharm基本使用</title>
-    <url>/2021/01/08/Pycharm%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h2 id="Pycharm基本使用"><a href="#Pycharm基本使用" class="headerlink" title="Pycharm基本使用"></a>Pycharm基本使用</h2><ol>
-<li>双击shift键(或Ctrl+shift+A)，会弹出全局搜索窗口</li>
-<li>快速格式化代码 Ctrl+shift+L</li>
-<li>快速复制粘贴选中代码 Ctrl+D</li>
-<li>移动一行代码 Ctrl+shift+上下箭头</li>
-<li>光标定位到一行开头Fn+左箭头，定位到一行结尾Fn+右箭头</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -297,6 +297,21 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
+    <title>Python可变数据类型和不可变数据类型</title>
+    <url>/2021/01/12/Python%E5%8F%AF%E5%8F%98%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E4%B8%8D%E5%8F%AF%E5%8F%98%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+    <content><![CDATA[<p>Python中的数据分为可变数据类型和不可变数据类型</p>
+<h3 id="可变数据类型"><a href="#可变数据类型" class="headerlink" title="可变数据类型"></a>可变数据类型</h3><p>定义：如果修改值，内存地址不会发生变化<br>可变数据类型:列表,字典,集合</p>
+<h3 id="不可变数据类型"><a href="#不可变数据类型" class="headerlink" title="不可变数据类型"></a>不可变数据类型</h3><p>定义：如果修改值，内存地址会发生变化<br>可变数据类型:字符串,数字,元组</p>
+<h3 id="看图理解"><a href="#看图理解" class="headerlink" title="看图理解"></a>看图理解</h3><p><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111164602.png"><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111165444.png"></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python基本语法</title>
     <url>/2021/01/08/Python%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</url>
     <content><![CDATA[<h2 id="Python基本语法"><a href="#Python基本语法" class="headerlink" title="Python基本语法"></a>Python基本语法</h2><ol>
@@ -338,21 +353,6 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
 <li>print<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">print(a,b,c); </span><br><span class="line"><span class="comment"># 可以打印一个或多个变量或字符串</span></span><br><span class="line">print(value1,value2,value3,,sep=<span class="string">&#x27; &#x27;</span>,end=<span class="string">&#x27;\n&#x27;</span>)</span><br><span class="line"><span class="comment"># sep值用来设定输出时多个值之间的连接符，默认是空格</span></span><br><span class="line"><span class="comment"># end值用来设定输出结束时的结束符，默认是换行</span></span><br><span class="line"><span class="comment"># sep,end两者都是以键值对的形式出现</span></span><br></pre></td></tr></table></figure></li>
 <li>input<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">msg=<span class="built_in">input</span>(<span class="string">&quot;提示信息&quot;</span>) </span><br><span class="line"><span class="comment"># input括号里保存的是提示信息</span></span><br><span class="line"><span class="comment"># 输入的信息会保存在变量msg</span></span><br><span class="line"><span class="comment"># 无论输入的是什么，msg的数据类型都为str</span></span><br></pre></td></tr></table></figure></li>
 </ol>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python可变数据类型和不可变数据类型</title>
-    <url>/2021/01/12/Python%E5%8F%AF%E5%8F%98%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E4%B8%8D%E5%8F%AF%E5%8F%98%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
-    <content><![CDATA[<p>Python中的数据分为可变数据类型和不可变数据类型</p>
-<h3 id="可变数据类型"><a href="#可变数据类型" class="headerlink" title="可变数据类型"></a>可变数据类型</h3><p>定义：如果修改值，内存地址不会发生变化<br>可变数据类型:列表,字典,集合</p>
-<h3 id="不可变数据类型"><a href="#不可变数据类型" class="headerlink" title="不可变数据类型"></a>不可变数据类型</h3><p>定义：如果修改值，内存地址会发生变化<br>可变数据类型:字符串,数字,元组</p>
-<h3 id="看图理解"><a href="#看图理解" class="headerlink" title="看图理解"></a>看图理解</h3><p><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111164602.png"><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111165444.png"></p>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -523,17 +523,6 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>js文件的写法</title>
-    <url>/2021/03/09/js%E6%96%87%E4%BB%B6%E7%9A%84%E5%86%99%E6%B3%95/</url>
-    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">owner</span>)</span>&#123;</span><br><span class="line">	owner.btn=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		alert(<span class="string">&quot;aaa&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;(<span class="built_in">window</span>.test=&#123;&#125;)) <span class="comment">//test是js的文件名</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo部署</title>
     <url>/2021/01/04/hexo%E9%83%A8%E7%BD%B2/</url>
     <content><![CDATA[<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><ol>
@@ -559,20 +548,6 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       <tags>
         <tag>hexo</tag>
         <tag>next</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>学习Python遇到的坑(更新中)</title>
-    <url>/2021/01/08/%E5%AD%A6%E4%B9%A0Python%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91(%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
-    <content><![CDATA[<ol>
-<li><h3 id="在cmd中输入Python打开软件商店"><a href="#在cmd中输入Python打开软件商店" class="headerlink" title="在cmd中输入Python打开软件商店"></a>在cmd中输入Python打开软件商店</h3>&nbsp;&nbsp;&nbsp;&nbsp;原因：在系统环境变量和用户环境变量的<code>path</code>中，当<code>WindowsApps</code>在<code>python</code>所配置的环境变量前的时候，就会先打开<code>WindowsApps</code><br>&nbsp;&nbsp;&nbsp;&nbsp;解决方法：1.在系统环境和用户环境变量的<code>path</code>中删掉<code>WindowsApps</code>这一项；2.在系统环境和用户环境变量的<code>path</code>中将<code>WindowsApps</code>这一项移动到<code>python</code>环境变量的下面，这样<code>python</code>环境变量就会先被执行，不会造成那样的意外<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210108143304.png"></li>
-</ol>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -616,15 +591,17 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>解决php中跨域问题</title>
-    <url>/2021/01/15/%E8%A7%A3%E5%86%B3php%E4%B8%AD%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>由于同源策略，经常会出现跨域问题，只需要在php代码前加上下面这些代码即可</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">header(<span class="string">&quot;Access-Control-Allow-Origin:*&quot;</span>);</span><br><span class="line">header(<span class="string">&#x27;Access-Control-Allow-Methods:POST&#x27;</span>);</span><br><span class="line">header(<span class="string">&#x27;Access-Control-Allow-Headers:x-requested-with, content-type&#x27;</span>);</span><br></pre></td></tr></table></figure>]]></content>
+    <title>学习Python遇到的坑(更新中)</title>
+    <url>/2021/01/08/%E5%AD%A6%E4%B9%A0Python%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91(%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
+    <content><![CDATA[<ol>
+<li><h3 id="在cmd中输入Python打开软件商店"><a href="#在cmd中输入Python打开软件商店" class="headerlink" title="在cmd中输入Python打开软件商店"></a>在cmd中输入Python打开软件商店</h3>&nbsp;&nbsp;&nbsp;&nbsp;原因：在系统环境变量和用户环境变量的<code>path</code>中，当<code>WindowsApps</code>在<code>python</code>所配置的环境变量前的时候，就会先打开<code>WindowsApps</code><br>&nbsp;&nbsp;&nbsp;&nbsp;解决方法：1.在系统环境和用户环境变量的<code>path</code>中删掉<code>WindowsApps</code>这一项；2.在系统环境和用户环境变量的<code>path</code>中将<code>WindowsApps</code>这一项移动到<code>python</code>环境变量的下面，这样<code>python</code>环境变量就会先被执行，不会造成那样的意外<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210108143304.png"></li>
+</ol>
+]]></content>
       <categories>
-        <category>后端</category>
+        <category>Python</category>
       </categories>
       <tags>
-        <tag>php</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -637,6 +614,29 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </categories>
       <tags>
         <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>js文件的写法</title>
+    <url>/2021/03/09/js%E6%96%87%E4%BB%B6%E7%9A%84%E5%86%99%E6%B3%95/</url>
+    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">owner</span>)</span>&#123;</span><br><span class="line">	owner.btn=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		alert(<span class="string">&quot;aaa&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;(<span class="built_in">window</span>.test=&#123;&#125;)) <span class="comment">//test是js的文件名</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决php中跨域问题</title>
+    <url>/2021/01/15/%E8%A7%A3%E5%86%B3php%E4%B8%AD%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>由于同源策略，经常会出现跨域问题，只需要在php代码前加上下面这些代码即可</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">header(<span class="string">&quot;Access-Control-Allow-Origin:*&quot;</span>);</span><br><span class="line">header(<span class="string">&#x27;Access-Control-Allow-Methods:POST&#x27;</span>);</span><br><span class="line">header(<span class="string">&#x27;Access-Control-Allow-Headers:x-requested-with, content-type&#x27;</span>);</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
       </tags>
   </entry>
 </search>

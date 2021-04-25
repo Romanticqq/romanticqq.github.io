@@ -30,6 +30,33 @@
       </tags>
   </entry>
   <entry>
+    <title>Anaconda安装库时遇到的坑</title>
+    <url>/2021/01/13/Anaconda%E5%AE%89%E8%A3%85%E5%BA%93%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</url>
+    <content><![CDATA[<ol>
+<li>注意要在安装库文件的目录下使用cmd，然后用命令安装</li>
+<li>当安装完库成功后,import库发现不存在,可能是因为库的安装路径不在当前Python库的搜索路径内,所以没被找到.<br>解决方法:<br>(1)把库的路径加入搜索路径内;<br>(2)当安装Anaconda使,自带了Python,因此删掉自己安装的Python后再重新安装库即可，这样就会自动安装在搜索目录下了(新手尽量只装一个Python)</li>
+</ol>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C语言函数数组传值</title>
+    <url>/2021/01/13/C%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0%E6%95%B0%E7%BB%84%E4%BC%A0%E5%80%BC/</url>
+    <content><![CDATA[<p>C语言中,向函数传值的问题</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 方法一</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span>* number)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> number[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">	duplicate(number);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> *number)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,number[<span class="number">0</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//方法二</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> number[])</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> number[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">	duplicate(number);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> number[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,number[<span class="number">0</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>C语言</category>
+      </categories>
+      <tags>
+        <tag>C语言</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Ajax原理和使用</title>
     <url>/2021/01/15/Ajax%E5%8E%9F%E7%90%86%E5%92%8C%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<ol>
@@ -124,33 +151,6 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>C语言函数数组传值</title>
-    <url>/2021/01/13/C%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0%E6%95%B0%E7%BB%84%E4%BC%A0%E5%80%BC/</url>
-    <content><![CDATA[<p>C语言中,向函数传值的问题</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 方法一</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span>* number)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> number[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">	duplicate(number);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> *number)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,number[<span class="number">0</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//方法二</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> number[])</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> number[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">	duplicate(number);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> number[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,number[<span class="number">0</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>C语言</category>
-      </categories>
-      <tags>
-        <tag>C语言</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Anaconda安装库时遇到的坑</title>
-    <url>/2021/01/13/Anaconda%E5%AE%89%E8%A3%85%E5%BA%93%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</url>
-    <content><![CDATA[<ol>
-<li>注意要在安装库文件的目录下使用cmd，然后用命令安装</li>
-<li>当安装完库成功后,import库发现不存在,可能是因为库的安装路径不在当前Python库的搜索路径内,所以没被找到.<br>解决方法:<br>(1)把库的路径加入搜索路径内;<br>(2)当安装Anaconda使,自带了Python,因此删掉自己安装的Python后再重新安装库即可，这样就会自动安装在搜索目录下了(新手尽量只装一个Python)</li>
-</ol>
-]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>机器学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Pycharm基本使用</title>
     <url>/2021/01/08/Pycharm%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h2 id="Pycharm基本使用"><a href="#Pycharm基本使用" class="headerlink" title="Pycharm基本使用"></a>Pycharm基本使用</h2><ol>
@@ -169,11 +169,18 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>Python2和Python3的区别(更新中)</title>
-    <url>/2021/01/10/Python2%E5%92%8CPython3%E7%9A%84%E5%8C%BA%E5%88%AB(%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
+    <title>Python中函数的使用</title>
+    <url>/2021/01/11/Python%E4%B8%AD%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<ol>
-<li>在Python2中，/得到的是一个整数;在Python3中得到是一个浮点数</li>
-<li>在python2中0o和0开始的数字都是8进制;在Python3中只有0o表示8进制</li>
+<li>函数定义语法<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># def 函数名(参数):</span></span><br><span class="line"><span class="comment">#    函数要执行的语句</span></span><br><span class="line">eg:</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span>(<span class="params">person</span>):</span></span><br><span class="line">    print(<span class="string">&#x27;&#123;&#125;说：他明天去旅游&#x27;</span>.<span class="built_in">format</span>(person))</span><br></pre></td></tr></table></figure></li>
+<li>传参<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1.一一对应传参</span></span><br><span class="line">say(<span class="string">&#x27;xiaoming&#x27;</span>)</span><br><span class="line"><span class="comment"># 2.通过变量名给形参赋值</span></span><br><span class="line">say(person=<span class="string">&#x27;xiaoming&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+<li>返回值<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> <span class="keyword">return</span> a <span class="comment">#语法</span></span><br><span class="line"><span class="number">2.</span> 通常情况下只能<span class="keyword">return</span>一次</span><br><span class="line"><span class="number">3.</span> 如果一个函数没有返回值，那么它的返回值就是<span class="literal">None</span></span><br><span class="line"><span class="number">4.</span> 在特殊情况下(<span class="keyword">finally</span>语句)，一个函数可能会执行多个<span class="keyword">return</span>语句</span><br></pre></td></tr></table></figure></li>
+<li>函数的注释<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">在定义函数名的下一行按三对双引号，然后回车</span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">:param person:</span></span><br><span class="line"><span class="string">:return:</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li>全局变量和局部变量<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 定义在函数外的为全局变量</span><br><span class="line"><span class="number">2.</span> 定义在函数内的为局部变量</span><br><span class="line"><span class="number">3.</span> 如果局部变量和全局变量重名时，会在函数内部又定义一个新的局部变量，而不是修改变全局变量</span><br><span class="line"><span class="number">4.</span>如果在函数内部想要修改全局变量，则用<span class="keyword">global</span></span><br><span class="line">eg：想要在函数内部修改全局变量name</span><br><span class="line"><span class="keyword">global</span> name</span><br><span class="line">name=<span class="string">&#x27;xiaoming&#x27;</span></span><br><span class="line"><span class="number">5.</span>使用内置函数查看全局变量和局部变量</span><br><span class="line"><span class="built_in">globals</span>() <span class="comment"># 查看当前.py中的全局变量</span></span><br><span class="line"><span class="built_in">locals</span>()  <span class="comment"># 查看当前.py中的局部变量</span></span><br><span class="line"><span class="number">6.</span> 在Python中只有函数分作用域</span><br></pre></td></tr></table></figure></li>
+<li>函数多个返回值<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 函数返回多个结果，就是将多个数据打包成一个整体返回，可以使用列表和字典</span><br><span class="line"><span class="number">2.</span> 通常情况下使用元组</span><br><span class="line"><span class="number">3.</span> 接受多个返回值时，若一直返回值个数，可直接用变量分别接受</span><br><span class="line">eg:</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test</span>():</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>,<span class="number">2</span></span><br><span class="line">x,y=test()</span><br><span class="line">print(<span class="string">&#x27;x=&#123;&#125;,y=&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(x,y))</span><br></pre></td></tr></table></figure></li>
+<li>缺省参数<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">定义：有些函数的参数是有默认参数，你传了用你的，不传用默认的</span><br><span class="line">eg:</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span>(<span class="params">person=<span class="string">&#x27;xiaoming&#x27;</span></span>):</span></span><br><span class="line">    print(<span class="string">&#x27;&#123;&#125;说：他明天去旅游&#x27;</span>.<span class="built_in">format</span>(person))</span><br><span class="line"></span><br><span class="line">say() <span class="comment"># 当say函数不传参数时，就使用默认参数</span></span><br></pre></td></tr></table></figure></li>
+<li>特殊传参<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 当位置参数和关键字参数混合使用时，位置参数在前</span><br><span class="line">eg:</span><br><span class="line">say(<span class="string">&#x27;xiaoming&#x27;</span>,age=<span class="number">18</span>)  <span class="comment"># 位置参数前，关键字参数后</span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> 位置可变参数</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span>(<span class="params">name,*args</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">say(<span class="string">&#x27;xiaoming&#x27;</span>)  <span class="comment"># args为空</span></span><br><span class="line">say(<span class="string">&#x27;xiaoming&#x27;</span>,<span class="number">18</span>)  <span class="comment"># 18以元组的形式存在args里</span></span><br><span class="line"><span class="comment"># 多出来的可变参数会以元组的形式保存在args里</span></span><br><span class="line"><span class="comment"># 在定义函数参数时,先写位置参数再写可变位置参数，传参时也是</span></span><br><span class="line"><span class="comment"># 注意是一个*</span></span><br><span class="line"></span><br><span class="line"><span class="number">3.</span>可变关键字参数</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span>(<span class="params">name,**kwargs</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">say(name=<span class="string">&#x27;xiaoming&#x27;</span>)  <span class="comment"># kwargs为空</span></span><br><span class="line">say(<span class="string">&#x27;xiaoming&#x27;</span>,<span class="number">18</span>)  <span class="comment"># 18以元组的形式存在kwargs里</span></span><br><span class="line"><span class="comment"># 多出来的可变参数会以字典的形式保存在kwargs里</span></span><br><span class="line"><span class="comment"># 在定义函数参数时,先写位置参数再写可变位置参数，传参时也是</span></span><br><span class="line"><span class="comment"># 注意是**</span></span><br><span class="line"></span><br><span class="line"><span class="number">4.</span>当位置参数，可变位置参数，缺省参数，关键字参数，可变关键字参数同时出现时</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span>(<span class="params">位置参数，可变位置参数，缺省参数，关键字参数，可变关键字参数</span>)  </span></span><br><span class="line"><span class="function">#传参时也是一样</span></span><br></pre></td></tr></table></figure></li>
+<li>注意事项 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 在Python中函数不允许重名,重名后一个会覆盖前一个</span><br><span class="line"><span class="number">2.</span> 函数名和变量名也不能重名</span><br></pre></td></tr></table></figure></li>
 </ol>
 ]]></content>
       <categories>
@@ -197,6 +204,37 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </categories>
       <tags>
         <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python2和Python3的区别(更新中)</title>
+    <url>/2021/01/10/Python2%E5%92%8CPython3%E7%9A%84%E5%8C%BA%E5%88%AB(%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
+    <content><![CDATA[<ol>
+<li>在Python2中，/得到的是一个整数;在Python3中得到是一个浮点数</li>
+<li>在python2中0o和0开始的数字都是8进制;在Python3中只有0o表示8进制</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python中进制和数据类型转换</title>
+    <url>/2021/01/09/Python%E4%B8%AD%E8%BF%9B%E5%88%B6%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</url>
+    <content><![CDATA[<ol>
+<li><h3 id="二、八、十六进制转换"><a href="#二、八、十六进制转换" class="headerlink" title="二、八、十六进制转换"></a>二、八、十六进制转换</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">  二进制:前缀,0b;<span class="number">0b11</span>;每个位最大不能超过<span class="number">1</span></span><br><span class="line">  八进制:前缀,0o;<span class="number">0o17</span>;每个位最大不能超过<span class="number">7</span></span><br><span class="line">十六进制:前缀,0x;<span class="number">0x1f</span>;每个位最大不能超过f</span><br><span class="line"><span class="comment"># 注：在python2中0o和0开始的数字都是8进制</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 手算转换</span></span><br><span class="line"><span class="number">2</span>进制转换为<span class="number">8</span>：从后向前<span class="number">3</span>位一组进行</span><br><span class="line"><span class="number">2</span>进制转换为<span class="number">16</span>：从后向前<span class="number">4</span>位一组进行</span><br><span class="line"><span class="number">2</span>,<span class="number">8</span>,<span class="number">16</span>进制转换成十进制，都是按照幂次，然后相加进行计算</span><br><span class="line"><span class="number">10</span>进制转换成<span class="number">2</span>进制：除留余数法</span><br><span class="line"></span><br><span class="line"><span class="comment"># 机算</span></span><br><span class="line">a=<span class="number">12</span> <span class="comment">#10进制数</span></span><br><span class="line"><span class="built_in">bin</span>(a) <span class="comment"># 将10进制数转换成2进制</span></span><br><span class="line"><span class="built_in">oct</span>(a) <span class="comment"># 将10进制数转换成8进制</span></span><br><span class="line"><span class="built_in">hex</span>(a) <span class="comment"># 将10进制数转换成16进制</span></span><br><span class="line">注：当a不等于数字时会报错</span><br></pre></td></tr></table></figure></li>
+<li>数据类型之间的转换<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#转换函数</span></span><br><span class="line">msg=<span class="built_in">int</span>(msg) </span><br><span class="line"><span class="comment"># 将不是int型的变量转换成int型的变量</span></span><br><span class="line"><span class="comment"># 其余类型写法相同，如float</span></span><br><span class="line"><span class="comment"># 当被转换的msg不是纯数字会转换失败，报错 </span></span><br><span class="line">msg=<span class="built_in">int</span>(x,y)</span><br><span class="line"><span class="comment"># 将字符串x,按照y进制转换成10进制数</span></span><br><span class="line">eg:</span><br><span class="line">msg=<span class="built_in">int</span>(<span class="string">&#x27;abc&#x27;</span>,<span class="number">16</span>) <span class="comment"># 将字符串&#x27;abc&#x27;按照16进制数转换成10进制数</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 转换原因</span></span><br><span class="line">不同的数据类型有时候不能进行运算</span><br><span class="line"></span><br><span class="line"><span class="comment"># True False</span></span><br><span class="line">在进行数据运算时,<span class="literal">True</span>=<span class="number">1</span>,<span class="literal">False</span>=<span class="number">0</span>;</span><br><span class="line">eg:</span><br><span class="line">print(<span class="literal">True</span> + <span class="number">1</span>)  <span class="comment"># 结果为2</span></span><br></pre></td></tr></table></figure></li>
+<li>转换成布尔值<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在数字里，只有0会被转换成False</span></span><br><span class="line"><span class="comment"># 在字符串里只有空字符串会被转换成False,空格串也会被转换成True</span></span><br><span class="line"><span class="comment"># None会被转换为False,eg:bool(None),打印出来是False</span></span><br><span class="line"><span class="comment"># 空数据类型会被转换成False,如[],(),&#123;&#125;等</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -233,35 +271,12 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>Python中函数的使用</title>
-    <url>/2021/01/11/Python%E4%B8%AD%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<ol>
-<li>函数定义语法<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># def 函数名(参数):</span></span><br><span class="line"><span class="comment">#    函数要执行的语句</span></span><br><span class="line">eg:</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span>(<span class="params">person</span>):</span></span><br><span class="line">    print(<span class="string">&#x27;&#123;&#125;说：他明天去旅游&#x27;</span>.<span class="built_in">format</span>(person))</span><br></pre></td></tr></table></figure></li>
-<li>传参<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1.一一对应传参</span></span><br><span class="line">say(<span class="string">&#x27;xiaoming&#x27;</span>)</span><br><span class="line"><span class="comment"># 2.通过变量名给形参赋值</span></span><br><span class="line">say(person=<span class="string">&#x27;xiaoming&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
-<li>返回值<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> <span class="keyword">return</span> a <span class="comment">#语法</span></span><br><span class="line"><span class="number">2.</span> 通常情况下只能<span class="keyword">return</span>一次</span><br><span class="line"><span class="number">3.</span> 如果一个函数没有返回值，那么它的返回值就是<span class="literal">None</span></span><br><span class="line"><span class="number">4.</span> 在特殊情况下(<span class="keyword">finally</span>语句)，一个函数可能会执行多个<span class="keyword">return</span>语句</span><br></pre></td></tr></table></figure></li>
-<li>函数的注释<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">在定义函数名的下一行按三对双引号，然后回车</span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">:param person:</span></span><br><span class="line"><span class="string">:return:</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure></li>
-<li>全局变量和局部变量<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 定义在函数外的为全局变量</span><br><span class="line"><span class="number">2.</span> 定义在函数内的为局部变量</span><br><span class="line"><span class="number">3.</span> 如果局部变量和全局变量重名时，会在函数内部又定义一个新的局部变量，而不是修改变全局变量</span><br><span class="line"><span class="number">4.</span>如果在函数内部想要修改全局变量，则用<span class="keyword">global</span></span><br><span class="line">eg：想要在函数内部修改全局变量name</span><br><span class="line"><span class="keyword">global</span> name</span><br><span class="line">name=<span class="string">&#x27;xiaoming&#x27;</span></span><br><span class="line"><span class="number">5.</span>使用内置函数查看全局变量和局部变量</span><br><span class="line"><span class="built_in">globals</span>() <span class="comment"># 查看当前.py中的全局变量</span></span><br><span class="line"><span class="built_in">locals</span>()  <span class="comment"># 查看当前.py中的局部变量</span></span><br><span class="line"><span class="number">6.</span> 在Python中只有函数分作用域</span><br></pre></td></tr></table></figure></li>
-<li>函数多个返回值<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 函数返回多个结果，就是将多个数据打包成一个整体返回，可以使用列表和字典</span><br><span class="line"><span class="number">2.</span> 通常情况下使用元组</span><br><span class="line"><span class="number">3.</span> 接受多个返回值时，若一直返回值个数，可直接用变量分别接受</span><br><span class="line">eg:</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test</span>():</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>,<span class="number">2</span></span><br><span class="line">x,y=test()</span><br><span class="line">print(<span class="string">&#x27;x=&#123;&#125;,y=&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(x,y))</span><br></pre></td></tr></table></figure></li>
-<li>缺省参数<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">定义：有些函数的参数是有默认参数，你传了用你的，不传用默认的</span><br><span class="line">eg:</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span>(<span class="params">person=<span class="string">&#x27;xiaoming&#x27;</span></span>):</span></span><br><span class="line">    print(<span class="string">&#x27;&#123;&#125;说：他明天去旅游&#x27;</span>.<span class="built_in">format</span>(person))</span><br><span class="line"></span><br><span class="line">say() <span class="comment"># 当say函数不传参数时，就使用默认参数</span></span><br></pre></td></tr></table></figure></li>
-<li>特殊传参<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 当位置参数和关键字参数混合使用时，位置参数在前</span><br><span class="line">eg:</span><br><span class="line">say(<span class="string">&#x27;xiaoming&#x27;</span>,age=<span class="number">18</span>)  <span class="comment"># 位置参数前，关键字参数后</span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> 位置可变参数</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span>(<span class="params">name,*args</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">say(<span class="string">&#x27;xiaoming&#x27;</span>)  <span class="comment"># args为空</span></span><br><span class="line">say(<span class="string">&#x27;xiaoming&#x27;</span>,<span class="number">18</span>)  <span class="comment"># 18以元组的形式存在args里</span></span><br><span class="line"><span class="comment"># 多出来的可变参数会以元组的形式保存在args里</span></span><br><span class="line"><span class="comment"># 在定义函数参数时,先写位置参数再写可变位置参数，传参时也是</span></span><br><span class="line"><span class="comment"># 注意是一个*</span></span><br><span class="line"></span><br><span class="line"><span class="number">3.</span>可变关键字参数</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span>(<span class="params">name,**kwargs</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">say(name=<span class="string">&#x27;xiaoming&#x27;</span>)  <span class="comment"># kwargs为空</span></span><br><span class="line">say(<span class="string">&#x27;xiaoming&#x27;</span>,<span class="number">18</span>)  <span class="comment"># 18以元组的形式存在kwargs里</span></span><br><span class="line"><span class="comment"># 多出来的可变参数会以字典的形式保存在kwargs里</span></span><br><span class="line"><span class="comment"># 在定义函数参数时,先写位置参数再写可变位置参数，传参时也是</span></span><br><span class="line"><span class="comment"># 注意是**</span></span><br><span class="line"></span><br><span class="line"><span class="number">4.</span>当位置参数，可变位置参数，缺省参数，关键字参数，可变关键字参数同时出现时</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span>(<span class="params">位置参数，可变位置参数，缺省参数，关键字参数，可变关键字参数</span>)  </span></span><br><span class="line"><span class="function">#传参时也是一样</span></span><br></pre></td></tr></table></figure></li>
-<li>注意事项 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 在Python中函数不允许重名,重名后一个会覆盖前一个</span><br><span class="line"><span class="number">2.</span> 函数名和变量名也不能重名</span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python中进制和数据类型转换</title>
-    <url>/2021/01/09/Python%E4%B8%AD%E8%BF%9B%E5%88%B6%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</url>
-    <content><![CDATA[<ol>
-<li><h3 id="二、八、十六进制转换"><a href="#二、八、十六进制转换" class="headerlink" title="二、八、十六进制转换"></a>二、八、十六进制转换</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">  二进制:前缀,0b;<span class="number">0b11</span>;每个位最大不能超过<span class="number">1</span></span><br><span class="line">  八进制:前缀,0o;<span class="number">0o17</span>;每个位最大不能超过<span class="number">7</span></span><br><span class="line">十六进制:前缀,0x;<span class="number">0x1f</span>;每个位最大不能超过f</span><br><span class="line"><span class="comment"># 注：在python2中0o和0开始的数字都是8进制</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 手算转换</span></span><br><span class="line"><span class="number">2</span>进制转换为<span class="number">8</span>：从后向前<span class="number">3</span>位一组进行</span><br><span class="line"><span class="number">2</span>进制转换为<span class="number">16</span>：从后向前<span class="number">4</span>位一组进行</span><br><span class="line"><span class="number">2</span>,<span class="number">8</span>,<span class="number">16</span>进制转换成十进制，都是按照幂次，然后相加进行计算</span><br><span class="line"><span class="number">10</span>进制转换成<span class="number">2</span>进制：除留余数法</span><br><span class="line"></span><br><span class="line"><span class="comment"># 机算</span></span><br><span class="line">a=<span class="number">12</span> <span class="comment">#10进制数</span></span><br><span class="line"><span class="built_in">bin</span>(a) <span class="comment"># 将10进制数转换成2进制</span></span><br><span class="line"><span class="built_in">oct</span>(a) <span class="comment"># 将10进制数转换成8进制</span></span><br><span class="line"><span class="built_in">hex</span>(a) <span class="comment"># 将10进制数转换成16进制</span></span><br><span class="line">注：当a不等于数字时会报错</span><br></pre></td></tr></table></figure></li>
-<li>数据类型之间的转换<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#转换函数</span></span><br><span class="line">msg=<span class="built_in">int</span>(msg) </span><br><span class="line"><span class="comment"># 将不是int型的变量转换成int型的变量</span></span><br><span class="line"><span class="comment"># 其余类型写法相同，如float</span></span><br><span class="line"><span class="comment"># 当被转换的msg不是纯数字会转换失败，报错 </span></span><br><span class="line">msg=<span class="built_in">int</span>(x,y)</span><br><span class="line"><span class="comment"># 将字符串x,按照y进制转换成10进制数</span></span><br><span class="line">eg:</span><br><span class="line">msg=<span class="built_in">int</span>(<span class="string">&#x27;abc&#x27;</span>,<span class="number">16</span>) <span class="comment"># 将字符串&#x27;abc&#x27;按照16进制数转换成10进制数</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 转换原因</span></span><br><span class="line">不同的数据类型有时候不能进行运算</span><br><span class="line"></span><br><span class="line"><span class="comment"># True False</span></span><br><span class="line">在进行数据运算时,<span class="literal">True</span>=<span class="number">1</span>,<span class="literal">False</span>=<span class="number">0</span>;</span><br><span class="line">eg:</span><br><span class="line">print(<span class="literal">True</span> + <span class="number">1</span>)  <span class="comment"># 结果为2</span></span><br></pre></td></tr></table></figure></li>
-<li>转换成布尔值<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在数字里，只有0会被转换成False</span></span><br><span class="line"><span class="comment"># 在字符串里只有空字符串会被转换成False,空格串也会被转换成True</span></span><br><span class="line"><span class="comment"># None会被转换为False,eg:bool(None),打印出来是False</span></span><br><span class="line"><span class="comment"># 空数据类型会被转换成False,如[],(),&#123;&#125;等</span></span><br></pre></td></tr></table></figure></li>
-</ol>
+    <title>Python可变数据类型和不可变数据类型</title>
+    <url>/2021/01/12/Python%E5%8F%AF%E5%8F%98%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E4%B8%8D%E5%8F%AF%E5%8F%98%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+    <content><![CDATA[<p>Python中的数据分为可变数据类型和不可变数据类型</p>
+<h3 id="可变数据类型"><a href="#可变数据类型" class="headerlink" title="可变数据类型"></a>可变数据类型</h3><p>定义：如果修改值，内存地址不会发生变化<br>可变数据类型:列表,字典,集合</p>
+<h3 id="不可变数据类型"><a href="#不可变数据类型" class="headerlink" title="不可变数据类型"></a>不可变数据类型</h3><p>定义：如果修改值，内存地址会发生变化<br>可变数据类型:字符串,数字,元组</p>
+<h3 id="看图理解"><a href="#看图理解" class="headerlink" title="看图理解"></a>看图理解</h3><p><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111164602.png"><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111165444.png"></p>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -288,21 +303,6 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
 <li><h3 id="循环语句注意事项"><a href="#循环语句注意事项" class="headerlink" title="循环语句注意事项"></a>循环语句注意事项</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> Python中没有i++或i--,只能i+=<span class="number">1</span></span><br><span class="line"><span class="number">2.</span> 常用<span class="built_in">range</span>内置类生成一个整数区间进行循环</span><br><span class="line"><span class="number">3.</span> <span class="built_in">range</span>生成的整数区间以前一个数开始，以后一个数的前一个整数结束</span><br><span class="line"><span class="number">4.</span> <span class="keyword">in</span>后面是一个可迭代的对象,目前接触到的接迭代的对象:字符串,列表,字典,元组,集合,<span class="built_in">range</span></span><br><span class="line"><span class="number">5.</span> Python中没有do...<span class="keyword">while</span>...</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python可变数据类型和不可变数据类型</title>
-    <url>/2021/01/12/Python%E5%8F%AF%E5%8F%98%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E4%B8%8D%E5%8F%AF%E5%8F%98%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
-    <content><![CDATA[<p>Python中的数据分为可变数据类型和不可变数据类型</p>
-<h3 id="可变数据类型"><a href="#可变数据类型" class="headerlink" title="可变数据类型"></a>可变数据类型</h3><p>定义：如果修改值，内存地址不会发生变化<br>可变数据类型:列表,字典,集合</p>
-<h3 id="不可变数据类型"><a href="#不可变数据类型" class="headerlink" title="不可变数据类型"></a>不可变数据类型</h3><p>定义：如果修改值，内存地址会发生变化<br>可变数据类型:字符串,数字,元组</p>
-<h3 id="看图理解"><a href="#看图理解" class="headerlink" title="看图理解"></a>看图理解</h3><p><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111164602.png"><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111165444.png"></p>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -503,6 +503,34 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
+    <title>hexo部署</title>
+    <url>/2021/01/04/hexo%E9%83%A8%E7%BD%B2/</url>
+    <content><![CDATA[<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><ol>
+<li>注册github账号(有github账号的可跳过)</li>
+<li>登录后，新建一个代码仓库名为：github账号名.github.io,权限为public</li>
+<li>实现git和github的链接<ol>
+<li>鼠标右键打开git Bash Here</li>
+<li>在git Bash Here中设置<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;Your Name&quot;</span><br><span class="line">git config --global user.email &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure></li>
+<li> 然后再输入，获取密钥<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;your_email@example.com&quot; </span><br></pre></td></tr></table></figure>
+按照提示默认下一步，生成两个文件，按照所给出的路径，用记事本打开id_rsa.pub，并复制</li>
+<li>打开github的settings/SSH and GPG keys<br>点击SSH keys旁边的新建，在Title处给密钥起一个名字，并把密钥粘贴到Key处，</li>
+<li>输入<code> ssh -T git@github.com</code>判断git和github是否连接成功</li>
+</ol>
+</li>
+<li>添加提交设置：打开blog/_config.yml在最后添加<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git   </span><br><span class="line">repo: https:&#x2F;&#x2F;github.com&#x2F;Romanticqq&#x2F;romanticqq.github.io.git &#x2F;&#x2F;提交的github仓库地址</span><br><span class="line">branch: master &#x2F;&#x2F;分支名</span><br></pre></td></tr></table></figure></li>
+<li>进行部署 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean &#x2F;&#x2F;清理public的内容</span><br><span class="line">hexo g &#x2F;&#x2F;生成静态内容</span><br><span class="line">hexo d  &#x2F;&#x2F;部署上传</span><br><span class="line">可能在上传时会报错，此时需要执行下面一句命令行</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></li>
+<li>访问<br>在浏览器地址栏输入<code>https://仓库名.github.io</code>,即可访问</li>
+</ol>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo绑定域名</title>
     <url>/2021/01/05/hexo%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/</url>
     <content><![CDATA[<ol>
@@ -548,45 +576,6 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>js文件的写法</title>
-    <url>/2021/03/09/js%E6%96%87%E4%BB%B6%E7%9A%84%E5%86%99%E6%B3%95/</url>
-    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">owner</span>)</span>&#123;</span><br><span class="line">	owner.btn=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		alert(<span class="string">&quot;aaa&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;(<span class="built_in">window</span>.test=&#123;&#125;)) <span class="comment">//test是js的文件名</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo部署</title>
-    <url>/2021/01/04/hexo%E9%83%A8%E7%BD%B2/</url>
-    <content><![CDATA[<h2 id="部署"><a href="#部署" class="headerlink" title="部署"></a>部署</h2><ol>
-<li>注册github账号(有github账号的可跳过)</li>
-<li>登录后，新建一个代码仓库名为：github账号名.github.io,权限为public</li>
-<li>实现git和github的链接<ol>
-<li>鼠标右键打开git Bash Here</li>
-<li>在git Bash Here中设置<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">git config --global user.name &quot;Your Name&quot;</span><br><span class="line">git config --global user.email &quot;email@example.com&quot;</span><br></pre></td></tr></table></figure></li>
-<li> 然后再输入，获取密钥<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C &quot;your_email@example.com&quot; </span><br></pre></td></tr></table></figure>
-按照提示默认下一步，生成两个文件，按照所给出的路径，用记事本打开id_rsa.pub，并复制</li>
-<li>打开github的settings/SSH and GPG keys<br>点击SSH keys旁边的新建，在Title处给密钥起一个名字，并把密钥粘贴到Key处，</li>
-<li>输入<code> ssh -T git@github.com</code>判断git和github是否连接成功</li>
-</ol>
-</li>
-<li>添加提交设置：打开blog/_config.yml在最后添加<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">type: git   </span><br><span class="line">repo: https:&#x2F;&#x2F;github.com&#x2F;Romanticqq&#x2F;romanticqq.github.io.git &#x2F;&#x2F;提交的github仓库地址</span><br><span class="line">branch: master &#x2F;&#x2F;分支名</span><br></pre></td></tr></table></figure></li>
-<li>进行部署 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">hexo clean &#x2F;&#x2F;清理public的内容</span><br><span class="line">hexo g &#x2F;&#x2F;生成静态内容</span><br><span class="line">hexo d  &#x2F;&#x2F;部署上传</span><br><span class="line">可能在上传时会报错，此时需要执行下面一句命令行</span><br><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></li>
-<li>访问<br>在浏览器地址栏输入<code>https://仓库名.github.io</code>,即可访问</li>
-</ol>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>next</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>学习Python遇到的坑(更新中)</title>
     <url>/2021/01/08/%E5%AD%A6%E4%B9%A0Python%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91(%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
     <content><![CDATA[<ol>
@@ -601,15 +590,26 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>解决php中跨域问题</title>
-    <url>/2021/01/15/%E8%A7%A3%E5%86%B3php%E4%B8%AD%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>由于同源策略，经常会出现跨域问题，只需要在php代码前加上下面这些代码即可</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">header(<span class="string">&quot;Access-Control-Allow-Origin:*&quot;</span>);</span><br><span class="line">header(<span class="string">&#x27;Access-Control-Allow-Methods:POST&#x27;</span>);</span><br><span class="line">header(<span class="string">&#x27;Access-Control-Allow-Headers:x-requested-with, content-type&#x27;</span>);</span><br></pre></td></tr></table></figure>]]></content>
+    <title>js文件的写法</title>
+    <url>/2021/03/09/js%E6%96%87%E4%BB%B6%E7%9A%84%E5%86%99%E6%B3%95/</url>
+    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">owner</span>)</span>&#123;</span><br><span class="line">	owner.btn=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		alert(<span class="string">&quot;aaa&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;(<span class="built_in">window</span>.test=&#123;&#125;)) <span class="comment">//test是js的文件名</span></span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>后端</category>
+        <category>前端</category>
       </categories>
       <tags>
-        <tag>php</tag>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决innerHTML不能解析数据</title>
+    <url>/2021/01/15/%E8%A7%A3%E5%86%B3innerHTML%E4%B8%8D%E8%83%BD%E8%A7%A3%E6%9E%90%E6%95%B0%E6%8D%AE/</url>
+    <content><![CDATA[<p>当使用<code>document.(&#39;div&#39;).innerHTML=`` </code>向页面追加内容时可能会出现变量不解析的情况。<br>正确姿势：<code>=</code>后面是<code>``</code>,而不是单引号或双引号,只有<code>``</code>才能解析。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">document.querySelector(&#x27;div&#x27;).innerHTML=`<span class="tag">&lt;<span class="name">h2</span>&gt;</span>编号：$&#123;resp.id&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span>`	</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -653,15 +653,15 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>解决innerHTML不能解析数据</title>
-    <url>/2021/01/15/%E8%A7%A3%E5%86%B3innerHTML%E4%B8%8D%E8%83%BD%E8%A7%A3%E6%9E%90%E6%95%B0%E6%8D%AE/</url>
-    <content><![CDATA[<p>当使用<code>document.(&#39;div&#39;).innerHTML=`` </code>向页面追加内容时可能会出现变量不解析的情况。<br>正确姿势：<code>=</code>后面是<code>``</code>,而不是单引号或双引号,只有<code>``</code>才能解析。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">document.querySelector(&#x27;div&#x27;).innerHTML=`<span class="tag">&lt;<span class="name">h2</span>&gt;</span>编号：$&#123;resp.id&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span>`	</span><br></pre></td></tr></table></figure>]]></content>
+    <title>解决php中跨域问题</title>
+    <url>/2021/01/15/%E8%A7%A3%E5%86%B3php%E4%B8%AD%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>由于同源策略，经常会出现跨域问题，只需要在php代码前加上下面这些代码即可</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">header(<span class="string">&quot;Access-Control-Allow-Origin:*&quot;</span>);</span><br><span class="line">header(<span class="string">&#x27;Access-Control-Allow-Methods:POST&#x27;</span>);</span><br><span class="line">header(<span class="string">&#x27;Access-Control-Allow-Headers:x-requested-with, content-type&#x27;</span>);</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>前端</category>
+        <category>后端</category>
       </categories>
       <tags>
-        <tag>前端</tag>
+        <tag>php</tag>
       </tags>
   </entry>
 </search>

@@ -6,7 +6,7 @@ tags:
     - Ajax
 categories: 前端
 ---
-#1.前端demo
+# 1.前端demo
 ```
 <script type="text/javascript">
     function btnSubmit() {
@@ -31,7 +31,7 @@ categories: 前端
     }
 </script>
 ```
-#2.服务端demo
+# 2.服务端demo
 ```
 $imgName=$_FILES['FILE']['name'];
 $tmp_name=$_FILES['FILE']['tmp_name'];

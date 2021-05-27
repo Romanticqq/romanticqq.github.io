@@ -24,21 +24,21 @@
     var CONFIG = {"hostname":"romanticqq.top","root":"/","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="函数定义语法12345# def 函数名(参数):#    函数要执行的语句eg:def say(person):    print(&amp;#x27;&amp;#123;&amp;#125;说：他明天去旅游&amp;#x27;.format(person)) 传参1234# 1.一一对应传参say(&amp;#x27;xiaoming&amp;#x27;)# 2.通过变量名给形参赋值say(person&#x3D;&amp;#x27;xiaoming&amp;#x">
+  <meta name="description" content="数据库优化1. 表结构course表 12345CourseId:课程id、主键CourseName:课程名称CourseClass:课程类别CourseImgUrl:课程图标describle:课程描述 section表 1234id:主键courseId:课程idsectionUrl:课程章节视频路径sectionName:课程章节视频名称 2. 根据数据库优化所做的代码修改2.1 当显示某一">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Python中函数的使用">
-<meta property="og:url" content="https://romanticqq.top/2021/01/11/Python%E4%B8%AD%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:title" content="RomanticQq">
+<meta property="og:url" content="https://romanticqq.top/2021/05/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96/index.html">
 <meta property="og:site_name" content="RomanticQq">
-<meta property="og:description" content="函数定义语法12345# def 函数名(参数):#    函数要执行的语句eg:def say(person):    print(&amp;#x27;&amp;#123;&amp;#125;说：他明天去旅游&amp;#x27;.format(person)) 传参1234# 1.一一对应传参say(&amp;#x27;xiaoming&amp;#x27;)# 2.通过变量名给形参赋值say(person&#x3D;&amp;#x27;xiaoming&amp;#x">
+<meta property="og:description" content="数据库优化1. 表结构course表 12345CourseId:课程id、主键CourseName:课程名称CourseClass:课程类别CourseImgUrl:课程图标describle:课程描述 section表 1234id:主键courseId:课程idsectionUrl:课程章节视频路径sectionName:课程章节视频名称 2. 根据数据库优化所做的代码修改2.1 当显示某一">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-01-11T15:30:09.000Z">
-<meta property="article:modified_time" content="2021-01-12T04:37:54.696Z">
+<meta property="article:published_time" content="2021-05-23T06:56:50.845Z">
+<meta property="article:modified_time" content="2021-05-23T07:53:59.589Z">
 <meta property="article:author" content="RomanticQq">
-<meta property="article:tag" content="Python">
+<meta property="article:tag" content="RomanticQq">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://romanticqq.top/2021/01/11/Python%E4%B8%AD%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/">
+<link rel="canonical" href="https://romanticqq.top/2021/05/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96/">
 
 
 <script class="page-configurations">
@@ -51,7 +51,7 @@
   };
 </script>
 
-  <title>Python中函数的使用 | RomanticQq</title>
+  <title> | RomanticQq</title>
   
 
 
@@ -216,7 +216,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -229,6 +229,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <section class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96"><span class="nav-text">数据库优化</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-%E8%A1%A8%E7%BB%93%E6%9E%84"><span class="nav-text">1. 表结构</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#2-%E6%A0%B9%E6%8D%AE%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96%E6%89%80%E5%81%9A%E7%9A%84%E4%BB%A3%E7%A0%81%E4%BF%AE%E6%94%B9"><span class="nav-text">2. 根据数据库优化所做的代码修改</span></a><ol class="nav-child"><li class="nav-item nav-level-6"><a class="nav-link" href="#2-1-%E5%BD%93%E6%98%BE%E7%A4%BA%E6%9F%90%E4%B8%80%E8%AF%BE%E7%A8%8B%E6%89%80%E6%9C%89%E8%A7%86%E9%A2%91%E4%BF%A1%E6%81%AF"><span class="nav-text">2.1 当显示某一课程所有视频信息</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-2-%E5%A2%9E%E5%8A%A0%E8%AF%BE%E7%A8%8B"><span class="nav-text">2.2 增加课程</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-3-%E5%A2%9E%E5%8A%A0%E8%A7%86%E9%A2%91"><span class="nav-text">2.3 增加视频</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-4-%E5%88%A0%E9%99%A4%E8%AF%BE%E7%A8%8B"><span class="nav-text">2.4 删除课程</span></a></li><li class="nav-item nav-level-6"><a class="nav-link" href="#2-5-%E4%BF%AE%E6%94%B9%E8%AF%BE%E7%A8%8B"><span class="nav-text">2.5 修改课程</span></a></li></ol></li></ol></li></ol></li></ol></div>
         </section>
         <!--/noindex-->
 
@@ -311,7 +312,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://romanticqq.top/2021/01/11/Python%E4%B8%AD%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/">
+    <link itemprop="mainEntityOfPage" href="https://romanticqq.top/2021/05/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -324,7 +325,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Python中函数的使用
+          
         </h1>
 
         <div class="post-meta-container">
@@ -334,24 +335,9 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-01-11 23:30:09" itemprop="dateCreated datePublished" datetime="2021-01-11T23:30:09+08:00">2021-01-11</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-01-12 12:37:54" itemprop="dateModified" datetime="2021-01-12T12:37:54+08:00">2021-01-12</time>
-      </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
-        </span>
+      <time title="创建时间：2021-05-23 14:56:50 / 修改时间：15:53:59" itemprop="dateCreated datePublished" datetime="2021-05-23T14:56:50+08:00">2021-05-23</time>
     </span>
 
   
@@ -370,8 +356,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2021/01/11/Python%E4%B8%AD%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/01/11/Python%E4%B8%AD%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/05/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/05/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -383,7 +369,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>1.6k</span>
+      <span>1.3k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -401,17 +387,15 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <ol>
-<li>函数定义语法<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># def 函数名(参数):</span></span><br><span class="line"><span class="comment">#    函数要执行的语句</span></span><br><span class="line">eg:</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span>(<span class="params">person</span>):</span></span><br><span class="line">    print(<span class="string">&#x27;&#123;&#125;说：他明天去旅游&#x27;</span>.<span class="built_in">format</span>(person))</span><br></pre></td></tr></table></figure></li>
-<li>传参<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 1.一一对应传参</span></span><br><span class="line">say(<span class="string">&#x27;xiaoming&#x27;</span>)</span><br><span class="line"><span class="comment"># 2.通过变量名给形参赋值</span></span><br><span class="line">say(person=<span class="string">&#x27;xiaoming&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
-<li>返回值<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> <span class="keyword">return</span> a <span class="comment">#语法</span></span><br><span class="line"><span class="number">2.</span> 通常情况下只能<span class="keyword">return</span>一次</span><br><span class="line"><span class="number">3.</span> 如果一个函数没有返回值，那么它的返回值就是<span class="literal">None</span></span><br><span class="line"><span class="number">4.</span> 在特殊情况下(<span class="keyword">finally</span>语句)，一个函数可能会执行多个<span class="keyword">return</span>语句</span><br></pre></td></tr></table></figure></li>
-<li>函数的注释<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">在定义函数名的下一行按三对双引号，然后回车</span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">:param person:</span></span><br><span class="line"><span class="string">:return:</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure></li>
-<li>全局变量和局部变量<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 定义在函数外的为全局变量</span><br><span class="line"><span class="number">2.</span> 定义在函数内的为局部变量</span><br><span class="line"><span class="number">3.</span> 如果局部变量和全局变量重名时，会在函数内部又定义一个新的局部变量，而不是修改变全局变量</span><br><span class="line"><span class="number">4.</span>如果在函数内部想要修改全局变量，则用<span class="keyword">global</span></span><br><span class="line">eg：想要在函数内部修改全局变量name</span><br><span class="line"><span class="keyword">global</span> name</span><br><span class="line">name=<span class="string">&#x27;xiaoming&#x27;</span></span><br><span class="line"><span class="number">5.</span>使用内置函数查看全局变量和局部变量</span><br><span class="line"><span class="built_in">globals</span>() <span class="comment"># 查看当前.py中的全局变量</span></span><br><span class="line"><span class="built_in">locals</span>()  <span class="comment"># 查看当前.py中的局部变量</span></span><br><span class="line"><span class="number">6.</span> 在Python中只有函数分作用域</span><br></pre></td></tr></table></figure></li>
-<li>函数多个返回值<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 函数返回多个结果，就是将多个数据打包成一个整体返回，可以使用列表和字典</span><br><span class="line"><span class="number">2.</span> 通常情况下使用元组</span><br><span class="line"><span class="number">3.</span> 接受多个返回值时，若一直返回值个数，可直接用变量分别接受</span><br><span class="line">eg:</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test</span>():</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>,<span class="number">2</span></span><br><span class="line">x,y=test()</span><br><span class="line">print(<span class="string">&#x27;x=&#123;&#125;,y=&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(x,y))</span><br></pre></td></tr></table></figure></li>
-<li>缺省参数<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">定义：有些函数的参数是有默认参数，你传了用你的，不传用默认的</span><br><span class="line">eg:</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span>(<span class="params">person=<span class="string">&#x27;xiaoming&#x27;</span></span>):</span></span><br><span class="line">    print(<span class="string">&#x27;&#123;&#125;说：他明天去旅游&#x27;</span>.<span class="built_in">format</span>(person))</span><br><span class="line"></span><br><span class="line">say() <span class="comment"># 当say函数不传参数时，就使用默认参数</span></span><br></pre></td></tr></table></figure></li>
-<li>特殊传参<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 当位置参数和关键字参数混合使用时，位置参数在前</span><br><span class="line">eg:</span><br><span class="line">say(<span class="string">&#x27;xiaoming&#x27;</span>,age=<span class="number">18</span>)  <span class="comment"># 位置参数前，关键字参数后</span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> 位置可变参数</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span>(<span class="params">name,*args</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">say(<span class="string">&#x27;xiaoming&#x27;</span>)  <span class="comment"># args为空</span></span><br><span class="line">say(<span class="string">&#x27;xiaoming&#x27;</span>,<span class="number">18</span>)  <span class="comment"># 18以元组的形式存在args里</span></span><br><span class="line"><span class="comment"># 多出来的可变参数会以元组的形式保存在args里</span></span><br><span class="line"><span class="comment"># 在定义函数参数时,先写位置参数再写可变位置参数，传参时也是</span></span><br><span class="line"><span class="comment"># 注意是一个*</span></span><br><span class="line"></span><br><span class="line"><span class="number">3.</span>可变关键字参数</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span>(<span class="params">name,**kwargs</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">say(name=<span class="string">&#x27;xiaoming&#x27;</span>)  <span class="comment"># kwargs为空</span></span><br><span class="line">say(<span class="string">&#x27;xiaoming&#x27;</span>,<span class="number">18</span>)  <span class="comment"># 18以元组的形式存在kwargs里</span></span><br><span class="line"><span class="comment"># 多出来的可变参数会以字典的形式保存在kwargs里</span></span><br><span class="line"><span class="comment"># 在定义函数参数时,先写位置参数再写可变位置参数，传参时也是</span></span><br><span class="line"><span class="comment"># 注意是**</span></span><br><span class="line"></span><br><span class="line"><span class="number">4.</span>当位置参数，可变位置参数，缺省参数，关键字参数，可变关键字参数同时出现时</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span>(<span class="params">位置参数，可变位置参数，缺省参数，关键字参数，可变关键字参数</span>)  </span></span><br><span class="line"><span class="function">#传参时也是一样</span></span><br></pre></td></tr></table></figure></li>
-<li>注意事项 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1.</span> 在Python中函数不允许重名,重名后一个会覆盖前一个</span><br><span class="line"><span class="number">2.</span> 函数名和变量名也不能重名</span><br></pre></td></tr></table></figure></li>
-</ol>
+        <h3 id="数据库优化"><a href="#数据库优化" class="headerlink" title="数据库优化"></a>数据库优化</h3><h5 id="1-表结构"><a href="#1-表结构" class="headerlink" title="1. 表结构"></a>1. 表结构</h5><p>course表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">CourseId:课程id、主键</span><br><span class="line">CourseName:课程名称</span><br><span class="line">CourseClass:课程类别</span><br><span class="line">CourseImgUrl:课程图标</span><br><span class="line">describle:课程描述</span><br></pre></td></tr></table></figure>
+<p>section表</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">id:主键</span><br><span class="line">courseId:课程id</span><br><span class="line">sectionUrl:课程章节视频路径</span><br><span class="line">sectionName:课程章节视频名称</span><br></pre></td></tr></table></figure>
+<h5 id="2-根据数据库优化所做的代码修改"><a href="#2-根据数据库优化所做的代码修改" class="headerlink" title="2. 根据数据库优化所做的代码修改"></a>2. 根据数据库优化所做的代码修改</h5><h6 id="2-1-当显示某一课程所有视频信息"><a href="#2-1-当显示某一课程所有视频信息" class="headerlink" title="2.1 当显示某一课程所有视频信息"></a>2.1 当显示某一课程所有视频信息</h6><p>采用<code>course</code>表和<code>section</code>表联合查询的方式显示，例如显示课程<code>id</code>为1的课程的所有视频信息，可采用如下的<code>SQL</code>语句,即<br><code>select * FROM section LEFT JOIN course on section.CourseId=course.CourseId where course.CourseId=1;</code><br>该功能是调用courseController控制器中的courseGetAllAction()方法。</p>
+<h6 id="2-2-增加课程"><a href="#2-2-增加课程" class="headerlink" title="2.2 增加课程"></a>2.2 增加课程</h6><p>在<code>course</code>表中插入一条新增课程的信息，采用的<code>SQL</code>语句为<br><code>INSERT INTO course (CourseName,CourseClass,describle,CourseImgUrl ) VALUES (&#39;111&#39;,&#39;数学&#39;,&#39;222&#39;,&#39;05898360be8a398eac2fe28763a726c7.jpg&#39;)</code>;<br>该功能是调用courseController控制器中的courseAddAction()方法。</p>
+<h6 id="2-3-增加视频"><a href="#2-3-增加视频" class="headerlink" title="2.3 增加视频"></a>2.3 增加视频</h6><p>在<code>section</code>表中插入一条新增课程的信息，采用的<code>SQL</code>语句为<br><code>INSERT INTO section (sectionName,sectionUrl,CourseId ) VALUES (&#39;111&#39;,&#39;1c9ca17bf6ed6f46095dc12c9b563e7b.mp4&#39;,&#39;8&#39;);</code><br>该功能是调用sectionController控制器中的sectionAddAction()方法;<br>该功能最重要的地方就是前端需要传递过来视频对应过来的课程id，前端通过本地存储的方式把点击某一课程的id存储起来，在需要向服务器发送课程id时再取出。</p>
+<h6 id="2-4-删除课程"><a href="#2-4-删除课程" class="headerlink" title="2.4 删除课程"></a>2.4 删除课程</h6><p>在<code>course</code>表中删除对应的一条课程的信息，采用的<code>SQL</code>语句为<br><code>DELETE FROM course WHERE courseId=8</code>;<br>该功能是调用courseController控制器中的courseDelAction()方法。</p>
+<h6 id="2-5-修改课程"><a href="#2-5-修改课程" class="headerlink" title="2.5 修改课程"></a>2.5 修改课程</h6><p>在<code>course</code>表中修改对应的一条课程的信息，采用的<code>SQL</code>语句为<br><code>update course set CourseName=&#39;不就是语法和长难句吗-刘晓艳&#39;,CourseClass=&#39;英语&#39;,describle=&#39;55&#39; where CourseId=4</code>;<br>该功能是调用courseController控制器中的courseUpdateAction()方法。</p>
 
     </div>
 
@@ -447,7 +431,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://romanticqq.top/2021/01/11/Python%E4%B8%AD%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/" title="Python中函数的使用">https://romanticqq.top/2021/01/11/Python中函数的使用/</a>
+      <a href="https://romanticqq.top/2021/05/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96/" title="">https://romanticqq.top/2021/05/23/数据库优化/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -455,21 +439,18 @@
 </ul>
 </div>
 
-          <div class="post-tags">
-              <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
-          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/01/11/Python%E5%85%83%E7%BB%84%E3%80%81%E5%88%97%E8%A1%A8%E3%80%81%E5%AD%97%E5%85%B8/" rel="prev" title="Python元组、列表、字典、集合">
-                  <i class="fa fa-chevron-left"></i> Python元组、列表、字典、集合
+                <a href="/2021/05/05/Ajax%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" rel="prev" title="Ajax实现文件上传">
+                  <i class="fa fa-chevron-left"></i> Ajax实现文件上传
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/01/12/Python%E8%BF%90%E7%AE%97%E7%AC%A6/" rel="next" title="Python运算符">
-                  Python运算符 <i class="fa fa-chevron-right"></i>
+                <a href="/2021/05/23/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" rel="next" title="">
+                   <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>
@@ -610,7 +591,7 @@ NexT.utils.loadComments('#valine-comments', () => {
   NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
     new Valine(Object.assign({"enable":true,"appId":"ORzagqYYRfQlmQ4SmiwKbGLQ-gzGzoHsz","appKey":"hcSjYLbTafwrerxKE9BLrn16","serverURLs":null,"placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":false,"comment_count":true,"recordIP":true,"enableQQ":true,"requiredFields":[]}, {
       el: '#valine-comments',
-      path: "/2021/01/11/Python%E4%B8%AD%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/",
+      path: "/2021/05/23/%E6%95%B0%E6%8D%AE%E5%BA%93%E4%BC%98%E5%8C%96/",
       serverURLs: "https://orzagqyy.api.lncldglobal.com"
     }));
   }, window.Valine);

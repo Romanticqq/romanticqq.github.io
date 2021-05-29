@@ -24,21 +24,21 @@
     var CONFIG = {"hostname":"romanticqq.top","root":"/","scheme":"Gemini","version":"8.0.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":true,"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"valine","storage":true,"lazyload":false,"nav":null,"activeClass":"valine"},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}};
   </script>
 
-  <meta name="description" content="Pycharm基本使用 双击shift键(或Ctrl+shift+A)，会弹出全局搜索窗口 快速格式化代码 Ctrl+shift+L 快速复制粘贴选中代码 Ctrl+D 移动一行代码 Ctrl+shift+上下箭头 光标定位到一行开头Fn+左箭头，定位到一行结尾Fn+右箭头">
+  <meta name="description" content="单例模式 单例模式的简述：单例模式就是确保某个类只有一个实例，而且这个实例一般都是自行实例化，不需要再去new这个类，通过一个全局访问点去访问，一般常见的如类名。 为什么要使用单例模式：在开发过程中，经常会遇到一些对象，这样的对象在全局当中仅仅存在一个就可以了，如执行SQL语句时连接数据库的操作。如果这种对象出现过多的话，可能会出现各种意外错误。 单例类 123456789101112131415">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Pycharm基本使用">
-<meta property="og:url" content="https://romanticqq.top/2021/01/08/Pycharm%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/index.html">
+<meta property="og:title" content="单例模式">
+<meta property="og:url" content="https://romanticqq.top/2021/05/29/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/index.html">
 <meta property="og:site_name" content="RomanticQq">
-<meta property="og:description" content="Pycharm基本使用 双击shift键(或Ctrl+shift+A)，会弹出全局搜索窗口 快速格式化代码 Ctrl+shift+L 快速复制粘贴选中代码 Ctrl+D 移动一行代码 Ctrl+shift+上下箭头 光标定位到一行开头Fn+左箭头，定位到一行结尾Fn+右箭头">
+<meta property="og:description" content="单例模式 单例模式的简述：单例模式就是确保某个类只有一个实例，而且这个实例一般都是自行实例化，不需要再去new这个类，通过一个全局访问点去访问，一般常见的如类名。 为什么要使用单例模式：在开发过程中，经常会遇到一些对象，这样的对象在全局当中仅仅存在一个就可以了，如执行SQL语句时连接数据库的操作。如果这种对象出现过多的话，可能会出现各种意外错误。 单例类 123456789101112131415">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-01-08T02:55:56.000Z">
-<meta property="article:modified_time" content="2021-01-12T06:12:12.488Z">
+<meta property="article:published_time" content="2021-05-29T07:25:23.000Z">
+<meta property="article:modified_time" content="2021-05-29T10:54:15.317Z">
 <meta property="article:author" content="RomanticQq">
-<meta property="article:tag" content="Python">
+<meta property="article:tag" content="设计模式">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="https://romanticqq.top/2021/01/08/Pycharm%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
+<link rel="canonical" href="https://romanticqq.top/2021/05/29/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">
 
 
 <script class="page-configurations">
@@ -51,7 +51,7 @@
   };
 </script>
 
-  <title>Pycharm基本使用 | RomanticQq</title>
+  <title>单例模式 | RomanticQq</title>
   
 
 
@@ -229,7 +229,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <section class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Pycharm%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8"><span class="nav-text">Pycharm基本使用</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F"><span class="nav-text">单例模式</span></a></li></ol></div>
         </section>
         <!--/noindex-->
 
@@ -312,7 +312,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://romanticqq.top/2021/01/08/Pycharm%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">
+    <link itemprop="mainEntityOfPage" href="https://romanticqq.top/2021/05/29/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.jpg">
@@ -325,7 +325,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Pycharm基本使用
+          单例模式
         </h1>
 
         <div class="post-meta-container">
@@ -335,23 +335,17 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-01-08 10:55:56" itemprop="dateCreated datePublished" datetime="2021-01-08T10:55:56+08:00">2021-01-08</time>
+      <time title="创建时间：2021-05-29 15:25:23 / 修改时间：18:54:15" itemprop="dateCreated datePublished" datetime="2021-05-29T15:25:23+08:00">2021-05-29</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-01-12 14:12:12" itemprop="dateModified" datetime="2021-01-12T14:12:12+08:00">2021-01-12</time>
-      </span>
     <span class="post-meta-item">
       <span class="post-meta-item-icon">
         <i class="far fa-folder"></i>
       </span>
       <span class="post-meta-item-text">分类于</span>
         <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/Python/" itemprop="url" rel="index"><span itemprop="name">Python</span></a>
+          <a href="/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" itemprop="url" rel="index"><span itemprop="name">设计模式</span></a>
         </span>
     </span>
 
@@ -371,8 +365,8 @@
       </span>
       <span class="post-meta-item-text">Valine：</span>
     
-    <a title="valine" href="/2021/01/08/Pycharm%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/01/08/Pycharm%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" itemprop="commentCount"></span>
+    <a title="valine" href="/2021/05/29/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/05/29/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" itemprop="commentCount"></span>
     </a>
   </span>
   
@@ -384,7 +378,7 @@
         <i class="far fa-file-word"></i>
       </span>
       <span class="post-meta-item-text">本文字数：</span>
-      <span>129</span>
+      <span>1k</span>
     </span>
     <span class="post-meta-item" title="阅读时长">
       <span class="post-meta-item-icon">
@@ -402,12 +396,12 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h2 id="Pycharm基本使用"><a href="#Pycharm基本使用" class="headerlink" title="Pycharm基本使用"></a>Pycharm基本使用</h2><ol>
-<li>双击shift键(或Ctrl+shift+A)，会弹出全局搜索窗口</li>
-<li>快速格式化代码 Ctrl+shift+L</li>
-<li>快速复制粘贴选中代码 Ctrl+D</li>
-<li>移动一行代码 Ctrl+shift+上下箭头</li>
-<li>光标定位到一行开头Fn+左箭头，定位到一行结尾Fn+右箭头</li>
+        <h4 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h4><ol>
+<li>单例模式的简述：<br>单例模式就是确保某个类只有一个实例，而且这个实例一般都是自行实例化，不需要再去new这个类，通过一个全局访问点去访问，一般常见的如类名。</li>
+<li>为什么要使用单例模式：<br>在开发过程中，经常会遇到一些对象，这样的对象在全局当中仅仅存在一个就可以了，如执行SQL语句时连接数据库的操作。如果这种对象出现过多的话，可能会出现各种意外错误。</li>
+<li>单例类 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Football</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">static</span>  <span class="variable">$fb</span> = <span class="literal">null</span>;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 构造方法私有化，不能让其他程序去new对象</span></span><br><span class="line"><span class="comment">    * 要想取得该对象，必须由该类提供方法</span></span><br><span class="line"><span class="comment">    * */</span></span><br><span class="line">    <span class="keyword">final</span> <span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 该方法必须是一个静态方法，只有通过类名才可以调用</span></span><br><span class="line"><span class="comment">    * 先去判断这个对象是否被创建</span></span><br><span class="line"><span class="comment">    * 如果没有则创建；如果存在则返回创建好的对象</span></span><br><span class="line"><span class="comment">    * 以保证该对象只有一个实例</span></span><br><span class="line"><span class="comment">    * */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">static</span> <span class="function"><span class="keyword">function</span> <span class="title">getInstance</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">static</span>::<span class="variable">$fb</span> === <span class="literal">null</span>)&#123;</span><br><span class="line">            <span class="built_in">static</span>::<span class="variable">$fb</span> = <span class="keyword">new</span> Football();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">static</span>::<span class="variable">$fb</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>测试类<figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">require</span> <span class="string">&#x27;Football.class.php&#x27;</span>;</span><br><span class="line">header(<span class="string">&quot;Content-Type:text/html;charset=utf-8&quot;</span>);</span><br><span class="line"><span class="comment">//class test &#123;</span></span><br><span class="line"><span class="comment">//    public function test()&#123;</span></span><br><span class="line"><span class="comment">//        $fb1 = Football::getInstance();</span></span><br><span class="line"><span class="comment">//        $fb2 = Football::getInstance();</span></span><br><span class="line"><span class="comment">//        if ($fb1 === $fb2)&#123;</span></span><br><span class="line"><span class="comment">//            echo &quot;fb1和fb2为同一个对象&quot;;</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line"><span class="comment">//&#125;</span></span><br><span class="line"><span class="variable">$fb1</span> = Football::getInstance();</span><br><span class="line"><span class="variable">$fb2</span> = Football::getInstance();</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* 去判断$fb1和$fb2是否为同一个实例</span></span><br><span class="line"><span class="comment">* */</span></span><br><span class="line"><span class="keyword">if</span> (<span class="variable">$fb1</span> === <span class="variable">$fb2</span>)&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;fb1和fb2为同一个对象&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
 </ol>
 
     </div>
@@ -444,7 +438,7 @@
   </li>
   <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="https://romanticqq.top/2021/01/08/Pycharm%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/" title="Pycharm基本使用">https://romanticqq.top/2021/01/08/Pycharm基本使用/</a>
+      <a href="https://romanticqq.top/2021/05/29/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/" title="单例模式">https://romanticqq.top/2021/05/29/单例模式/</a>
   </li>
   <li class="post-copyright-license">
     <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
@@ -453,21 +447,18 @@
 </div>
 
           <div class="post-tags">
-              <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i> Python</a>
+              <a href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag"><i class="fa fa-tag"></i> 设计模式</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/01/08/Python%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/" rel="prev" title="Python基本语法">
-                  <i class="fa fa-chevron-left"></i> Python基本语法
+                <a href="/2021/05/05/Ajax%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" rel="prev" title="Ajax实现文件上传">
+                  <i class="fa fa-chevron-left"></i> Ajax实现文件上传
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/01/08/%E5%AD%A6%E4%B9%A0Python%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91(%E6%9B%B4%E6%96%B0%E4%B8%AD)/" rel="next" title="学习Python遇到的坑(更新中)">
-                  学习Python遇到的坑(更新中) <i class="fa fa-chevron-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -607,7 +598,7 @@ NexT.utils.loadComments('#valine-comments', () => {
   NexT.utils.getScript('//cdn.jsdelivr.net/npm/valine@1.4.14/dist/Valine.min.js', () => {
     new Valine(Object.assign({"enable":true,"appId":"ORzagqYYRfQlmQ4SmiwKbGLQ-gzGzoHsz","appKey":"hcSjYLbTafwrerxKE9BLrn16","serverURLs":null,"placeholder":"Just go go","avatar":"mm","meta":["nick","mail","link"],"pageSize":10,"lang":null,"visitor":false,"comment_count":true,"recordIP":true,"enableQQ":true,"requiredFields":[]}, {
       el: '#valine-comments',
-      path: "/2021/01/08/Pycharm%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/",
+      path: "/2021/05/29/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/",
       serverURLs: "https://orzagqyy.api.lncldglobal.com"
     }));
   }, window.Valine);

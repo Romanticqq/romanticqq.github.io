@@ -242,7 +242,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">34</span>
+          <span class="site-state-item-count">36</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -255,7 +255,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">18</span>
+        <span class="site-state-item-count">22</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -300,6 +300,320 @@
       
 
       
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://romanticqq.top/2021/06/03/laravel8%E8%B7%AF%E7%94%B1/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="RomanticQq">
+      <meta itemprop="description" content="种一棵树最好的时间是十年前,其次是现在!">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RomanticQq">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/03/laravel8%E8%B7%AF%E7%94%B1/" class="post-title-link" itemprop="url">laravel8路由</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-06-03 22:28:38 / 修改时间：22:27:23" itemprop="dateCreated datePublished" datetime="2021-06-03T22:28:38+08:00">2021-06-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%90%8E%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/06/03/laravel8%E8%B7%AF%E7%94%B1/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/06/03/laravel8%E8%B7%AF%E7%94%B1/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>1.9k</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>2 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <ol>
+<li>get请求 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Route::get(<span class="string">&#x27;/aaa&#x27;</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&#x27;aaa&#x27;</span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">Route::get(<span class="string">&#x27;/aaa&#x27;</span>,[TestController::class,<span class="string">&#x27;form&#x27;</span>]);</span><br></pre></td></tr></table></figure></li>
+<li>post请求 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Route::post(<span class="string">&#x27;/aaa&#x27;</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&#x27;aaa&#x27;</span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">Route::post(<span class="string">&#x27;/aaa&#x27;</span>,[TestController::class,<span class="string">&#x27;form&#x27;</span>]);</span><br></pre></td></tr></table></figure></li>
+<li>一个路由响应多个http请求动作 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Route::match([<span class="string">&#x27;get&#x27;</span>, <span class="string">&#x27;post&#x27;</span>], <span class="string">&#x27;foo&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;This is a request from get or post&#x27;</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+<li>一个路由来响应所有 HTTP 请求动作 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Route::any(<span class="string">&#x27;bar&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="string">&#x27;This is a request from any HTTP verb&#x27;</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+<li>重定向路由 <figure class="highlight php"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Route::redirect(<span class="string">&#x27;/here&#x27;</span>,<span class="string">&#x27;/aaa&#x27;</span>);</span><br></pre></td></tr></table></figure></li>
+<li>视图路由<pre><code class="php">Route::view(&#39;hello&#39;, &#39;hello&#39;, [&#39;name&#39; =&gt; &#39;学院君&#39;]);
+&lt;h1&gt;
+    Hello, &#123;&#123; $name &#125;&#125;!
+&lt;/h1&gt;
+注：在view中第一个参数为URL，第二个参数为视图名称，第三个参数可选为需要传到视图文件的值
+
+</code></pre>
+</li>
+</ol>
+<ol start="7">
+<li>路由参数<pre><code class="php">//必选参数
+Route::get(&#39;user/&#123;id&#125;&#39;, function ($id) &#123;
+    return &#39;User &#39; . $id;
+&#125;);
+//可选参数  可以设置默认值
+Route::get(&#39;user/&#123;id？&#125;&#39;, function ($id=1) &#123;
+    return &#39;User &#39; . $id;
+&#125;);
+//多个参数
+Route::get(&#39;posts/&#123;post&#125;/&#123;comment&#125;&#39;, function ($postId, $commentId) &#123;
+    return $postId . &#39;-&#39; . $commentId;
+&#125;);
+
+</code></pre>
+</li>
+</ol>
+<ol start="8">
+<li><p>正则约束</p>
+<pre><code class="php">//判断一个值
+Route::get(&#39;user/&#123;id&#125;&#39;, function ($id) &#123;
+    // $id 必须是数字
+&#125;)-&gt;where(&#39;id&#39;, &#39;[0-9]+&#39;);
+//判断多个值
+Route::get(&#39;user/&#123;id&#125;&#39;, function ($id) &#123;
+    // $id 必须是数字
+&#125;)-&gt;where(&#39;id&#39;, &#39;[0-9]+&#39;);</code></pre>
+</li>
+<li><p>全局约束</p>
+<pre><code class="php">//需要在 RouteServiceProvider 类的 boot 方法中定义这种约束模式
+public function boot()
+&#123;
+    Route::pattern(&#39;id&#39;, &#39;[0-9]+&#39;);
+&#125;
+Route::get(&#39;user/&#123;id&#125;&#39;, function ($id) &#123;
+    // 只有当 &#123;id&#125; 是数字时才会被调用
+&#125;);
+
+</code></pre>
+</li>
+</ol>
+<ol start="10">
+<li>分组前缀<pre><code class="php">Route::prefix(&#39;sss&#39;)-&gt;group(function ()&#123;
+Route::get(&#39;index&#39;,function ()&#123;
+return 33;
+&#125;);
+Route::get(&#39;welcome&#39;,function ()&#123;
+return 44;
+&#125;);
+&#125;);
+//访问时路由为/sss/index或/sss/welcome
+</code></pre>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://romanticqq.top/2021/06/03/Linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BALAMP/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpg">
+      <meta itemprop="name" content="RomanticQq">
+      <meta itemprop="description" content="种一棵树最好的时间是十年前,其次是现在!">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="RomanticQq">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/06/03/Linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BALAMP/" class="post-title-link" itemprop="url">Linux环境下搭建LAMP</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-06-03 22:22:38 / 修改时间：22:24:45" itemprop="dateCreated datePublished" datetime="2021-06-03T22:22:38+08:00">2021-06-03</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-folder"></i>
+      </span>
+      <span class="post-meta-item-text">分类于</span>
+        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+          <a href="/categories/%E5%90%8E%E7%AB%AF/" itemprop="url" rel="index"><span itemprop="name">后端</span></a>
+        </span>
+    </span>
+
+  
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/2021/06/03/Linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BALAMP/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/2021/06/03/Linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BALAMP/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+      </div>
+      <div class="post-meta">
+    <span class="post-meta-item" title="本文字数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-file-word"></i>
+      </span>
+      <span class="post-meta-item-text">本文字数：</span>
+      <span>933</span>
+    </span>
+    <span class="post-meta-item" title="阅读时长">
+      <span class="post-meta-item-icon">
+        <i class="far fa-clock"></i>
+      </span>
+      <span class="post-meta-item-text">阅读时长 &asymp;</span>
+      <span>1 分钟</span>
+    </span>
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4 id="安装Apache"><a href="#安装Apache" class="headerlink" title="安装Apache"></a>安装Apache</h4><ol>
+<li><p>安装Apache</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">   yum install httpd -y</span><br><span class="line"></span><br><span class="line">2. 启动服务</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>service httpd restart</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3. Apache服务开机启动</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p> chkconfig httpd on</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">4. Apache的配置文件</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p> /etc/httpd/conf/httpd.conf</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">5. 网站根目录</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p> /var/www/html/</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 安装mysql</span><br><span class="line"></span><br><span class="line">1. 安装mysql</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>wget <a target="_blank" rel="noopener" href="http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm">http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm</a><br>rpm -ivh mysql-community-release-el7-5.noarch.rpm<br>yum install mysql-server</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2. 启动mysql</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p> service mysqld restart</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3. 首次登录mysql</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p> mysql </p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">4. 设置密码</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p> show databases;<br> use mysql;<br> select user,password from user;<br> update user set password=password(‘root’) where user=’root’;</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">5. mysql刷新权限命令</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>flush privileges;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">6. 再次登录mysql</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p> mysql -u root(用户名) -p<br> root（密码）</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">#### 安装php</span><br><span class="line"></span><br><span class="line">1. 安装php和连接php、mysql工具</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p> yum install php php-mysql</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">2. 启动Apache和mysql</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p> service httpd restart<br> service mysqld restart</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">3. 测试php和mysql是否连接成功</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p> $link = mysql_connect(‘localhost’,’root’,’root’);<br> if($link){<br> echo “successful”;<br> }else{<br> echo “fail”;<br> }</p>
+ <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> #### 常见问题         </span><br><span class="line"></span><br><span class="line">1. 报错Cannot find a valid baseurl for repo： base&#x2F;7&#x2F;86-64</span><br><span class="line"></span><br><span class="line">    解决方案：</span><br></pre></td></tr></table></figure>
+<p> cd /etc/sysconfig/network-scriptsls<br> vim ifcfg-ens33<br> //修改<br> ONBOOT=yes<br> //保存退出即可</p>
+<pre><code>
+
+
+
+</code></pre>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
     
 
 
@@ -1189,237 +1503,6 @@
 
 
 
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://romanticqq.top/2021/02/04/2015%E5%B9%B4%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%A4%8D%E8%AF%95%E7%9C%9F%E9%A2%98/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="RomanticQq">
-      <meta itemprop="description" content="种一棵树最好的时间是十年前,其次是现在!">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="RomanticQq">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/02/04/2015%E5%B9%B4%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%A4%8D%E8%AF%95%E7%9C%9F%E9%A2%98/" class="post-title-link" itemprop="url">重邮程序设计复试真题(部分)</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-02-04 10:08:48 / 修改时间：10:33:29" itemprop="dateCreated datePublished" datetime="2021-02-04T10:08:48+08:00">2021-02-04</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/C%E8%AF%AD%E8%A8%80/" itemprop="url" rel="index"><span itemprop="name">C语言</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2021/02/04/2015%E5%B9%B4%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%A4%8D%E8%AF%95%E7%9C%9F%E9%A2%98/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/02/04/2015%E5%B9%B4%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%A4%8D%E8%AF%95%E7%9C%9F%E9%A2%98/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>257</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>2015年：</p>
-<ol>
-<li>求num各数字之和；</li>
-<li>测试字符C在字符号串S中出现的次数；</li>
-<li>中国有句俗话叫“三天打鱼两天晒网”。某人1990年1月1日起开始“三天打鱼两天晒网”，问这个人在以后的某一天中是打鱼还是晒网</li>
-</ol>
-<p>2017年：</p>
-<ol>
-<li>选择分支结构，注意ceil函数</li>
-<li>汉诺塔问题</li>
-<li>字符串交换问题：字符串以A开头和以K结尾的单词进行交换</li>
-<li>百钱买百鸡问题：百鸡问题：鸡翁一值钱五，鸡母一值钱三，鸡雏三值钱一。百钱买百鸡，问鸡翁、鸡母、鸡雏各几何？</li>
-<li>最大约数辗转相除法；</li>
-<li>文件操作：将数据写入fname.txt中</li>
-<li>螺旋方阵</li>
-<li>求方程组近似根：弦截法</li>
-<li>斐波那契数列递归实现</li>
-</ol>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://romanticqq.top/2021/01/18/Pyecharts%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpg">
-      <meta itemprop="name" content="RomanticQq">
-      <meta itemprop="description" content="种一棵树最好的时间是十年前,其次是现在!">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="RomanticQq">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/01/18/Pyecharts%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/" class="post-title-link" itemprop="url">Pyecharts遇到的坑</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-      
-
-      <time title="创建时间：2021-01-18 15:33:01 / 修改时间：19:45:45" itemprop="dateCreated datePublished" datetime="2021-01-18T15:33:01+08:00">2021-01-18</time>
-    </span>
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-folder"></i>
-      </span>
-      <span class="post-meta-item-text">分类于</span>
-        <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-          <a href="/categories/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/" itemprop="url" rel="index"><span itemprop="name">机器学习</span></a>
-        </span>
-    </span>
-
-  
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Valine：</span>
-    
-    <a title="valine" href="/2021/01/18/Pyecharts%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/#valine-comments" itemprop="discussionUrl">
-      <span class="post-comments-count valine-comment-count" data-xid="/2021/01/18/Pyecharts%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/" itemprop="commentCount"></span>
-    </a>
-  </span>
-  
-  
-      </div>
-      <div class="post-meta">
-    <span class="post-meta-item" title="本文字数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-file-word"></i>
-      </span>
-      <span class="post-meta-item-text">本文字数：</span>
-      <span>454</span>
-    </span>
-    <span class="post-meta-item" title="阅读时长">
-      <span class="post-meta-item-icon">
-        <i class="far fa-clock"></i>
-      </span>
-      <span class="post-meta-item-text">阅读时长 &asymp;</span>
-      <span>1 分钟</span>
-    </span>
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <p>因为Pyecharts高版本不兼容低版本的问题，相同的语法在不同的版本就可能会出现一个能正常运行而一个出现报错的情况<br>常见的有导包时就有可能出现错误</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> pyecharts.charts <span class="keyword">import</span> Bar,Pie,Line <span class="comment"># 1.x版本的语法</span></span><br><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> Bar,Pie,Line <span class="comment"># 0.5.x版本的语法</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#若交换使用就会报错 </span></span><br></pre></td></tr></table></figure>
-<p>还有</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">bar_1 = Bar(<span class="string">&quot;每天被领劵的数量&quot;</span>,width=<span class="number">1500</span>,height=<span class="number">600</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在0.5.x版本下就是正确的，在1.x版本下就是错误的</span></span><br></pre></td></tr></table></figure>
-<p>在用<code>pip</code>命令安装时默认安装的是高版本，下面是卸载<code>Pyecharts</code>的命令和安装低版本的命令</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">pip install pyecharts <span class="comment"># 默认安装高版本</span></span><br><span class="line">pip uninstall pyecharts <span class="comment"># 卸载pycharts(无论任何版本)</span></span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pyecharts==<span class="number">0.5</span><span class="number">.5</span> <span class="comment"># 安装0.5.5</span></span><br></pre></td></tr></table></figure>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
 
   
   <nav class="pagination">
@@ -1476,14 +1559,14 @@
       <i class="fa fa-chart-line"></i>
     </span>
       <span>站点总字数：</span>
-    <span title="站点总字数">40k</span>
+    <span title="站点总字数">43k</span>
   </span>
   <span class="post-meta-item">
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
       <span>站点阅读时长 &asymp;</span>
-    <span title="站点阅读时长">36 分钟</span>
+    <span title="站点阅读时长">39 分钟</span>
   </span>
 </div>
 <div class="busuanzi-count">

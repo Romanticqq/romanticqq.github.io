@@ -1,18 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Ajax实现文件上传</title>
-    <url>/2021/05/05/Ajax%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</url>
-    <content><![CDATA[<h1 id="1-前端demo"><a href="#1-前端demo" class="headerlink" title="1.前端demo"></a>1.前端demo</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">    function btnSubmit() &#123;</span><br><span class="line">        var img &#x3D; document.getElementById(&#39;images&#39;).files[0];</span><br><span class="line">        var fd &#x3D; new FormData();</span><br><span class="line">        fd.append(&#39;FILE&#39;, img);</span><br><span class="line">        fd.append(&#39;name&#39;, &#39;xiaoming&#39;);</span><br><span class="line">        $.ajax(&#123;</span><br><span class="line">            type: &quot;post&quot;,</span><br><span class="line">            url: &quot;http:&#x2F;&#x2F;127.0.0.1&#x2F;test.php&quot;,</span><br><span class="line">            processData: false,&#x2F;&#x2F;非常重要，不可省略</span><br><span class="line">            contentType: false,&#x2F;&#x2F;非常重要，不可省略</span><br><span class="line">            dataType: &quot;json&quot;,</span><br><span class="line">            data: fd,</span><br><span class="line">            success: function(data) &#123;</span><br><span class="line"></span><br><span class="line">            &#125;,</span><br><span class="line">            error: function(data) &#123;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-<h1 id="2-服务端demo"><a href="#2-服务端demo" class="headerlink" title="2.服务端demo"></a>2.服务端demo</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$imgName&#x3D;$_FILES[&#39;FILE&#39;][&#39;name&#39;];</span><br><span class="line">$tmp_name&#x3D;$_FILES[&#39;FILE&#39;][&#39;tmp_name&#39;];</span><br><span class="line">$fileName&#x3D;&#39;.&#x2F;123.jpg&#39;;</span><br><span class="line">$rst&#x3D;move_uploaded_file($tmp_name,$fileName);</span><br><span class="line">echo $rst;</span><br></pre></td></tr></table></figure>
-<p>注：<br>1.$fileName路径中的路径必须存在；<br>2.$fileName路径中不可出现中文；<br>若不满足则两种情况，可能会false；</p>
+    <title>重邮程序设计复试真题(部分)</title>
+    <url>/2021/02/04/2015%E5%B9%B4%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%A4%8D%E8%AF%95%E7%9C%9F%E9%A2%98/</url>
+    <content><![CDATA[<p>2015年：</p>
+<ol>
+<li>求num各数字之和；</li>
+<li>测试字符C在字符号串S中出现的次数；</li>
+<li>中国有句俗话叫“三天打鱼两天晒网”。某人1990年1月1日起开始“三天打鱼两天晒网”，问这个人在以后的某一天中是打鱼还是晒网</li>
+</ol>
+<p>2017年：</p>
+<ol>
+<li>选择分支结构，注意ceil函数</li>
+<li>汉诺塔问题</li>
+<li>字符串交换问题：字符串以A开头和以K结尾的单词进行交换</li>
+<li>百钱买百鸡问题：百鸡问题：鸡翁一值钱五，鸡母一值钱三，鸡雏三值钱一。百钱买百鸡，问鸡翁、鸡母、鸡雏各几何？</li>
+<li>最大约数辗转相除法；</li>
+<li>文件操作：将数据写入fname.txt中</li>
+<li>螺旋方阵</li>
+<li>求方程组近似根：弦截法</li>
+<li>斐波那契数列递归实现</li>
+</ol>
 ]]></content>
       <categories>
-        <category>前端</category>
+        <category>C语言</category>
       </categories>
       <tags>
-        <tag>前端</tag>
-        <tag>Ajax</tag>
+        <tag>F021程序设计</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Anaconda安装库时遇到的坑</title>
+    <url>/2021/01/13/Anaconda%E5%AE%89%E8%A3%85%E5%BA%93%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</url>
+    <content><![CDATA[<ol>
+<li>注意要在安装库文件的目录下使用cmd，然后用命令安装</li>
+<li>当安装完库成功后,import库发现不存在,可能是因为库的安装路径不在当前Python库的搜索路径内,所以没被找到.<br>解决方法:<br>(1)把库的路径加入搜索路径内;<br>(2)当安装Anaconda使,自带了Python,因此删掉自己安装的Python后再重新安装库即可，这样就会自动安装在搜索目录下了(新手尽量只装一个Python)</li>
+</ol>
+]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
       </tags>
   </entry>
   <entry>
@@ -110,59 +139,69 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>重邮程序设计复试真题(部分)</title>
-    <url>/2021/02/04/2015%E5%B9%B4%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%A4%8D%E8%AF%95%E7%9C%9F%E9%A2%98/</url>
-    <content><![CDATA[<p>2015年：</p>
-<ol>
-<li>求num各数字之和；</li>
-<li>测试字符C在字符号串S中出现的次数；</li>
-<li>中国有句俗话叫“三天打鱼两天晒网”。某人1990年1月1日起开始“三天打鱼两天晒网”，问这个人在以后的某一天中是打鱼还是晒网</li>
-</ol>
-<p>2017年：</p>
-<ol>
-<li>选择分支结构，注意ceil函数</li>
-<li>汉诺塔问题</li>
-<li>字符串交换问题：字符串以A开头和以K结尾的单词进行交换</li>
-<li>百钱买百鸡问题：百鸡问题：鸡翁一值钱五，鸡母一值钱三，鸡雏三值钱一。百钱买百鸡，问鸡翁、鸡母、鸡雏各几何？</li>
-<li>最大约数辗转相除法；</li>
-<li>文件操作：将数据写入fname.txt中</li>
-<li>螺旋方阵</li>
-<li>求方程组近似根：弦截法</li>
-<li>斐波那契数列递归实现</li>
+    <title>Linux环境下搭建LAMP</title>
+    <url>/2021/06/03/Linux%E7%8E%AF%E5%A2%83%E4%B8%8B%E6%90%AD%E5%BB%BALAMP/</url>
+    <content><![CDATA[<h4 id="安装Apache"><a href="#安装Apache" class="headerlink" title="安装Apache"></a>安装Apache</h4><ol>
+<li><p>安装Apache</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">   yum install httpd -y</span><br><span class="line"></span><br><span class="line">2. 启动服务</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>service httpd restart</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">3. Apache服务开机启动</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p> chkconfig httpd on</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">4. Apache的配置文件</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p> /etc/httpd/conf/httpd.conf</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">5. 网站根目录</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p> /var/www/html/</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">#### 安装mysql</span><br><span class="line"></span><br><span class="line">1. 安装mysql</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>wget <a href="http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm">http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm</a><br>rpm -ivh mysql-community-release-el7-5.noarch.rpm<br>yum install mysql-server</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">2. 启动mysql</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p> service mysqld restart</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">3. 首次登录mysql</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p> mysql </p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">4. 设置密码</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p> show databases;<br> use mysql;<br> select user,password from user;<br> update user set password=password(‘root’) where user=’root’;</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">5. mysql刷新权限命令</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p>flush privileges;</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">6. 再次登录mysql</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p> mysql -u root(用户名) -p<br> root（密码）</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">#### 安装php</span><br><span class="line"></span><br><span class="line">1. 安装php和连接php、mysql工具</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p> yum install php php-mysql</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">2. 启动Apache和mysql</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p> service httpd restart<br> service mysqld restart</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">3. 测试php和mysql是否连接成功</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p> $link = mysql_connect(‘localhost’,’root’,’root’);<br> if($link){<br> echo “successful”;<br> }else{<br> echo “fail”;<br> }</p>
+ <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"> #### 常见问题         </span><br><span class="line"></span><br><span class="line">1. 报错Cannot find a valid baseurl for repo： base&#x2F;7&#x2F;86-64</span><br><span class="line"></span><br><span class="line">    解决方案：</span><br></pre></td></tr></table></figure>
+<p> cd /etc/sysconfig/network-scriptsls<br> vim ifcfg-ens33<br> //修改<br> ONBOOT=yes<br> //保存退出即可</p>
+<pre><code>
+
+
+
+</code></pre>
+</li>
 </ol>
 ]]></content>
       <categories>
-        <category>C语言</category>
+        <category>后端</category>
       </categories>
       <tags>
-        <tag>F021程序设计</tag>
+        <tag>Linux</tag>
+        <tag>LAMP</tag>
+        <tag>服务器</tag>
+        <tag>php</tag>
       </tags>
   </entry>
   <entry>
-    <title>Anaconda安装库时遇到的坑</title>
-    <url>/2021/01/13/Anaconda%E5%AE%89%E8%A3%85%E5%BA%93%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</url>
-    <content><![CDATA[<ol>
-<li>注意要在安装库文件的目录下使用cmd，然后用命令安装</li>
-<li>当安装完库成功后,import库发现不存在,可能是因为库的安装路径不在当前Python库的搜索路径内,所以没被找到.<br>解决方法:<br>(1)把库的路径加入搜索路径内;<br>(2)当安装Anaconda使,自带了Python,因此删掉自己安装的Python后再重新安装库即可，这样就会自动安装在搜索目录下了(新手尽量只装一个Python)</li>
-</ol>
+    <title>Ajax实现文件上传</title>
+    <url>/2021/05/05/Ajax%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</url>
+    <content><![CDATA[<h1 id="1-前端demo"><a href="#1-前端demo" class="headerlink" title="1.前端demo"></a>1.前端demo</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">    function btnSubmit() &#123;</span><br><span class="line">        var img &#x3D; document.getElementById(&#39;images&#39;).files[0];</span><br><span class="line">        var fd &#x3D; new FormData();</span><br><span class="line">        fd.append(&#39;FILE&#39;, img);</span><br><span class="line">        fd.append(&#39;name&#39;, &#39;xiaoming&#39;);</span><br><span class="line">        $.ajax(&#123;</span><br><span class="line">            type: &quot;post&quot;,</span><br><span class="line">            url: &quot;http:&#x2F;&#x2F;127.0.0.1&#x2F;test.php&quot;,</span><br><span class="line">            processData: false,&#x2F;&#x2F;非常重要，不可省略</span><br><span class="line">            contentType: false,&#x2F;&#x2F;非常重要，不可省略</span><br><span class="line">            dataType: &quot;json&quot;,</span><br><span class="line">            data: fd,</span><br><span class="line">            success: function(data) &#123;</span><br><span class="line"></span><br><span class="line">            &#125;,</span><br><span class="line">            error: function(data) &#123;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="2-服务端demo"><a href="#2-服务端demo" class="headerlink" title="2.服务端demo"></a>2.服务端demo</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$imgName&#x3D;$_FILES[&#39;FILE&#39;][&#39;name&#39;];</span><br><span class="line">$tmp_name&#x3D;$_FILES[&#39;FILE&#39;][&#39;tmp_name&#39;];</span><br><span class="line">$fileName&#x3D;&#39;.&#x2F;123.jpg&#39;;</span><br><span class="line">$rst&#x3D;move_uploaded_file($tmp_name,$fileName);</span><br><span class="line">echo $rst;</span><br></pre></td></tr></table></figure>
+<p>注：<br>1.$fileName路径中的路径必须存在；<br>2.$fileName路径中不可出现中文；<br>若不满足则两种情况，可能会false；</p>
 ]]></content>
       <categories>
-        <category>机器学习</category>
+        <category>前端</category>
       </categories>
       <tags>
-        <tag>机器学习</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C语言函数数组传值</title>
-    <url>/2021/01/13/C%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0%E6%95%B0%E7%BB%84%E4%BC%A0%E5%80%BC/</url>
-    <content><![CDATA[<p>C语言中,向函数传值的问题</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 方法一</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span>* number)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> number[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">	duplicate(number);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> *number)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,number[<span class="number">0</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//方法二</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> number[])</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> number[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">	duplicate(number);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> number[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,number[<span class="number">0</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>C语言</category>
-      </categories>
-      <tags>
-        <tag>C语言</tag>
+        <tag>前端</tag>
+        <tag>Ajax</tag>
       </tags>
   </entry>
   <entry>
@@ -187,22 +226,6 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>Pyecharts遇到的坑</title>
-    <url>/2021/01/18/Pyecharts%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</url>
-    <content><![CDATA[<p>因为Pyecharts高版本不兼容低版本的问题，相同的语法在不同的版本就可能会出现一个能正常运行而一个出现报错的情况<br>常见的有导包时就有可能出现错误</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> pyecharts.charts <span class="keyword">import</span> Bar,Pie,Line <span class="comment"># 1.x版本的语法</span></span><br><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> Bar,Pie,Line <span class="comment"># 0.5.x版本的语法</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#若交换使用就会报错 </span></span><br></pre></td></tr></table></figure>
-<p>还有</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bar_1 = Bar(<span class="string">&quot;每天被领劵的数量&quot;</span>,width=<span class="number">1500</span>,height=<span class="number">600</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在0.5.x版本下就是正确的，在1.x版本下就是错误的</span></span><br></pre></td></tr></table></figure>
-<p>在用<code>pip</code>命令安装时默认安装的是高版本，下面是卸载<code>Pyecharts</code>的命令和安装低版本的命令</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install pyecharts <span class="comment"># 默认安装高版本</span></span><br><span class="line">pip uninstall pyecharts <span class="comment"># 卸载pycharts(无论任何版本)</span></span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pyecharts==<span class="number">0.5</span><span class="number">.5</span> <span class="comment"># 安装0.5.5</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>机器学习</category>
-      </categories>
-      <tags>
-        <tag>机器学习</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Pycharm基本使用</title>
     <url>/2021/01/08/Pycharm%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h2 id="Pycharm基本使用"><a href="#Pycharm基本使用" class="headerlink" title="Pycharm基本使用"></a>Pycharm基本使用</h2><ol>
@@ -221,25 +244,15 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>Python中函数的使用</title>
-    <url>/2021/01/11/Python%E4%B8%AD%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<ol>
-<li>函数定义语法<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># def 函数名(参数):</span></span><br><span class="line"><span class="comment">#    函数要执行的语句</span></span><br><span class="line">eg:</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span>(<span class="params">person</span>):</span></span><br><span class="line">    print(<span class="string">&#x27;&#123;&#125;说：他明天去旅游&#x27;</span>.<span class="built_in">format</span>(person))</span><br></pre></td></tr></table></figure></li>
-<li>传参<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1.一一对应传参</span></span><br><span class="line">say(<span class="string">&#x27;xiaoming&#x27;</span>)</span><br><span class="line"><span class="comment"># 2.通过变量名给形参赋值</span></span><br><span class="line">say(person=<span class="string">&#x27;xiaoming&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
-<li>返回值<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> <span class="keyword">return</span> a <span class="comment">#语法</span></span><br><span class="line"><span class="number">2.</span> 通常情况下只能<span class="keyword">return</span>一次</span><br><span class="line"><span class="number">3.</span> 如果一个函数没有返回值，那么它的返回值就是<span class="literal">None</span></span><br><span class="line"><span class="number">4.</span> 在特殊情况下(<span class="keyword">finally</span>语句)，一个函数可能会执行多个<span class="keyword">return</span>语句</span><br></pre></td></tr></table></figure></li>
-<li>函数的注释<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">在定义函数名的下一行按三对双引号，然后回车</span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">:param person:</span></span><br><span class="line"><span class="string">:return:</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure></li>
-<li>全局变量和局部变量<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 定义在函数外的为全局变量</span><br><span class="line"><span class="number">2.</span> 定义在函数内的为局部变量</span><br><span class="line"><span class="number">3.</span> 如果局部变量和全局变量重名时，会在函数内部又定义一个新的局部变量，而不是修改变全局变量</span><br><span class="line"><span class="number">4.</span>如果在函数内部想要修改全局变量，则用<span class="keyword">global</span></span><br><span class="line">eg：想要在函数内部修改全局变量name</span><br><span class="line"><span class="keyword">global</span> name</span><br><span class="line">name=<span class="string">&#x27;xiaoming&#x27;</span></span><br><span class="line"><span class="number">5.</span>使用内置函数查看全局变量和局部变量</span><br><span class="line"><span class="built_in">globals</span>() <span class="comment"># 查看当前.py中的全局变量</span></span><br><span class="line"><span class="built_in">locals</span>()  <span class="comment"># 查看当前.py中的局部变量</span></span><br><span class="line"><span class="number">6.</span> 在Python中只有函数分作用域</span><br></pre></td></tr></table></figure></li>
-<li>函数多个返回值<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 函数返回多个结果，就是将多个数据打包成一个整体返回，可以使用列表和字典</span><br><span class="line"><span class="number">2.</span> 通常情况下使用元组</span><br><span class="line"><span class="number">3.</span> 接受多个返回值时，若一直返回值个数，可直接用变量分别接受</span><br><span class="line">eg:</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test</span>():</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>,<span class="number">2</span></span><br><span class="line">x,y=test()</span><br><span class="line">print(<span class="string">&#x27;x=&#123;&#125;,y=&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(x,y))</span><br></pre></td></tr></table></figure></li>
-<li>缺省参数<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">定义：有些函数的参数是有默认参数，你传了用你的，不传用默认的</span><br><span class="line">eg:</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span>(<span class="params">person=<span class="string">&#x27;xiaoming&#x27;</span></span>):</span></span><br><span class="line">    print(<span class="string">&#x27;&#123;&#125;说：他明天去旅游&#x27;</span>.<span class="built_in">format</span>(person))</span><br><span class="line"></span><br><span class="line">say() <span class="comment"># 当say函数不传参数时，就使用默认参数</span></span><br></pre></td></tr></table></figure></li>
-<li>特殊传参<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 当位置参数和关键字参数混合使用时，位置参数在前</span><br><span class="line">eg:</span><br><span class="line">say(<span class="string">&#x27;xiaoming&#x27;</span>,age=<span class="number">18</span>)  <span class="comment"># 位置参数前，关键字参数后</span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> 位置可变参数</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span>(<span class="params">name,*args</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">say(<span class="string">&#x27;xiaoming&#x27;</span>)  <span class="comment"># args为空</span></span><br><span class="line">say(<span class="string">&#x27;xiaoming&#x27;</span>,<span class="number">18</span>)  <span class="comment"># 18以元组的形式存在args里</span></span><br><span class="line"><span class="comment"># 多出来的可变参数会以元组的形式保存在args里</span></span><br><span class="line"><span class="comment"># 在定义函数参数时,先写位置参数再写可变位置参数，传参时也是</span></span><br><span class="line"><span class="comment"># 注意是一个*</span></span><br><span class="line"></span><br><span class="line"><span class="number">3.</span>可变关键字参数</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span>(<span class="params">name,**kwargs</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">say(name=<span class="string">&#x27;xiaoming&#x27;</span>)  <span class="comment"># kwargs为空</span></span><br><span class="line">say(<span class="string">&#x27;xiaoming&#x27;</span>,<span class="number">18</span>)  <span class="comment"># 18以元组的形式存在kwargs里</span></span><br><span class="line"><span class="comment"># 多出来的可变参数会以字典的形式保存在kwargs里</span></span><br><span class="line"><span class="comment"># 在定义函数参数时,先写位置参数再写可变位置参数，传参时也是</span></span><br><span class="line"><span class="comment"># 注意是**</span></span><br><span class="line"></span><br><span class="line"><span class="number">4.</span>当位置参数，可变位置参数，缺省参数，关键字参数，可变关键字参数同时出现时</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span>(<span class="params">位置参数，可变位置参数，缺省参数，关键字参数，可变关键字参数</span>)  </span></span><br><span class="line"><span class="function">#传参时也是一样</span></span><br></pre></td></tr></table></figure></li>
-<li>注意事项 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 在Python中函数不允许重名,重名后一个会覆盖前一个</span><br><span class="line"><span class="number">2.</span> 函数名和变量名也不能重名</span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
+    <title>C语言函数数组传值</title>
+    <url>/2021/01/13/C%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0%E6%95%B0%E7%BB%84%E4%BC%A0%E5%80%BC/</url>
+    <content><![CDATA[<p>C语言中,向函数传值的问题</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 方法一</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span>* number)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> number[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">	duplicate(number);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> *number)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,number[<span class="number">0</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//方法二</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> number[])</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> number[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">	duplicate(number);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> number[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,number[<span class="number">0</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
-        <category>Python</category>
+        <category>C语言</category>
       </categories>
       <tags>
-        <tag>Python</tag>
+        <tag>C语言</tag>
       </tags>
   </entry>
   <entry>
@@ -258,53 +271,34 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>Python中进制和数据类型转换</title>
-    <url>/2021/01/09/Python%E4%B8%AD%E8%BF%9B%E5%88%B6%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</url>
+    <title>Pyecharts遇到的坑</title>
+    <url>/2021/01/18/Pyecharts%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</url>
+    <content><![CDATA[<p>因为Pyecharts高版本不兼容低版本的问题，相同的语法在不同的版本就可能会出现一个能正常运行而一个出现报错的情况<br>常见的有导包时就有可能出现错误</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">from</span> pyecharts.charts <span class="keyword">import</span> Bar,Pie,Line <span class="comment"># 1.x版本的语法</span></span><br><span class="line"><span class="keyword">from</span> pyecharts <span class="keyword">import</span> Bar,Pie,Line <span class="comment"># 0.5.x版本的语法</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#若交换使用就会报错 </span></span><br></pre></td></tr></table></figure>
+<p>还有</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">bar_1 = Bar(<span class="string">&quot;每天被领劵的数量&quot;</span>,width=<span class="number">1500</span>,height=<span class="number">600</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 在0.5.x版本下就是正确的，在1.x版本下就是错误的</span></span><br></pre></td></tr></table></figure>
+<p>在用<code>pip</code>命令安装时默认安装的是高版本，下面是卸载<code>Pyecharts</code>的命令和安装低版本的命令</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">pip install pyecharts <span class="comment"># 默认安装高版本</span></span><br><span class="line">pip uninstall pyecharts <span class="comment"># 卸载pycharts(无论任何版本)</span></span><br><span class="line">pip install -i https://pypi.tuna.tsinghua.edu.cn/simple pyecharts==<span class="number">0.5</span><span class="number">.5</span> <span class="comment"># 安装0.5.5</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>机器学习</category>
+      </categories>
+      <tags>
+        <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python中函数的使用</title>
+    <url>/2021/01/11/Python%E4%B8%AD%E5%87%BD%E6%95%B0%E7%9A%84%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<ol>
-<li><h3 id="二、八、十六进制转换"><a href="#二、八、十六进制转换" class="headerlink" title="二、八、十六进制转换"></a>二、八、十六进制转换</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">  二进制:前缀,0b;<span class="number">0b11</span>;每个位最大不能超过<span class="number">1</span></span><br><span class="line">  八进制:前缀,0o;<span class="number">0o17</span>;每个位最大不能超过<span class="number">7</span></span><br><span class="line">十六进制:前缀,0x;<span class="number">0x1f</span>;每个位最大不能超过f</span><br><span class="line"><span class="comment"># 注：在python2中0o和0开始的数字都是8进制</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 手算转换</span></span><br><span class="line"><span class="number">2</span>进制转换为<span class="number">8</span>：从后向前<span class="number">3</span>位一组进行</span><br><span class="line"><span class="number">2</span>进制转换为<span class="number">16</span>：从后向前<span class="number">4</span>位一组进行</span><br><span class="line"><span class="number">2</span>,<span class="number">8</span>,<span class="number">16</span>进制转换成十进制，都是按照幂次，然后相加进行计算</span><br><span class="line"><span class="number">10</span>进制转换成<span class="number">2</span>进制：除留余数法</span><br><span class="line"></span><br><span class="line"><span class="comment"># 机算</span></span><br><span class="line">a=<span class="number">12</span> <span class="comment">#10进制数</span></span><br><span class="line"><span class="built_in">bin</span>(a) <span class="comment"># 将10进制数转换成2进制</span></span><br><span class="line"><span class="built_in">oct</span>(a) <span class="comment"># 将10进制数转换成8进制</span></span><br><span class="line"><span class="built_in">hex</span>(a) <span class="comment"># 将10进制数转换成16进制</span></span><br><span class="line">注：当a不等于数字时会报错</span><br></pre></td></tr></table></figure></li>
-<li>数据类型之间的转换<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#转换函数</span></span><br><span class="line">msg=<span class="built_in">int</span>(msg) </span><br><span class="line"><span class="comment"># 将不是int型的变量转换成int型的变量</span></span><br><span class="line"><span class="comment"># 其余类型写法相同，如float</span></span><br><span class="line"><span class="comment"># 当被转换的msg不是纯数字会转换失败，报错 </span></span><br><span class="line">msg=<span class="built_in">int</span>(x,y)</span><br><span class="line"><span class="comment"># 将字符串x,按照y进制转换成10进制数</span></span><br><span class="line">eg:</span><br><span class="line">msg=<span class="built_in">int</span>(<span class="string">&#x27;abc&#x27;</span>,<span class="number">16</span>) <span class="comment"># 将字符串&#x27;abc&#x27;按照16进制数转换成10进制数</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 转换原因</span></span><br><span class="line">不同的数据类型有时候不能进行运算</span><br><span class="line"></span><br><span class="line"><span class="comment"># True False</span></span><br><span class="line">在进行数据运算时,<span class="literal">True</span>=<span class="number">1</span>,<span class="literal">False</span>=<span class="number">0</span>;</span><br><span class="line">eg:</span><br><span class="line">print(<span class="literal">True</span> + <span class="number">1</span>)  <span class="comment"># 结果为2</span></span><br></pre></td></tr></table></figure></li>
-<li>转换成布尔值<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在数字里，只有0会被转换成False</span></span><br><span class="line"><span class="comment"># 在字符串里只有空字符串会被转换成False,空格串也会被转换成True</span></span><br><span class="line"><span class="comment"># None会被转换为False,eg:bool(None),打印出来是False</span></span><br><span class="line"><span class="comment"># 空数据类型会被转换成False,如[],(),&#123;&#125;等</span></span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python中浅拷贝和深拷贝</title>
-    <url>/2021/01/12/Python%E4%B8%AD%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/</url>
-    <content><![CDATA[<h4 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h4><p>浅拷贝只拷贝一层,当列表中有嵌套时,嵌套的列表是指向而不是拷贝</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x=[<span class="number">1</span>,<span class="number">2</span>,[<span class="number">3</span>,<span class="number">4</span>],<span class="number">5</span>]</span><br><span class="line">y=x.copy()</span><br><span class="line">print(<span class="string">&#x27;列表x的值为:&#x27;</span>,x)  <span class="comment">#列表x的值为: [1, 2, [3, 4], 5]</span></span><br><span class="line">print(<span class="string">&#x27;列表y的值为:&#x27;</span>,y)  <span class="comment">#列表y的值为: [1, 2, [3, 4], 5]</span></span><br><span class="line">x[<span class="number">2</span>][<span class="number">0</span>]=<span class="number">100</span></span><br><span class="line">print(<span class="string">&#x27;列表x修改后,列表x的值为:&#x27;</span>,x)   <span class="comment">#列表x修改后,列表x的值为: [1, 2, [100, 4], 5]</span></span><br><span class="line">print(<span class="string">&#x27;列表x修改后,列表y的值为:&#x27;</span>,y)   <span class="comment">#列表x修改后,列表y的值为: [1, 2, [100, 4], 5]</span></span><br><span class="line"><span class="comment">#当修改列表x第一层时因为数据是拷贝过去的,所以对y无影响;</span></span><br><span class="line"><span class="comment">#当修改列表x第二层时因为数据是指向，当修改列表x时,y也跟着修改</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 浅拷贝方法</span></span><br><span class="line"><span class="number">1.</span> 用copy函数</span><br><span class="line"><span class="number">2.</span> 引用copy模块,用copy模块里的copy函数</span><br></pre></td></tr></table></figure>
-<p><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210112145922.png"></p>
-<h4 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h4><p>深拷贝是对列表所有数据都拷贝,新列表和原列表没有一点关系</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> copy</span><br><span class="line">x=[<span class="number">1</span>,<span class="number">2</span>,[<span class="number">3</span>,<span class="number">4</span>],<span class="number">5</span>]</span><br><span class="line">y=copy.deepcopy(x)</span><br><span class="line">print(<span class="string">&#x27;列表x的值为:&#x27;</span>,x)  <span class="comment">#列表x的值为: [1, 2, [3, 4], 5]</span></span><br><span class="line">print(<span class="string">&#x27;列表y的值为:&#x27;</span>,y)  <span class="comment">#列表y的值为: [1, 2, [3, 4], 5]</span></span><br><span class="line">x[<span class="number">2</span>][<span class="number">0</span>]=<span class="number">100</span></span><br><span class="line">print(<span class="string">&#x27;列表x修改后,列表x的值为:&#x27;</span>,x)   <span class="comment">#列表x修改后,列表x的值为: [1, 2, [100, 4], 5]</span></span><br><span class="line">print(<span class="string">&#x27;列表x修改后,列表y的值为:&#x27;</span>,y)   <span class="comment">#列表x修改后,列表y的值为: [1, 2, [3, 4], 5]</span></span><br><span class="line"><span class="comment"># 深拷贝只能用copy模块里的deepcopy函数进行拷贝</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python分支语句和循环语句</title>
-    <url>/2021/01/10/Python%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5%E5%92%8C%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/</url>
-    <content><![CDATA[<h2 id="分支语句"><a href="#分支语句" class="headerlink" title="分支语句"></a>分支语句</h2><ol>
-<li><h3 id="if"><a href="#if" class="headerlink" title="if"></a>if</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> 判断条件:</span><br><span class="line">    条件成立时，执行的语句</span><br><span class="line">eg:</span><br><span class="line"><span class="keyword">if</span> <span class="number">1</span> &lt; <span class="number">2</span> :</span><br><span class="line">    print(<span class="string">&quot;helloworld&quot;</span>)</span><br></pre></td></tr></table></figure></li>
-<li><h3 id="if…else"><a href="#if…else" class="headerlink" title="if…else"></a>if…else</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> 判断条件:</span><br><span class="line">    条件成立时，执行的语句</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    当<span class="keyword">if</span>中的条件不成立时，执行的语句</span><br><span class="line">eg:</span><br><span class="line">msg=<span class="number">1</span></span><br><span class="line"><span class="keyword">if</span> msg==<span class="number">0</span> :</span><br><span class="line">    print(<span class="string">&quot;helloworld&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&quot;你好&quot;</span>)</span><br><span class="line">eg:</span><br><span class="line"><span class="keyword">if</span> <span class="number">1</span> &lt; <span class="number">2</span> :</span><br><span class="line">    print(<span class="string">&quot;helloworld&quot;</span>)</span><br></pre></td></tr></table></figure></li>
-<li><h3 id="if…elif…else"><a href="#if…elif…else" class="headerlink" title="if…elif…else"></a>if…elif…else</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> 条件<span class="number">1</span>:</span><br><span class="line">    条件<span class="number">1</span>成立，执行语句</span><br><span class="line"><span class="keyword">elif</span> 条件<span class="number">2</span>:</span><br><span class="line">    条件<span class="number">2</span>成立，执行语句</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    当所有条件都不成立时，执行的语句</span><br><span class="line">eg:</span><br><span class="line">msg=<span class="number">10</span></span><br><span class="line"><span class="keyword">if</span> <span class="number">0</span> &lt;msg&lt;<span class="number">3</span> :</span><br><span class="line">    print(<span class="string">&quot;helloworld&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> <span class="number">3</span>&lt;= msg &lt;=<span class="number">10</span> :  <span class="comment">#在Python中，允许这样进行左右判断</span></span><br><span class="line">    print(<span class="string">&quot;你好&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(msg)</span><br></pre></td></tr></table></figure></li>
-<li>pass关键字<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># pass关键字在Python中没有意思，只是用来占位，保证代码的完整性</span></span><br><span class="line">eg:</span><br><span class="line"><span class="keyword">if</span> <span class="number">1</span> &lt; <span class="number">2</span> :</span><br><span class="line">    <span class="keyword">pass</span>   <span class="comment"># pass无意义，保证代码完整性</span></span><br></pre></td></tr></table></figure></li>
-<li><h3 id="if语句注意点"><a href="#if语句注意点" class="headerlink" title="if语句注意点"></a>if语句注意点</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span>区间判断</span><br><span class="line">在Python中可以进行连写判断,如 <span class="number">0</span>&lt;=msg&lt;=<span class="number">10</span></span><br><span class="line"><span class="number">2.</span>隐式类型转换</span><br><span class="line"><span class="keyword">if</span>后面需要一个<span class="built_in">bool</span>类型的值，若不是<span class="built_in">bool</span>类型的值，则会自动转换</span><br><span class="line">eg：</span><br><span class="line"><span class="keyword">if</span> <span class="number">1</span> :</span><br><span class="line">    print(<span class="string">&quot;你好&quot;</span>) <span class="comment"># 1会自动转换成bool类型的值true</span></span><br><span class="line"><span class="number">3.</span>三元表达式(对<span class="keyword">if</span>...<span class="keyword">else</span>的简写)</span><br><span class="line">x=num1 <span class="keyword">if</span> num1 &gt; num2 <span class="keyword">else</span> num2</span><br><span class="line">eg:</span><br><span class="line">x=<span class="number">1</span> <span class="keyword">if</span> <span class="number">1</span> &lt; <span class="number">2</span> <span class="keyword">else</span> <span class="number">2</span> </span><br><span class="line">print(x)   <span class="comment"># 打印出的结果为1</span></span><br><span class="line"><span class="number">4.</span> 在Python中不支持switch...case...</span><br><span class="line"><span class="number">5.</span> 在Python中使用强制缩进来表示语句之间的结构</span><br></pre></td></tr></table></figure>
-<h2 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h2></li>
-<li><h3 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> 判断条件:</span><br><span class="line">    条件成立时,执行的语句</span><br><span class="line">eg:</span><br><span class="line"><span class="keyword">while</span> <span class="number">2</span>&lt;<span class="number">3</span>:</span><br><span class="line">    print(<span class="string">&quot;hello world&quot;</span>)</span><br></pre></td></tr></table></figure></li>
-<li><h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> ele <span class="keyword">in</span> iterable:</span><br><span class="line">    执行语句</span><br><span class="line"><span class="comment">#这个和别的语言有所区别,对于计算数的时候一般用range</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">5</span>):</span><br><span class="line">    print(i) <span class="comment"># 打印结果为0,1,2,3,4</span></span><br></pre></td></tr></table></figure></li>
-<li><h3 id="for…in循环"><a href="#for…in循环" class="headerlink" title="for…in循环"></a>for…in循环</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># for...in循环的本质是不断的调用next方法查找下一个数据</span></span><br><span class="line"><span class="keyword">for</span> ele <span class="keyword">in</span> iterable:</span><br><span class="line">    执行语句</span><br><span class="line">eg:</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">5</span>):</span><br><span class="line">    print(<span class="string">&quot;aaa&quot;</span>)</span><br></pre></td></tr></table></figure></li>
-<li><h3 id="for…else循环"><a href="#for…else循环" class="headerlink" title="for…else循环"></a>for…else循环</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> ele <span class="keyword">in</span> iterable:</span><br><span class="line">    执行语句</span><br><span class="line">    <span class="keyword">if</span> 条件判断:</span><br><span class="line">        <span class="keyword">break</span>   <span class="comment"># 若break被执行，则退出for...each循环，each不会被执行</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    执行语句 <span class="comment"># 当for语句执行完后且没有被break,则最后再执行each语句</span></span><br><span class="line">eg:</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">5</span>):</span><br><span class="line">    print(<span class="string">&quot;aaa&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> i==<span class="number">3</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"><span class="keyword">else</span>:   <span class="comment"># 当for里面break被执行，each就不会被执行</span></span><br><span class="line">    print(<span class="string">&quot;111&quot;</span>)</span><br></pre></td></tr></table></figure></li>
-<li><h3 id="break和continue"><a href="#break和continue" class="headerlink" title="break和continue"></a>break和continue</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">break</span>:终止本层循环</span><br><span class="line"><span class="keyword">continue</span>:终止本次循环</span><br></pre></td></tr></table></figure></li>
-<li><h3 id="循环语句注意事项"><a href="#循环语句注意事项" class="headerlink" title="循环语句注意事项"></a>循环语句注意事项</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> Python中没有i++或i--,只能i+=<span class="number">1</span></span><br><span class="line"><span class="number">2.</span> 常用<span class="built_in">range</span>内置类生成一个整数区间进行循环</span><br><span class="line"><span class="number">3.</span> <span class="built_in">range</span>生成的整数区间以前一个数开始，以后一个数的前一个整数结束</span><br><span class="line"><span class="number">4.</span> <span class="keyword">in</span>后面是一个可迭代的对象,目前接触到的接迭代的对象:字符串,列表,字典,元组,集合,<span class="built_in">range</span></span><br><span class="line"><span class="number">5.</span> Python中没有do...<span class="keyword">while</span>...</span><br></pre></td></tr></table></figure>
-</li>
+<li>函数定义语法<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># def 函数名(参数):</span></span><br><span class="line"><span class="comment">#    函数要执行的语句</span></span><br><span class="line">eg:</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span>(<span class="params">person</span>):</span></span><br><span class="line">    print(<span class="string">&#x27;&#123;&#125;说：他明天去旅游&#x27;</span>.<span class="built_in">format</span>(person))</span><br></pre></td></tr></table></figure></li>
+<li>传参<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1.一一对应传参</span></span><br><span class="line">say(<span class="string">&#x27;xiaoming&#x27;</span>)</span><br><span class="line"><span class="comment"># 2.通过变量名给形参赋值</span></span><br><span class="line">say(person=<span class="string">&#x27;xiaoming&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+<li>返回值<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> <span class="keyword">return</span> a <span class="comment">#语法</span></span><br><span class="line"><span class="number">2.</span> 通常情况下只能<span class="keyword">return</span>一次</span><br><span class="line"><span class="number">3.</span> 如果一个函数没有返回值，那么它的返回值就是<span class="literal">None</span></span><br><span class="line"><span class="number">4.</span> 在特殊情况下(<span class="keyword">finally</span>语句)，一个函数可能会执行多个<span class="keyword">return</span>语句</span><br></pre></td></tr></table></figure></li>
+<li>函数的注释<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">在定义函数名的下一行按三对双引号，然后回车</span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">:param person:</span></span><br><span class="line"><span class="string">:return:</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li>全局变量和局部变量<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 定义在函数外的为全局变量</span><br><span class="line"><span class="number">2.</span> 定义在函数内的为局部变量</span><br><span class="line"><span class="number">3.</span> 如果局部变量和全局变量重名时，会在函数内部又定义一个新的局部变量，而不是修改变全局变量</span><br><span class="line"><span class="number">4.</span>如果在函数内部想要修改全局变量，则用<span class="keyword">global</span></span><br><span class="line">eg：想要在函数内部修改全局变量name</span><br><span class="line"><span class="keyword">global</span> name</span><br><span class="line">name=<span class="string">&#x27;xiaoming&#x27;</span></span><br><span class="line"><span class="number">5.</span>使用内置函数查看全局变量和局部变量</span><br><span class="line"><span class="built_in">globals</span>() <span class="comment"># 查看当前.py中的全局变量</span></span><br><span class="line"><span class="built_in">locals</span>()  <span class="comment"># 查看当前.py中的局部变量</span></span><br><span class="line"><span class="number">6.</span> 在Python中只有函数分作用域</span><br></pre></td></tr></table></figure></li>
+<li>函数多个返回值<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 函数返回多个结果，就是将多个数据打包成一个整体返回，可以使用列表和字典</span><br><span class="line"><span class="number">2.</span> 通常情况下使用元组</span><br><span class="line"><span class="number">3.</span> 接受多个返回值时，若一直返回值个数，可直接用变量分别接受</span><br><span class="line">eg:</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test</span>():</span></span><br><span class="line">    <span class="keyword">return</span> <span class="number">1</span>,<span class="number">2</span></span><br><span class="line">x,y=test()</span><br><span class="line">print(<span class="string">&#x27;x=&#123;&#125;,y=&#123;&#125;&#x27;</span>.<span class="built_in">format</span>(x,y))</span><br></pre></td></tr></table></figure></li>
+<li>缺省参数<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">定义：有些函数的参数是有默认参数，你传了用你的，不传用默认的</span><br><span class="line">eg:</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span>(<span class="params">person=<span class="string">&#x27;xiaoming&#x27;</span></span>):</span></span><br><span class="line">    print(<span class="string">&#x27;&#123;&#125;说：他明天去旅游&#x27;</span>.<span class="built_in">format</span>(person))</span><br><span class="line"></span><br><span class="line">say() <span class="comment"># 当say函数不传参数时，就使用默认参数</span></span><br></pre></td></tr></table></figure></li>
+<li>特殊传参<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 当位置参数和关键字参数混合使用时，位置参数在前</span><br><span class="line">eg:</span><br><span class="line">say(<span class="string">&#x27;xiaoming&#x27;</span>,age=<span class="number">18</span>)  <span class="comment"># 位置参数前，关键字参数后</span></span><br><span class="line"></span><br><span class="line"><span class="number">2.</span> 位置可变参数</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span>(<span class="params">name,*args</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">say(<span class="string">&#x27;xiaoming&#x27;</span>)  <span class="comment"># args为空</span></span><br><span class="line">say(<span class="string">&#x27;xiaoming&#x27;</span>,<span class="number">18</span>)  <span class="comment"># 18以元组的形式存在args里</span></span><br><span class="line"><span class="comment"># 多出来的可变参数会以元组的形式保存在args里</span></span><br><span class="line"><span class="comment"># 在定义函数参数时,先写位置参数再写可变位置参数，传参时也是</span></span><br><span class="line"><span class="comment"># 注意是一个*</span></span><br><span class="line"></span><br><span class="line"><span class="number">3.</span>可变关键字参数</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span>(<span class="params">name,**kwargs</span>):</span></span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line">say(name=<span class="string">&#x27;xiaoming&#x27;</span>)  <span class="comment"># kwargs为空</span></span><br><span class="line">say(<span class="string">&#x27;xiaoming&#x27;</span>,<span class="number">18</span>)  <span class="comment"># 18以元组的形式存在kwargs里</span></span><br><span class="line"><span class="comment"># 多出来的可变参数会以字典的形式保存在kwargs里</span></span><br><span class="line"><span class="comment"># 在定义函数参数时,先写位置参数再写可变位置参数，传参时也是</span></span><br><span class="line"><span class="comment"># 注意是**</span></span><br><span class="line"></span><br><span class="line"><span class="number">4.</span>当位置参数，可变位置参数，缺省参数，关键字参数，可变关键字参数同时出现时</span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">say</span>(<span class="params">位置参数，可变位置参数，缺省参数，关键字参数，可变关键字参数</span>)  </span></span><br><span class="line"><span class="function">#传参时也是一样</span></span><br></pre></td></tr></table></figure></li>
+<li>注意事项 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> 在Python中函数不允许重名,重名后一个会覆盖前一个</span><br><span class="line"><span class="number">2.</span> 函数名和变量名也不能重名</span><br></pre></td></tr></table></figure></li>
 </ol>
 ]]></content>
       <categories>
@@ -333,12 +327,54 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>Python可变数据类型和不可变数据类型</title>
-    <url>/2021/01/12/Python%E5%8F%AF%E5%8F%98%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E4%B8%8D%E5%8F%AF%E5%8F%98%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
-    <content><![CDATA[<p>Python中的数据分为可变数据类型和不可变数据类型</p>
-<h3 id="可变数据类型"><a href="#可变数据类型" class="headerlink" title="可变数据类型"></a>可变数据类型</h3><p>定义：如果修改值，内存地址不会发生变化<br>可变数据类型:列表,字典,集合</p>
-<h3 id="不可变数据类型"><a href="#不可变数据类型" class="headerlink" title="不可变数据类型"></a>不可变数据类型</h3><p>定义：如果修改值，内存地址会发生变化<br>可变数据类型:字符串,数字,元组</p>
-<h3 id="看图理解"><a href="#看图理解" class="headerlink" title="看图理解"></a>看图理解</h3><p><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111164602.png"><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111165444.png"></p>
+    <title>Python中浅拷贝和深拷贝</title>
+    <url>/2021/01/12/Python%E4%B8%AD%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/</url>
+    <content><![CDATA[<h4 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h4><p>浅拷贝只拷贝一层,当列表中有嵌套时,嵌套的列表是指向而不是拷贝</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x=[<span class="number">1</span>,<span class="number">2</span>,[<span class="number">3</span>,<span class="number">4</span>],<span class="number">5</span>]</span><br><span class="line">y=x.copy()</span><br><span class="line">print(<span class="string">&#x27;列表x的值为:&#x27;</span>,x)  <span class="comment">#列表x的值为: [1, 2, [3, 4], 5]</span></span><br><span class="line">print(<span class="string">&#x27;列表y的值为:&#x27;</span>,y)  <span class="comment">#列表y的值为: [1, 2, [3, 4], 5]</span></span><br><span class="line">x[<span class="number">2</span>][<span class="number">0</span>]=<span class="number">100</span></span><br><span class="line">print(<span class="string">&#x27;列表x修改后,列表x的值为:&#x27;</span>,x)   <span class="comment">#列表x修改后,列表x的值为: [1, 2, [100, 4], 5]</span></span><br><span class="line">print(<span class="string">&#x27;列表x修改后,列表y的值为:&#x27;</span>,y)   <span class="comment">#列表x修改后,列表y的值为: [1, 2, [100, 4], 5]</span></span><br><span class="line"><span class="comment">#当修改列表x第一层时因为数据是拷贝过去的,所以对y无影响;</span></span><br><span class="line"><span class="comment">#当修改列表x第二层时因为数据是指向，当修改列表x时,y也跟着修改</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 浅拷贝方法</span></span><br><span class="line"><span class="number">1.</span> 用copy函数</span><br><span class="line"><span class="number">2.</span> 引用copy模块,用copy模块里的copy函数</span><br></pre></td></tr></table></figure>
+<p><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210112145922.png"></p>
+<h4 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h4><p>深拷贝是对列表所有数据都拷贝,新列表和原列表没有一点关系</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> copy</span><br><span class="line">x=[<span class="number">1</span>,<span class="number">2</span>,[<span class="number">3</span>,<span class="number">4</span>],<span class="number">5</span>]</span><br><span class="line">y=copy.deepcopy(x)</span><br><span class="line">print(<span class="string">&#x27;列表x的值为:&#x27;</span>,x)  <span class="comment">#列表x的值为: [1, 2, [3, 4], 5]</span></span><br><span class="line">print(<span class="string">&#x27;列表y的值为:&#x27;</span>,y)  <span class="comment">#列表y的值为: [1, 2, [3, 4], 5]</span></span><br><span class="line">x[<span class="number">2</span>][<span class="number">0</span>]=<span class="number">100</span></span><br><span class="line">print(<span class="string">&#x27;列表x修改后,列表x的值为:&#x27;</span>,x)   <span class="comment">#列表x修改后,列表x的值为: [1, 2, [100, 4], 5]</span></span><br><span class="line">print(<span class="string">&#x27;列表x修改后,列表y的值为:&#x27;</span>,y)   <span class="comment">#列表x修改后,列表y的值为: [1, 2, [3, 4], 5]</span></span><br><span class="line"><span class="comment"># 深拷贝只能用copy模块里的deepcopy函数进行拷贝</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python中进制和数据类型转换</title>
+    <url>/2021/01/09/Python%E4%B8%AD%E8%BF%9B%E5%88%B6%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</url>
+    <content><![CDATA[<ol>
+<li><h3 id="二、八、十六进制转换"><a href="#二、八、十六进制转换" class="headerlink" title="二、八、十六进制转换"></a>二、八、十六进制转换</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">  二进制:前缀,0b;<span class="number">0b11</span>;每个位最大不能超过<span class="number">1</span></span><br><span class="line">  八进制:前缀,0o;<span class="number">0o17</span>;每个位最大不能超过<span class="number">7</span></span><br><span class="line">十六进制:前缀,0x;<span class="number">0x1f</span>;每个位最大不能超过f</span><br><span class="line"><span class="comment"># 注：在python2中0o和0开始的数字都是8进制</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 手算转换</span></span><br><span class="line"><span class="number">2</span>进制转换为<span class="number">8</span>：从后向前<span class="number">3</span>位一组进行</span><br><span class="line"><span class="number">2</span>进制转换为<span class="number">16</span>：从后向前<span class="number">4</span>位一组进行</span><br><span class="line"><span class="number">2</span>,<span class="number">8</span>,<span class="number">16</span>进制转换成十进制，都是按照幂次，然后相加进行计算</span><br><span class="line"><span class="number">10</span>进制转换成<span class="number">2</span>进制：除留余数法</span><br><span class="line"></span><br><span class="line"><span class="comment"># 机算</span></span><br><span class="line">a=<span class="number">12</span> <span class="comment">#10进制数</span></span><br><span class="line"><span class="built_in">bin</span>(a) <span class="comment"># 将10进制数转换成2进制</span></span><br><span class="line"><span class="built_in">oct</span>(a) <span class="comment"># 将10进制数转换成8进制</span></span><br><span class="line"><span class="built_in">hex</span>(a) <span class="comment"># 将10进制数转换成16进制</span></span><br><span class="line">注：当a不等于数字时会报错</span><br></pre></td></tr></table></figure></li>
+<li>数据类型之间的转换<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#转换函数</span></span><br><span class="line">msg=<span class="built_in">int</span>(msg) </span><br><span class="line"><span class="comment"># 将不是int型的变量转换成int型的变量</span></span><br><span class="line"><span class="comment"># 其余类型写法相同，如float</span></span><br><span class="line"><span class="comment"># 当被转换的msg不是纯数字会转换失败，报错 </span></span><br><span class="line">msg=<span class="built_in">int</span>(x,y)</span><br><span class="line"><span class="comment"># 将字符串x,按照y进制转换成10进制数</span></span><br><span class="line">eg:</span><br><span class="line">msg=<span class="built_in">int</span>(<span class="string">&#x27;abc&#x27;</span>,<span class="number">16</span>) <span class="comment"># 将字符串&#x27;abc&#x27;按照16进制数转换成10进制数</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 转换原因</span></span><br><span class="line">不同的数据类型有时候不能进行运算</span><br><span class="line"></span><br><span class="line"><span class="comment"># True False</span></span><br><span class="line">在进行数据运算时,<span class="literal">True</span>=<span class="number">1</span>,<span class="literal">False</span>=<span class="number">0</span>;</span><br><span class="line">eg:</span><br><span class="line">print(<span class="literal">True</span> + <span class="number">1</span>)  <span class="comment"># 结果为2</span></span><br></pre></td></tr></table></figure></li>
+<li>转换成布尔值<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在数字里，只有0会被转换成False</span></span><br><span class="line"><span class="comment"># 在字符串里只有空字符串会被转换成False,空格串也会被转换成True</span></span><br><span class="line"><span class="comment"># None会被转换为False,eg:bool(None),打印出来是False</span></span><br><span class="line"><span class="comment"># 空数据类型会被转换成False,如[],(),&#123;&#125;等</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python分支语句和循环语句</title>
+    <url>/2021/01/10/Python%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5%E5%92%8C%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/</url>
+    <content><![CDATA[<h2 id="分支语句"><a href="#分支语句" class="headerlink" title="分支语句"></a>分支语句</h2><ol>
+<li><h3 id="if"><a href="#if" class="headerlink" title="if"></a>if</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> 判断条件:</span><br><span class="line">    条件成立时，执行的语句</span><br><span class="line">eg:</span><br><span class="line"><span class="keyword">if</span> <span class="number">1</span> &lt; <span class="number">2</span> :</span><br><span class="line">    print(<span class="string">&quot;helloworld&quot;</span>)</span><br></pre></td></tr></table></figure></li>
+<li><h3 id="if…else"><a href="#if…else" class="headerlink" title="if…else"></a>if…else</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> 判断条件:</span><br><span class="line">    条件成立时，执行的语句</span><br><span class="line"><span class="keyword">else</span></span><br><span class="line">    当<span class="keyword">if</span>中的条件不成立时，执行的语句</span><br><span class="line">eg:</span><br><span class="line">msg=<span class="number">1</span></span><br><span class="line"><span class="keyword">if</span> msg==<span class="number">0</span> :</span><br><span class="line">    print(<span class="string">&quot;helloworld&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(<span class="string">&quot;你好&quot;</span>)</span><br><span class="line">eg:</span><br><span class="line"><span class="keyword">if</span> <span class="number">1</span> &lt; <span class="number">2</span> :</span><br><span class="line">    print(<span class="string">&quot;helloworld&quot;</span>)</span><br></pre></td></tr></table></figure></li>
+<li><h3 id="if…elif…else"><a href="#if…elif…else" class="headerlink" title="if…elif…else"></a>if…elif…else</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">if</span> 条件<span class="number">1</span>:</span><br><span class="line">    条件<span class="number">1</span>成立，执行语句</span><br><span class="line"><span class="keyword">elif</span> 条件<span class="number">2</span>:</span><br><span class="line">    条件<span class="number">2</span>成立，执行语句</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    当所有条件都不成立时，执行的语句</span><br><span class="line">eg:</span><br><span class="line">msg=<span class="number">10</span></span><br><span class="line"><span class="keyword">if</span> <span class="number">0</span> &lt;msg&lt;<span class="number">3</span> :</span><br><span class="line">    print(<span class="string">&quot;helloworld&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> <span class="number">3</span>&lt;= msg &lt;=<span class="number">10</span> :  <span class="comment">#在Python中，允许这样进行左右判断</span></span><br><span class="line">    print(<span class="string">&quot;你好&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    print(msg)</span><br></pre></td></tr></table></figure></li>
+<li>pass关键字<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># pass关键字在Python中没有意思，只是用来占位，保证代码的完整性</span></span><br><span class="line">eg:</span><br><span class="line"><span class="keyword">if</span> <span class="number">1</span> &lt; <span class="number">2</span> :</span><br><span class="line">    <span class="keyword">pass</span>   <span class="comment"># pass无意义，保证代码完整性</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="if语句注意点"><a href="#if语句注意点" class="headerlink" title="if语句注意点"></a>if语句注意点</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span>区间判断</span><br><span class="line">在Python中可以进行连写判断,如 <span class="number">0</span>&lt;=msg&lt;=<span class="number">10</span></span><br><span class="line"><span class="number">2.</span>隐式类型转换</span><br><span class="line"><span class="keyword">if</span>后面需要一个<span class="built_in">bool</span>类型的值，若不是<span class="built_in">bool</span>类型的值，则会自动转换</span><br><span class="line">eg：</span><br><span class="line"><span class="keyword">if</span> <span class="number">1</span> :</span><br><span class="line">    print(<span class="string">&quot;你好&quot;</span>) <span class="comment"># 1会自动转换成bool类型的值true</span></span><br><span class="line"><span class="number">3.</span>三元表达式(对<span class="keyword">if</span>...<span class="keyword">else</span>的简写)</span><br><span class="line">x=num1 <span class="keyword">if</span> num1 &gt; num2 <span class="keyword">else</span> num2</span><br><span class="line">eg:</span><br><span class="line">x=<span class="number">1</span> <span class="keyword">if</span> <span class="number">1</span> &lt; <span class="number">2</span> <span class="keyword">else</span> <span class="number">2</span> </span><br><span class="line">print(x)   <span class="comment"># 打印出的结果为1</span></span><br><span class="line"><span class="number">4.</span> 在Python中不支持switch...case...</span><br><span class="line"><span class="number">5.</span> 在Python中使用强制缩进来表示语句之间的结构</span><br></pre></td></tr></table></figure>
+<h2 id="循环语句"><a href="#循环语句" class="headerlink" title="循环语句"></a>循环语句</h2></li>
+<li><h3 id="while循环"><a href="#while循环" class="headerlink" title="while循环"></a>while循环</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">while</span> 判断条件:</span><br><span class="line">    条件成立时,执行的语句</span><br><span class="line">eg:</span><br><span class="line"><span class="keyword">while</span> <span class="number">2</span>&lt;<span class="number">3</span>:</span><br><span class="line">    print(<span class="string">&quot;hello world&quot;</span>)</span><br></pre></td></tr></table></figure></li>
+<li><h3 id="for循环"><a href="#for循环" class="headerlink" title="for循环"></a>for循环</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> ele <span class="keyword">in</span> iterable:</span><br><span class="line">    执行语句</span><br><span class="line"><span class="comment">#这个和别的语言有所区别,对于计算数的时候一般用range</span></span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">0</span>,<span class="number">5</span>):</span><br><span class="line">    print(i) <span class="comment"># 打印结果为0,1,2,3,4</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="for…in循环"><a href="#for…in循环" class="headerlink" title="for…in循环"></a>for…in循环</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># for...in循环的本质是不断的调用next方法查找下一个数据</span></span><br><span class="line"><span class="keyword">for</span> ele <span class="keyword">in</span> iterable:</span><br><span class="line">    执行语句</span><br><span class="line">eg:</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">5</span>):</span><br><span class="line">    print(<span class="string">&quot;aaa&quot;</span>)</span><br></pre></td></tr></table></figure></li>
+<li><h3 id="for…else循环"><a href="#for…else循环" class="headerlink" title="for…else循环"></a>for…else循环</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> ele <span class="keyword">in</span> iterable:</span><br><span class="line">    执行语句</span><br><span class="line">    <span class="keyword">if</span> 条件判断:</span><br><span class="line">        <span class="keyword">break</span>   <span class="comment"># 若break被执行，则退出for...each循环，each不会被执行</span></span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    执行语句 <span class="comment"># 当for语句执行完后且没有被break,则最后再执行each语句</span></span><br><span class="line">eg:</span><br><span class="line"><span class="keyword">for</span> i <span class="keyword">in</span> <span class="built_in">range</span>(<span class="number">1</span>,<span class="number">5</span>):</span><br><span class="line">    print(<span class="string">&quot;aaa&quot;</span>)</span><br><span class="line">    <span class="keyword">if</span> i==<span class="number">3</span>:</span><br><span class="line">        <span class="keyword">break</span></span><br><span class="line"><span class="keyword">else</span>:   <span class="comment"># 当for里面break被执行，each就不会被执行</span></span><br><span class="line">    print(<span class="string">&quot;111&quot;</span>)</span><br></pre></td></tr></table></figure></li>
+<li><h3 id="break和continue"><a href="#break和continue" class="headerlink" title="break和continue"></a>break和continue</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">break</span>:终止本层循环</span><br><span class="line"><span class="keyword">continue</span>:终止本次循环</span><br></pre></td></tr></table></figure></li>
+<li><h3 id="循环语句注意事项"><a href="#循环语句注意事项" class="headerlink" title="循环语句注意事项"></a>循环语句注意事项</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> Python中没有i++或i--,只能i+=<span class="number">1</span></span><br><span class="line"><span class="number">2.</span> 常用<span class="built_in">range</span>内置类生成一个整数区间进行循环</span><br><span class="line"><span class="number">3.</span> <span class="built_in">range</span>生成的整数区间以前一个数开始，以后一个数的前一个整数结束</span><br><span class="line"><span class="number">4.</span> <span class="keyword">in</span>后面是一个可迭代的对象,目前接触到的接迭代的对象:字符串,列表,字典,元组,集合,<span class="built_in">range</span></span><br><span class="line"><span class="number">5.</span> Python中没有do...<span class="keyword">while</span>...</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -425,6 +461,21 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
+    <title>Python可变数据类型和不可变数据类型</title>
+    <url>/2021/01/12/Python%E5%8F%AF%E5%8F%98%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E4%B8%8D%E5%8F%AF%E5%8F%98%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+    <content><![CDATA[<p>Python中的数据分为可变数据类型和不可变数据类型</p>
+<h3 id="可变数据类型"><a href="#可变数据类型" class="headerlink" title="可变数据类型"></a>可变数据类型</h3><p>定义：如果修改值，内存地址不会发生变化<br>可变数据类型:列表,字典,集合</p>
+<h3 id="不可变数据类型"><a href="#不可变数据类型" class="headerlink" title="不可变数据类型"></a>不可变数据类型</h3><p>定义：如果修改值，内存地址会发生变化<br>可变数据类型:字符串,数字,元组</p>
+<h3 id="看图理解"><a href="#看图理解" class="headerlink" title="看图理解"></a>看图理解</h3><p><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111164602.png"><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111165444.png"></p>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python运算符</title>
     <url>/2021/01/12/Python%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
     <content><![CDATA[<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><ol>
@@ -441,52 +492,6 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </categories>
       <tags>
         <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python经典问题</title>
-    <url>/2021/01/12/Python%E7%BB%8F%E5%85%B8%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<ol>
-<li><h3 id="交换两个变量的值"><a href="#交换两个变量的值" class="headerlink" title="交换两个变量的值"></a>交换两个变量的值</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="number">1</span></span><br><span class="line">b=<span class="number">2</span></span><br><span class="line"><span class="comment"># 方法一:利用第三个变量实现</span></span><br><span class="line">c=b</span><br><span class="line">b=a</span><br><span class="line">a=c</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法二:利用运算符实现</span></span><br><span class="line">a=a+b</span><br><span class="line">b=a-b</span><br><span class="line">a=a-b</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法三:利用异或运算符实现</span></span><br><span class="line">a=a^b</span><br><span class="line">b=a^b</span><br><span class="line">a=a^b</span><br><span class="line"><span class="comment"># 原理 a^b^b==a</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法四:使用Python特有的方法实现</span></span><br><span class="line">a,b=b,a</span><br></pre></td></tr></table></figure></li>
-<li>for…in循环删除元素</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo+PicGo+gitee图床</title>
-    <url>/2021/01/05/hexo-PicGo-gitee%E5%9B%BE%E5%BA%8A/</url>
-    <content><![CDATA[<p><strong>前言</strong>：我尝试了好几种床图，不是在电脑端加载不出来，就是有各种各样的限制，最后找到了gitee，因为服务器在国内，访问速度也是比较快，空间也没有限制，算是比较理想的一种吧。一开始我用vscode+PicGo插件，等到快成的时候，图片是上传上去了，但是加载不出来，我尝试了<code>sm.ms</code>和<code>github</code>，最后抛弃了<code>vsCode+PicGo</code>插件，选择了<code>PicGo客户端和gitee</code>。</p>
-<ol>
-<li><strong>注册gitee账号</strong><br>去官网注册账号<a href="https://gitee.com/">gitee</a></li>
-<li><strong>新建gitee仓库</strong><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105203048.png"><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105203450.png"></li>
-<li><strong>获得gitee的token</strong><br>登录<code>gitee</code>官网，点击头像/设置/私人令牌/生成令牌<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105203902.png"><br>点击提交后复制生成的令牌，在配置的时候要使用</li>
-<li><strong>下载gitee</strong><br>点击<a href="https://github.com/Molunerfinn/PicGo/releases">PicGo</a>下载，有不同的版本，都可以<br>下载成功后按照提示默认安装即可</li>
-<li><strong>配置gitee</strong><br>默认状态下PicGo是没有<code>gitee</code>，因此先安装插件<code>gitee-uploader</code><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105205151.png"><br>这时，点击图床设置，已经有<code>gitee图床</code>的设置<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105205522.png"> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1:打开新建的仓库，看地址栏，若地址栏为https:&#x2F;&#x2F;gitee.com&#x2F;A&#x2F;B,则需要填A&#x2F;B</span><br><span class="line">2:默认为master就可以</span><br><span class="line">3:把刚才生成的token粘贴到这里</span><br><span class="line">4:path为创建的仓库存放图片的文件夹名，可以为image，可任意填写</span><br><span class="line">5:其余开心就好</span><br></pre></td></tr></table></figure></li>
-<li><strong>升华</strong><br>为更方便地获取截图外链，安装<code>picgo-plugin-quick-capture</code>,实现截图上传一步搞定</li>
-<li><strong>Typora+PicGo+gitee配置</strong><br>如果用<code>Typora</code>写<code>Markdown</code>文章，还需要对<code>Typora</code>进行配置，找到<code>文件/偏好设置/图像</code><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105212825.png"><br>在typora中，当插入本地图片时，会自动转换成gitee外链</li>
-</ol>
-<p><strong>tips</strong></p>
-<ol>
-<li>通过上面的操作已经实现了快速上传和快速截图上传功能，当我们要用本地图片生成外链时，先复制一下本地图片(就是选中图片按下Ctrl+c),然后按下快速上传的快捷键，此时外链已经生成，在需要插入图片的位置Ctrl+V就可以了</li>
-<li>当使用快速截图上传时，如果是直接截图的话，截完图后直接Ctrl+V就可以了，但如果是截完图后需要写批注，那么截的图并不一定可以自动上传，需要按下快速上传的快捷键，然后再Ctrl+V</li>
-<li>通过PicGo可以查看和删除上传的图片<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105212411.png"></li>
-</ol>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>PicGo</tag>
-        <tag>gitee</tag>
-        <tag>Typora</tag>
-        <tag>图床</tag>
       </tags>
   </entry>
   <entry>
@@ -510,6 +515,47 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       <tags>
         <tag>hexo</tag>
         <tag>next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo插入图片</title>
+    <url>/2021/01/05/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</url>
+    <content><![CDATA[<h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><ol>
+<li>在blog的本地文件的根目录中打开git Bash，然后执行<br><code>    npm install hexo-asset-image --save</code></li>
+<li>打开blog根目录下的配置文件_config.yml，修改<br><code>post_asset_folder: true  //由false改为true</code><br>此时，当执行<code>hexo n 文章名</code>的时候，会在_post目录下新建同名的一个文件夹和一个后缀名为<code>.md</code>的文件<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105173654.png"><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105173920.png"></li>
+<li>打开<code>/node_modules/hexo-asset-image/index.js</code> 用下面代码替换<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#39;use strict&#39;;</span><br><span class="line">var cheerio &#x3D; require(&#39;cheerio&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; http:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;14480345&#x2F;how-to-get-the-nth-occurrence-in-a-string</span><br><span class="line">function getPosition(str, m, i) &#123;</span><br><span class="line">  return str.split(m, i).join(m).length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var version &#x3D; String(hexo.version).split(&#39;.&#39;);</span><br><span class="line">hexo.extend.filter.register(&#39;after_post_render&#39;, function(data)&#123;</span><br><span class="line">  var config &#x3D; hexo.config;</span><br><span class="line">  if(config.post_asset_folder)&#123;</span><br><span class="line">        var link &#x3D; data.permalink;</span><br><span class="line">    if(version.length &gt; 0 &amp;&amp; Number(version[0]) &#x3D;&#x3D; 3)</span><br><span class="line">       var beginPos &#x3D; getPosition(link, &#39;&#x2F;&#39;, 1) + 1;</span><br><span class="line">    else</span><br><span class="line">       var beginPos &#x3D; getPosition(link, &#39;&#x2F;&#39;, 3) + 1;</span><br><span class="line">    &#x2F;&#x2F; In hexo 3.1.1, the permalink of &quot;about&quot; page is like &quot;...&#x2F;about&#x2F;index.html&quot;.</span><br><span class="line">    var endPos &#x3D; link.lastIndexOf(&#39;&#x2F;&#39;) + 1;</span><br><span class="line">    link &#x3D; link.substring(beginPos, endPos);</span><br><span class="line"></span><br><span class="line">    var toprocess &#x3D; [&#39;excerpt&#39;, &#39;more&#39;, &#39;content&#39;];</span><br><span class="line">    for(var i &#x3D; 0; i &lt; toprocess.length; i++)&#123;</span><br><span class="line">      var key &#x3D; toprocess[i];</span><br><span class="line"> </span><br><span class="line">      var $ &#x3D; cheerio.load(data[key], &#123;</span><br><span class="line">        ignoreWhitespace: false,</span><br><span class="line">        xmlMode: false,</span><br><span class="line">        lowerCaseTags: false,</span><br><span class="line">        decodeEntities: false</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      $(&#39;img&#39;).each(function()&#123;</span><br><span class="line">        if ($(this).attr(&#39;src&#39;))&#123;</span><br><span class="line">            &#x2F;&#x2F; For windows style path, we replace &#39;\&#39; to &#39;&#x2F;&#39;.</span><br><span class="line">            var src &#x3D; $(this).attr(&#39;src&#39;).replace(&#39;\\&#39;, &#39;&#x2F;&#39;);</span><br><span class="line">            if(!&#x2F;http[s]*.*|\&#x2F;\&#x2F;.*&#x2F;.test(src) &amp;&amp;</span><br><span class="line">               !&#x2F;^\s*\&#x2F;&#x2F;.test(src)) &#123;</span><br><span class="line">              &#x2F;&#x2F; For &quot;about&quot; page, the first part of &quot;src&quot; can&#39;t be removed.</span><br><span class="line">              &#x2F;&#x2F; In addition, to support multi-level local directory.</span><br><span class="line">              var linkArray &#x3D; link.split(&#39;&#x2F;&#39;).filter(function(elem)&#123;</span><br><span class="line">                return elem !&#x3D; &#39;&#39;;</span><br><span class="line">              &#125;);</span><br><span class="line">              var srcArray &#x3D; src.split(&#39;&#x2F;&#39;).filter(function(elem)&#123;</span><br><span class="line">                return elem !&#x3D; &#39;&#39; &amp;&amp; elem !&#x3D; &#39;.&#39;;</span><br><span class="line">              &#125;);</span><br><span class="line">              if(srcArray.length &gt; 1)</span><br><span class="line">                srcArray.shift();</span><br><span class="line">              src &#x3D; srcArray.join(&#39;&#x2F;&#39;);</span><br><span class="line">              $(this).attr(&#39;src&#39;, config.root + link + src);</span><br><span class="line">              console.info&amp;&amp;console.info(&quot;update link as:--&gt;&quot;+config.root + link + src);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            console.info&amp;&amp;console.info(&quot;no src attr, skipped...&quot;);</span><br><span class="line">            console.info&amp;&amp;console.info($(this));</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      data[key] &#x3D; $.html();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+<li>把自己想用的图片放在新建的文件夹(文章名的文件夹)中，在<code>test.md</code>中引用是<code>![](图片的文件名)</code><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105183827.png"></li>
+</ol>
+<h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><ol>
+<li>在<code>\blog\source</code>目录下新建<code>image</code>文件夹<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105184557.png"></li>
+<li>把想要插入的图片都放入<code>image</code>文件夹下</li>
+<li>在插入图片的位置引用<code>![](/image/图片名)</code>即可</li>
+</ol>
+<p><strong>注</strong>：按照这种方式插入可能会在本地图片加载不出来，上传后就可以加载出来了；若上传后还加载不出来，检查blog根目录下的配置文件<code>_config.yml</code>的<code>post_asset_folder:</code>是否为<code>false</code></p>
+<h4 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h4><p>用图床实现插入图片，也是最推荐的一种，具体见<a href="https://romanticqq.top/2021/01/05/hexo-PicGo-gitee%E5%9B%BE%E5%BA%8A/">hexo+PicGo+gitee图床</a></p>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next</tag>
+        <tag>图床</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python经典问题</title>
+    <url>/2021/01/12/Python%E7%BB%8F%E5%85%B8%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<ol>
+<li><h3 id="交换两个变量的值"><a href="#交换两个变量的值" class="headerlink" title="交换两个变量的值"></a>交换两个变量的值</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="number">1</span></span><br><span class="line">b=<span class="number">2</span></span><br><span class="line"><span class="comment"># 方法一:利用第三个变量实现</span></span><br><span class="line">c=b</span><br><span class="line">b=a</span><br><span class="line">a=c</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法二:利用运算符实现</span></span><br><span class="line">a=a+b</span><br><span class="line">b=a-b</span><br><span class="line">a=a-b</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法三:利用异或运算符实现</span></span><br><span class="line">a=a^b</span><br><span class="line">b=a^b</span><br><span class="line">a=a^b</span><br><span class="line"><span class="comment"># 原理 a^b^b==a</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法四:使用Python特有的方法实现</span></span><br><span class="line">a,b=b,a</span><br></pre></td></tr></table></figure></li>
+<li>for…in循环删除元素</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -573,32 +619,6 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>hexo插入图片</title>
-    <url>/2021/01/05/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</url>
-    <content><![CDATA[<h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><ol>
-<li>在blog的本地文件的根目录中打开git Bash，然后执行<br><code>    npm install hexo-asset-image --save</code></li>
-<li>打开blog根目录下的配置文件_config.yml，修改<br><code>post_asset_folder: true  //由false改为true</code><br>此时，当执行<code>hexo n 文章名</code>的时候，会在_post目录下新建同名的一个文件夹和一个后缀名为<code>.md</code>的文件<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105173654.png"><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105173920.png"></li>
-<li>打开<code>/node_modules/hexo-asset-image/index.js</code> 用下面代码替换<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#39;use strict&#39;;</span><br><span class="line">var cheerio &#x3D; require(&#39;cheerio&#39;);</span><br><span class="line"></span><br><span class="line">&#x2F;&#x2F; http:&#x2F;&#x2F;stackoverflow.com&#x2F;questions&#x2F;14480345&#x2F;how-to-get-the-nth-occurrence-in-a-string</span><br><span class="line">function getPosition(str, m, i) &#123;</span><br><span class="line">  return str.split(m, i).join(m).length;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var version &#x3D; String(hexo.version).split(&#39;.&#39;);</span><br><span class="line">hexo.extend.filter.register(&#39;after_post_render&#39;, function(data)&#123;</span><br><span class="line">  var config &#x3D; hexo.config;</span><br><span class="line">  if(config.post_asset_folder)&#123;</span><br><span class="line">        var link &#x3D; data.permalink;</span><br><span class="line">    if(version.length &gt; 0 &amp;&amp; Number(version[0]) &#x3D;&#x3D; 3)</span><br><span class="line">       var beginPos &#x3D; getPosition(link, &#39;&#x2F;&#39;, 1) + 1;</span><br><span class="line">    else</span><br><span class="line">       var beginPos &#x3D; getPosition(link, &#39;&#x2F;&#39;, 3) + 1;</span><br><span class="line">    &#x2F;&#x2F; In hexo 3.1.1, the permalink of &quot;about&quot; page is like &quot;...&#x2F;about&#x2F;index.html&quot;.</span><br><span class="line">    var endPos &#x3D; link.lastIndexOf(&#39;&#x2F;&#39;) + 1;</span><br><span class="line">    link &#x3D; link.substring(beginPos, endPos);</span><br><span class="line"></span><br><span class="line">    var toprocess &#x3D; [&#39;excerpt&#39;, &#39;more&#39;, &#39;content&#39;];</span><br><span class="line">    for(var i &#x3D; 0; i &lt; toprocess.length; i++)&#123;</span><br><span class="line">      var key &#x3D; toprocess[i];</span><br><span class="line"> </span><br><span class="line">      var $ &#x3D; cheerio.load(data[key], &#123;</span><br><span class="line">        ignoreWhitespace: false,</span><br><span class="line">        xmlMode: false,</span><br><span class="line">        lowerCaseTags: false,</span><br><span class="line">        decodeEntities: false</span><br><span class="line">      &#125;);</span><br><span class="line"></span><br><span class="line">      $(&#39;img&#39;).each(function()&#123;</span><br><span class="line">        if ($(this).attr(&#39;src&#39;))&#123;</span><br><span class="line">            &#x2F;&#x2F; For windows style path, we replace &#39;\&#39; to &#39;&#x2F;&#39;.</span><br><span class="line">            var src &#x3D; $(this).attr(&#39;src&#39;).replace(&#39;\\&#39;, &#39;&#x2F;&#39;);</span><br><span class="line">            if(!&#x2F;http[s]*.*|\&#x2F;\&#x2F;.*&#x2F;.test(src) &amp;&amp;</span><br><span class="line">               !&#x2F;^\s*\&#x2F;&#x2F;.test(src)) &#123;</span><br><span class="line">              &#x2F;&#x2F; For &quot;about&quot; page, the first part of &quot;src&quot; can&#39;t be removed.</span><br><span class="line">              &#x2F;&#x2F; In addition, to support multi-level local directory.</span><br><span class="line">              var linkArray &#x3D; link.split(&#39;&#x2F;&#39;).filter(function(elem)&#123;</span><br><span class="line">                return elem !&#x3D; &#39;&#39;;</span><br><span class="line">              &#125;);</span><br><span class="line">              var srcArray &#x3D; src.split(&#39;&#x2F;&#39;).filter(function(elem)&#123;</span><br><span class="line">                return elem !&#x3D; &#39;&#39; &amp;&amp; elem !&#x3D; &#39;.&#39;;</span><br><span class="line">              &#125;);</span><br><span class="line">              if(srcArray.length &gt; 1)</span><br><span class="line">                srcArray.shift();</span><br><span class="line">              src &#x3D; srcArray.join(&#39;&#x2F;&#39;);</span><br><span class="line">              $(this).attr(&#39;src&#39;, config.root + link + src);</span><br><span class="line">              console.info&amp;&amp;console.info(&quot;update link as:--&gt;&quot;+config.root + link + src);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;else&#123;</span><br><span class="line">            console.info&amp;&amp;console.info(&quot;no src attr, skipped...&quot;);</span><br><span class="line">            console.info&amp;&amp;console.info($(this));</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;);</span><br><span class="line">      data[key] &#x3D; $.html();</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
-<li>把自己想用的图片放在新建的文件夹(文章名的文件夹)中，在<code>test.md</code>中引用是<code>![](图片的文件名)</code><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105183827.png"></li>
-</ol>
-<h4 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h4><ol>
-<li>在<code>\blog\source</code>目录下新建<code>image</code>文件夹<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105184557.png"></li>
-<li>把想要插入的图片都放入<code>image</code>文件夹下</li>
-<li>在插入图片的位置引用<code>![](/image/图片名)</code>即可</li>
-</ol>
-<p><strong>注</strong>：按照这种方式插入可能会在本地图片加载不出来，上传后就可以加载出来了；若上传后还加载不出来，检查blog根目录下的配置文件<code>_config.yml</code>的<code>post_asset_folder:</code>是否为<code>false</code></p>
-<h4 id="方法三"><a href="#方法三" class="headerlink" title="方法三"></a>方法三</h4><p>用图床实现插入图片，也是最推荐的一种，具体见<a href="https://romanticqq.top/2021/01/05/hexo-PicGo-gitee%E5%9B%BE%E5%BA%8A/">hexo+PicGo+gitee图床</a></p>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>图床</tag>
-        <tag>next</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>js文件的写法</title>
     <url>/2021/03/09/js%E6%96%87%E4%BB%B6%E7%9A%84%E5%86%99%E6%B3%95/</url>
     <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">owner</span>)</span>&#123;</span><br><span class="line">	owner.btn=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		alert(<span class="string">&quot;aaa&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;(<span class="built_in">window</span>.test=&#123;&#125;)) <span class="comment">//test是js的文件名</span></span><br></pre></td></tr></table></figure>]]></content>
@@ -607,24 +627,6 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </categories>
       <tags>
         <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>单例模式</title>
-    <url>/2021/05/29/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</url>
-    <content><![CDATA[<h4 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h4><ol>
-<li>单例模式的简述：<br>单例模式就是确保某个类只有一个实例，而且这个实例一般都是自行实例化，不需要再去new这个类，通过一个全局访问点去访问，一般常见的如类名。</li>
-<li>为什么要使用单例模式：<br>在开发过程中，经常会遇到一些对象，这样的对象在全局当中仅仅存在一个就可以了，如执行SQL语句时连接数据库的操作。如果这种对象出现过多的话，可能会出现各种意外错误。</li>
-<li>单例类 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Football</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">static</span>  <span class="variable">$fb</span> = <span class="literal">null</span>;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 构造方法私有化，不能让其他程序去new对象</span></span><br><span class="line"><span class="comment">    * 要想取得该对象，必须由该类提供方法</span></span><br><span class="line"><span class="comment">    * */</span></span><br><span class="line">    <span class="keyword">final</span> <span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 该方法必须是一个静态方法，只有通过类名才可以调用</span></span><br><span class="line"><span class="comment">    * 先去判断这个对象是否被创建</span></span><br><span class="line"><span class="comment">    * 如果没有则创建；如果存在则返回创建好的对象</span></span><br><span class="line"><span class="comment">    * 以保证该对象只有一个实例</span></span><br><span class="line"><span class="comment">    * */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">static</span> <span class="function"><span class="keyword">function</span> <span class="title">getInstance</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">static</span>::<span class="variable">$fb</span> === <span class="literal">null</span>)&#123;</span><br><span class="line">            <span class="built_in">static</span>::<span class="variable">$fb</span> = <span class="keyword">new</span> Football();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">static</span>::<span class="variable">$fb</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-<li>测试类<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">require</span> <span class="string">&#x27;Football.class.php&#x27;</span>;</span><br><span class="line">header(<span class="string">&quot;Content-Type:text/html;charset=utf-8&quot;</span>);</span><br><span class="line"><span class="comment">//class test &#123;</span></span><br><span class="line"><span class="comment">//    public function test()&#123;</span></span><br><span class="line"><span class="comment">//        $fb1 = Football::getInstance();</span></span><br><span class="line"><span class="comment">//        $fb2 = Football::getInstance();</span></span><br><span class="line"><span class="comment">//        if ($fb1 === $fb2)&#123;</span></span><br><span class="line"><span class="comment">//            echo &quot;fb1和fb2为同一个对象&quot;;</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line"><span class="comment">//&#125;</span></span><br><span class="line"><span class="variable">$fb1</span> = Football::getInstance();</span><br><span class="line"><span class="variable">$fb2</span> = Football::getInstance();</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* 去判断$fb1和$fb2是否为同一个实例</span></span><br><span class="line"><span class="comment">* */</span></span><br><span class="line"><span class="keyword">if</span> (<span class="variable">$fb1</span> === <span class="variable">$fb2</span>)&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;fb1和fb2为同一个对象&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
-]]></content>
-      <categories>
-        <category>设计模式</category>
-      </categories>
-      <tags>
-        <tag>设计模式</tag>
       </tags>
   </entry>
   <entry>
@@ -653,17 +655,145 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>学习Python遇到的坑(更新中)</title>
-    <url>/2021/01/08/%E5%AD%A6%E4%B9%A0Python%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91(%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
-    <content><![CDATA[<ol>
-<li><h3 id="在cmd中输入Python打开软件商店"><a href="#在cmd中输入Python打开软件商店" class="headerlink" title="在cmd中输入Python打开软件商店"></a>在cmd中输入Python打开软件商店</h3>&nbsp;&nbsp;&nbsp;&nbsp;原因：在系统环境变量和用户环境变量的<code>path</code>中，当<code>WindowsApps</code>在<code>python</code>所配置的环境变量前的时候，就会先打开<code>WindowsApps</code><br>&nbsp;&nbsp;&nbsp;&nbsp;解决方法：1.在系统环境和用户环境变量的<code>path</code>中删掉<code>WindowsApps</code>这一项；2.在系统环境和用户环境变量的<code>path</code>中将<code>WindowsApps</code>这一项移动到<code>python</code>环境变量的下面，这样<code>python</code>环境变量就会先被执行，不会造成那样的意外<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210108143304.png"></li>
+    <title>hexo+PicGo+gitee图床</title>
+    <url>/2021/01/05/hexo-PicGo-gitee%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<p><strong>前言</strong>：我尝试了好几种床图，不是在电脑端加载不出来，就是有各种各样的限制，最后找到了gitee，因为服务器在国内，访问速度也是比较快，空间也没有限制，算是比较理想的一种吧。一开始我用vscode+PicGo插件，等到快成的时候，图片是上传上去了，但是加载不出来，我尝试了<code>sm.ms</code>和<code>github</code>，最后抛弃了<code>vsCode+PicGo</code>插件，选择了<code>PicGo客户端和gitee</code>。</p>
+<ol>
+<li><strong>注册gitee账号</strong><br>去官网注册账号<a href="https://gitee.com/">gitee</a></li>
+<li><strong>新建gitee仓库</strong><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105203048.png"><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105203450.png"></li>
+<li><strong>获得gitee的token</strong><br>登录<code>gitee</code>官网，点击头像/设置/私人令牌/生成令牌<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105203902.png"><br>点击提交后复制生成的令牌，在配置的时候要使用</li>
+<li><strong>下载gitee</strong><br>点击<a href="https://github.com/Molunerfinn/PicGo/releases">PicGo</a>下载，有不同的版本，都可以<br>下载成功后按照提示默认安装即可</li>
+<li><strong>配置gitee</strong><br>默认状态下PicGo是没有<code>gitee</code>，因此先安装插件<code>gitee-uploader</code><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105205151.png"><br>这时，点击图床设置，已经有<code>gitee图床</code>的设置<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105205522.png"> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1:打开新建的仓库，看地址栏，若地址栏为https:&#x2F;&#x2F;gitee.com&#x2F;A&#x2F;B,则需要填A&#x2F;B</span><br><span class="line">2:默认为master就可以</span><br><span class="line">3:把刚才生成的token粘贴到这里</span><br><span class="line">4:path为创建的仓库存放图片的文件夹名，可以为image，可任意填写</span><br><span class="line">5:其余开心就好</span><br></pre></td></tr></table></figure></li>
+<li><strong>升华</strong><br>为更方便地获取截图外链，安装<code>picgo-plugin-quick-capture</code>,实现截图上传一步搞定</li>
+<li><strong>Typora+PicGo+gitee配置</strong><br>如果用<code>Typora</code>写<code>Markdown</code>文章，还需要对<code>Typora</code>进行配置，找到<code>文件/偏好设置/图像</code><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105212825.png"><br>在typora中，当插入本地图片时，会自动转换成gitee外链</li>
+</ol>
+<p><strong>tips</strong></p>
+<ol>
+<li>通过上面的操作已经实现了快速上传和快速截图上传功能，当我们要用本地图片生成外链时，先复制一下本地图片(就是选中图片按下Ctrl+c),然后按下快速上传的快捷键，此时外链已经生成，在需要插入图片的位置Ctrl+V就可以了</li>
+<li>当使用快速截图上传时，如果是直接截图的话，截完图后直接Ctrl+V就可以了，但如果是截完图后需要写批注，那么截的图并不一定可以自动上传，需要按下快速上传的快捷键，然后再Ctrl+V</li>
+<li>通过PicGo可以查看和删除上传的图片<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105212411.png"></li>
 </ol>
 ]]></content>
       <categories>
-        <category>Python</category>
+        <category>hexo</category>
       </categories>
       <tags>
-        <tag>Python</tag>
+        <tag>hexo</tag>
+        <tag>图床</tag>
+        <tag>PicGo</tag>
+        <tag>gitee</tag>
+        <tag>Typora</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>单例模式</title>
+    <url>/2021/05/29/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</url>
+    <content><![CDATA[<h4 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h4><ol>
+<li>单例模式的简述：<br>单例模式就是确保某个类只有一个实例，而且这个实例一般都是自行实例化，不需要再去new这个类，通过一个全局访问点去访问，一般常见的如类名。</li>
+<li>为什么要使用单例模式：<br>在开发过程中，经常会遇到一些对象，这样的对象在全局当中仅仅存在一个就可以了，如执行SQL语句时连接数据库的操作。如果这种对象出现过多的话，可能会出现各种意外错误。</li>
+<li>单例类 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Football</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">static</span>  <span class="variable">$fb</span> = <span class="literal">null</span>;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 构造方法私有化，不能让其他程序去new对象</span></span><br><span class="line"><span class="comment">    * 要想取得该对象，必须由该类提供方法</span></span><br><span class="line"><span class="comment">    * */</span></span><br><span class="line">    <span class="keyword">final</span> <span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 该方法必须是一个静态方法，只有通过类名才可以调用</span></span><br><span class="line"><span class="comment">    * 先去判断这个对象是否被创建</span></span><br><span class="line"><span class="comment">    * 如果没有则创建；如果存在则返回创建好的对象</span></span><br><span class="line"><span class="comment">    * 以保证该对象只有一个实例</span></span><br><span class="line"><span class="comment">    * */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">static</span> <span class="function"><span class="keyword">function</span> <span class="title">getInstance</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">static</span>::<span class="variable">$fb</span> === <span class="literal">null</span>)&#123;</span><br><span class="line">            <span class="built_in">static</span>::<span class="variable">$fb</span> = <span class="keyword">new</span> Football();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">static</span>::<span class="variable">$fb</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>测试类<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">require</span> <span class="string">&#x27;Football.class.php&#x27;</span>;</span><br><span class="line">header(<span class="string">&quot;Content-Type:text/html;charset=utf-8&quot;</span>);</span><br><span class="line"><span class="comment">//class test &#123;</span></span><br><span class="line"><span class="comment">//    public function test()&#123;</span></span><br><span class="line"><span class="comment">//        $fb1 = Football::getInstance();</span></span><br><span class="line"><span class="comment">//        $fb2 = Football::getInstance();</span></span><br><span class="line"><span class="comment">//        if ($fb1 === $fb2)&#123;</span></span><br><span class="line"><span class="comment">//            echo &quot;fb1和fb2为同一个对象&quot;;</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line"><span class="comment">//&#125;</span></span><br><span class="line"><span class="variable">$fb1</span> = Football::getInstance();</span><br><span class="line"><span class="variable">$fb2</span> = Football::getInstance();</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* 去判断$fb1和$fb2是否为同一个实例</span></span><br><span class="line"><span class="comment">* */</span></span><br><span class="line"><span class="keyword">if</span> (<span class="variable">$fb1</span> === <span class="variable">$fb2</span>)&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;fb1和fb2为同一个对象&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>laravel8路由</title>
+    <url>/2021/06/03/laravel8%E8%B7%AF%E7%94%B1/</url>
+    <content><![CDATA[<ol>
+<li>get请求 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line">Route::get(<span class="string">&#x27;/aaa&#x27;</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&#x27;aaa&#x27;</span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">Route::get(<span class="string">&#x27;/aaa&#x27;</span>,[TestController::class,<span class="string">&#x27;form&#x27;</span>]);</span><br></pre></td></tr></table></figure></li>
+<li>post请求 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line">Route::post(<span class="string">&#x27;/aaa&#x27;</span>,<span class="function"><span class="keyword">function</span> (<span class="params"></span>)</span>&#123;</span><br><span class="line"><span class="keyword">echo</span> <span class="string">&#x27;aaa&#x27;</span>;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">Route::post(<span class="string">&#x27;/aaa&#x27;</span>,[TestController::class,<span class="string">&#x27;form&#x27;</span>]);</span><br></pre></td></tr></table></figure></li>
+<li>一个路由响应多个http请求动作 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line">Route::match([<span class="string">&#x27;get&#x27;</span>, <span class="string">&#x27;post&#x27;</span>], <span class="string">&#x27;foo&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="string">&#x27;This is a request from get or post&#x27;</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+<li>一个路由来响应所有 HTTP 请求动作 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line">Route::any(<span class="string">&#x27;bar&#x27;</span>, <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line"><span class="keyword">return</span> <span class="string">&#x27;This is a request from any HTTP verb&#x27;</span>;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></li>
+<li>重定向路由 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line">Route::redirect(<span class="string">&#x27;/here&#x27;</span>,<span class="string">&#x27;/aaa&#x27;</span>);</span><br></pre></td></tr></table></figure></li>
+<li>视图路由<pre><code class="php">Route::view(&#39;hello&#39;, &#39;hello&#39;, [&#39;name&#39; =&gt; &#39;学院君&#39;]);
+&lt;h1&gt;
+    Hello, &#123;&#123; $name &#125;&#125;!
+&lt;/h1&gt;
+注：在view中第一个参数为URL，第二个参数为视图名称，第三个参数可选为需要传到视图文件的值
+
+</code></pre>
+</li>
+</ol>
+<ol start="7">
+<li>路由参数<pre><code class="php">//必选参数
+Route::get(&#39;user/&#123;id&#125;&#39;, function ($id) &#123;
+    return &#39;User &#39; . $id;
+&#125;);
+//可选参数  可以设置默认值
+Route::get(&#39;user/&#123;id？&#125;&#39;, function ($id=1) &#123;
+    return &#39;User &#39; . $id;
+&#125;);
+//多个参数
+Route::get(&#39;posts/&#123;post&#125;/&#123;comment&#125;&#39;, function ($postId, $commentId) &#123;
+    return $postId . &#39;-&#39; . $commentId;
+&#125;);
+
+</code></pre>
+</li>
+</ol>
+<ol start="8">
+<li><p>正则约束</p>
+<pre><code class="php">//判断一个值
+Route::get(&#39;user/&#123;id&#125;&#39;, function ($id) &#123;
+    // $id 必须是数字
+&#125;)-&gt;where(&#39;id&#39;, &#39;[0-9]+&#39;);
+//判断多个值
+Route::get(&#39;user/&#123;id&#125;&#39;, function ($id) &#123;
+    // $id 必须是数字
+&#125;)-&gt;where(&#39;id&#39;, &#39;[0-9]+&#39;);</code></pre>
+</li>
+<li><p>全局约束</p>
+<pre><code class="php">//需要在 RouteServiceProvider 类的 boot 方法中定义这种约束模式
+public function boot()
+&#123;
+    Route::pattern(&#39;id&#39;, &#39;[0-9]+&#39;);
+&#125;
+Route::get(&#39;user/&#123;id&#125;&#39;, function ($id) &#123;
+    // 只有当 &#123;id&#125; 是数字时才会被调用
+&#125;);
+
+</code></pre>
+</li>
+</ol>
+<ol start="10">
+<li>分组前缀<pre><code class="php">Route::prefix(&#39;sss&#39;)-&gt;group(function ()&#123;
+Route::get(&#39;index&#39;,function ()&#123;
+return 33;
+&#125;);
+Route::get(&#39;welcome&#39;,function ()&#123;
+return 44;
+&#125;);
+&#125;);
+//访问时路由为/sss/index或/sss/welcome
+</code></pre>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
+        <tag>laravel</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>第一次来北京</title>
+    <url>/2021/05/29/%E7%94%9F%E6%B4%BB%E6%9D%82%E8%AE%B0/</url>
+    <content><![CDATA[<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;说实话，以前也来过两次北京，与其说来过，不如说是路过。这是算是真正意义的来北京吧，顺利成为北漂的一员。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;北京给我的印象是贵：下面简单算一下每天的日常开销吧。首先早上上班坐地铁5元，早餐一杯豆浆3.5元，中午定外卖大约20元，下班坐地铁5元，晚餐一碗鸡蛋汤和四个煎包6元，房租水电65元，共计105元；一个月下来不买零食、不买生活用品、不买衣服、没有任何事情，需要3150元，但是不可能没有别的事，也不可能什么都不买，因此一个月四千元在北京应该算是基本开销了吧。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;北京给我的印象是人多：感觉在地铁上能坐到座位的概率应该跟中彩票差不多了吧。虽然有点夸张，但事实是我上下班确实没有坐到过位置，即使是始发站。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;北京给我的印象是机会多：我面了将近十家公司，各种各样的都有，只有你想工作，应该都能找到相对合适的，但前提是你要一个一个去面，面完了你才能知道适不适合你。</p>
+]]></content>
+      <categories>
+        <category>碎碎念</category>
+      </categories>
+      <tags>
+        <tag>碎碎念</tag>
       </tags>
   </entry>
   <entry>
@@ -707,18 +837,6 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>第一次来北京</title>
-    <url>/2021/05/29/%E7%94%9F%E6%B4%BB%E6%9D%82%E8%AE%B0/</url>
-    <content><![CDATA[<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;说实话，以前也来过两次北京，与其说来过，不如说是路过。这是算是真正意义的来北京吧，顺利成为北漂的一员。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;北京给我的印象是贵：下面简单算一下每天的日常开销吧。首先早上上班坐地铁5元，早餐一杯豆浆3.5元，中午定外卖大约20元，下班坐地铁5元，晚餐一碗鸡蛋汤和四个煎包6元，房租水电65元，共计105元；一个月下来不买零食、不买生活用品、不买衣服、没有任何事情，需要3150元，但是不可能没有别的事，也不可能什么都不买，因此一个月四千元在北京应该算是基本开销了吧。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;北京给我的印象是人多：感觉在地铁上能坐到座位的概率应该跟中彩票差不多了吧。虽然有点夸张，但事实是我上下班确实没有坐到过位置，即使是始发站。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;北京给我的印象是机会多：我面了将近十家公司，各种各样的都有，只有你想工作，应该都能找到相对合适的，但前提是你要一个一个去面，面完了你才能知道适不适合你。</p>
-]]></content>
-      <categories>
-        <category>碎碎念</category>
-      </categories>
-      <tags>
-        <tag>碎碎念</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>解决innerHTML不能解析数据</title>
     <url>/2021/01/15/%E8%A7%A3%E5%86%B3innerHTML%E4%B8%8D%E8%83%BD%E8%A7%A3%E6%9E%90%E6%95%B0%E6%8D%AE/</url>
     <content><![CDATA[<p>当使用<code>document.(&#39;div&#39;).innerHTML=`` </code>向页面追加内容时可能会出现变量不解析的情况。<br>正确姿势：<code>=</code>后面是<code>``</code>,而不是单引号或双引号,只有<code>``</code>才能解析。</p>
@@ -728,18 +846,6 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </categories>
       <tags>
         <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>解决php中跨域问题</title>
-    <url>/2021/01/15/%E8%A7%A3%E5%86%B3php%E4%B8%AD%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>由于同源策略，经常会出现跨域问题，只需要在php代码前加上下面这些代码即可</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">header(<span class="string">&quot;Access-Control-Allow-Origin:*&quot;</span>);</span><br><span class="line">header(<span class="string">&#x27;Access-Control-Allow-Methods:POST&#x27;</span>);</span><br><span class="line">header(<span class="string">&#x27;Access-Control-Allow-Headers:x-requested-with, content-type&#x27;</span>);</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>后端</category>
-      </categories>
-      <tags>
-        <tag>php</tag>
       </tags>
   </entry>
   <entry>
@@ -766,6 +872,32 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </categories>
       <tags>
         <tag>面试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决php中跨域问题</title>
+    <url>/2021/01/15/%E8%A7%A3%E5%86%B3php%E4%B8%AD%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>由于同源策略，经常会出现跨域问题，只需要在php代码前加上下面这些代码即可</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">header(<span class="string">&quot;Access-Control-Allow-Origin:*&quot;</span>);</span><br><span class="line">header(<span class="string">&#x27;Access-Control-Allow-Methods:POST&#x27;</span>);</span><br><span class="line">header(<span class="string">&#x27;Access-Control-Allow-Headers:x-requested-with, content-type&#x27;</span>);</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>学习Python遇到的坑(更新中)</title>
+    <url>/2021/01/08/%E5%AD%A6%E4%B9%A0Python%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91(%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
+    <content><![CDATA[<ol>
+<li><h3 id="在cmd中输入Python打开软件商店"><a href="#在cmd中输入Python打开软件商店" class="headerlink" title="在cmd中输入Python打开软件商店"></a>在cmd中输入Python打开软件商店</h3>&nbsp;&nbsp;&nbsp;&nbsp;原因：在系统环境变量和用户环境变量的<code>path</code>中，当<code>WindowsApps</code>在<code>python</code>所配置的环境变量前的时候，就会先打开<code>WindowsApps</code><br>&nbsp;&nbsp;&nbsp;&nbsp;解决方法：1.在系统环境和用户环境变量的<code>path</code>中删掉<code>WindowsApps</code>这一项；2.在系统环境和用户环境变量的<code>path</code>中将<code>WindowsApps</code>这一项移动到<code>python</code>环境变量的下面，这样<code>python</code>环境变量就会先被执行，不会造成那样的意外<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210108143304.png"></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
       </tags>
   </entry>
 </search>

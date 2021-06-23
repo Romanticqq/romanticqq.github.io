@@ -921,4 +921,19 @@ return 44;
         <tag>面试</tag>
       </tags>
   </entry>
+  <entry>
+    <title>解决createjs适配手机横屏的问题</title>
+    <url>/2021/06/23/%E8%A7%A3%E5%86%B3createjs%E9%80%82%E9%85%8D%E6%89%8B%E6%9C%BA%E6%A8%AA%E5%B1%8F%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>当用createjs做手机游戏开发，通常会遇到游戏横屏的问题，此时难以开发，下面通过一些代码去解决这一问题。</p>
+<p>当开发时，可以通过谷歌浏览器打开手机横屏调试界面，进行页面的布局，并在布局前通过下面代码或得手机屏幕的宽高，然后进行适配:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;测试</span><br><span class="line">&#x2F;&#x2F; var gameScale &#x3D; screenWidth&#x2F;375;</span><br><span class="line">&#x2F;&#x2F; gameView.rotation &#x3D; 90;</span><br><span class="line">&#x2F;&#x2F; gameView.x &#x3D; screenWidth;</span><br><span class="line">&#x2F;&#x2F; gameView.y &#x3D; 0;</span><br><span class="line">&#x2F;&#x2F; screenWidth &#x3D; window.innerHeight;</span><br><span class="line">&#x2F;&#x2F; screenHeight &#x3D; window.innerWidth;</span><br><span class="line">&#x2F;&#x2F;开发</span><br><span class="line">screenWidth &#x3D; window.innerWidth;</span><br><span class="line">screenHeight &#x3D; window.innerHeight;</span><br></pre></td></tr></table></figure>
+<p>当测试时，可以通过旋转屏幕的方式查看手机横屏后的效果：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&#x2F;&#x2F;测试</span><br><span class="line"> var gameScale &#x3D; screenWidth&#x2F;375;</span><br><span class="line"> gameView.rotation &#x3D; 90;</span><br><span class="line"> gameView.x &#x3D; screenWidth;</span><br><span class="line"> gameView.y &#x3D; 0;</span><br><span class="line"> screenWidth &#x3D; window.innerHeight;</span><br><span class="line"> screenHeight &#x3D; window.innerWidth;</span><br><span class="line">&#x2F;&#x2F;开发</span><br><span class="line">&#x2F;&#x2F;screenWidth &#x3D; window.innerWidth;</span><br><span class="line">&#x2F;&#x2F;screenHeight &#x3D; window.innerHeight;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
 </search>

@@ -30,3 +30,9 @@ categories: hexo
     npm install hexo-deployer-git
     ```
 3. 本地文件恢复，`hexo s`开启本地服务，在浏览器输入`http://localhost:4000`测试是否正常
+## 当遇到提交失败时
+```php
+OpenSSL SSL_read: Connection was reset, errno 10054
+//在hexo d之前执行命令
+git config --global http.sslVerify "false"
+```

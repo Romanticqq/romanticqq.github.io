@@ -1,6 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Ajax实现文件上传</title>
+    <url>/2021/05/05/Ajax%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</url>
+    <content><![CDATA[<h1 id="1-前端demo"><a href="#1-前端demo" class="headerlink" title="1.前端demo"></a>1.前端demo</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">    function btnSubmit() &#123;</span><br><span class="line">        var img &#x3D; document.getElementById(&#39;images&#39;).files[0];</span><br><span class="line">        var fd &#x3D; new FormData();</span><br><span class="line">        fd.append(&#39;FILE&#39;, img);</span><br><span class="line">        fd.append(&#39;name&#39;, &#39;xiaoming&#39;);</span><br><span class="line">        $.ajax(&#123;</span><br><span class="line">            type: &quot;post&quot;,</span><br><span class="line">            url: &quot;http:&#x2F;&#x2F;127.0.0.1&#x2F;test.php&quot;,</span><br><span class="line">            processData: false,&#x2F;&#x2F;非常重要，不可省略</span><br><span class="line">            contentType: false,&#x2F;&#x2F;非常重要，不可省略</span><br><span class="line">            dataType: &quot;json&quot;,</span><br><span class="line">            data: fd,</span><br><span class="line">            success: function(data) &#123;</span><br><span class="line"></span><br><span class="line">            &#125;,</span><br><span class="line">            error: function(data) &#123;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
+<h1 id="2-服务端demo"><a href="#2-服务端demo" class="headerlink" title="2.服务端demo"></a>2.服务端demo</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$imgName&#x3D;$_FILES[&#39;FILE&#39;][&#39;name&#39;];</span><br><span class="line">$tmp_name&#x3D;$_FILES[&#39;FILE&#39;][&#39;tmp_name&#39;];</span><br><span class="line">$fileName&#x3D;&#39;.&#x2F;123.jpg&#39;;</span><br><span class="line">$rst&#x3D;move_uploaded_file($tmp_name,$fileName);</span><br><span class="line">echo $rst;</span><br></pre></td></tr></table></figure>
+<p>注：<br>1.$fileName路径中的路径必须存在；<br>2.$fileName路径中不可出现中文；<br>若不满足则两种情况，可能会false；</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>Ajax</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>重邮程序设计复试真题(部分)</title>
     <url>/2021/02/04/2015%E5%B9%B4%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%A4%8D%E8%AF%95%E7%9C%9F%E9%A2%98/</url>
     <content><![CDATA[<p>2015年：</p>
@@ -27,21 +42,6 @@
       </categories>
       <tags>
         <tag>F021程序设计</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Ajax实现文件上传</title>
-    <url>/2021/05/05/Ajax%E5%AE%9E%E7%8E%B0%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/</url>
-    <content><![CDATA[<h1 id="1-前端demo"><a href="#1-前端demo" class="headerlink" title="1.前端demo"></a>1.前端demo</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">&lt;script type&#x3D;&quot;text&#x2F;javascript&quot;&gt;</span><br><span class="line">    function btnSubmit() &#123;</span><br><span class="line">        var img &#x3D; document.getElementById(&#39;images&#39;).files[0];</span><br><span class="line">        var fd &#x3D; new FormData();</span><br><span class="line">        fd.append(&#39;FILE&#39;, img);</span><br><span class="line">        fd.append(&#39;name&#39;, &#39;xiaoming&#39;);</span><br><span class="line">        $.ajax(&#123;</span><br><span class="line">            type: &quot;post&quot;,</span><br><span class="line">            url: &quot;http:&#x2F;&#x2F;127.0.0.1&#x2F;test.php&quot;,</span><br><span class="line">            processData: false,&#x2F;&#x2F;非常重要，不可省略</span><br><span class="line">            contentType: false,&#x2F;&#x2F;非常重要，不可省略</span><br><span class="line">            dataType: &quot;json&quot;,</span><br><span class="line">            data: fd,</span><br><span class="line">            success: function(data) &#123;</span><br><span class="line"></span><br><span class="line">            &#125;,</span><br><span class="line">            error: function(data) &#123;</span><br><span class="line"></span><br><span class="line">            &#125;</span><br><span class="line">        &#125;);</span><br><span class="line">    &#125;</span><br><span class="line">&lt;&#x2F;script&gt;</span><br></pre></td></tr></table></figure>
-<h1 id="2-服务端demo"><a href="#2-服务端demo" class="headerlink" title="2.服务端demo"></a>2.服务端demo</h1><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$imgName&#x3D;$_FILES[&#39;FILE&#39;][&#39;name&#39;];</span><br><span class="line">$tmp_name&#x3D;$_FILES[&#39;FILE&#39;][&#39;tmp_name&#39;];</span><br><span class="line">$fileName&#x3D;&#39;.&#x2F;123.jpg&#39;;</span><br><span class="line">$rst&#x3D;move_uploaded_file($tmp_name,$fileName);</span><br><span class="line">echo $rst;</span><br></pre></td></tr></table></figure>
-<p>注：<br>1.$fileName路径中的路径必须存在；<br>2.$fileName路径中不可出现中文；<br>若不满足则两种情况，可能会false；</p>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-        <tag>Ajax</tag>
       </tags>
   </entry>
   <entry>
@@ -140,7 +140,7 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
   </entry>
   <entry>
     <title>Anaconda安装库时遇到的坑</title>
-    <url>/2021/07/09/Anaconda%E5%AE%89%E8%A3%85%E5%BA%93%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</url>
+    <url>/2021/01/03/Anaconda%E5%AE%89%E8%A3%85%E5%BA%93%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</url>
     <content><![CDATA[<ol>
 <li>注意要在安装库文件的目录下使用cmd，然后用命令安装</li>
 <li>当安装完库成功后,import库发现不存在,可能是因为库的安装路径不在当前Python库的搜索路径内,所以没被找到.<br>解决方法:<br>(1)把库的路径加入搜索路径内;<br>(2)当安装Anaconda使,自带了Python,因此删掉自己安装的Python后再重新安装库即可，这样就会自动安装在搜索目录下了(新手尽量只装一个Python)</li>
@@ -172,6 +172,36 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </categories>
       <tags>
         <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C语言函数数组传值</title>
+    <url>/2021/01/13/C%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0%E6%95%B0%E7%BB%84%E4%BC%A0%E5%80%BC/</url>
+    <content><![CDATA[<p>C语言中,向函数传值的问题</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 方法一</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span>* number)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> number[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">	duplicate(number);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> *number)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,number[<span class="number">0</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//方法二</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> number[])</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> number[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">	duplicate(number);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> number[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,number[<span class="number">0</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>C语言</category>
+      </categories>
+      <tags>
+        <tag>C语言</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Pycharm基本使用</title>
+    <url>/2021/01/08/Pycharm%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h2 id="Pycharm基本使用"><a href="#Pycharm基本使用" class="headerlink" title="Pycharm基本使用"></a>Pycharm基本使用</h2><ol>
+<li>双击shift键(或Ctrl+shift+A)，会弹出全局搜索窗口</li>
+<li>快速格式化代码 Ctrl+shift+L</li>
+<li>快速复制粘贴选中代码 Ctrl+D</li>
+<li>移动一行代码 Ctrl+shift+上下箭头</li>
+<li>光标定位到一行开头Fn+左箭头，定位到一行结尾Fn+右箭头</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -235,57 +265,11 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>Pycharm基本使用</title>
-    <url>/2021/01/08/Pycharm%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h2 id="Pycharm基本使用"><a href="#Pycharm基本使用" class="headerlink" title="Pycharm基本使用"></a>Pycharm基本使用</h2><ol>
-<li>双击shift键(或Ctrl+shift+A)，会弹出全局搜索窗口</li>
-<li>快速格式化代码 Ctrl+shift+L</li>
-<li>快速复制粘贴选中代码 Ctrl+D</li>
-<li>移动一行代码 Ctrl+shift+上下箭头</li>
-<li>光标定位到一行开头Fn+左箭头，定位到一行结尾Fn+右箭头</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>C语言函数数组传值</title>
-    <url>/2021/01/13/C%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0%E6%95%B0%E7%BB%84%E4%BC%A0%E5%80%BC/</url>
-    <content><![CDATA[<p>C语言中,向函数传值的问题</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 方法一</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span>* number)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> number[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">	duplicate(number);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> *number)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,number[<span class="number">0</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//方法二</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> number[])</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> number[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">	duplicate(number);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> number[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,number[<span class="number">0</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>C语言</category>
-      </categories>
-      <tags>
-        <tag>C语言</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python2和Python3的区别(更新中)</title>
     <url>/2021/01/10/Python2%E5%92%8CPython3%E7%9A%84%E5%8C%BA%E5%88%AB(%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
     <content><![CDATA[<ol>
 <li>在Python2中，/得到的是一个整数;在Python3中得到是一个浮点数</li>
 <li>在python2中0o和0开始的数字都是8进制;在Python3中只有0o表示8进制</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python中进制和数据类型转换</title>
-    <url>/2021/01/09/Python%E4%B8%AD%E8%BF%9B%E5%88%B6%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</url>
-    <content><![CDATA[<ol>
-<li><h3 id="二、八、十六进制转换"><a href="#二、八、十六进制转换" class="headerlink" title="二、八、十六进制转换"></a>二、八、十六进制转换</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">  二进制:前缀,0b;<span class="number">0b11</span>;每个位最大不能超过<span class="number">1</span></span><br><span class="line">  八进制:前缀,0o;<span class="number">0o17</span>;每个位最大不能超过<span class="number">7</span></span><br><span class="line">十六进制:前缀,0x;<span class="number">0x1f</span>;每个位最大不能超过f</span><br><span class="line"><span class="comment"># 注：在python2中0o和0开始的数字都是8进制</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 手算转换</span></span><br><span class="line"><span class="number">2</span>进制转换为<span class="number">8</span>：从后向前<span class="number">3</span>位一组进行</span><br><span class="line"><span class="number">2</span>进制转换为<span class="number">16</span>：从后向前<span class="number">4</span>位一组进行</span><br><span class="line"><span class="number">2</span>,<span class="number">8</span>,<span class="number">16</span>进制转换成十进制，都是按照幂次，然后相加进行计算</span><br><span class="line"><span class="number">10</span>进制转换成<span class="number">2</span>进制：除留余数法</span><br><span class="line"></span><br><span class="line"><span class="comment"># 机算</span></span><br><span class="line">a=<span class="number">12</span> <span class="comment">#10进制数</span></span><br><span class="line"><span class="built_in">bin</span>(a) <span class="comment"># 将10进制数转换成2进制</span></span><br><span class="line"><span class="built_in">oct</span>(a) <span class="comment"># 将10进制数转换成8进制</span></span><br><span class="line"><span class="built_in">hex</span>(a) <span class="comment"># 将10进制数转换成16进制</span></span><br><span class="line">注：当a不等于数字时会报错</span><br></pre></td></tr></table></figure></li>
-<li>数据类型之间的转换<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#转换函数</span></span><br><span class="line">msg=<span class="built_in">int</span>(msg) </span><br><span class="line"><span class="comment"># 将不是int型的变量转换成int型的变量</span></span><br><span class="line"><span class="comment"># 其余类型写法相同，如float</span></span><br><span class="line"><span class="comment"># 当被转换的msg不是纯数字会转换失败，报错 </span></span><br><span class="line">msg=<span class="built_in">int</span>(x,y)</span><br><span class="line"><span class="comment"># 将字符串x,按照y进制转换成10进制数</span></span><br><span class="line">eg:</span><br><span class="line">msg=<span class="built_in">int</span>(<span class="string">&#x27;abc&#x27;</span>,<span class="number">16</span>) <span class="comment"># 将字符串&#x27;abc&#x27;按照16进制数转换成10进制数</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 转换原因</span></span><br><span class="line">不同的数据类型有时候不能进行运算</span><br><span class="line"></span><br><span class="line"><span class="comment"># True False</span></span><br><span class="line">在进行数据运算时,<span class="literal">True</span>=<span class="number">1</span>,<span class="literal">False</span>=<span class="number">0</span>;</span><br><span class="line">eg:</span><br><span class="line">print(<span class="literal">True</span> + <span class="number">1</span>)  <span class="comment"># 结果为2</span></span><br></pre></td></tr></table></figure></li>
-<li>转换成布尔值<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在数字里，只有0会被转换成False</span></span><br><span class="line"><span class="comment"># 在字符串里只有空字符串会被转换成False,空格串也会被转换成True</span></span><br><span class="line"><span class="comment"># None会被转换为False,eg:bool(None),打印出来是False</span></span><br><span class="line"><span class="comment"># 空数据类型会被转换成False,如[],(),&#123;&#125;等</span></span><br></pre></td></tr></table></figure></li>
 </ol>
 ]]></content>
       <categories>
@@ -349,6 +333,22 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
+    <title>Python中进制和数据类型转换</title>
+    <url>/2021/01/09/Python%E4%B8%AD%E8%BF%9B%E5%88%B6%E5%92%8C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/</url>
+    <content><![CDATA[<ol>
+<li><h3 id="二、八、十六进制转换"><a href="#二、八、十六进制转换" class="headerlink" title="二、八、十六进制转换"></a>二、八、十六进制转换</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">  二进制:前缀,0b;<span class="number">0b11</span>;每个位最大不能超过<span class="number">1</span></span><br><span class="line">  八进制:前缀,0o;<span class="number">0o17</span>;每个位最大不能超过<span class="number">7</span></span><br><span class="line">十六进制:前缀,0x;<span class="number">0x1f</span>;每个位最大不能超过f</span><br><span class="line"><span class="comment"># 注：在python2中0o和0开始的数字都是8进制</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 手算转换</span></span><br><span class="line"><span class="number">2</span>进制转换为<span class="number">8</span>：从后向前<span class="number">3</span>位一组进行</span><br><span class="line"><span class="number">2</span>进制转换为<span class="number">16</span>：从后向前<span class="number">4</span>位一组进行</span><br><span class="line"><span class="number">2</span>,<span class="number">8</span>,<span class="number">16</span>进制转换成十进制，都是按照幂次，然后相加进行计算</span><br><span class="line"><span class="number">10</span>进制转换成<span class="number">2</span>进制：除留余数法</span><br><span class="line"></span><br><span class="line"><span class="comment"># 机算</span></span><br><span class="line">a=<span class="number">12</span> <span class="comment">#10进制数</span></span><br><span class="line"><span class="built_in">bin</span>(a) <span class="comment"># 将10进制数转换成2进制</span></span><br><span class="line"><span class="built_in">oct</span>(a) <span class="comment"># 将10进制数转换成8进制</span></span><br><span class="line"><span class="built_in">hex</span>(a) <span class="comment"># 将10进制数转换成16进制</span></span><br><span class="line">注：当a不等于数字时会报错</span><br></pre></td></tr></table></figure></li>
+<li>数据类型之间的转换<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment">#转换函数</span></span><br><span class="line">msg=<span class="built_in">int</span>(msg) </span><br><span class="line"><span class="comment"># 将不是int型的变量转换成int型的变量</span></span><br><span class="line"><span class="comment"># 其余类型写法相同，如float</span></span><br><span class="line"><span class="comment"># 当被转换的msg不是纯数字会转换失败，报错 </span></span><br><span class="line">msg=<span class="built_in">int</span>(x,y)</span><br><span class="line"><span class="comment"># 将字符串x,按照y进制转换成10进制数</span></span><br><span class="line">eg:</span><br><span class="line">msg=<span class="built_in">int</span>(<span class="string">&#x27;abc&#x27;</span>,<span class="number">16</span>) <span class="comment"># 将字符串&#x27;abc&#x27;按照16进制数转换成10进制数</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 转换原因</span></span><br><span class="line">不同的数据类型有时候不能进行运算</span><br><span class="line"></span><br><span class="line"><span class="comment"># True False</span></span><br><span class="line">在进行数据运算时,<span class="literal">True</span>=<span class="number">1</span>,<span class="literal">False</span>=<span class="number">0</span>;</span><br><span class="line">eg:</span><br><span class="line">print(<span class="literal">True</span> + <span class="number">1</span>)  <span class="comment"># 结果为2</span></span><br></pre></td></tr></table></figure></li>
+<li>转换成布尔值<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在数字里，只有0会被转换成False</span></span><br><span class="line"><span class="comment"># 在字符串里只有空字符串会被转换成False,空格串也会被转换成True</span></span><br><span class="line"><span class="comment"># None会被转换为False,eg:bool(None),打印出来是False</span></span><br><span class="line"><span class="comment"># 空数据类型会被转换成False,如[],(),&#123;&#125;等</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Python分支语句和循环语句</title>
     <url>/2021/01/10/Python%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5%E5%92%8C%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5/</url>
     <content><![CDATA[<h2 id="分支语句"><a href="#分支语句" class="headerlink" title="分支语句"></a>分支语句</h2><ol>
@@ -365,36 +365,6 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
 <li><h3 id="break和continue"><a href="#break和continue" class="headerlink" title="break和continue"></a>break和continue</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">break</span>:终止本层循环</span><br><span class="line"><span class="keyword">continue</span>:终止本次循环</span><br></pre></td></tr></table></figure></li>
 <li><h3 id="循环语句注意事项"><a href="#循环语句注意事项" class="headerlink" title="循环语句注意事项"></a>循环语句注意事项</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> Python中没有i++或i--,只能i+=<span class="number">1</span></span><br><span class="line"><span class="number">2.</span> 常用<span class="built_in">range</span>内置类生成一个整数区间进行循环</span><br><span class="line"><span class="number">3.</span> <span class="built_in">range</span>生成的整数区间以前一个数开始，以后一个数的前一个整数结束</span><br><span class="line"><span class="number">4.</span> <span class="keyword">in</span>后面是一个可迭代的对象,目前接触到的接迭代的对象:字符串,列表,字典,元组,集合,<span class="built_in">range</span></span><br><span class="line"><span class="number">5.</span> Python中没有do...<span class="keyword">while</span>...</span><br></pre></td></tr></table></figure>
 </li>
-</ol>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python可变数据类型和不可变数据类型</title>
-    <url>/2021/01/12/Python%E5%8F%AF%E5%8F%98%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E4%B8%8D%E5%8F%AF%E5%8F%98%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
-    <content><![CDATA[<p>Python中的数据分为可变数据类型和不可变数据类型</p>
-<h3 id="可变数据类型"><a href="#可变数据类型" class="headerlink" title="可变数据类型"></a>可变数据类型</h3><p>定义：如果修改值，内存地址不会发生变化<br>可变数据类型:列表,字典,集合</p>
-<h3 id="不可变数据类型"><a href="#不可变数据类型" class="headerlink" title="不可变数据类型"></a>不可变数据类型</h3><p>定义：如果修改值，内存地址会发生变化<br>可变数据类型:字符串,数字,元组</p>
-<h3 id="看图理解"><a href="#看图理解" class="headerlink" title="看图理解"></a>看图理解</h3><p><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111164602.png"><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111165444.png"></p>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python经典问题</title>
-    <url>/2021/01/12/Python%E7%BB%8F%E5%85%B8%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<ol>
-<li><h3 id="交换两个变量的值"><a href="#交换两个变量的值" class="headerlink" title="交换两个变量的值"></a>交换两个变量的值</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="number">1</span></span><br><span class="line">b=<span class="number">2</span></span><br><span class="line"><span class="comment"># 方法一:利用第三个变量实现</span></span><br><span class="line">c=b</span><br><span class="line">b=a</span><br><span class="line">a=c</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法二:利用运算符实现</span></span><br><span class="line">a=a+b</span><br><span class="line">b=a-b</span><br><span class="line">a=a-b</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法三:利用异或运算符实现</span></span><br><span class="line">a=a^b</span><br><span class="line">b=a^b</span><br><span class="line">a=a^b</span><br><span class="line"><span class="comment"># 原理 a^b^b==a</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法四:使用Python特有的方法实现</span></span><br><span class="line">a,b=b,a</span><br></pre></td></tr></table></figure></li>
-<li>for…in循环删除元素</li>
 </ol>
 ]]></content>
       <categories>
@@ -450,67 +420,18 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>Python运算符</title>
-    <url>/2021/01/12/Python%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
-    <content><![CDATA[<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><ol>
-<li><h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">+:加</span><br><span class="line">-:减</span><br><span class="line">*:乘</span><br><span class="line">/:除(结果可以是<span class="built_in">float</span>)</span><br><span class="line">%:取余</span><br><span class="line">**:幂运算 eg: print(<span class="number">2</span>**<span class="number">3</span>) <span class="comment">#打印2的3次幂</span></span><br><span class="line">//:整除(向下取整)</span><br><span class="line">注：</span><br><span class="line"><span class="comment"># 可用幂运算进行开方运算</span></span><br><span class="line">eg:print(<span class="number">81</span>**(<span class="number">1</span>/<span class="number">2</span>)) <span class="comment">#打印的是81开平方的结果，即为9</span></span><br><span class="line"><span class="comment"># 在Python2中，/得到的是一个整数;在Python3中得到是一个浮点数</span></span><br><span class="line"><span class="comment"># 在开发中使用括号来表示优先级,比较清晰</span></span><br></pre></td></tr></table></figure></li>
-<li><h3 id="算术运算符在字符串中的使用"><a href="#算术运算符在字符串中的使用" class="headerlink" title="算术运算符在字符串中的使用"></a>算术运算符在字符串中的使用</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在字符串中有限度的支持加法和乘法运算符</span></span><br><span class="line">print(<span class="string">&quot;hello&quot;</span>+<span class="string">&quot;world&quot;</span>)   <span class="comment"># 结果为 helloworld(用于拼接字符串)</span></span><br><span class="line">print(<span class="string">&quot;hello&quot;</span>*<span class="number">2</span>)         <span class="comment"># 结果为 hellohello</span></span><br><span class="line">注：字符串和数字是不能相加的</span><br><span class="line">print(<span class="string">&quot;a&quot;</span>+<span class="number">1</span>) <span class="comment"># 会报错</span></span><br></pre></td></tr></table></figure></li>
-<li><h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="number">1</span> <span class="comment"># 单个变量赋值</span></span><br><span class="line">m,n=<span class="number">1</span>,<span class="number">2</span> <span class="comment"># 多个变量赋值(拆包),且当等号左右两侧个数不相等时会报错</span></span><br><span class="line">o*,p,q=<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span> <span class="comment">#加*表示可变长度,把4,5分别赋给p,q,其余全部赋值给o</span></span><br><span class="line">m=<span class="string">&#x27;hello&#x27;</span>,<span class="string">&#x27;world&#x27;</span> <span class="comment"># 元组赋值</span></span><br></pre></td></tr></table></figure></li>
-<li><h3 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 比较运算符</span></span><br><span class="line">&gt;:大于</span><br><span class="line">&lt;:小于</span><br><span class="line">&gt;=:大于等于</span><br><span class="line">&lt;=:小于等于</span><br><span class="line">!=:不等于(在python2&lt;&gt;也表示不等于，python3不支持)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 比较运算符在字符串中的使用</span></span><br><span class="line">print(<span class="string">&#x27;a&#x27;</span>&lt;<span class="string">&#x27;b&#x27;</span>) <span class="comment"># 结果为true 按照ASCII码进行比较</span></span><br><span class="line">print(<span class="string">&#x27;abc&#x27;</span>&lt;<span class="string">&#x27;b&#x27;</span>) <span class="comment"># 结果为true,直接字符a,b相比得出结果</span></span><br><span class="line">print(<span class="string">&#x27;abc&#x27;</span>==<span class="string">&#x27;abc&#x27;</span>) <span class="comment"># 结果为true</span></span><br><span class="line">在数字和字符串之间做==为true,做!=比较为false</span><br></pre></td></tr></table></figure></li>
-<li><h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">and</span>:逻辑与</span><br><span class="line"><span class="keyword">or</span>:逻辑或</span><br><span class="line"><span class="keyword">not</span>:逻辑非</span><br><span class="line"></span><br><span class="line"><span class="comment">#规则</span></span><br><span class="line">逻辑与规则:只有一个运算数是<span class="literal">False</span>,结果就为<span class="literal">False</span></span><br><span class="line">逻辑或规则:只有一个运算数是<span class="literal">True</span>,结果就为<span class="literal">True</span></span><br><span class="line">优先级:<span class="keyword">not</span> &gt; <span class="keyword">and</span> &gt; <span class="keyword">or</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#逻辑运算符的取值问题(逻辑运算结果不一定是bool值)</span></span><br><span class="line">print(<span class="number">3</span> <span class="keyword">and</span> <span class="string">&#x27;Hello&#x27;</span> <span class="keyword">and</span> <span class="number">0</span> <span class="keyword">and</span> <span class="number">2</span>) </span><br><span class="line"><span class="comment"># 结果为0(按照逻辑与的运算规则,有False则False)</span></span><br><span class="line">print(<span class="number">3</span> <span class="keyword">or</span> <span class="number">0</span>)</span><br><span class="line"><span class="comment"># 结果为3,逻辑或运算当有一个是True时，后面的将不会被执行</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#逻辑运算符的短路问题</span></span><br><span class="line"><span class="number">4</span> &gt; <span class="number">3</span> <span class="keyword">and</span> print(<span class="string">&#x27;hello world&#x27;</span>) </span><br><span class="line"><span class="comment"># 打印hello world</span></span><br><span class="line"><span class="number">4</span> &gt; <span class="number">3</span> <span class="keyword">or</span> print(<span class="string">&#x27;hello world&#x27;</span>) </span><br><span class="line"><span class="comment"># print将会短路，因为逻辑或前面已经是True,后面将不会被执行</span></span><br></pre></td></tr></table></figure></li>
-<li><h3 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&amp;:按位与(都为<span class="number">1</span>取<span class="number">1</span>,否则取<span class="number">0</span>)</span><br><span class="line">|:按位或(有<span class="number">1</span>取<span class="number">1</span>,否则取<span class="number">0</span>)</span><br><span class="line">^:按位异或(不同取<span class="number">1</span>,相同取<span class="number">0</span>)</span><br><span class="line">~:按位取反(<span class="number">0</span>取<span class="number">1</span>,<span class="number">1</span>取<span class="number">0</span>)</span><br><span class="line">&lt;&lt;:左移(向左移,后面补<span class="number">0</span>)</span><br><span class="line">&gt;&gt;:右移(向右移,数据会丢失)</span><br><span class="line"><span class="comment"># 左移:x左移a位结果为x乘以2的a次方</span></span><br><span class="line"><span class="comment"># 右移:x右移a位结果为x除以2的a次方(取整)</span></span><br></pre></td></tr></table></figure></li>
-</ol>
+    <title>Python可变数据类型和不可变数据类型</title>
+    <url>/2021/01/12/Python%E5%8F%AF%E5%8F%98%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E4%B8%8D%E5%8F%AF%E5%8F%98%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+    <content><![CDATA[<p>Python中的数据分为可变数据类型和不可变数据类型</p>
+<h3 id="可变数据类型"><a href="#可变数据类型" class="headerlink" title="可变数据类型"></a>可变数据类型</h3><p>定义：如果修改值，内存地址不会发生变化<br>可变数据类型:列表,字典,集合</p>
+<h3 id="不可变数据类型"><a href="#不可变数据类型" class="headerlink" title="不可变数据类型"></a>不可变数据类型</h3><p>定义：如果修改值，内存地址会发生变化<br>可变数据类型:字符串,数字,元组</p>
+<h3 id="看图理解"><a href="#看图理解" class="headerlink" title="看图理解"></a>看图理解</h3><p><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111164602.png"><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111165444.png"></p>
 ]]></content>
       <categories>
         <category>Python</category>
       </categories>
       <tags>
         <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>createjs小游戏笔记</title>
-    <url>/2021/07/09/createjs%E5%B0%8F%E6%B8%B8%E6%88%8F%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<ol>
-<li>创建舞台<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> stage = <span class="keyword">new</span> createjs.Stage();<span class="comment">//()中为画布的id,与画布进行绑定</span></span><br></pre></td></tr></table></figure></li>
-<li>创建容器<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> gameView = <span class="keyword">new</span> createjs.Container();</span><br><span class="line">stage.addChild(gameView);<span class="comment">//可将容器放在舞台中，创建的元素放在容器中</span></span><br><span class="line">stage &gt; container &gt; 单个元素<span class="comment">//三代之间的关系，可通过addChild()方法进行追加元素</span></span><br></pre></td></tr></table></figure></li>
-<li>创建图形<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> shape = <span class="keyword">new</span> createjs.Shape();<span class="comment">//创建一个图形</span></span><br><span class="line">shape.graphics.beginFill(color)drawRect(x,y,w,h);<span class="comment">//画一个矩形</span></span><br><span class="line">shape.graphics.beginFill(color)drawRoundRect(x,y,w,h,radius);<span class="comment">//画圆角矩形</span></span><br><span class="line">shape.graphics.beginFill(color)drawCircle(x,y,r);<span class="comment">//画圆</span></span><br></pre></td></tr></table></figure></li>
-<li>创建图片<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> img = <span class="keyword">new</span> createjs.Bitmap();<span class="comment">//括号中为图片路径</span></span><br></pre></td></tr></table></figure></li>
-<li>创建文字<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> text = <span class="keyword">new</span> createjs.Text(text,font,color);<span class="comment">//创建文字</span></span><br><span class="line"><span class="comment">//属性</span></span><br><span class="line">text.lineWidth  <span class="comment">//设置行宽</span></span><br><span class="line">text.lineHeight <span class="comment">//设置行高</span></span><br><span class="line">text.textAlign  <span class="comment">//设置对齐方式</span></span><br><span class="line">注：</span><br><span class="line">当设置左对齐的时候，text.x的值为文字的起始点横坐标；</span><br><span class="line">当设置右对齐的时候，text.x的值为文字的结束点横坐标；</span><br><span class="line">当设置居中对齐的时候，text.x的值为文字的中间点横坐标；</span><br><span class="line">当设置lineWidth会出现中文不换行问题见<span class="number">19</span>；</span><br></pre></td></tr></table></figure></li>
-<li>常见属性和方法<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">demo.x <span class="comment">//设置起始位置横坐标</span></span><br><span class="line">demo.y <span class="comment">//设置起始位置纵坐标</span></span><br><span class="line">demo.alpha <span class="comment">//设置透明度</span></span><br><span class="line">demo.x <span class="comment">//设置起始位置横坐标</span></span><br><span class="line">demo.y <span class="comment">//设置起始位置纵坐标</span></span><br><span class="line">demo.scaleX <span class="comment">//水平变换</span></span><br><span class="line">demo.scaleY <span class="comment">//垂直变换</span></span><br><span class="line">demo.scale  <span class="comment">//整体变换</span></span><br><span class="line">demo.alpha  <span class="comment">//设置透明度</span></span><br><span class="line">demo.mask   <span class="comment">//设置蒙版</span></span><br><span class="line">demo.name   <span class="comment">//设置名称</span></span><br><span class="line">demo.visible <span class="comment">//设置元素是否显示 </span></span><br><span class="line">demo.removeAllChildren(); <span class="comment">//移除所有子元素</span></span><br><span class="line">parent.addChild(child); <span class="comment">//添加子元素</span></span><br><span class="line">parent.setChildIndex(child,parent.getNumChildren()-num);<span class="comment">//设置层级</span></span><br><span class="line">注：</span><br><span class="line"><span class="number">1.</span> 当alpha为<span class="number">0</span>时不能触发事件；</span><br><span class="line"><span class="number">2.</span> mask显示的内容为和蒙版重合的部分，为蒙版不追加入img的父元素中；</span><br></pre></td></tr></table></figure></li>
-<li>雪碧图<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> data = &#123;</span><br><span class="line">    images: [url],<span class="comment">//图片路径</span></span><br><span class="line">    frames: &#123;<span class="attr">width</span>:w,<span class="attr">height</span>:h,<span class="attr">count</span>:count&#125;,<span class="comment">//w,h是一张精灵图的实际宽高，count的图片数量</span></span><br><span class="line">    animations: &#123;</span><br><span class="line">        run: &#123;</span><br><span class="line">            frames:[<span class="number">0</span>,<span class="number">3</span>],<span class="comment">//显示哪几张图片，0，3为0～3四张</span></span><br><span class="line">            speed:<span class="number">0.5</span> <span class="comment">//图片运动速度</span></span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">let</span> spriteSheet = <span class="keyword">new</span> createjs.SpriteSheet(data);</span><br><span class="line"><span class="keyword">let</span> animation = <span class="keyword">new</span> createjs.Sprite(spriteSheet,<span class="string">&quot;run&quot;</span>);</span><br><span class="line">nimation.set(&#123;<span class="attr">x</span>:x,<span class="attr">y</span>:y,<span class="attr">scaleX</span>:scaleX,<span class="attr">scaleY</span>:scaleY&#125;);</span><br></pre></td></tr></table></figure></li>
-<li>创建动画<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">createjs.Tween.get(元素).to(&#123;属性:值&#125;,时间)；<span class="comment">//异步执行</span></span><br><span class="line">createjs.Tween.get(元素).to(&#123;属性:值&#125;,时间).call(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;)；<span class="comment">//function()和动画同步执行，会在动画结束后执行</span></span><br></pre></td></tr></table></figure></li>
-<li>资源预加载<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$.when(filePreload()).then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;);</span><br><span class="line"><span class="comment">//预加载完成后在执行then后面的函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">filePreload</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//deferred对象的含义就是&quot;延迟&quot;到未来某个点再执行。</span></span><br><span class="line">    <span class="keyword">let</span> deferred = <span class="keyword">new</span> $.Deferred();</span><br><span class="line">    <span class="comment">//preload可以方便我们预先加载相关资源</span></span><br><span class="line">    <span class="keyword">let</span> queue = <span class="keyword">new</span> createjs.LoadQueue(<span class="literal">false</span>);</span><br><span class="line">    <span class="comment">//如果载入声音，必须先注册createjs.Sound</span></span><br><span class="line">    queue.installPlugin(createjs.Sound);</span><br><span class="line">    <span class="comment">//将需要预加载的资源放在manifest数组中</span></span><br><span class="line">    <span class="comment">//url：资源的路径</span></span><br><span class="line">    <span class="comment">//id:给资源重新定义的名字，调用改资源时使用</span></span><br><span class="line">    <span class="keyword">let</span> manifest = [</span><br><span class="line">        &#123;<span class="attr">id</span>:id,<span class="attr">src</span>:url<span class="string">&quot;&#125;</span></span><br><span class="line"><span class="string">    ];</span></span><br><span class="line"><span class="string">    //预加载过程中执行的函数</span></span><br><span class="line"><span class="string">    //当调用某一资源时使用bitmapList[id].clone(),且bitmapList需为全局变量</span></span><br><span class="line"><span class="string">    queue.on(&quot;</span>fileload<span class="string">&quot;, function (event) &#123;</span></span><br><span class="line"><span class="string">        if (event.item.type == &quot;</span>image<span class="string">&quot;) &#123;</span></span><br><span class="line"><span class="string">            bitmapList[event.item.id] = new createjs.Bitmap(event.result);</span></span><br><span class="line"><span class="string">            &#125;</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;, this);</span></span><br><span class="line"><span class="string">    //预加载完成后执行的函数</span></span><br><span class="line"><span class="string">    queue.on(&quot;</span>complete<span class="string">&quot;, function (event) &#123;</span></span><br><span class="line"><span class="string">        deferred.resolve();</span></span><br><span class="line"><span class="string">    &#125;, this);</span></span><br><span class="line"><span class="string">    queue.loadManifest(manifest);</span></span><br><span class="line"><span class="string">    return deferred.promise();</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">//</span></span><br></pre></td></tr></table></figure></li>
-<li>设置旋转(竖屏转成横屏) <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">stage.rotation = <span class="number">90</span>;</span><br><span class="line">stage.x = screenWidth;</span><br><span class="line">stage.y = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">let</span> temp = screenWidth;</span><br><span class="line">screenWidth = screenHeight;</span><br><span class="line">screenHeight = temp;</span><br><span class="line">注：等号右侧为竖屏宽高，左侧为横屏宽高</span><br></pre></td></tr></table></figure></li>
-<li>当使用高清图片时若图片还是不清晰，可适当扩大画布的倍数；</li>
-<li>当使用onload方法且需要传参时，避免异步的影响<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//如加载图片时，图片没有加载好就获取图片属性会报错</span></span><br><span class="line"><span class="comment">//若在for循环中，可能计数i会产生影响</span></span><br><span class="line"><span class="keyword">let</span> img = <span class="keyword">new</span> Image();</span><br><span class="line">img.src = url;</span><br><span class="line">img.index = <span class="number">1</span>;</span><br><span class="line">img.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(img.index);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//可推广</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line">obj.x = <span class="number">1</span>;</span><br><span class="line">obg.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(obj.x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
-<li>动态修改shape图形的参数<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">shape.graphics.command.属性 = 值；</span><br></pre></td></tr></table></figure></li>
-<li>实现container的滚动<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//主函数</span></span><br><span class="line"><span class="keyword">if</span>(createjs.Touch.isSupported() == <span class="literal">true</span>)&#123;</span><br><span class="line">        createjs.Touch.enable(stage)</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//设置滚动条件</span></span><br><span class="line"><span class="keyword">let</span> localPos,y;</span><br><span class="line">gameView.addEventListener(<span class="string">&#x27;mousedown&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">evt</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//滑动开始时的位置</span></span><br><span class="line">    <span class="keyword">let</span> stageX = evt.stageX;</span><br><span class="line">    <span class="keyword">let</span> stageY = evt.stageY;</span><br><span class="line">    <span class="comment">//将gameView对象从舞台（全局）坐标转换为显示对象的（本地）坐标</span></span><br><span class="line">    localPos = stage.globalToLocal(stageX,stageY);</span><br><span class="line">    <span class="comment">//获取gameview对象的坐标</span></span><br><span class="line">    y = gameView.y;</span><br><span class="line">&#125;)</span><br><span class="line">gameView.addEventListener(<span class="string">&#x27;pressmove&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">evt</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//gameview.y = 滑动结束时滑动点处的y-滑动开始时滑动点处的y+滑动开始时gameview的y</span></span><br><span class="line">    <span class="keyword">let</span> move_y = evt.stageY - localPos.y + y;</span><br><span class="line">    <span class="comment">//通过滑动区域y坐标的大小限制滑动区域</span></span><br><span class="line">    <span class="keyword">if</span>(move_y &gt;= -(滑动区域.y-显示区域.y) &amp;&amp; move_y &lt;= <span class="number">0</span>)&#123;</span><br><span class="line">        gameView.y = move_y;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
-<li>全局只需要在入口函数设置tick刷新舞台即可；</li>
-<li>适配不同的手机屏幕可通过长宽比例进行适配； </li>
-<li>js合并两个数组<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">arr1 = arr1.concat(arr2);</span><br></pre></td></tr></table></figure></li>
-<li>获取屏幕的宽高<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> screenWidth = <span class="built_in">window</span>.innerWidth;</span><br><span class="line"><span class="keyword">let</span> screenHeight = <span class="built_in">window</span>.innerHeight;</span><br></pre></td></tr></table></figure></li>
-<li>EaselJS的Text中文不会自动换行的问题<br>修改easeljs的p._drawText方法为<br><a href="https://pasteme.cn/135634">点击</a></li>
-</ol>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-        <tag>createjs</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>happyBirthday</title>
-    <url>/2021/05/01/happyBirthday/</url>
-    <content><![CDATA[<p><a href="http://47.94.243.37/birthday-2019/index.html">2019</a></p>
-<p><a href="http://47.94.243.37/birthday-2020/index.html">2020</a></p>
-<p><a href="http://47.94.243.37/birthday-2021/index.html">2021</a></p>
-<p><strong>欢迎打赏哈！</strong></p>
-]]></content>
-      <tags>
-        <tag>happyBirthday</tag>
       </tags>
   </entry>
   <entry>
@@ -564,6 +485,70 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
+    <title>Python运算符</title>
+    <url>/2021/01/12/Python%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
+    <content><![CDATA[<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><ol>
+<li><h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">+:加</span><br><span class="line">-:减</span><br><span class="line">*:乘</span><br><span class="line">/:除(结果可以是<span class="built_in">float</span>)</span><br><span class="line">%:取余</span><br><span class="line">**:幂运算 eg: print(<span class="number">2</span>**<span class="number">3</span>) <span class="comment">#打印2的3次幂</span></span><br><span class="line">//:整除(向下取整)</span><br><span class="line">注：</span><br><span class="line"><span class="comment"># 可用幂运算进行开方运算</span></span><br><span class="line">eg:print(<span class="number">81</span>**(<span class="number">1</span>/<span class="number">2</span>)) <span class="comment">#打印的是81开平方的结果，即为9</span></span><br><span class="line"><span class="comment"># 在Python2中，/得到的是一个整数;在Python3中得到是一个浮点数</span></span><br><span class="line"><span class="comment"># 在开发中使用括号来表示优先级,比较清晰</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="算术运算符在字符串中的使用"><a href="#算术运算符在字符串中的使用" class="headerlink" title="算术运算符在字符串中的使用"></a>算术运算符在字符串中的使用</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在字符串中有限度的支持加法和乘法运算符</span></span><br><span class="line">print(<span class="string">&quot;hello&quot;</span>+<span class="string">&quot;world&quot;</span>)   <span class="comment"># 结果为 helloworld(用于拼接字符串)</span></span><br><span class="line">print(<span class="string">&quot;hello&quot;</span>*<span class="number">2</span>)         <span class="comment"># 结果为 hellohello</span></span><br><span class="line">注：字符串和数字是不能相加的</span><br><span class="line">print(<span class="string">&quot;a&quot;</span>+<span class="number">1</span>) <span class="comment"># 会报错</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="number">1</span> <span class="comment"># 单个变量赋值</span></span><br><span class="line">m,n=<span class="number">1</span>,<span class="number">2</span> <span class="comment"># 多个变量赋值(拆包),且当等号左右两侧个数不相等时会报错</span></span><br><span class="line">o*,p,q=<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span> <span class="comment">#加*表示可变长度,把4,5分别赋给p,q,其余全部赋值给o</span></span><br><span class="line">m=<span class="string">&#x27;hello&#x27;</span>,<span class="string">&#x27;world&#x27;</span> <span class="comment"># 元组赋值</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 比较运算符</span></span><br><span class="line">&gt;:大于</span><br><span class="line">&lt;:小于</span><br><span class="line">&gt;=:大于等于</span><br><span class="line">&lt;=:小于等于</span><br><span class="line">!=:不等于(在python2&lt;&gt;也表示不等于，python3不支持)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 比较运算符在字符串中的使用</span></span><br><span class="line">print(<span class="string">&#x27;a&#x27;</span>&lt;<span class="string">&#x27;b&#x27;</span>) <span class="comment"># 结果为true 按照ASCII码进行比较</span></span><br><span class="line">print(<span class="string">&#x27;abc&#x27;</span>&lt;<span class="string">&#x27;b&#x27;</span>) <span class="comment"># 结果为true,直接字符a,b相比得出结果</span></span><br><span class="line">print(<span class="string">&#x27;abc&#x27;</span>==<span class="string">&#x27;abc&#x27;</span>) <span class="comment"># 结果为true</span></span><br><span class="line">在数字和字符串之间做==为true,做!=比较为false</span><br></pre></td></tr></table></figure></li>
+<li><h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">and</span>:逻辑与</span><br><span class="line"><span class="keyword">or</span>:逻辑或</span><br><span class="line"><span class="keyword">not</span>:逻辑非</span><br><span class="line"></span><br><span class="line"><span class="comment">#规则</span></span><br><span class="line">逻辑与规则:只有一个运算数是<span class="literal">False</span>,结果就为<span class="literal">False</span></span><br><span class="line">逻辑或规则:只有一个运算数是<span class="literal">True</span>,结果就为<span class="literal">True</span></span><br><span class="line">优先级:<span class="keyword">not</span> &gt; <span class="keyword">and</span> &gt; <span class="keyword">or</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#逻辑运算符的取值问题(逻辑运算结果不一定是bool值)</span></span><br><span class="line">print(<span class="number">3</span> <span class="keyword">and</span> <span class="string">&#x27;Hello&#x27;</span> <span class="keyword">and</span> <span class="number">0</span> <span class="keyword">and</span> <span class="number">2</span>) </span><br><span class="line"><span class="comment"># 结果为0(按照逻辑与的运算规则,有False则False)</span></span><br><span class="line">print(<span class="number">3</span> <span class="keyword">or</span> <span class="number">0</span>)</span><br><span class="line"><span class="comment"># 结果为3,逻辑或运算当有一个是True时，后面的将不会被执行</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#逻辑运算符的短路问题</span></span><br><span class="line"><span class="number">4</span> &gt; <span class="number">3</span> <span class="keyword">and</span> print(<span class="string">&#x27;hello world&#x27;</span>) </span><br><span class="line"><span class="comment"># 打印hello world</span></span><br><span class="line"><span class="number">4</span> &gt; <span class="number">3</span> <span class="keyword">or</span> print(<span class="string">&#x27;hello world&#x27;</span>) </span><br><span class="line"><span class="comment"># print将会短路，因为逻辑或前面已经是True,后面将不会被执行</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&amp;:按位与(都为<span class="number">1</span>取<span class="number">1</span>,否则取<span class="number">0</span>)</span><br><span class="line">|:按位或(有<span class="number">1</span>取<span class="number">1</span>,否则取<span class="number">0</span>)</span><br><span class="line">^:按位异或(不同取<span class="number">1</span>,相同取<span class="number">0</span>)</span><br><span class="line">~:按位取反(<span class="number">0</span>取<span class="number">1</span>,<span class="number">1</span>取<span class="number">0</span>)</span><br><span class="line">&lt;&lt;:左移(向左移,后面补<span class="number">0</span>)</span><br><span class="line">&gt;&gt;:右移(向右移,数据会丢失)</span><br><span class="line"><span class="comment"># 左移:x左移a位结果为x乘以2的a次方</span></span><br><span class="line"><span class="comment"># 右移:x右移a位结果为x除以2的a次方(取整)</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>happyBirthday</title>
+    <url>/2021/05/01/happyBirthday/</url>
+    <content><![CDATA[<p><a href="http://47.94.243.37/birthday-2019/index.html">2019</a></p>
+<p><a href="http://47.94.243.37/birthday-2020/index.html">2020</a></p>
+<p><a href="http://47.94.243.37/birthday-2021/index.html">2021</a></p>
+<p><strong>欢迎打赏哈！</strong></p>
+]]></content>
+      <tags>
+        <tag>happyBirthday</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>createjs小游戏笔记</title>
+    <url>/2021/07/09/createjs%E5%B0%8F%E6%B8%B8%E6%88%8F%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<ol>
+<li>创建舞台<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> stage = <span class="keyword">new</span> createjs.Stage();<span class="comment">//()中为画布的id,与画布进行绑定</span></span><br></pre></td></tr></table></figure></li>
+<li>创建容器<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> gameView = <span class="keyword">new</span> createjs.Container();</span><br><span class="line">stage.addChild(gameView);<span class="comment">//可将容器放在舞台中，创建的元素放在容器中</span></span><br><span class="line">stage &gt; container &gt; 单个元素<span class="comment">//三代之间的关系，可通过addChild()方法进行追加元素</span></span><br></pre></td></tr></table></figure></li>
+<li>创建图形<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> shape = <span class="keyword">new</span> createjs.Shape();<span class="comment">//创建一个图形</span></span><br><span class="line">shape.graphics.beginFill(color)drawRect(x,y,w,h);<span class="comment">//画一个矩形</span></span><br><span class="line">shape.graphics.beginFill(color)drawRoundRect(x,y,w,h,radius);<span class="comment">//画圆角矩形</span></span><br><span class="line">shape.graphics.beginFill(color)drawCircle(x,y,r);<span class="comment">//画圆</span></span><br></pre></td></tr></table></figure></li>
+<li>创建图片<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> img = <span class="keyword">new</span> createjs.Bitmap();<span class="comment">//括号中为图片路径</span></span><br></pre></td></tr></table></figure></li>
+<li>创建文字<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> text = <span class="keyword">new</span> createjs.Text(text,font,color);<span class="comment">//创建文字</span></span><br><span class="line"><span class="comment">//属性</span></span><br><span class="line">text.lineWidth  <span class="comment">//设置行宽</span></span><br><span class="line">text.lineHeight <span class="comment">//设置行高</span></span><br><span class="line">text.textAlign  <span class="comment">//设置对齐方式</span></span><br><span class="line">注：</span><br><span class="line">当设置左对齐的时候，text.x的值为文字的起始点横坐标；</span><br><span class="line">当设置右对齐的时候，text.x的值为文字的结束点横坐标；</span><br><span class="line">当设置居中对齐的时候，text.x的值为文字的中间点横坐标；</span><br><span class="line">当设置lineWidth会出现中文不换行问题见<span class="number">19</span>；</span><br></pre></td></tr></table></figure></li>
+<li>常见属性和方法<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">demo.x <span class="comment">//设置起始位置横坐标</span></span><br><span class="line">demo.y <span class="comment">//设置起始位置纵坐标</span></span><br><span class="line">demo.alpha <span class="comment">//设置透明度</span></span><br><span class="line">demo.x <span class="comment">//设置起始位置横坐标</span></span><br><span class="line">demo.y <span class="comment">//设置起始位置纵坐标</span></span><br><span class="line">demo.scaleX <span class="comment">//水平变换</span></span><br><span class="line">demo.scaleY <span class="comment">//垂直变换</span></span><br><span class="line">demo.scale  <span class="comment">//整体变换</span></span><br><span class="line">demo.alpha  <span class="comment">//设置透明度</span></span><br><span class="line">demo.mask   <span class="comment">//设置蒙版</span></span><br><span class="line">demo.name   <span class="comment">//设置名称</span></span><br><span class="line">demo.visible <span class="comment">//设置元素是否显示 </span></span><br><span class="line">demo.removeAllChildren(); <span class="comment">//移除所有子元素</span></span><br><span class="line">parent.addChild(child); <span class="comment">//添加子元素</span></span><br><span class="line">parent.setChildIndex(child,parent.getNumChildren()-num);<span class="comment">//设置层级</span></span><br><span class="line">注：</span><br><span class="line"><span class="number">1.</span> 当alpha为<span class="number">0</span>时不能触发事件；</span><br><span class="line"><span class="number">2.</span> mask显示的内容为和蒙版重合的部分，为蒙版不追加入img的父元素中；</span><br></pre></td></tr></table></figure></li>
+<li>雪碧图<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> data = &#123;</span><br><span class="line">    images: [url],<span class="comment">//图片路径</span></span><br><span class="line">    frames: &#123;<span class="attr">width</span>:w,<span class="attr">height</span>:h,<span class="attr">count</span>:count&#125;,<span class="comment">//w,h是一张精灵图的实际宽高，count的图片数量</span></span><br><span class="line">    animations: &#123;</span><br><span class="line">        run: &#123;</span><br><span class="line">            frames:[<span class="number">0</span>,<span class="number">3</span>],<span class="comment">//显示哪几张图片，0，3为0～3四张</span></span><br><span class="line">            speed:<span class="number">0.5</span> <span class="comment">//图片运动速度</span></span><br><span class="line">        &#125;,</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="keyword">let</span> spriteSheet = <span class="keyword">new</span> createjs.SpriteSheet(data);</span><br><span class="line"><span class="keyword">let</span> animation = <span class="keyword">new</span> createjs.Sprite(spriteSheet,<span class="string">&quot;run&quot;</span>);</span><br><span class="line">nimation.set(&#123;<span class="attr">x</span>:x,<span class="attr">y</span>:y,<span class="attr">scaleX</span>:scaleX,<span class="attr">scaleY</span>:scaleY&#125;);</span><br></pre></td></tr></table></figure></li>
+<li>创建动画<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">createjs.Tween.get(元素).to(&#123;属性:值&#125;,时间)；<span class="comment">//异步执行</span></span><br><span class="line">createjs.Tween.get(元素).to(&#123;属性:值&#125;,时间).call(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;)；<span class="comment">//function()和动画同步执行，会在动画结束后执行</span></span><br></pre></td></tr></table></figure></li>
+<li>资源预加载<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$.when(filePreload()).then(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;);</span><br><span class="line"><span class="comment">//预加载完成后在执行then后面的函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">filePreload</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="comment">//deferred对象的含义就是&quot;延迟&quot;到未来某个点再执行。</span></span><br><span class="line">    <span class="keyword">let</span> deferred = <span class="keyword">new</span> $.Deferred();</span><br><span class="line">    <span class="comment">//preload可以方便我们预先加载相关资源</span></span><br><span class="line">    <span class="keyword">let</span> queue = <span class="keyword">new</span> createjs.LoadQueue(<span class="literal">false</span>);</span><br><span class="line">    <span class="comment">//如果载入声音，必须先注册createjs.Sound</span></span><br><span class="line">    queue.installPlugin(createjs.Sound);</span><br><span class="line">    <span class="comment">//将需要预加载的资源放在manifest数组中</span></span><br><span class="line">    <span class="comment">//url：资源的路径</span></span><br><span class="line">    <span class="comment">//id:给资源重新定义的名字，调用改资源时使用</span></span><br><span class="line">    <span class="keyword">let</span> manifest = [</span><br><span class="line">        &#123;<span class="attr">id</span>:id,<span class="attr">src</span>:url<span class="string">&quot;&#125;</span></span><br><span class="line"><span class="string">    ];</span></span><br><span class="line"><span class="string">    //预加载过程中执行的函数</span></span><br><span class="line"><span class="string">    //当调用某一资源时使用bitmapList[id].clone(),且bitmapList需为全局变量</span></span><br><span class="line"><span class="string">    queue.on(&quot;</span>fileload<span class="string">&quot;, function (event) &#123;</span></span><br><span class="line"><span class="string">        if (event.item.type == &quot;</span>image<span class="string">&quot;) &#123;</span></span><br><span class="line"><span class="string">            bitmapList[event.item.id] = new createjs.Bitmap(event.result);</span></span><br><span class="line"><span class="string">            &#125;</span></span><br><span class="line"><span class="string">        &#125;</span></span><br><span class="line"><span class="string">    &#125;, this);</span></span><br><span class="line"><span class="string">    //预加载完成后执行的函数</span></span><br><span class="line"><span class="string">    queue.on(&quot;</span>complete<span class="string">&quot;, function (event) &#123;</span></span><br><span class="line"><span class="string">        deferred.resolve();</span></span><br><span class="line"><span class="string">    &#125;, this);</span></span><br><span class="line"><span class="string">    queue.loadManifest(manifest);</span></span><br><span class="line"><span class="string">    return deferred.promise();</span></span><br><span class="line"><span class="string">&#125;</span></span><br><span class="line"><span class="string">//</span></span><br></pre></td></tr></table></figure></li>
+<li>设置旋转(竖屏转成横屏) <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">stage.rotation = <span class="number">90</span>;</span><br><span class="line">stage.x = screenWidth;</span><br><span class="line">stage.y = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">let</span> temp = screenWidth;</span><br><span class="line">screenWidth = screenHeight;</span><br><span class="line">screenHeight = temp;</span><br><span class="line">注：等号右侧为竖屏宽高，左侧为横屏宽高</span><br></pre></td></tr></table></figure></li>
+<li>当使用高清图片时若图片还是不清晰，可适当扩大画布的倍数；</li>
+<li>当使用onload方法且需要传参时，避免异步的影响<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//如加载图片时，图片没有加载好就获取图片属性会报错</span></span><br><span class="line"><span class="comment">//若在for循环中，可能计数i会产生影响</span></span><br><span class="line"><span class="keyword">let</span> img = <span class="keyword">new</span> Image();</span><br><span class="line">img.src = url;</span><br><span class="line">img.index = <span class="number">1</span>;</span><br><span class="line">img.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(img.index);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//可推广</span></span><br><span class="line"><span class="keyword">let</span> obj = &#123;&#125;;</span><br><span class="line">obj.x = <span class="number">1</span>;</span><br><span class="line">obg.onload = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(obj.x);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>动态修改shape图形的参数<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">shape.graphics.command.属性 = 值；</span><br></pre></td></tr></table></figure></li>
+<li>实现container的滚动<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">//主函数</span></span><br><span class="line"><span class="keyword">if</span>(createjs.Touch.isSupported() == <span class="literal">true</span>)&#123;</span><br><span class="line">        createjs.Touch.enable(stage)</span><br><span class="line">    &#125;</span><br><span class="line"><span class="comment">//设置滚动条件</span></span><br><span class="line"><span class="keyword">let</span> localPos,y;</span><br><span class="line">gameView.addEventListener(<span class="string">&#x27;mousedown&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">evt</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//滑动开始时的位置</span></span><br><span class="line">    <span class="keyword">let</span> stageX = evt.stageX;</span><br><span class="line">    <span class="keyword">let</span> stageY = evt.stageY;</span><br><span class="line">    <span class="comment">//将gameView对象从舞台（全局）坐标转换为显示对象的（本地）坐标</span></span><br><span class="line">    localPos = stage.globalToLocal(stageX,stageY);</span><br><span class="line">    <span class="comment">//获取gameview对象的坐标</span></span><br><span class="line">    y = gameView.y;</span><br><span class="line">&#125;)</span><br><span class="line">gameView.addEventListener(<span class="string">&#x27;pressmove&#x27;</span>,<span class="function"><span class="keyword">function</span>(<span class="params">evt</span>)</span>&#123;</span><br><span class="line">    <span class="comment">//gameview.y = 滑动结束时滑动点处的y-滑动开始时滑动点处的y+滑动开始时gameview的y</span></span><br><span class="line">    <span class="keyword">let</span> move_y = evt.stageY - localPos.y + y;</span><br><span class="line">    <span class="comment">//通过滑动区域y坐标的大小限制滑动区域</span></span><br><span class="line">    <span class="keyword">if</span>(move_y &gt;= -(滑动区域.y-显示区域.y) &amp;&amp; move_y &lt;= <span class="number">0</span>)&#123;</span><br><span class="line">        gameView.y = move_y;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+<li>全局只需要在入口函数设置tick刷新舞台即可；</li>
+<li>适配不同的手机屏幕可通过长宽比例进行适配； </li>
+<li>js合并两个数组<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">arr1 = arr1.concat(arr2);</span><br></pre></td></tr></table></figure></li>
+<li>获取屏幕的宽高<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">let</span> screenWidth = <span class="built_in">window</span>.innerWidth;</span><br><span class="line"><span class="keyword">let</span> screenHeight = <span class="built_in">window</span>.innerHeight;</span><br></pre></td></tr></table></figure></li>
+<li>EaselJS的Text中文不会自动换行的问题<br>修改easeljs的p._drawText方法为<br><a href="https://pasteme.cn/135634">点击</a></li>
+</ol>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>createjs</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo插入图片</title>
     <url>/2021/01/05/hexo%E6%8F%92%E5%85%A5%E5%9B%BE%E7%89%87/</url>
     <content><![CDATA[<h4 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h4><ol>
@@ -613,6 +598,41 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
+    <title>Python经典问题</title>
+    <url>/2021/01/12/Python%E7%BB%8F%E5%85%B8%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<ol>
+<li><h3 id="交换两个变量的值"><a href="#交换两个变量的值" class="headerlink" title="交换两个变量的值"></a>交换两个变量的值</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="number">1</span></span><br><span class="line">b=<span class="number">2</span></span><br><span class="line"><span class="comment"># 方法一:利用第三个变量实现</span></span><br><span class="line">c=b</span><br><span class="line">b=a</span><br><span class="line">a=c</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法二:利用运算符实现</span></span><br><span class="line">a=a+b</span><br><span class="line">b=a-b</span><br><span class="line">a=a-b</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法三:利用异或运算符实现</span></span><br><span class="line">a=a^b</span><br><span class="line">b=a^b</span><br><span class="line">a=a^b</span><br><span class="line"><span class="comment"># 原理 a^b^b==a</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法四:使用Python特有的方法实现</span></span><br><span class="line">a,b=b,a</span><br></pre></td></tr></table></figure></li>
+<li>for…in循环删除元素</li>
+</ol>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo绑定域名</title>
+    <url>/2021/01/05/hexo%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/</url>
+    <content><![CDATA[<ol>
+<li><strong>注册域名</strong><br>可以挑选<a href="https://cloud.tencent.com/">腾讯云</a>或<a href="https://www.aliyun.com/">阿里云</a>，或则其余任何一家进行域名注册</li>
+<li><strong>获取github仓库IP</strong><br>打开<code>cmd</code>,<code>ping 仓库名.github.io</code>,获取IP<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105215709.png"><br>我的这个ping的有点问题，但方法没错</li>
+<li><strong>域名和IP绑定</strong><br>找到控制台，点解析<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105220220.png"><br>然后点击修改，按照下面图片提示<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105220540.png"></li>
+<li><strong>创建CNAME文件</strong><br>在<code>blog/source</code>目录创建<code>CNAME(无后缀名)</code>,把申请的域名填入即可<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105215242.png"></li>
+<li><strong>域名和github仓库绑定</strong><br>打开存放博客的仓库，点击<code>settings</code>,找到<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105214939.png"><br>在输入框输入申请的域名，然后点击<code>save</code></li>
+<li><strong>访问</strong><br>域名，IP，https://仓库名.github.io，三则都可访问</li>
+</ol>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>hexo+PicGo+gitee图床</title>
     <url>/2021/01/05/hexo-PicGo-gitee%E5%9B%BE%E5%BA%8A/</url>
     <content><![CDATA[<p><strong>前言</strong>：我尝试了好几种床图，不是在电脑端加载不出来，就是有各种各样的限制，最后找到了gitee，因为服务器在国内，访问速度也是比较快，空间也没有限制，算是比较理想的一种吧。一开始我用vscode+PicGo插件，等到快成的时候，图片是上传上去了，但是加载不出来，我尝试了<code>sm.ms</code>和<code>github</code>，最后抛弃了<code>vsCode+PicGo</code>插件，选择了<code>PicGo客户端和gitee</code>。</p>
@@ -644,23 +664,28 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>hexo绑定域名</title>
-    <url>/2021/01/05/hexo%E7%BB%91%E5%AE%9A%E5%9F%9F%E5%90%8D/</url>
+    <title>Java笔记(第一天)</title>
+    <url>/2021/04/24/java%E7%AC%94%E8%AE%B0(%E7%AC%AC%E4%B8%80%E5%A4%A9)/</url>
     <content><![CDATA[<ol>
-<li><strong>注册域名</strong><br>可以挑选<a href="https://cloud.tencent.com/">腾讯云</a>或<a href="https://www.aliyun.com/">阿里云</a>，或则其余任何一家进行域名注册</li>
-<li><strong>获取github仓库IP</strong><br>打开<code>cmd</code>,<code>ping 仓库名.github.io</code>,获取IP<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105215709.png"><br>我的这个ping的有点问题，但方法没错</li>
-<li><strong>域名和IP绑定</strong><br>找到控制台，点解析<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105220220.png"><br>然后点击修改，按照下面图片提示<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105220540.png"></li>
-<li><strong>创建CNAME文件</strong><br>在<code>blog/source</code>目录创建<code>CNAME(无后缀名)</code>,把申请的域名填入即可<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105215242.png"></li>
-<li><strong>域名和github仓库绑定</strong><br>打开存放博客的仓库，点击<code>settings</code>,找到<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105214939.png"><br>在输入框输入申请的域名，然后点击<code>save</code></li>
-<li><strong>访问</strong><br>域名，IP，https://仓库名.github.io，三则都可访问</li>
+<li>Java只有单继承，没有多继承；</li>
+<li>命名规则：<br>(1)大驼峰：每个单词首字母大写；<br>(2)小驼峰：除了第一个单词首字母小写，其余都大写；</li>
+<li>重载：在同一个类中，方法名相同的情况下，可以通过参数不同，参数类型不同进行重载(不能用返回值类型不同进行重载)</li>
+<li>代码千万行，规范第一行；格式不规范，码农两行泪；</li>
+<li>数据类型转换：<br>(1)自动类型转换：如int+double会自动转化为double；<br>(2)强制类型转换：如(int)(a+b)；<br>(3)利：可以满足数据类型的一致化；弊：会导致数据类型精度丢失，且不可逆；</li>
+<li>数组两种初始化的方法：<br>(1)动态初始化：如int[] a=new int[5];<br>(2)静态初试化：如int[] a=new int[]{1,2,3};<br>注：数组的长度不可变；标准格式初始化可以拆，动态初始化和静态初始化都可以拆；</li>
+<li>在java中可以用任何数据类型做参数和返回值；特别之是可以用对象作为参数和返回值；</li>
+<li>在写类中对全局变量时，对于Boolean类型的取值是isName，而不是getName；</li>
+<li>字符串用双引号；</li>
+<li>调用自己类里的方法必须为静态方法；</li>
+<li>java的内存需要划分为五个部分：<br>(1)栈：存放的都是方法中的局部变量。方法的运行一定要在栈中；<br>作用域：一旦超出作用域，立刻从栈内存当中消失；<br>(2)堆：凡是new出来的东西，都在堆当中；堆内存里面的东西都有一个地址值：16进制；堆内存里面的数据，都有默认值。规则：<br>如果是整数       默认为0<br>如果是浮点数     默认为0.0<br>如果是字符       默认为’\u0000’<br>如果是布尔       默认为false<br>如果是引用类型   默认为null<br>(3)方法区：存储.class相关信息，包含方法的信息。<br>(4)本地方法栈：与操作系统有关；<br>(5)寄存器：与CPU有关；</li>
+<li>构造方法在new时被调用执行；</li>
 </ol>
 ]]></content>
       <categories>
-        <category>hexo</category>
+        <category>Java</category>
       </categories>
       <tags>
-        <tag>hexo</tag>
-        <tag>next</tag>
+        <tag>Java</tag>
       </tags>
   </entry>
   <entry>
@@ -692,6 +717,24 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
+    <title>单例模式</title>
+    <url>/2021/05/29/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</url>
+    <content><![CDATA[<h4 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h4><ol>
+<li>单例模式的简述：<br>单例模式就是确保某个类只有一个实例，而且这个实例一般都是自行实例化，不需要再去new这个类，通过一个全局访问点去访问，一般常见的如类名。</li>
+<li>为什么要使用单例模式：<br>在开发过程中，经常会遇到一些对象，这样的对象在全局当中仅仅存在一个就可以了，如执行SQL语句时连接数据库的操作。如果这种对象出现过多的话，可能会出现各种意外错误。</li>
+<li>单例类 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Football</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">static</span>  <span class="variable">$fb</span> = <span class="literal">null</span>;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 构造方法私有化，不能让其他程序去new对象</span></span><br><span class="line"><span class="comment">    * 要想取得该对象，必须由该类提供方法</span></span><br><span class="line"><span class="comment">    * */</span></span><br><span class="line">    <span class="keyword">final</span> <span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 该方法必须是一个静态方法，只有通过类名才可以调用</span></span><br><span class="line"><span class="comment">    * 先去判断这个对象是否被创建</span></span><br><span class="line"><span class="comment">    * 如果没有则创建；如果存在则返回创建好的对象</span></span><br><span class="line"><span class="comment">    * 以保证该对象只有一个实例</span></span><br><span class="line"><span class="comment">    * */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">static</span> <span class="function"><span class="keyword">function</span> <span class="title">getInstance</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">static</span>::<span class="variable">$fb</span> === <span class="literal">null</span>)&#123;</span><br><span class="line">            <span class="built_in">static</span>::<span class="variable">$fb</span> = <span class="keyword">new</span> Football();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">static</span>::<span class="variable">$fb</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
+<li>测试类<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">require</span> <span class="string">&#x27;Football.class.php&#x27;</span>;</span><br><span class="line">header(<span class="string">&quot;Content-Type:text/html;charset=utf-8&quot;</span>);</span><br><span class="line"><span class="comment">//class test &#123;</span></span><br><span class="line"><span class="comment">//    public function test()&#123;</span></span><br><span class="line"><span class="comment">//        $fb1 = Football::getInstance();</span></span><br><span class="line"><span class="comment">//        $fb2 = Football::getInstance();</span></span><br><span class="line"><span class="comment">//        if ($fb1 === $fb2)&#123;</span></span><br><span class="line"><span class="comment">//            echo &quot;fb1和fb2为同一个对象&quot;;</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line"><span class="comment">//&#125;</span></span><br><span class="line"><span class="variable">$fb1</span> = Football::getInstance();</span><br><span class="line"><span class="variable">$fb2</span> = Football::getInstance();</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* 去判断$fb1和$fb2是否为同一个实例</span></span><br><span class="line"><span class="comment">* */</span></span><br><span class="line"><span class="keyword">if</span> (<span class="variable">$fb1</span> === <span class="variable">$fb2</span>)&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;fb1和fb2为同一个对象&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+]]></content>
+      <categories>
+        <category>设计模式</category>
+      </categories>
+      <tags>
+        <tag>设计模式</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>js文件的写法</title>
     <url>/2021/03/09/js%E6%96%87%E4%BB%B6%E7%9A%84%E5%86%99%E6%B3%95/</url>
     <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">owner</span>)</span>&#123;</span><br><span class="line">	owner.btn=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		alert(<span class="string">&quot;aaa&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;(<span class="built_in">window</span>.test=&#123;&#125;)) <span class="comment">//test是js的文件名</span></span><br></pre></td></tr></table></figure>]]></content>
@@ -703,28 +746,17 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>Java笔记(第一天)</title>
-    <url>/2021/04/24/java%E7%AC%94%E8%AE%B0(%E7%AC%AC%E4%B8%80%E5%A4%A9)/</url>
+    <title>学习Python遇到的坑(更新中)</title>
+    <url>/2021/01/08/%E5%AD%A6%E4%B9%A0Python%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91(%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
     <content><![CDATA[<ol>
-<li>Java只有单继承，没有多继承；</li>
-<li>命名规则：<br>(1)大驼峰：每个单词首字母大写；<br>(2)小驼峰：除了第一个单词首字母小写，其余都大写；</li>
-<li>重载：在同一个类中，方法名相同的情况下，可以通过参数不同，参数类型不同进行重载(不能用返回值类型不同进行重载)</li>
-<li>代码千万行，规范第一行；格式不规范，码农两行泪；</li>
-<li>数据类型转换：<br>(1)自动类型转换：如int+double会自动转化为double；<br>(2)强制类型转换：如(int)(a+b)；<br>(3)利：可以满足数据类型的一致化；弊：会导致数据类型精度丢失，且不可逆；</li>
-<li>数组两种初始化的方法：<br>(1)动态初始化：如int[] a=new int[5];<br>(2)静态初试化：如int[] a=new int[]{1,2,3};<br>注：数组的长度不可变；标准格式初始化可以拆，动态初始化和静态初始化都可以拆；</li>
-<li>在java中可以用任何数据类型做参数和返回值；特别之是可以用对象作为参数和返回值；</li>
-<li>在写类中对全局变量时，对于Boolean类型的取值是isName，而不是getName；</li>
-<li>字符串用双引号；</li>
-<li>调用自己类里的方法必须为静态方法；</li>
-<li>java的内存需要划分为五个部分：<br>(1)栈：存放的都是方法中的局部变量。方法的运行一定要在栈中；<br>作用域：一旦超出作用域，立刻从栈内存当中消失；<br>(2)堆：凡是new出来的东西，都在堆当中；堆内存里面的东西都有一个地址值：16进制；堆内存里面的数据，都有默认值。规则：<br>如果是整数       默认为0<br>如果是浮点数     默认为0.0<br>如果是字符       默认为’\u0000’<br>如果是布尔       默认为false<br>如果是引用类型   默认为null<br>(3)方法区：存储.class相关信息，包含方法的信息。<br>(4)本地方法栈：与操作系统有关；<br>(5)寄存器：与CPU有关；</li>
-<li>构造方法在new时被调用执行；</li>
+<li><h3 id="在cmd中输入Python打开软件商店"><a href="#在cmd中输入Python打开软件商店" class="headerlink" title="在cmd中输入Python打开软件商店"></a>在cmd中输入Python打开软件商店</h3>&nbsp;&nbsp;&nbsp;&nbsp;原因：在系统环境变量和用户环境变量的<code>path</code>中，当<code>WindowsApps</code>在<code>python</code>所配置的环境变量前的时候，就会先打开<code>WindowsApps</code><br>&nbsp;&nbsp;&nbsp;&nbsp;解决方法：1.在系统环境和用户环境变量的<code>path</code>中删掉<code>WindowsApps</code>这一项；2.在系统环境和用户环境变量的<code>path</code>中将<code>WindowsApps</code>这一项移动到<code>python</code>环境变量的下面，这样<code>python</code>环境变量就会先被执行，不会造成那样的意外<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210108143304.png"></li>
 </ol>
 ]]></content>
       <categories>
-        <category>Java</category>
+        <category>Python</category>
       </categories>
       <tags>
-        <tag>Java</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -809,35 +841,15 @@ return 44;
       </tags>
   </entry>
   <entry>
-    <title>单例模式</title>
-    <url>/2021/05/29/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</url>
-    <content><![CDATA[<h4 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h4><ol>
-<li>单例模式的简述：<br>单例模式就是确保某个类只有一个实例，而且这个实例一般都是自行实例化，不需要再去new这个类，通过一个全局访问点去访问，一般常见的如类名。</li>
-<li>为什么要使用单例模式：<br>在开发过程中，经常会遇到一些对象，这样的对象在全局当中仅仅存在一个就可以了，如执行SQL语句时连接数据库的操作。如果这种对象出现过多的话，可能会出现各种意外错误。</li>
-<li>单例类 <figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Football</span></span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="built_in">static</span>  <span class="variable">$fb</span> = <span class="literal">null</span>;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 构造方法私有化，不能让其他程序去new对象</span></span><br><span class="line"><span class="comment">    * 要想取得该对象，必须由该类提供方法</span></span><br><span class="line"><span class="comment">    * */</span></span><br><span class="line">    <span class="keyword">final</span> <span class="keyword">private</span> <span class="function"><span class="keyword">function</span> <span class="title">__construct</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    * 该方法必须是一个静态方法，只有通过类名才可以调用</span></span><br><span class="line"><span class="comment">    * 先去判断这个对象是否被创建</span></span><br><span class="line"><span class="comment">    * 如果没有则创建；如果存在则返回创建好的对象</span></span><br><span class="line"><span class="comment">    * 以保证该对象只有一个实例</span></span><br><span class="line"><span class="comment">    * */</span></span><br><span class="line">    <span class="keyword">public</span> <span class="built_in">static</span> <span class="function"><span class="keyword">function</span> <span class="title">getInstance</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(<span class="built_in">static</span>::<span class="variable">$fb</span> === <span class="literal">null</span>)&#123;</span><br><span class="line">            <span class="built_in">static</span>::<span class="variable">$fb</span> = <span class="keyword">new</span> Football();</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">static</span>::<span class="variable">$fb</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-<li>测试类<figure class="highlight php"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?php</span></span><br><span class="line"><span class="keyword">require</span> <span class="string">&#x27;Football.class.php&#x27;</span>;</span><br><span class="line">header(<span class="string">&quot;Content-Type:text/html;charset=utf-8&quot;</span>);</span><br><span class="line"><span class="comment">//class test &#123;</span></span><br><span class="line"><span class="comment">//    public function test()&#123;</span></span><br><span class="line"><span class="comment">//        $fb1 = Football::getInstance();</span></span><br><span class="line"><span class="comment">//        $fb2 = Football::getInstance();</span></span><br><span class="line"><span class="comment">//        if ($fb1 === $fb2)&#123;</span></span><br><span class="line"><span class="comment">//            echo &quot;fb1和fb2为同一个对象&quot;;</span></span><br><span class="line"><span class="comment">//        &#125;</span></span><br><span class="line"><span class="comment">//    &#125;</span></span><br><span class="line"><span class="comment">//&#125;</span></span><br><span class="line"><span class="variable">$fb1</span> = Football::getInstance();</span><br><span class="line"><span class="variable">$fb2</span> = Football::getInstance();</span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment">* 去判断$fb1和$fb2是否为同一个实例</span></span><br><span class="line"><span class="comment">* */</span></span><br><span class="line"><span class="keyword">if</span> (<span class="variable">$fb1</span> === <span class="variable">$fb2</span>)&#123;</span><br><span class="line">    <span class="keyword">echo</span> <span class="string">&quot;fb1和fb2为同一个对象&quot;</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-</li>
-</ol>
+    <title>第一次来北京</title>
+    <url>/2021/05/29/%E7%94%9F%E6%B4%BB%E6%9D%82%E8%AE%B0/</url>
+    <content><![CDATA[<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;说实话，以前也来过两次北京，与其说来过，不如说是路过。这是算是真正意义的来北京吧，顺利成为北漂的一员。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;北京给我的印象是贵：下面简单算一下每天的日常开销吧。首先早上上班坐地铁5元，早餐一杯豆浆3.5元，中午定外卖大约20元，下班坐地铁5元，晚餐一碗鸡蛋汤和四个煎包6元，房租水电65元，共计105元；一个月下来不买零食、不买生活用品、不买衣服、没有任何事情，需要3150元，但是不可能没有别的事，也不可能什么都不买，因此一个月四千元在北京应该算是基本开销了吧。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;北京给我的印象是人多：感觉在地铁上能坐到座位的概率应该跟中彩票差不多了吧。虽然有点夸张，但事实是我上下班确实没有坐到过位置，即使是始发站。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;北京给我的印象是机会多：我面了将近十家公司，各种各样的都有，只有你想工作，应该都能找到相对合适的，但前提是你要一个一个去面，面完了你才能知道适不适合你。</p>
 ]]></content>
       <categories>
-        <category>设计模式</category>
+        <category>碎碎念</category>
       </categories>
       <tags>
-        <tag>设计模式</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>学习Python遇到的坑(更新中)</title>
-    <url>/2021/01/08/%E5%AD%A6%E4%B9%A0Python%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91(%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
-    <content><![CDATA[<ol>
-<li><h3 id="在cmd中输入Python打开软件商店"><a href="#在cmd中输入Python打开软件商店" class="headerlink" title="在cmd中输入Python打开软件商店"></a>在cmd中输入Python打开软件商店</h3>&nbsp;&nbsp;&nbsp;&nbsp;原因：在系统环境变量和用户环境变量的<code>path</code>中，当<code>WindowsApps</code>在<code>python</code>所配置的环境变量前的时候，就会先打开<code>WindowsApps</code><br>&nbsp;&nbsp;&nbsp;&nbsp;解决方法：1.在系统环境和用户环境变量的<code>path</code>中删掉<code>WindowsApps</code>这一项；2.在系统环境和用户环境变量的<code>path</code>中将<code>WindowsApps</code>这一项移动到<code>python</code>环境变量的下面，这样<code>python</code>环境变量就会先被执行，不会造成那样的意外<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210108143304.png"></li>
-</ol>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
+        <tag>碎碎念</tag>
       </tags>
   </entry>
   <entry>
@@ -897,22 +909,22 @@ return 44;
       </tags>
   </entry>
   <entry>
-    <title>第一次来北京</title>
-    <url>/2021/05/29/%E7%94%9F%E6%B4%BB%E6%9D%82%E8%AE%B0/</url>
-    <content><![CDATA[<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;说实话，以前也来过两次北京，与其说来过，不如说是路过。这是算是真正意义的来北京吧，顺利成为北漂的一员。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;北京给我的印象是贵：下面简单算一下每天的日常开销吧。首先早上上班坐地铁5元，早餐一杯豆浆3.5元，中午定外卖大约20元，下班坐地铁5元，晚餐一碗鸡蛋汤和四个煎包6元，房租水电65元，共计105元；一个月下来不买零食、不买生活用品、不买衣服、没有任何事情，需要3150元，但是不可能没有别的事，也不可能什么都不买，因此一个月四千元在北京应该算是基本开销了吧。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;北京给我的印象是人多：感觉在地铁上能坐到座位的概率应该跟中彩票差不多了吧。虽然有点夸张，但事实是我上下班确实没有坐到过位置，即使是始发站。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;北京给我的印象是机会多：我面了将近十家公司，各种各样的都有，只有你想工作，应该都能找到相对合适的，但前提是你要一个一个去面，面完了你才能知道适不适合你。</p>
-]]></content>
-      <categories>
-        <category>碎碎念</category>
-      </categories>
-      <tags>
-        <tag>碎碎念</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>解决innerHTML不能解析数据</title>
     <url>/2021/01/15/%E8%A7%A3%E5%86%B3innerHTML%E4%B8%8D%E8%83%BD%E8%A7%A3%E6%9E%90%E6%95%B0%E6%8D%AE/</url>
     <content><![CDATA[<p>当使用<code>document.(&#39;div&#39;).innerHTML=`` </code>向页面追加内容时可能会出现变量不解析的情况。<br>正确姿势：<code>=</code>后面是<code>``</code>,而不是单引号或双引号,只有<code>``</code>才能解析。</p>
 <figure class="highlight html"><table><tr><td class="code"><pre><span class="line">document.querySelector(&#x27;div&#x27;).innerHTML=`<span class="tag">&lt;<span class="name">h2</span>&gt;</span>编号：$&#123;resp.id&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span>`	</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决空html页面有hight的问题</title>
+    <url>/2021/06/23/%E8%A7%A3%E5%86%B3%E7%A9%BAhtml%E9%A1%B5%E9%9D%A2%E6%9C%89hight%E7%9A%84%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>可能是由于meta的标签的问题，更换成下面meta标签中的内容。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;meta content=<span class="string">&quot;width=device-width,initial-scale=1,user-scalable=no&quot;</span> name=<span class="string">&quot;viewport&quot;</span>&gt;</span><br></pre></td></tr></table></figure>]]></content>
       <categories>
         <category>前端</category>
       </categories>
@@ -930,18 +942,6 @@ return 44;
       </categories>
       <tags>
         <tag>php</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>解决空html页面有hight的问题</title>
-    <url>/2021/06/23/%E8%A7%A3%E5%86%B3%E7%A9%BAhtml%E9%A1%B5%E9%9D%A2%E6%9C%89hight%E7%9A%84%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>可能是由于meta的标签的问题，更换成下面meta标签中的内容。</p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;meta content=<span class="string">&quot;width=device-width,initial-scale=1,user-scalable=no&quot;</span> name=<span class="string">&quot;viewport&quot;</span>&gt;</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
       </tags>
   </entry>
   <entry>

@@ -1,6 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>重邮程序设计复试真题(部分)</title>
+    <url>/2021/02/04/2015%E5%B9%B4%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%A4%8D%E8%AF%95%E7%9C%9F%E9%A2%98/</url>
+    <content><![CDATA[<p>2015年：</p>
+<ol>
+<li>求num各数字之和；</li>
+<li>测试字符C在字符号串S中出现的次数；</li>
+<li>中国有句俗话叫“三天打鱼两天晒网”。某人1990年1月1日起开始“三天打鱼两天晒网”，问这个人在以后的某一天中是打鱼还是晒网</li>
+</ol>
+<p>2017年：</p>
+<ol>
+<li>选择分支结构，注意ceil函数</li>
+<li>汉诺塔问题</li>
+<li>字符串交换问题：字符串以A开头和以K结尾的单词进行交换</li>
+<li>百钱买百鸡问题：百鸡问题：鸡翁一值钱五，鸡母一值钱三，鸡雏三值钱一。百钱买百鸡，问鸡翁、鸡母、鸡雏各几何？</li>
+<li>最大约数辗转相除法；</li>
+<li>文件操作：将数据写入fname.txt中</li>
+<li>螺旋方阵</li>
+<li>求方程组近似根：弦截法</li>
+<li>斐波那契数列递归实现</li>
+</ol>
+]]></content>
+      <categories>
+        <category>C语言</category>
+      </categories>
+      <tags>
+        <tag>F021程序设计</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Ajax原理和使用</title>
     <url>/2021/01/15/Ajax%E5%8E%9F%E7%90%86%E5%92%8C%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<ol>
@@ -95,15 +124,18 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>C语言函数数组传值</title>
-    <url>/2021/01/13/C%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0%E6%95%B0%E7%BB%84%E4%BC%A0%E5%80%BC/</url>
-    <content><![CDATA[<p>C语言中,向函数传值的问题</p>
-<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 方法一</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span>* number)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> number[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">	duplicate(number);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> *number)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,number[<span class="number">0</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//方法二</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> number[])</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> number[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">	duplicate(number);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> number[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,number[<span class="number">0</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    <title>Anaconda安装库时遇到的坑</title>
+    <url>/2021/01/03/Anaconda%E5%AE%89%E8%A3%85%E5%BA%93%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</url>
+    <content><![CDATA[<ol>
+<li>注意要在安装库文件的目录下使用cmd，然后用命令安装</li>
+<li>当安装完库成功后,import库发现不存在,可能是因为库的安装路径不在当前Python库的搜索路径内,所以没被找到.<br>解决方法:<br>(1)把库的路径加入搜索路径内;<br>(2)当安装Anaconda使,自带了Python,因此删掉自己安装的Python后再重新安装库即可，这样就会自动安装在搜索目录下了(新手尽量只装一个Python)</li>
+</ol>
+]]></content>
       <categories>
-        <category>C语言</category>
+        <category>机器学习</category>
       </categories>
       <tags>
-        <tag>C语言</tag>
+        <tag>机器学习</tag>
       </tags>
   </entry>
   <entry>
@@ -143,35 +175,6 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>重邮程序设计复试真题(部分)</title>
-    <url>/2021/02/04/2015%E5%B9%B4%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%E5%A4%8D%E8%AF%95%E7%9C%9F%E9%A2%98/</url>
-    <content><![CDATA[<p>2015年：</p>
-<ol>
-<li>求num各数字之和；</li>
-<li>测试字符C在字符号串S中出现的次数；</li>
-<li>中国有句俗话叫“三天打鱼两天晒网”。某人1990年1月1日起开始“三天打鱼两天晒网”，问这个人在以后的某一天中是打鱼还是晒网</li>
-</ol>
-<p>2017年：</p>
-<ol>
-<li>选择分支结构，注意ceil函数</li>
-<li>汉诺塔问题</li>
-<li>字符串交换问题：字符串以A开头和以K结尾的单词进行交换</li>
-<li>百钱买百鸡问题：百鸡问题：鸡翁一值钱五，鸡母一值钱三，鸡雏三值钱一。百钱买百鸡，问鸡翁、鸡母、鸡雏各几何？</li>
-<li>最大约数辗转相除法；</li>
-<li>文件操作：将数据写入fname.txt中</li>
-<li>螺旋方阵</li>
-<li>求方程组近似根：弦截法</li>
-<li>斐波那契数列递归实现</li>
-</ol>
-]]></content>
-      <categories>
-        <category>C语言</category>
-      </categories>
-      <tags>
-        <tag>F021程序设计</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Pycharm基本使用</title>
     <url>/2021/01/08/Pycharm%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
     <content><![CDATA[<h2 id="Pycharm基本使用"><a href="#Pycharm基本使用" class="headerlink" title="Pycharm基本使用"></a>Pycharm基本使用</h2><ol>
@@ -187,6 +190,18 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </categories>
       <tags>
         <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>C语言函数数组传值</title>
+    <url>/2021/01/13/C%E8%AF%AD%E8%A8%80%E5%87%BD%E6%95%B0%E6%95%B0%E7%BB%84%E4%BC%A0%E5%80%BC/</url>
+    <content><![CDATA[<p>C语言中,向函数传值的问题</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 方法一</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span>* number)</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> number[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">	duplicate(number);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> *number)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,number[<span class="number">0</span>]);</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//方法二</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> number[])</span></span>;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="keyword">int</span> number[<span class="number">5</span>]=&#123;<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>&#125;;</span><br><span class="line">	duplicate(number);</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">duplicate</span><span class="params">(<span class="keyword">int</span> number[])</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%d&quot;</span>,number[<span class="number">0</span>]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>C语言</category>
+      </categories>
+      <tags>
+        <tag>C语言</tag>
       </tags>
   </entry>
   <entry>
@@ -250,18 +265,18 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>Anaconda安装库时遇到的坑</title>
-    <url>/2021/01/03/Anaconda%E5%AE%89%E8%A3%85%E5%BA%93%E6%97%B6%E9%81%87%E5%88%B0%E7%9A%84%E5%9D%91/</url>
+    <title>Python2和Python3的区别(更新中)</title>
+    <url>/2021/01/10/Python2%E5%92%8CPython3%E7%9A%84%E5%8C%BA%E5%88%AB(%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
     <content><![CDATA[<ol>
-<li>注意要在安装库文件的目录下使用cmd，然后用命令安装</li>
-<li>当安装完库成功后,import库发现不存在,可能是因为库的安装路径不在当前Python库的搜索路径内,所以没被找到.<br>解决方法:<br>(1)把库的路径加入搜索路径内;<br>(2)当安装Anaconda使,自带了Python,因此删掉自己安装的Python后再重新安装库即可，这样就会自动安装在搜索目录下了(新手尽量只装一个Python)</li>
+<li>在Python2中，/得到的是一个整数;在Python3中得到是一个浮点数</li>
+<li>在python2中0o和0开始的数字都是8进制;在Python3中只有0o表示8进制</li>
 </ol>
 ]]></content>
       <categories>
-        <category>机器学习</category>
+        <category>Python</category>
       </categories>
       <tags>
-        <tag>机器学习</tag>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -278,6 +293,21 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </categories>
       <tags>
         <tag>机器学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Python中浅拷贝和深拷贝</title>
+    <url>/2021/01/12/Python%E4%B8%AD%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/</url>
+    <content><![CDATA[<h4 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h4><p>浅拷贝只拷贝一层,当列表中有嵌套时,嵌套的列表是指向而不是拷贝</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x=[<span class="number">1</span>,<span class="number">2</span>,[<span class="number">3</span>,<span class="number">4</span>],<span class="number">5</span>]</span><br><span class="line">y=x.copy()</span><br><span class="line">print(<span class="string">&#x27;列表x的值为:&#x27;</span>,x)  <span class="comment">#列表x的值为: [1, 2, [3, 4], 5]</span></span><br><span class="line">print(<span class="string">&#x27;列表y的值为:&#x27;</span>,y)  <span class="comment">#列表y的值为: [1, 2, [3, 4], 5]</span></span><br><span class="line">x[<span class="number">2</span>][<span class="number">0</span>]=<span class="number">100</span></span><br><span class="line">print(<span class="string">&#x27;列表x修改后,列表x的值为:&#x27;</span>,x)   <span class="comment">#列表x修改后,列表x的值为: [1, 2, [100, 4], 5]</span></span><br><span class="line">print(<span class="string">&#x27;列表x修改后,列表y的值为:&#x27;</span>,y)   <span class="comment">#列表x修改后,列表y的值为: [1, 2, [100, 4], 5]</span></span><br><span class="line"><span class="comment">#当修改列表x第一层时因为数据是拷贝过去的,所以对y无影响;</span></span><br><span class="line"><span class="comment">#当修改列表x第二层时因为数据是指向，当修改列表x时,y也跟着修改</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 浅拷贝方法</span></span><br><span class="line"><span class="number">1.</span> 用copy函数</span><br><span class="line"><span class="number">2.</span> 引用copy模块,用copy模块里的copy函数</span><br></pre></td></tr></table></figure>
+<p><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210112145922.png"></p>
+<h4 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h4><p>深拷贝是对列表所有数据都拷贝,新列表和原列表没有一点关系</p>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> copy</span><br><span class="line">x=[<span class="number">1</span>,<span class="number">2</span>,[<span class="number">3</span>,<span class="number">4</span>],<span class="number">5</span>]</span><br><span class="line">y=copy.deepcopy(x)</span><br><span class="line">print(<span class="string">&#x27;列表x的值为:&#x27;</span>,x)  <span class="comment">#列表x的值为: [1, 2, [3, 4], 5]</span></span><br><span class="line">print(<span class="string">&#x27;列表y的值为:&#x27;</span>,y)  <span class="comment">#列表y的值为: [1, 2, [3, 4], 5]</span></span><br><span class="line">x[<span class="number">2</span>][<span class="number">0</span>]=<span class="number">100</span></span><br><span class="line">print(<span class="string">&#x27;列表x修改后,列表x的值为:&#x27;</span>,x)   <span class="comment">#列表x修改后,列表x的值为: [1, 2, [100, 4], 5]</span></span><br><span class="line">print(<span class="string">&#x27;列表x修改后,列表y的值为:&#x27;</span>,y)   <span class="comment">#列表x修改后,列表y的值为: [1, 2, [3, 4], 5]</span></span><br><span class="line"><span class="comment"># 深拷贝只能用copy模块里的deepcopy函数进行拷贝</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
       </tags>
   </entry>
   <entry>
@@ -319,36 +349,6 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>Python2和Python3的区别(更新中)</title>
-    <url>/2021/01/10/Python2%E5%92%8CPython3%E7%9A%84%E5%8C%BA%E5%88%AB(%E6%9B%B4%E6%96%B0%E4%B8%AD)/</url>
-    <content><![CDATA[<ol>
-<li>在Python2中，/得到的是一个整数;在Python3中得到是一个浮点数</li>
-<li>在python2中0o和0开始的数字都是8进制;在Python3中只有0o表示8进制</li>
-</ol>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python中浅拷贝和深拷贝</title>
-    <url>/2021/01/12/Python%E4%B8%AD%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D/</url>
-    <content><![CDATA[<h4 id="浅拷贝"><a href="#浅拷贝" class="headerlink" title="浅拷贝"></a>浅拷贝</h4><p>浅拷贝只拷贝一层,当列表中有嵌套时,嵌套的列表是指向而不是拷贝</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x=[<span class="number">1</span>,<span class="number">2</span>,[<span class="number">3</span>,<span class="number">4</span>],<span class="number">5</span>]</span><br><span class="line">y=x.copy()</span><br><span class="line">print(<span class="string">&#x27;列表x的值为:&#x27;</span>,x)  <span class="comment">#列表x的值为: [1, 2, [3, 4], 5]</span></span><br><span class="line">print(<span class="string">&#x27;列表y的值为:&#x27;</span>,y)  <span class="comment">#列表y的值为: [1, 2, [3, 4], 5]</span></span><br><span class="line">x[<span class="number">2</span>][<span class="number">0</span>]=<span class="number">100</span></span><br><span class="line">print(<span class="string">&#x27;列表x修改后,列表x的值为:&#x27;</span>,x)   <span class="comment">#列表x修改后,列表x的值为: [1, 2, [100, 4], 5]</span></span><br><span class="line">print(<span class="string">&#x27;列表x修改后,列表y的值为:&#x27;</span>,y)   <span class="comment">#列表x修改后,列表y的值为: [1, 2, [100, 4], 5]</span></span><br><span class="line"><span class="comment">#当修改列表x第一层时因为数据是拷贝过去的,所以对y无影响;</span></span><br><span class="line"><span class="comment">#当修改列表x第二层时因为数据是指向，当修改列表x时,y也跟着修改</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 浅拷贝方法</span></span><br><span class="line"><span class="number">1.</span> 用copy函数</span><br><span class="line"><span class="number">2.</span> 引用copy模块,用copy模块里的copy函数</span><br></pre></td></tr></table></figure>
-<p><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210112145922.png"></p>
-<h4 id="深拷贝"><a href="#深拷贝" class="headerlink" title="深拷贝"></a>深拷贝</h4><p>深拷贝是对列表所有数据都拷贝,新列表和原列表没有一点关系</p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> copy</span><br><span class="line">x=[<span class="number">1</span>,<span class="number">2</span>,[<span class="number">3</span>,<span class="number">4</span>],<span class="number">5</span>]</span><br><span class="line">y=copy.deepcopy(x)</span><br><span class="line">print(<span class="string">&#x27;列表x的值为:&#x27;</span>,x)  <span class="comment">#列表x的值为: [1, 2, [3, 4], 5]</span></span><br><span class="line">print(<span class="string">&#x27;列表y的值为:&#x27;</span>,y)  <span class="comment">#列表y的值为: [1, 2, [3, 4], 5]</span></span><br><span class="line">x[<span class="number">2</span>][<span class="number">0</span>]=<span class="number">100</span></span><br><span class="line">print(<span class="string">&#x27;列表x修改后,列表x的值为:&#x27;</span>,x)   <span class="comment">#列表x修改后,列表x的值为: [1, 2, [100, 4], 5]</span></span><br><span class="line">print(<span class="string">&#x27;列表x修改后,列表y的值为:&#x27;</span>,y)   <span class="comment">#列表x修改后,列表y的值为: [1, 2, [3, 4], 5]</span></span><br><span class="line"><span class="comment"># 深拷贝只能用copy模块里的deepcopy函数进行拷贝</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Python元组、列表、字典、集合</title>
     <url>/2021/01/11/Python%E5%85%83%E7%BB%84%E3%80%81%E5%88%97%E8%A1%A8%E3%80%81%E5%AD%97%E5%85%B8/</url>
     <content><![CDATA[<ol>
@@ -367,24 +367,12 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>Python字符串</title>
-    <url>/2021/01/12/Python%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
-    <content><![CDATA[<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><ol>
-<li><h3 id="单引号和双引号"><a href="#单引号和双引号" class="headerlink" title="单引号和双引号"></a>单引号和双引号</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">在Python中可以使用一对单引号或双引号；也可以使用三对单引号或双引号</span><br><span class="line">eg:</span><br><span class="line"><span class="string">&#x27;hello&#x27;</span></span><br><span class="line"><span class="string">&quot;hello&quot;</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;hello&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;hello&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">当字符串里面还有引号时，用单双引号嵌套使用，使表达的意思清晰</span><br><span class="line">eg:</span><br><span class="line">msg=<span class="string">&#x27;xiaoming say&quot;I am xiaoming&quot;&#x27;</span></span><br></pre></td></tr></table></figure></li>
-<li><h3 id="字符串的转义字符"><a href="#字符串的转义字符" class="headerlink" title="字符串的转义字符\"></a>字符串的转义字符\</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># \&#x27; ==&gt; 显示一个普通的单引号</span></span><br><span class="line"><span class="comment"># \&quot; ==&gt; 显示一个普通的双引号</span></span><br><span class="line"><span class="comment"># \n ==&gt; 表示一个换行</span></span><br><span class="line"><span class="comment"># \t ==&gt; 表示一个制表符</span></span><br><span class="line"><span class="comment"># \\ ==&gt; 表示一个普通的\</span></span><br><span class="line"><span class="comment"># r&#x27;字符串&#x27; ==&gt; 表示原生字符串，\n等会原生输出，不会表现特殊含义(r,R都可以)</span></span><br><span class="line">eg:</span><br><span class="line">x1=<span class="string">&#x27;I\&#x27;m xiaoming&#x27;</span>     <span class="comment"># 若不用转移字符对&#x27;进行转义，则在m之前最会被截断，从而报错，不是一个字符串</span></span><br><span class="line">x2=<span class="string">&#x27;你好\n世界&#x27;</span>     </span><br><span class="line"><span class="comment"># 打印是：</span></span><br><span class="line">你好</span><br><span class="line">世界</span><br><span class="line"><span class="comment">#中间会转行 </span></span><br><span class="line"><span class="comment">#若x3=&#x27;你好\\n世界&#x27;</span></span><br><span class="line"><span class="comment">#打印结果是 你好\n世界     #因为已经对\进行转义，转义后仅表示一个普通的\字符 </span></span><br><span class="line">m=<span class="string">&#x27;hello\tworld&#x27;</span></span><br><span class="line">n=<span class="string">r&#x27;hello\tworld&#x27;</span></span><br><span class="line">print(m) <span class="comment"># 打印 hello	world</span></span><br><span class="line">print(n) <span class="comment"># 打印 hello\tworld，因为r会使字符串保持原生</span></span><br></pre></td></tr></table></figure></li>
-<li><h3 id="字符串下标"><a href="#字符串下标" class="headerlink" title="字符串下标"></a>字符串下标</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 下标又被称为索引，表示第几个数据</span></span><br><span class="line"><span class="comment"># str,list,tuple类型的数据可以通过下标获取或操作数据</span></span><br><span class="line"><span class="comment"># 切记，字符串是不可变数据类型(原数据永远不会修改，是在原数据的基础上新产生的数据)</span></span><br><span class="line"><span class="comment"># 下标是用0开始</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以通过下标来获取或则修改指定位置的数据</span></span><br><span class="line">word=<span class="string">&#x27;zhangsan&#x27;</span></span><br><span class="line">print(word[<span class="number">4</span>]) <span class="comment"># 打印n</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 字符串是不可变数据类型</span></span><br><span class="line"><span class="comment"># 对于字符串的任何操作，都不会改变原有的字符串！！！</span></span><br><span class="line">word=<span class="string">&#x27;zhangsan&#x27;</span></span><br><span class="line"><span class="comment"># 不管对word做任何操作</span></span><br><span class="line">print(word)   <span class="comment"># word打印的结果恒为 zhangsan</span></span><br></pre></td></tr></table></figure></li>
-<li><h3 id="字符串切片"><a href="#字符串切片" class="headerlink" title="字符串切片"></a>字符串切片</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 切片就是从字符串里复制一段指定的内容，生成一个新的字符串</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 切片语法</span></span><br><span class="line">m[star:end:step]    <span class="comment"># m是字符串的变量名</span></span><br><span class="line"><span class="comment"># 复制的内容中包含stat位，不包含end位</span></span><br><span class="line"><span class="comment"># step表示步长，每步取一个数据，step默认为1</span></span><br><span class="line">m[Index] <span class="comment"># 获取字符串指定下标的数据</span></span><br><span class="line">m[star:end] <span class="comment"># 获取从star到end的数据</span></span><br><span class="line">m[star:] <span class="comment"># 获取从star开始的所有数据</span></span><br><span class="line">m[:end] <span class="comment"># 获取从头开始到end的数据</span></span><br><span class="line">m[::] <span class="comment"># 从复制整个字符串</span></span><br><span class="line">m[::step] <span class="comment">#整个字符串每step复制一个数据</span></span><br><span class="line">m[star:end:step] <span class="comment">#获取从star到end,没step取一个数据</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#注意</span></span><br><span class="line"><span class="comment"># 1.步长不能为0，但可以为负</span></span><br><span class="line"><span class="comment"># 2.当步长为负时，从star位开始向前运算</span></span><br><span class="line"><span class="comment"># 3.当step&lt;0且star&lt;end时，截取的内容为空(因为从star开始向前找不到end)</span></span><br><span class="line"><span class="comment"># 4.当star和end都为负数，表示从右向左数</span></span><br></pre></td></tr></table></figure></li>
-<li><h3 id="字符串常见操作"><a href="#字符串常见操作" class="headerlink" title="字符串常见操作"></a>字符串常见操作</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">len</span>(x) <span class="comment"># 获取字符串长度</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查找相关方法</span></span><br><span class="line">x.find(a) <span class="comment"># 查找字符串x中,字符c串a的下标，失败返回-1(返回a第一次出现的)</span></span><br><span class="line">x.index(a)  <span class="comment"># 查找字符串x中,字符串a的下标，失败会报错(返回a第一次出现的)</span></span><br><span class="line">x.rfind(a)  <span class="comment"># 查找字符串x中,字符串a的下标，失败返回-1(返回a最后一次出现的)</span></span><br><span class="line">x.rindex(a)  <span class="comment"># 查找字符串x中,字符串a的下标，失败会报错(返回a最后一次出现的)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 判断相关方法</span></span><br><span class="line"><span class="comment"># is开头的都是判断结果是bool值</span></span><br><span class="line">x.startswith(a) <span class="comment"># 判断是否以字符串a开头</span></span><br><span class="line">x.endswith(a) <span class="comment"># 判断是否以字符串a结尾</span></span><br><span class="line">x.isdigit() <span class="comment"># 判断是否是纯数字</span></span><br><span class="line">x.isalpha() <span class="comment"># 判断是否是纯字母</span></span><br><span class="line">x.isalnum() <span class="comment"># 判断是否由纯字母数字组成(纯数字,纯字母,字母数字混合都为True,但当有其他字符如空格时就是False)</span></span><br><span class="line">x.isspace() <span class="comment"># 检测字符串是否只由空格组成,只有空格返回True,否则返回False</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 替换</span></span><br><span class="line">x.replace(a,b) <span class="comment"># 用b替换字符串x中的a    </span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 分割</span></span><br><span class="line"><span class="comment">#按照指定字符串分割 </span></span><br><span class="line">x.split(a) <span class="comment"># 用字符串a将字符串x分割成一个列表</span></span><br><span class="line">x.rsplit(a,b) <span class="comment"># 用字符串a将字符串x从左切b次分割成一个列表</span></span><br><span class="line">x.split(a) <span class="comment"># 用字符串a将字符串x分割成一个列表</span></span><br><span class="line">x.rsplit(a,b) <span class="comment"># 用字符串a将字符串x从右切b次分割成一个列表</span></span><br><span class="line"><span class="comment">#按照行分割</span></span><br><span class="line">x.splitlines() <span class="comment"># 在有换行出\n处分割</span></span><br><span class="line"><span class="comment">#按照指定字符串分成三部分</span></span><br><span class="line">x.partition(a) <span class="comment"># 在第一个a处将字符串x分成三部分:a左侧,a,a右侧</span></span><br><span class="line">x.rpartition(a) <span class="comment"># 在最后一个a处将字符串x分成三部分:a左侧,a,a右侧</span></span><br></pre></td></tr></table></figure></li>
-<li><h3 id="修改大小写"><a href="#修改大小写" class="headerlink" title="修改大小写"></a>修改大小写</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x.capitalize() <span class="comment"># 让字符串x第一个字符大写</span></span><br><span class="line">x.upper() <span class="comment"># 让字符串x中所有字符都大写</span></span><br><span class="line">x.lower() <span class="comment"># 让字符串x中所有字符都小写</span></span><br><span class="line">x.title() <span class="comment"># 让字符串x中所有单词首字母大写</span></span><br></pre></td></tr></table></figure></li>
-<li><h3 id="字符串填充"><a href="#字符串填充" class="headerlink" title="字符串填充"></a>字符串填充</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x.ljust(width) <span class="comment"># 在字符串x的左边填空格，使字符串长度变为width(len(x)大于width，不做任何操作)</span></span><br><span class="line">x.rjust(width) <span class="comment"># 在字符串x的右边填空格，使字符串长度变为width(len(x)大于width，不做任何操作)</span></span><br><span class="line">x.center(width) <span class="comment"># 在字符串两侧平均填空格，使字符串长度变为width(len(x)大于width，不做任何操作)</span></span><br><span class="line">x.ljust(width,fillchar) <span class="comment"># 在字符串x的左边填filechar，使字符串长度变为width(len(x)大于width，不做任何操作)</span></span><br><span class="line">x.rjust(width,fillchar) <span class="comment"># 在字符串x的右边填filechar，使字符串长度变为width(len(x)大于width，不做任何操作)</span></span><br><span class="line">x.center(width,fillchar) <span class="comment"># 在字符串两侧平均填fillchar，使字符串长度变为width(len(x)大于width，不做任何操作)</span></span><br></pre></td></tr></table></figure></li>
-<li><h3 id="增删空格"><a href="#增删空格" class="headerlink" title="增删空格"></a>增删空格</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x.lstrip() <span class="comment">#去除x中左侧的空格</span></span><br><span class="line">x.rstrip() <span class="comment">#去除x中右侧的空格</span></span><br><span class="line">x.lstrip(chars) <span class="comment">#去除x中左侧的chars</span></span><br><span class="line">x.rstrip(chars) <span class="comment">#去除x中右侧的chars</span></span><br></pre></td></tr></table></figure></li>
-<li><h3 id="列表、字符串之间的转化"><a href="#列表、字符串之间的转化" class="headerlink" title="列表、字符串之间的转化"></a>列表、字符串之间的转化</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x.split(<span class="built_in">str</span>) <span class="comment"># 用字符str把x分成一个list</span></span><br><span class="line"><span class="built_in">str</span>.join(chars) <span class="comment"># 用字符str把chars连接成一个字符串</span></span><br><span class="line"><span class="comment"># chars是一个可迭代的对象</span></span><br></pre></td></tr></table></figure></li>
-<li><h3 id="字符串的运算符"><a href="#字符串的运算符" class="headerlink" title="字符串的运算符"></a>字符串的运算符</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1.字符串和字符串之间可以相加</span></span><br><span class="line"><span class="comment"># 2.字符串和数字之间可以相乘</span></span><br><span class="line"><span class="comment"># 3.字符串和数字之前：==为False；!=为True</span></span><br><span class="line"><span class="comment"># 4.字符串和字符串之间做比较运算，会逐个比较字符串的编码值</span></span><br><span class="line"><span class="comment"># 5.不支持其他运算符</span></span><br></pre></td></tr></table></figure></li>
-<li><h3 id="利用内置函数实现数字、字符间的转化-ASCII码"><a href="#利用内置函数实现数字、字符间的转化-ASCII码" class="headerlink" title="利用内置函数实现数字、字符间的转化(ASCII码)"></a>利用内置函数实现数字、字符间的转化(ASCII码)</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ord</span>(char) <span class="comment"># 查看字符char的ASCII码</span></span><br><span class="line"><span class="built_in">chr</span>(num) <span class="comment"># 查看ASCII码num所对应的字符</span></span><br></pre></td></tr></table></figure></li>
-<li><h3 id="in-和-not-in"><a href="#in-和-not-in" class="headerlink" title="in 和 not in"></a>in 和 not in</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">in</span> <span class="comment"># 用来判断一个内容是否在可迭代对象中</span></span><br><span class="line"><span class="keyword">not</span> <span class="keyword">in</span> <span class="comment"># 用来判断一个内容是否不在可迭代对象中</span></span><br></pre></td></tr></table></figure></li>
-<li><h3 id="使用-占位符来格式化字符串"><a href="#使用-占位符来格式化字符串" class="headerlink" title="使用% 占位符来格式化字符串"></a>使用% 占位符来格式化字符串</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># %s    表示的是字符串的占位符</span></span><br><span class="line"><span class="comment"># %d    表示的整数的占位符</span></span><br><span class="line"><span class="comment"># %nd   打印时显示n位，如果不够，n&gt;0在前面用空格补齐,n&lt;0在后面补空格</span></span><br><span class="line"><span class="comment"># %0d   打印时显示n位，如果不够，在前面用0补齐</span></span><br><span class="line"><span class="comment"># %f    表示浮点数的占位符</span></span><br><span class="line"><span class="comment"># %nf   表示浮点数的占位符,四舍五入保留n为小数</span></span><br><span class="line"><span class="comment"># %%    打印一个%</span></span><br><span class="line"><span class="comment"># %x    将数字按16进制输出，字符为小写</span></span><br><span class="line"><span class="comment"># %X    将数字按16进制输出，字符为大写</span></span><br><span class="line"><span class="comment"># print(&#x27;%3d&#x27;% 15) ##语法</span></span><br></pre></td></tr></table></figure></li>
-<li><h3 id="format方法"><a href="#format方法" class="headerlink" title="format方法"></a>format方法</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># &#123;&#125; 可以用来占位，用format中的数据进行填充</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 一一对应填充</span></span><br><span class="line"><span class="comment"># x=&#x27;大家好,我是&#123;&#125;,今年&#123;&#125;岁&#x27;.format(&#x27;xiaoming&#x27;,18)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># &#123;数字&#125;，数字从0开始</span></span><br><span class="line"><span class="comment"># x=&#x27;大家好,我是&#123;1&#125;,今年&#123;0&#125;岁&#x27;.format(18,&#x27;xiaoming&#x27;)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># &#123;变量名&#125;,相当于键值对</span></span><br><span class="line"><span class="comment"># x=&#x27;大家好,我是&#123;name&#125;,今年&#123;age&#125;岁&#x27;.format(name=&#x27;xiaoming&#x27;,age=18)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># &#123;数字&#125;&#123;变量名&#125;混合使用</span></span><br><span class="line"><span class="comment"># x=&#x27;大家好,我是&#123;name&#125;,今年&#123;1&#125;岁,身高&#123;0&#125;cm&#x27;.format(180,18,name=&#x27;xiaoming&#x27;)</span></span><br><span class="line"><span class="comment"># 要先写数字的值，再写变量名的值</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 用list填充</span></span><br><span class="line"><span class="comment"># data=[&#x27;xiaoming&#x27;,18,180]</span></span><br><span class="line"><span class="comment"># x=&#x27;大家好,我是&#123;&#125;,今年&#123;&#125;岁,身高&#123;&#125;cm&#x27;.format(*data)</span></span><br><span class="line"><span class="comment"># 切记加*</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 用dictionary填充</span></span><br><span class="line"><span class="comment"># data=&#123;&#x27;name&#x27;:&#x27;xiaoming&#x27;,&#x27;age&#x27;:18,&#x27;high&#x27;:180&#125;</span></span><br><span class="line"><span class="comment"># x=&#x27;大家好,我是&#123;name&#125;,今年&#123;age&#125;岁,身高&#123;high&#125;cm&#x27;.format(**data)</span></span><br><span class="line"><span class="comment"># 切记加**</span></span><br></pre></td></tr></table></figure></li>
-</ol>
+    <title>Python可变数据类型和不可变数据类型</title>
+    <url>/2021/01/12/Python%E5%8F%AF%E5%8F%98%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E4%B8%8D%E5%8F%AF%E5%8F%98%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
+    <content><![CDATA[<p>Python中的数据分为可变数据类型和不可变数据类型</p>
+<h3 id="可变数据类型"><a href="#可变数据类型" class="headerlink" title="可变数据类型"></a>可变数据类型</h3><p>定义：如果修改值，内存地址不会发生变化<br>可变数据类型:列表,字典,集合</p>
+<h3 id="不可变数据类型"><a href="#不可变数据类型" class="headerlink" title="不可变数据类型"></a>不可变数据类型</h3><p>定义：如果修改值，内存地址会发生变化<br>可变数据类型:字符串,数字,元组</p>
+<h3 id="看图理解"><a href="#看图理解" class="headerlink" title="看图理解"></a>看图理解</h3><p><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111164602.png"><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111165444.png"></p>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -411,21 +399,6 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
 <li><h3 id="循环语句注意事项"><a href="#循环语句注意事项" class="headerlink" title="循环语句注意事项"></a>循环语句注意事项</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="number">1.</span> Python中没有i++或i--,只能i+=<span class="number">1</span></span><br><span class="line"><span class="number">2.</span> 常用<span class="built_in">range</span>内置类生成一个整数区间进行循环</span><br><span class="line"><span class="number">3.</span> <span class="built_in">range</span>生成的整数区间以前一个数开始，以后一个数的前一个整数结束</span><br><span class="line"><span class="number">4.</span> <span class="keyword">in</span>后面是一个可迭代的对象,目前接触到的接迭代的对象:字符串,列表,字典,元组,集合,<span class="built_in">range</span></span><br><span class="line"><span class="number">5.</span> Python中没有do...<span class="keyword">while</span>...</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-]]></content>
-      <categories>
-        <category>Python</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python可变数据类型和不可变数据类型</title>
-    <url>/2021/01/12/Python%E5%8F%AF%E5%8F%98%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%92%8C%E4%B8%8D%E5%8F%AF%E5%8F%98%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</url>
-    <content><![CDATA[<p>Python中的数据分为可变数据类型和不可变数据类型</p>
-<h3 id="可变数据类型"><a href="#可变数据类型" class="headerlink" title="可变数据类型"></a>可变数据类型</h3><p>定义：如果修改值，内存地址不会发生变化<br>可变数据类型:列表,字典,集合</p>
-<h3 id="不可变数据类型"><a href="#不可变数据类型" class="headerlink" title="不可变数据类型"></a>不可变数据类型</h3><p>定义：如果修改值，内存地址会发生变化<br>可变数据类型:字符串,数字,元组</p>
-<h3 id="看图理解"><a href="#看图理解" class="headerlink" title="看图理解"></a>看图理解</h3><p><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111164602.png"><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210111165444.png"></p>
 ]]></content>
       <categories>
         <category>Python</category>
@@ -485,15 +458,11 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>Python运算符</title>
-    <url>/2021/01/12/Python%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
-    <content><![CDATA[<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><ol>
-<li><h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">+:加</span><br><span class="line">-:减</span><br><span class="line">*:乘</span><br><span class="line">/:除(结果可以是<span class="built_in">float</span>)</span><br><span class="line">%:取余</span><br><span class="line">**:幂运算 eg: print(<span class="number">2</span>**<span class="number">3</span>) <span class="comment">#打印2的3次幂</span></span><br><span class="line">//:整除(向下取整)</span><br><span class="line">注：</span><br><span class="line"><span class="comment"># 可用幂运算进行开方运算</span></span><br><span class="line">eg:print(<span class="number">81</span>**(<span class="number">1</span>/<span class="number">2</span>)) <span class="comment">#打印的是81开平方的结果，即为9</span></span><br><span class="line"><span class="comment"># 在Python2中，/得到的是一个整数;在Python3中得到是一个浮点数</span></span><br><span class="line"><span class="comment"># 在开发中使用括号来表示优先级,比较清晰</span></span><br></pre></td></tr></table></figure></li>
-<li><h3 id="算术运算符在字符串中的使用"><a href="#算术运算符在字符串中的使用" class="headerlink" title="算术运算符在字符串中的使用"></a>算术运算符在字符串中的使用</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在字符串中有限度的支持加法和乘法运算符</span></span><br><span class="line">print(<span class="string">&quot;hello&quot;</span>+<span class="string">&quot;world&quot;</span>)   <span class="comment"># 结果为 helloworld(用于拼接字符串)</span></span><br><span class="line">print(<span class="string">&quot;hello&quot;</span>*<span class="number">2</span>)         <span class="comment"># 结果为 hellohello</span></span><br><span class="line">注：字符串和数字是不能相加的</span><br><span class="line">print(<span class="string">&quot;a&quot;</span>+<span class="number">1</span>) <span class="comment"># 会报错</span></span><br></pre></td></tr></table></figure></li>
-<li><h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="number">1</span> <span class="comment"># 单个变量赋值</span></span><br><span class="line">m,n=<span class="number">1</span>,<span class="number">2</span> <span class="comment"># 多个变量赋值(拆包),且当等号左右两侧个数不相等时会报错</span></span><br><span class="line">o*,p,q=<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span> <span class="comment">#加*表示可变长度,把4,5分别赋给p,q,其余全部赋值给o</span></span><br><span class="line">m=<span class="string">&#x27;hello&#x27;</span>,<span class="string">&#x27;world&#x27;</span> <span class="comment"># 元组赋值</span></span><br></pre></td></tr></table></figure></li>
-<li><h3 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 比较运算符</span></span><br><span class="line">&gt;:大于</span><br><span class="line">&lt;:小于</span><br><span class="line">&gt;=:大于等于</span><br><span class="line">&lt;=:小于等于</span><br><span class="line">!=:不等于(在python2&lt;&gt;也表示不等于，python3不支持)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 比较运算符在字符串中的使用</span></span><br><span class="line">print(<span class="string">&#x27;a&#x27;</span>&lt;<span class="string">&#x27;b&#x27;</span>) <span class="comment"># 结果为true 按照ASCII码进行比较</span></span><br><span class="line">print(<span class="string">&#x27;abc&#x27;</span>&lt;<span class="string">&#x27;b&#x27;</span>) <span class="comment"># 结果为true,直接字符a,b相比得出结果</span></span><br><span class="line">print(<span class="string">&#x27;abc&#x27;</span>==<span class="string">&#x27;abc&#x27;</span>) <span class="comment"># 结果为true</span></span><br><span class="line">在数字和字符串之间做==为true,做!=比较为false</span><br></pre></td></tr></table></figure></li>
-<li><h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">and</span>:逻辑与</span><br><span class="line"><span class="keyword">or</span>:逻辑或</span><br><span class="line"><span class="keyword">not</span>:逻辑非</span><br><span class="line"></span><br><span class="line"><span class="comment">#规则</span></span><br><span class="line">逻辑与规则:只有一个运算数是<span class="literal">False</span>,结果就为<span class="literal">False</span></span><br><span class="line">逻辑或规则:只有一个运算数是<span class="literal">True</span>,结果就为<span class="literal">True</span></span><br><span class="line">优先级:<span class="keyword">not</span> &gt; <span class="keyword">and</span> &gt; <span class="keyword">or</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#逻辑运算符的取值问题(逻辑运算结果不一定是bool值)</span></span><br><span class="line">print(<span class="number">3</span> <span class="keyword">and</span> <span class="string">&#x27;Hello&#x27;</span> <span class="keyword">and</span> <span class="number">0</span> <span class="keyword">and</span> <span class="number">2</span>) </span><br><span class="line"><span class="comment"># 结果为0(按照逻辑与的运算规则,有False则False)</span></span><br><span class="line">print(<span class="number">3</span> <span class="keyword">or</span> <span class="number">0</span>)</span><br><span class="line"><span class="comment"># 结果为3,逻辑或运算当有一个是True时，后面的将不会被执行</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#逻辑运算符的短路问题</span></span><br><span class="line"><span class="number">4</span> &gt; <span class="number">3</span> <span class="keyword">and</span> print(<span class="string">&#x27;hello world&#x27;</span>) </span><br><span class="line"><span class="comment"># 打印hello world</span></span><br><span class="line"><span class="number">4</span> &gt; <span class="number">3</span> <span class="keyword">or</span> print(<span class="string">&#x27;hello world&#x27;</span>) </span><br><span class="line"><span class="comment"># print将会短路，因为逻辑或前面已经是True,后面将不会被执行</span></span><br></pre></td></tr></table></figure></li>
-<li><h3 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&amp;:按位与(都为<span class="number">1</span>取<span class="number">1</span>,否则取<span class="number">0</span>)</span><br><span class="line">|:按位或(有<span class="number">1</span>取<span class="number">1</span>,否则取<span class="number">0</span>)</span><br><span class="line">^:按位异或(不同取<span class="number">1</span>,相同取<span class="number">0</span>)</span><br><span class="line">~:按位取反(<span class="number">0</span>取<span class="number">1</span>,<span class="number">1</span>取<span class="number">0</span>)</span><br><span class="line">&lt;&lt;:左移(向左移,后面补<span class="number">0</span>)</span><br><span class="line">&gt;&gt;:右移(向右移,数据会丢失)</span><br><span class="line"><span class="comment"># 左移:x左移a位结果为x乘以2的a次方</span></span><br><span class="line"><span class="comment"># 右移:x右移a位结果为x除以2的a次方(取整)</span></span><br></pre></td></tr></table></figure></li>
+    <title>Python经典问题</title>
+    <url>/2021/01/12/Python%E7%BB%8F%E5%85%B8%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<ol>
+<li><h3 id="交换两个变量的值"><a href="#交换两个变量的值" class="headerlink" title="交换两个变量的值"></a>交换两个变量的值</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="number">1</span></span><br><span class="line">b=<span class="number">2</span></span><br><span class="line"><span class="comment"># 方法一:利用第三个变量实现</span></span><br><span class="line">c=b</span><br><span class="line">b=a</span><br><span class="line">a=c</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法二:利用运算符实现</span></span><br><span class="line">a=a+b</span><br><span class="line">b=a-b</span><br><span class="line">a=a-b</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法三:利用异或运算符实现</span></span><br><span class="line">a=a^b</span><br><span class="line">b=a^b</span><br><span class="line">a=a^b</span><br><span class="line"><span class="comment"># 原理 a^b^b==a</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法四:使用Python特有的方法实现</span></span><br><span class="line">a,b=b,a</span><br></pre></td></tr></table></figure></li>
+<li>for…in循环删除元素</li>
 </ol>
 ]]></content>
       <categories>
@@ -504,23 +473,23 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>happyBirthday</title>
-    <url>/2021/05/01/happyBirthday/</url>
-    <content><![CDATA[<p><a href="http://47.94.243.37/birthday-2019/index.html">2019</a></p>
-<p><a href="http://47.94.243.37/birthday-2020/index.html">2020</a></p>
-<p><a href="http://47.94.243.37/birthday-2021/index.html">2021</a></p>
-<p><strong>欢迎打赏哈！</strong></p>
-]]></content>
-      <tags>
-        <tag>happyBirthday</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Python经典问题</title>
-    <url>/2021/01/12/Python%E7%BB%8F%E5%85%B8%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<ol>
-<li><h3 id="交换两个变量的值"><a href="#交换两个变量的值" class="headerlink" title="交换两个变量的值"></a>交换两个变量的值</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="number">1</span></span><br><span class="line">b=<span class="number">2</span></span><br><span class="line"><span class="comment"># 方法一:利用第三个变量实现</span></span><br><span class="line">c=b</span><br><span class="line">b=a</span><br><span class="line">a=c</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法二:利用运算符实现</span></span><br><span class="line">a=a+b</span><br><span class="line">b=a-b</span><br><span class="line">a=a-b</span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法三:利用异或运算符实现</span></span><br><span class="line">a=a^b</span><br><span class="line">b=a^b</span><br><span class="line">a=a^b</span><br><span class="line"><span class="comment"># 原理 a^b^b==a</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 方法四:使用Python特有的方法实现</span></span><br><span class="line">a,b=b,a</span><br></pre></td></tr></table></figure></li>
-<li>for…in循环删除元素</li>
+    <title>Python字符串</title>
+    <url>/2021/01/12/Python%E5%AD%97%E7%AC%A6%E4%B8%B2/</url>
+    <content><![CDATA[<h2 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h2><ol>
+<li><h3 id="单引号和双引号"><a href="#单引号和双引号" class="headerlink" title="单引号和双引号"></a>单引号和双引号</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">在Python中可以使用一对单引号或双引号；也可以使用三对单引号或双引号</span><br><span class="line">eg:</span><br><span class="line"><span class="string">&#x27;hello&#x27;</span></span><br><span class="line"><span class="string">&quot;hello&quot;</span></span><br><span class="line"><span class="string">&#x27;&#x27;&#x27;hello&#x27;&#x27;&#x27;</span></span><br><span class="line"><span class="string">&quot;&quot;&quot;hello&quot;&quot;&quot;</span></span><br><span class="line"></span><br><span class="line">当字符串里面还有引号时，用单双引号嵌套使用，使表达的意思清晰</span><br><span class="line">eg:</span><br><span class="line">msg=<span class="string">&#x27;xiaoming say&quot;I am xiaoming&quot;&#x27;</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="字符串的转义字符"><a href="#字符串的转义字符" class="headerlink" title="字符串的转义字符\"></a>字符串的转义字符\</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># \&#x27; ==&gt; 显示一个普通的单引号</span></span><br><span class="line"><span class="comment"># \&quot; ==&gt; 显示一个普通的双引号</span></span><br><span class="line"><span class="comment"># \n ==&gt; 表示一个换行</span></span><br><span class="line"><span class="comment"># \t ==&gt; 表示一个制表符</span></span><br><span class="line"><span class="comment"># \\ ==&gt; 表示一个普通的\</span></span><br><span class="line"><span class="comment"># r&#x27;字符串&#x27; ==&gt; 表示原生字符串，\n等会原生输出，不会表现特殊含义(r,R都可以)</span></span><br><span class="line">eg:</span><br><span class="line">x1=<span class="string">&#x27;I\&#x27;m xiaoming&#x27;</span>     <span class="comment"># 若不用转移字符对&#x27;进行转义，则在m之前最会被截断，从而报错，不是一个字符串</span></span><br><span class="line">x2=<span class="string">&#x27;你好\n世界&#x27;</span>     </span><br><span class="line"><span class="comment"># 打印是：</span></span><br><span class="line">你好</span><br><span class="line">世界</span><br><span class="line"><span class="comment">#中间会转行 </span></span><br><span class="line"><span class="comment">#若x3=&#x27;你好\\n世界&#x27;</span></span><br><span class="line"><span class="comment">#打印结果是 你好\n世界     #因为已经对\进行转义，转义后仅表示一个普通的\字符 </span></span><br><span class="line">m=<span class="string">&#x27;hello\tworld&#x27;</span></span><br><span class="line">n=<span class="string">r&#x27;hello\tworld&#x27;</span></span><br><span class="line">print(m) <span class="comment"># 打印 hello	world</span></span><br><span class="line">print(n) <span class="comment"># 打印 hello\tworld，因为r会使字符串保持原生</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="字符串下标"><a href="#字符串下标" class="headerlink" title="字符串下标"></a>字符串下标</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 下标又被称为索引，表示第几个数据</span></span><br><span class="line"><span class="comment"># str,list,tuple类型的数据可以通过下标获取或操作数据</span></span><br><span class="line"><span class="comment"># 切记，字符串是不可变数据类型(原数据永远不会修改，是在原数据的基础上新产生的数据)</span></span><br><span class="line"><span class="comment"># 下标是用0开始</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 可以通过下标来获取或则修改指定位置的数据</span></span><br><span class="line">word=<span class="string">&#x27;zhangsan&#x27;</span></span><br><span class="line">print(word[<span class="number">4</span>]) <span class="comment"># 打印n</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 字符串是不可变数据类型</span></span><br><span class="line"><span class="comment"># 对于字符串的任何操作，都不会改变原有的字符串！！！</span></span><br><span class="line">word=<span class="string">&#x27;zhangsan&#x27;</span></span><br><span class="line"><span class="comment"># 不管对word做任何操作</span></span><br><span class="line">print(word)   <span class="comment"># word打印的结果恒为 zhangsan</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="字符串切片"><a href="#字符串切片" class="headerlink" title="字符串切片"></a>字符串切片</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 切片就是从字符串里复制一段指定的内容，生成一个新的字符串</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 切片语法</span></span><br><span class="line">m[star:end:step]    <span class="comment"># m是字符串的变量名</span></span><br><span class="line"><span class="comment"># 复制的内容中包含stat位，不包含end位</span></span><br><span class="line"><span class="comment"># step表示步长，每步取一个数据，step默认为1</span></span><br><span class="line">m[Index] <span class="comment"># 获取字符串指定下标的数据</span></span><br><span class="line">m[star:end] <span class="comment"># 获取从star到end的数据</span></span><br><span class="line">m[star:] <span class="comment"># 获取从star开始的所有数据</span></span><br><span class="line">m[:end] <span class="comment"># 获取从头开始到end的数据</span></span><br><span class="line">m[::] <span class="comment"># 从复制整个字符串</span></span><br><span class="line">m[::step] <span class="comment">#整个字符串每step复制一个数据</span></span><br><span class="line">m[star:end:step] <span class="comment">#获取从star到end,没step取一个数据</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#注意</span></span><br><span class="line"><span class="comment"># 1.步长不能为0，但可以为负</span></span><br><span class="line"><span class="comment"># 2.当步长为负时，从star位开始向前运算</span></span><br><span class="line"><span class="comment"># 3.当step&lt;0且star&lt;end时，截取的内容为空(因为从star开始向前找不到end)</span></span><br><span class="line"><span class="comment"># 4.当star和end都为负数，表示从右向左数</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="字符串常见操作"><a href="#字符串常见操作" class="headerlink" title="字符串常见操作"></a>字符串常见操作</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">len</span>(x) <span class="comment"># 获取字符串长度</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查找相关方法</span></span><br><span class="line">x.find(a) <span class="comment"># 查找字符串x中,字符c串a的下标，失败返回-1(返回a第一次出现的)</span></span><br><span class="line">x.index(a)  <span class="comment"># 查找字符串x中,字符串a的下标，失败会报错(返回a第一次出现的)</span></span><br><span class="line">x.rfind(a)  <span class="comment"># 查找字符串x中,字符串a的下标，失败返回-1(返回a最后一次出现的)</span></span><br><span class="line">x.rindex(a)  <span class="comment"># 查找字符串x中,字符串a的下标，失败会报错(返回a最后一次出现的)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 判断相关方法</span></span><br><span class="line"><span class="comment"># is开头的都是判断结果是bool值</span></span><br><span class="line">x.startswith(a) <span class="comment"># 判断是否以字符串a开头</span></span><br><span class="line">x.endswith(a) <span class="comment"># 判断是否以字符串a结尾</span></span><br><span class="line">x.isdigit() <span class="comment"># 判断是否是纯数字</span></span><br><span class="line">x.isalpha() <span class="comment"># 判断是否是纯字母</span></span><br><span class="line">x.isalnum() <span class="comment"># 判断是否由纯字母数字组成(纯数字,纯字母,字母数字混合都为True,但当有其他字符如空格时就是False)</span></span><br><span class="line">x.isspace() <span class="comment"># 检测字符串是否只由空格组成,只有空格返回True,否则返回False</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 替换</span></span><br><span class="line">x.replace(a,b) <span class="comment"># 用b替换字符串x中的a    </span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 分割</span></span><br><span class="line"><span class="comment">#按照指定字符串分割 </span></span><br><span class="line">x.split(a) <span class="comment"># 用字符串a将字符串x分割成一个列表</span></span><br><span class="line">x.rsplit(a,b) <span class="comment"># 用字符串a将字符串x从左切b次分割成一个列表</span></span><br><span class="line">x.split(a) <span class="comment"># 用字符串a将字符串x分割成一个列表</span></span><br><span class="line">x.rsplit(a,b) <span class="comment"># 用字符串a将字符串x从右切b次分割成一个列表</span></span><br><span class="line"><span class="comment">#按照行分割</span></span><br><span class="line">x.splitlines() <span class="comment"># 在有换行出\n处分割</span></span><br><span class="line"><span class="comment">#按照指定字符串分成三部分</span></span><br><span class="line">x.partition(a) <span class="comment"># 在第一个a处将字符串x分成三部分:a左侧,a,a右侧</span></span><br><span class="line">x.rpartition(a) <span class="comment"># 在最后一个a处将字符串x分成三部分:a左侧,a,a右侧</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="修改大小写"><a href="#修改大小写" class="headerlink" title="修改大小写"></a>修改大小写</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x.capitalize() <span class="comment"># 让字符串x第一个字符大写</span></span><br><span class="line">x.upper() <span class="comment"># 让字符串x中所有字符都大写</span></span><br><span class="line">x.lower() <span class="comment"># 让字符串x中所有字符都小写</span></span><br><span class="line">x.title() <span class="comment"># 让字符串x中所有单词首字母大写</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="字符串填充"><a href="#字符串填充" class="headerlink" title="字符串填充"></a>字符串填充</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x.ljust(width) <span class="comment"># 在字符串x的左边填空格，使字符串长度变为width(len(x)大于width，不做任何操作)</span></span><br><span class="line">x.rjust(width) <span class="comment"># 在字符串x的右边填空格，使字符串长度变为width(len(x)大于width，不做任何操作)</span></span><br><span class="line">x.center(width) <span class="comment"># 在字符串两侧平均填空格，使字符串长度变为width(len(x)大于width，不做任何操作)</span></span><br><span class="line">x.ljust(width,fillchar) <span class="comment"># 在字符串x的左边填filechar，使字符串长度变为width(len(x)大于width，不做任何操作)</span></span><br><span class="line">x.rjust(width,fillchar) <span class="comment"># 在字符串x的右边填filechar，使字符串长度变为width(len(x)大于width，不做任何操作)</span></span><br><span class="line">x.center(width,fillchar) <span class="comment"># 在字符串两侧平均填fillchar，使字符串长度变为width(len(x)大于width，不做任何操作)</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="增删空格"><a href="#增删空格" class="headerlink" title="增删空格"></a>增删空格</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x.lstrip() <span class="comment">#去除x中左侧的空格</span></span><br><span class="line">x.rstrip() <span class="comment">#去除x中右侧的空格</span></span><br><span class="line">x.lstrip(chars) <span class="comment">#去除x中左侧的chars</span></span><br><span class="line">x.rstrip(chars) <span class="comment">#去除x中右侧的chars</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="列表、字符串之间的转化"><a href="#列表、字符串之间的转化" class="headerlink" title="列表、字符串之间的转化"></a>列表、字符串之间的转化</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x.split(<span class="built_in">str</span>) <span class="comment"># 用字符str把x分成一个list</span></span><br><span class="line"><span class="built_in">str</span>.join(chars) <span class="comment"># 用字符str把chars连接成一个字符串</span></span><br><span class="line"><span class="comment"># chars是一个可迭代的对象</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="字符串的运算符"><a href="#字符串的运算符" class="headerlink" title="字符串的运算符"></a>字符串的运算符</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 1.字符串和字符串之间可以相加</span></span><br><span class="line"><span class="comment"># 2.字符串和数字之间可以相乘</span></span><br><span class="line"><span class="comment"># 3.字符串和数字之前：==为False；!=为True</span></span><br><span class="line"><span class="comment"># 4.字符串和字符串之间做比较运算，会逐个比较字符串的编码值</span></span><br><span class="line"><span class="comment"># 5.不支持其他运算符</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="利用内置函数实现数字、字符间的转化-ASCII码"><a href="#利用内置函数实现数字、字符间的转化-ASCII码" class="headerlink" title="利用内置函数实现数字、字符间的转化(ASCII码)"></a>利用内置函数实现数字、字符间的转化(ASCII码)</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">ord</span>(char) <span class="comment"># 查看字符char的ASCII码</span></span><br><span class="line"><span class="built_in">chr</span>(num) <span class="comment"># 查看ASCII码num所对应的字符</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="in-和-not-in"><a href="#in-和-not-in" class="headerlink" title="in 和 not in"></a>in 和 not in</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">in</span> <span class="comment"># 用来判断一个内容是否在可迭代对象中</span></span><br><span class="line"><span class="keyword">not</span> <span class="keyword">in</span> <span class="comment"># 用来判断一个内容是否不在可迭代对象中</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="使用-占位符来格式化字符串"><a href="#使用-占位符来格式化字符串" class="headerlink" title="使用% 占位符来格式化字符串"></a>使用% 占位符来格式化字符串</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># %s    表示的是字符串的占位符</span></span><br><span class="line"><span class="comment"># %d    表示的整数的占位符</span></span><br><span class="line"><span class="comment"># %nd   打印时显示n位，如果不够，n&gt;0在前面用空格补齐,n&lt;0在后面补空格</span></span><br><span class="line"><span class="comment"># %0d   打印时显示n位，如果不够，在前面用0补齐</span></span><br><span class="line"><span class="comment"># %f    表示浮点数的占位符</span></span><br><span class="line"><span class="comment"># %nf   表示浮点数的占位符,四舍五入保留n为小数</span></span><br><span class="line"><span class="comment"># %%    打印一个%</span></span><br><span class="line"><span class="comment"># %x    将数字按16进制输出，字符为小写</span></span><br><span class="line"><span class="comment"># %X    将数字按16进制输出，字符为大写</span></span><br><span class="line"><span class="comment"># print(&#x27;%3d&#x27;% 15) ##语法</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="format方法"><a href="#format方法" class="headerlink" title="format方法"></a>format方法</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># &#123;&#125; 可以用来占位，用format中的数据进行填充</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 一一对应填充</span></span><br><span class="line"><span class="comment"># x=&#x27;大家好,我是&#123;&#125;,今年&#123;&#125;岁&#x27;.format(&#x27;xiaoming&#x27;,18)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># &#123;数字&#125;，数字从0开始</span></span><br><span class="line"><span class="comment"># x=&#x27;大家好,我是&#123;1&#125;,今年&#123;0&#125;岁&#x27;.format(18,&#x27;xiaoming&#x27;)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># &#123;变量名&#125;,相当于键值对</span></span><br><span class="line"><span class="comment"># x=&#x27;大家好,我是&#123;name&#125;,今年&#123;age&#125;岁&#x27;.format(name=&#x27;xiaoming&#x27;,age=18)</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># &#123;数字&#125;&#123;变量名&#125;混合使用</span></span><br><span class="line"><span class="comment"># x=&#x27;大家好,我是&#123;name&#125;,今年&#123;1&#125;岁,身高&#123;0&#125;cm&#x27;.format(180,18,name=&#x27;xiaoming&#x27;)</span></span><br><span class="line"><span class="comment"># 要先写数字的值，再写变量名的值</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 用list填充</span></span><br><span class="line"><span class="comment"># data=[&#x27;xiaoming&#x27;,18,180]</span></span><br><span class="line"><span class="comment"># x=&#x27;大家好,我是&#123;&#125;,今年&#123;&#125;岁,身高&#123;&#125;cm&#x27;.format(*data)</span></span><br><span class="line"><span class="comment"># 切记加*</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 用dictionary填充</span></span><br><span class="line"><span class="comment"># data=&#123;&#x27;name&#x27;:&#x27;xiaoming&#x27;,&#x27;age&#x27;:18,&#x27;high&#x27;:180&#125;</span></span><br><span class="line"><span class="comment"># x=&#x27;大家好,我是&#123;name&#125;,今年&#123;age&#125;岁,身高&#123;high&#125;cm&#x27;.format(**data)</span></span><br><span class="line"><span class="comment"># 切记加**</span></span><br></pre></td></tr></table></figure></li>
 </ol>
 ]]></content>
       <categories>
@@ -564,18 +533,54 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </tags>
   </entry>
   <entry>
-    <title>hexo备份与恢复</title>
-    <url>/2021/01/04/hexo%E5%A4%87%E4%BB%BD%E4%B8%8E%E6%81%A2%E5%A4%8D/</url>
-    <content><![CDATA[<h2 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h2><ol>
-<li>在github的博客仓库创建新的分支<strong>backup</strong></li>
-<li>打开git Bash Here，输入 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-git-backup --save</span><br></pre></td></tr></table></figure></li>
-<li>添加提交设置：打开blog/_config.yml在最后添加<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">backup:</span><br><span class="line">type: git</span><br><span class="line">repository:</span><br><span class="line">github: git@github.com:Romanticqq&#x2F;romanticqq.github.io.git,backup(提交的github地址,分支名)</span><br></pre></td></tr></table></figure></li>
-<li>当要对代码备份时，执行<code>hexo d</code>即备份成功</li>
+    <title>Python运算符</title>
+    <url>/2021/01/12/Python%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
+    <content><![CDATA[<h2 id="运算符"><a href="#运算符" class="headerlink" title="运算符"></a>运算符</h2><ol>
+<li><h3 id="算术运算符"><a href="#算术运算符" class="headerlink" title="算术运算符"></a>算术运算符</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">+:加</span><br><span class="line">-:减</span><br><span class="line">*:乘</span><br><span class="line">/:除(结果可以是<span class="built_in">float</span>)</span><br><span class="line">%:取余</span><br><span class="line">**:幂运算 eg: print(<span class="number">2</span>**<span class="number">3</span>) <span class="comment">#打印2的3次幂</span></span><br><span class="line">//:整除(向下取整)</span><br><span class="line">注：</span><br><span class="line"><span class="comment"># 可用幂运算进行开方运算</span></span><br><span class="line">eg:print(<span class="number">81</span>**(<span class="number">1</span>/<span class="number">2</span>)) <span class="comment">#打印的是81开平方的结果，即为9</span></span><br><span class="line"><span class="comment"># 在Python2中，/得到的是一个整数;在Python3中得到是一个浮点数</span></span><br><span class="line"><span class="comment"># 在开发中使用括号来表示优先级,比较清晰</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="算术运算符在字符串中的使用"><a href="#算术运算符在字符串中的使用" class="headerlink" title="算术运算符在字符串中的使用"></a>算术运算符在字符串中的使用</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 在字符串中有限度的支持加法和乘法运算符</span></span><br><span class="line">print(<span class="string">&quot;hello&quot;</span>+<span class="string">&quot;world&quot;</span>)   <span class="comment"># 结果为 helloworld(用于拼接字符串)</span></span><br><span class="line">print(<span class="string">&quot;hello&quot;</span>*<span class="number">2</span>)         <span class="comment"># 结果为 hellohello</span></span><br><span class="line">注：字符串和数字是不能相加的</span><br><span class="line">print(<span class="string">&quot;a&quot;</span>+<span class="number">1</span>) <span class="comment"># 会报错</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="赋值运算符"><a href="#赋值运算符" class="headerlink" title="赋值运算符"></a>赋值运算符</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="number">1</span> <span class="comment"># 单个变量赋值</span></span><br><span class="line">m,n=<span class="number">1</span>,<span class="number">2</span> <span class="comment"># 多个变量赋值(拆包),且当等号左右两侧个数不相等时会报错</span></span><br><span class="line">o*,p,q=<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span> <span class="comment">#加*表示可变长度,把4,5分别赋给p,q,其余全部赋值给o</span></span><br><span class="line">m=<span class="string">&#x27;hello&#x27;</span>,<span class="string">&#x27;world&#x27;</span> <span class="comment"># 元组赋值</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="比较运算符"><a href="#比较运算符" class="headerlink" title="比较运算符"></a>比较运算符</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 比较运算符</span></span><br><span class="line">&gt;:大于</span><br><span class="line">&lt;:小于</span><br><span class="line">&gt;=:大于等于</span><br><span class="line">&lt;=:小于等于</span><br><span class="line">!=:不等于(在python2&lt;&gt;也表示不等于，python3不支持)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 比较运算符在字符串中的使用</span></span><br><span class="line">print(<span class="string">&#x27;a&#x27;</span>&lt;<span class="string">&#x27;b&#x27;</span>) <span class="comment"># 结果为true 按照ASCII码进行比较</span></span><br><span class="line">print(<span class="string">&#x27;abc&#x27;</span>&lt;<span class="string">&#x27;b&#x27;</span>) <span class="comment"># 结果为true,直接字符a,b相比得出结果</span></span><br><span class="line">print(<span class="string">&#x27;abc&#x27;</span>==<span class="string">&#x27;abc&#x27;</span>) <span class="comment"># 结果为true</span></span><br><span class="line">在数字和字符串之间做==为true,做!=比较为false</span><br></pre></td></tr></table></figure></li>
+<li><h3 id="逻辑运算符"><a href="#逻辑运算符" class="headerlink" title="逻辑运算符"></a>逻辑运算符</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">and</span>:逻辑与</span><br><span class="line"><span class="keyword">or</span>:逻辑或</span><br><span class="line"><span class="keyword">not</span>:逻辑非</span><br><span class="line"></span><br><span class="line"><span class="comment">#规则</span></span><br><span class="line">逻辑与规则:只有一个运算数是<span class="literal">False</span>,结果就为<span class="literal">False</span></span><br><span class="line">逻辑或规则:只有一个运算数是<span class="literal">True</span>,结果就为<span class="literal">True</span></span><br><span class="line">优先级:<span class="keyword">not</span> &gt; <span class="keyword">and</span> &gt; <span class="keyword">or</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#逻辑运算符的取值问题(逻辑运算结果不一定是bool值)</span></span><br><span class="line">print(<span class="number">3</span> <span class="keyword">and</span> <span class="string">&#x27;Hello&#x27;</span> <span class="keyword">and</span> <span class="number">0</span> <span class="keyword">and</span> <span class="number">2</span>) </span><br><span class="line"><span class="comment"># 结果为0(按照逻辑与的运算规则,有False则False)</span></span><br><span class="line">print(<span class="number">3</span> <span class="keyword">or</span> <span class="number">0</span>)</span><br><span class="line"><span class="comment"># 结果为3,逻辑或运算当有一个是True时，后面的将不会被执行</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#逻辑运算符的短路问题</span></span><br><span class="line"><span class="number">4</span> &gt; <span class="number">3</span> <span class="keyword">and</span> print(<span class="string">&#x27;hello world&#x27;</span>) </span><br><span class="line"><span class="comment"># 打印hello world</span></span><br><span class="line"><span class="number">4</span> &gt; <span class="number">3</span> <span class="keyword">or</span> print(<span class="string">&#x27;hello world&#x27;</span>) </span><br><span class="line"><span class="comment"># print将会短路，因为逻辑或前面已经是True,后面将不会被执行</span></span><br></pre></td></tr></table></figure></li>
+<li><h3 id="位运算"><a href="#位运算" class="headerlink" title="位运算"></a>位运算</h3><figure class="highlight python"><table><tr><td class="code"><pre><span class="line">&amp;:按位与(都为<span class="number">1</span>取<span class="number">1</span>,否则取<span class="number">0</span>)</span><br><span class="line">|:按位或(有<span class="number">1</span>取<span class="number">1</span>,否则取<span class="number">0</span>)</span><br><span class="line">^:按位异或(不同取<span class="number">1</span>,相同取<span class="number">0</span>)</span><br><span class="line">~:按位取反(<span class="number">0</span>取<span class="number">1</span>,<span class="number">1</span>取<span class="number">0</span>)</span><br><span class="line">&lt;&lt;:左移(向左移,后面补<span class="number">0</span>)</span><br><span class="line">&gt;&gt;:右移(向右移,数据会丢失)</span><br><span class="line"><span class="comment"># 左移:x左移a位结果为x乘以2的a次方</span></span><br><span class="line"><span class="comment"># 右移:x右移a位结果为x除以2的a次方(取整)</span></span><br></pre></td></tr></table></figure></li>
 </ol>
-<h2 id="恢复"><a href="#恢复" class="headerlink" title="恢复"></a>恢复</h2><ol>
-<li>把github的博客仓库<strong>backup</strong>分支的内容下载到本地</li>
-<li>依次执行下列命令 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git</span><br></pre></td></tr></table></figure></li>
-<li>本地文件恢复，<code>hexo s</code>开启本地服务，在浏览器输入<code>http://localhost:4000</code>测试是否正常<h2 id="当遇到提交失败时"><a href="#当遇到提交失败时" class="headerlink" title="当遇到提交失败时"></a>当遇到提交失败时</h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">OpenSSL SSL_read: Connection was reset, errno <span class="number">10054</span></span><br><span class="line"><span class="comment">//在hexo d之前执行命令</span></span><br><span class="line">git config --<span class="keyword">global</span> http.sslVerify <span class="string">&quot;false&quot;</span></span><br></pre></td></tr></table></figure></li>
+]]></content>
+      <categories>
+        <category>Python</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>happyBirthday</title>
+    <url>/2021/05/01/happyBirthday/</url>
+    <content><![CDATA[<p><a href="http://47.94.243.37/birthday-2019/index.html">2019</a></p>
+<p><a href="http://47.94.243.37/birthday-2020/index.html">2020</a></p>
+<p><a href="http://47.94.243.37/birthday-2021/index.html">2021</a></p>
+<p><strong>欢迎打赏哈！</strong></p>
+]]></content>
+      <tags>
+        <tag>happyBirthday</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo+PicGo+gitee图床</title>
+    <url>/2021/01/05/hexo-PicGo-gitee%E5%9B%BE%E5%BA%8A/</url>
+    <content><![CDATA[<p><strong>前言</strong>：我尝试了好几种床图，不是在电脑端加载不出来，就是有各种各样的限制，最后找到了gitee，因为服务器在国内，访问速度也是比较快，空间也没有限制，算是比较理想的一种吧。一开始我用vscode+PicGo插件，等到快成的时候，图片是上传上去了，但是加载不出来，我尝试了<code>sm.ms</code>和<code>github</code>，最后抛弃了<code>vsCode+PicGo</code>插件，选择了<code>PicGo客户端和gitee</code>。</p>
+<ol>
+<li><strong>注册gitee账号</strong><br>去官网注册账号<a href="https://gitee.com/">gitee</a></li>
+<li><strong>新建gitee仓库</strong><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105203048.png"><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105203450.png"></li>
+<li><strong>获得gitee的token</strong><br>登录<code>gitee</code>官网，点击头像/设置/私人令牌/生成令牌<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105203902.png"><br>点击提交后复制生成的令牌，在配置的时候要使用</li>
+<li><strong>下载gitee</strong><br>点击<a href="https://github.com/Molunerfinn/PicGo/releases">PicGo</a>下载，有不同的版本，都可以<br>下载成功后按照提示默认安装即可</li>
+<li><strong>配置gitee</strong><br>默认状态下PicGo是没有<code>gitee</code>，因此先安装插件<code>gitee-uploader</code><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105205151.png"><br>这时，点击图床设置，已经有<code>gitee图床</code>的设置<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105205522.png"> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1:打开新建的仓库，看地址栏，若地址栏为https:&#x2F;&#x2F;gitee.com&#x2F;A&#x2F;B,则需要填A&#x2F;B</span><br><span class="line">2:默认为master就可以</span><br><span class="line">3:把刚才生成的token粘贴到这里</span><br><span class="line">4:path为创建的仓库存放图片的文件夹名，可以为image，可任意填写</span><br><span class="line">5:其余开心就好</span><br></pre></td></tr></table></figure></li>
+<li><strong>升华</strong><br>为更方便地获取截图外链，安装<code>picgo-plugin-quick-capture</code>,实现截图上传一步搞定</li>
+<li><strong>Typora+PicGo+gitee配置</strong><br>如果用<code>Typora</code>写<code>Markdown</code>文章，还需要对<code>Typora</code>进行配置，找到<code>文件/偏好设置/图像</code><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105212825.png"><br>在typora中，当插入本地图片时，会自动转换成gitee外链</li>
+</ol>
+<p><strong>tips</strong></p>
+<ol>
+<li>通过上面的操作已经实现了快速上传和快速截图上传功能，当我们要用本地图片生成外链时，先复制一下本地图片(就是选中图片按下Ctrl+c),然后按下快速上传的快捷键，此时外链已经生成，在需要插入图片的位置Ctrl+V就可以了</li>
+<li>当使用快速截图上传时，如果是直接截图的话，截完图后直接Ctrl+V就可以了，但如果是截完图后需要写批注，那么截的图并不一定可以自动上传，需要按下快速上传的快捷键，然后再Ctrl+V</li>
+<li>通过PicGo可以查看和删除上传的图片<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105212411.png"></li>
 </ol>
 ]]></content>
       <categories>
@@ -583,7 +588,10 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </categories>
       <tags>
         <tag>hexo</tag>
-        <tag>next</tag>
+        <tag>PicGo</tag>
+        <tag>gitee</tag>
+        <tag>Typora</tag>
+        <tag>图床</tag>
       </tags>
   </entry>
   <entry>
@@ -608,8 +616,31 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </categories>
       <tags>
         <tag>hexo</tag>
-        <tag>next</tag>
         <tag>图床</tag>
+        <tag>next</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo备份与恢复</title>
+    <url>/2021/01/04/hexo%E5%A4%87%E4%BB%BD%E4%B8%8E%E6%81%A2%E5%A4%8D/</url>
+    <content><![CDATA[<h2 id="备份"><a href="#备份" class="headerlink" title="备份"></a>备份</h2><ol>
+<li>在github的博客仓库创建新的分支<strong>backup</strong></li>
+<li>打开git Bash Here，输入 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo-git-backup --save</span><br></pre></td></tr></table></figure></li>
+<li>添加提交设置：打开blog/_config.yml在最后添加<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">backup:</span><br><span class="line">type: git</span><br><span class="line">repository:</span><br><span class="line">github: git@github.com:Romanticqq&#x2F;romanticqq.github.io.git,backup(提交的github地址,分支名)</span><br></pre></td></tr></table></figure></li>
+<li>当要对代码备份时，执行<code>hexo d</code>即备份成功</li>
+</ol>
+<h2 id="恢复"><a href="#恢复" class="headerlink" title="恢复"></a>恢复</h2><ol>
+<li>把github的博客仓库<strong>backup</strong>分支的内容下载到本地</li>
+<li>依次执行下列命令 <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">npm install hexo</span><br><span class="line">npm install</span><br><span class="line">npm install hexo-deployer-git</span><br></pre></td></tr></table></figure></li>
+<li>本地文件恢复，<code>hexo s</code>开启本地服务，在浏览器输入<code>http://localhost:4000</code>测试是否正常<h2 id="当遇到提交失败时"><a href="#当遇到提交失败时" class="headerlink" title="当遇到提交失败时"></a>当遇到提交失败时</h2><figure class="highlight php"><table><tr><td class="code"><pre><span class="line">OpenSSL SSL_read: Connection was reset, errno <span class="number">10054</span></span><br><span class="line"><span class="comment">//在hexo d之前执行命令</span></span><br><span class="line">git config --<span class="keyword">global</span> http.sslVerify <span class="string">&quot;false&quot;</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>hexo</category>
+      </categories>
+      <tags>
+        <tag>hexo</tag>
+        <tag>next</tag>
       </tags>
   </entry>
   <entry>
@@ -638,37 +669,6 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       <tags>
         <tag>hexo</tag>
         <tag>next</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo+PicGo+gitee图床</title>
-    <url>/2021/01/05/hexo-PicGo-gitee%E5%9B%BE%E5%BA%8A/</url>
-    <content><![CDATA[<p><strong>前言</strong>：我尝试了好几种床图，不是在电脑端加载不出来，就是有各种各样的限制，最后找到了gitee，因为服务器在国内，访问速度也是比较快，空间也没有限制，算是比较理想的一种吧。一开始我用vscode+PicGo插件，等到快成的时候，图片是上传上去了，但是加载不出来，我尝试了<code>sm.ms</code>和<code>github</code>，最后抛弃了<code>vsCode+PicGo</code>插件，选择了<code>PicGo客户端和gitee</code>。</p>
-<ol>
-<li><strong>注册gitee账号</strong><br>去官网注册账号<a href="https://gitee.com/">gitee</a></li>
-<li><strong>新建gitee仓库</strong><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105203048.png"><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105203450.png"></li>
-<li><strong>获得gitee的token</strong><br>登录<code>gitee</code>官网，点击头像/设置/私人令牌/生成令牌<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105203902.png"><br>点击提交后复制生成的令牌，在配置的时候要使用</li>
-<li><strong>下载gitee</strong><br>点击<a href="https://github.com/Molunerfinn/PicGo/releases">PicGo</a>下载，有不同的版本，都可以<br>下载成功后按照提示默认安装即可</li>
-<li><strong>配置gitee</strong><br>默认状态下PicGo是没有<code>gitee</code>，因此先安装插件<code>gitee-uploader</code><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105205151.png"><br>这时，点击图床设置，已经有<code>gitee图床</code>的设置<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105205522.png"> <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">1:打开新建的仓库，看地址栏，若地址栏为https:&#x2F;&#x2F;gitee.com&#x2F;A&#x2F;B,则需要填A&#x2F;B</span><br><span class="line">2:默认为master就可以</span><br><span class="line">3:把刚才生成的token粘贴到这里</span><br><span class="line">4:path为创建的仓库存放图片的文件夹名，可以为image，可任意填写</span><br><span class="line">5:其余开心就好</span><br></pre></td></tr></table></figure></li>
-<li><strong>升华</strong><br>为更方便地获取截图外链，安装<code>picgo-plugin-quick-capture</code>,实现截图上传一步搞定</li>
-<li><strong>Typora+PicGo+gitee配置</strong><br>如果用<code>Typora</code>写<code>Markdown</code>文章，还需要对<code>Typora</code>进行配置，找到<code>文件/偏好设置/图像</code><br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105212825.png"><br>在typora中，当插入本地图片时，会自动转换成gitee外链</li>
-</ol>
-<p><strong>tips</strong></p>
-<ol>
-<li>通过上面的操作已经实现了快速上传和快速截图上传功能，当我们要用本地图片生成外链时，先复制一下本地图片(就是选中图片按下Ctrl+c),然后按下快速上传的快捷键，此时外链已经生成，在需要插入图片的位置Ctrl+V就可以了</li>
-<li>当使用快速截图上传时，如果是直接截图的话，截完图后直接Ctrl+V就可以了，但如果是截完图后需要写批注，那么截的图并不一定可以自动上传，需要按下快速上传的快捷键，然后再Ctrl+V</li>
-<li>通过PicGo可以查看和删除上传的图片<br><img src="https://gitee.com/light_trap/for-picgo/raw/master/image/20210105212411.png"></li>
-</ol>
-]]></content>
-      <categories>
-        <category>hexo</category>
-      </categories>
-      <tags>
-        <tag>hexo</tag>
-        <tag>图床</tag>
-        <tag>PicGo</tag>
-        <tag>gitee</tag>
-        <tag>Typora</tag>
       </tags>
   </entry>
   <entry>
@@ -714,17 +714,6 @@ client代码<figure class="highlight html"><table><tr><td class="code"><pre><spa
       </categories>
       <tags>
         <tag>Java</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>js文件的写法</title>
-    <url>/2021/03/09/js%E6%96%87%E4%BB%B6%E7%9A%84%E5%86%99%E6%B3%95/</url>
-    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">owner</span>)</span>&#123;</span><br><span class="line">	owner.btn=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		alert(<span class="string">&quot;aaa&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;(<span class="built_in">window</span>.test=&#123;&#125;)) <span class="comment">//test是js的文件名</span></span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
       </tags>
   </entry>
   <entry>
@@ -809,6 +798,17 @@ return 44;
       </tags>
   </entry>
   <entry>
+    <title>js文件的写法</title>
+    <url>/2021/03/09/js%E6%96%87%E4%BB%B6%E7%9A%84%E5%86%99%E6%B3%95/</url>
+    <content><![CDATA[<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">owner</span>)</span>&#123;</span><br><span class="line">	owner.btn=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">		alert(<span class="string">&quot;aaa&quot;</span>);</span><br><span class="line">	&#125;</span><br><span class="line">&#125;(<span class="built_in">window</span>.test=&#123;&#125;)) <span class="comment">//test是js的文件名</span></span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>单例模式</title>
     <url>/2021/05/29/%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F/</url>
     <content><![CDATA[<h4 id="单例模式"><a href="#单例模式" class="headerlink" title="单例模式"></a>单例模式</h4><ol>
@@ -881,6 +881,18 @@ return 44;
       </tags>
   </entry>
   <entry>
+    <title>解决innerHTML不能解析数据</title>
+    <url>/2021/01/15/%E8%A7%A3%E5%86%B3innerHTML%E4%B8%8D%E8%83%BD%E8%A7%A3%E6%9E%90%E6%95%B0%E6%8D%AE/</url>
+    <content><![CDATA[<p>当使用<code>document.(&#39;div&#39;).innerHTML=`` </code>向页面追加内容时可能会出现变量不解析的情况。<br>正确姿势：<code>=</code>后面是<code>``</code>,而不是单引号或双引号,只有<code>``</code>才能解析。</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">document.querySelector(&#x27;div&#x27;).innerHTML=`<span class="tag">&lt;<span class="name">h2</span>&gt;</span>编号：$&#123;resp.id&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span>`	</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>第一次来北京</title>
     <url>/2021/05/29/%E7%94%9F%E6%B4%BB%E6%9D%82%E8%AE%B0/</url>
     <content><![CDATA[<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;说实话，以前也来过两次北京，与其说来过，不如说是路过。这是算是真正意义的来北京吧，顺利成为北漂的一员。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;北京给我的印象是贵：下面简单算一下每天的日常开销吧。首先早上上班坐地铁5元，早餐一杯豆浆3.5元，中午定外卖大约20元，下班坐地铁5元，晚餐一碗鸡蛋汤和四个煎包6元，房租水电65元，共计105元；一个月下来不买零食、不买生活用品、不买衣服、没有任何事情，需要3150元，但是不可能没有别的事，也不可能什么都不买，因此一个月四千元在北京应该算是基本开销了吧。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;北京给我的印象是人多：感觉在地铁上能坐到座位的概率应该跟中彩票差不多了吧。虽然有点夸张，但事实是我上下班确实没有坐到过位置，即使是始发站。<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;北京给我的印象是机会多：我面了将近十家公司，各种各样的都有，只有你想工作，应该都能找到相对合适的，但前提是你要一个一个去面，面完了你才能知道适不适合你。</p>
@@ -906,30 +918,6 @@ return 44;
       <tags>
         <tag>前端</tag>
         <tag>createjs</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>解决innerHTML不能解析数据</title>
-    <url>/2021/01/15/%E8%A7%A3%E5%86%B3innerHTML%E4%B8%8D%E8%83%BD%E8%A7%A3%E6%9E%90%E6%95%B0%E6%8D%AE/</url>
-    <content><![CDATA[<p>当使用<code>document.(&#39;div&#39;).innerHTML=`` </code>向页面追加内容时可能会出现变量不解析的情况。<br>正确姿势：<code>=</code>后面是<code>``</code>,而不是单引号或双引号,只有<code>``</code>才能解析。</p>
-<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">document.querySelector(&#x27;div&#x27;).innerHTML=`<span class="tag">&lt;<span class="name">h2</span>&gt;</span>编号：$&#123;resp.id&#125;<span class="tag">&lt;/<span class="name">h2</span>&gt;</span>`	</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>解决php中跨域问题</title>
-    <url>/2021/01/15/%E8%A7%A3%E5%86%B3php%E4%B8%AD%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/</url>
-    <content><![CDATA[<p>由于同源策略，经常会出现跨域问题，只需要在php代码前加上下面这些代码即可</p>
-<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">header(<span class="string">&quot;Access-Control-Allow-Origin:*&quot;</span>);</span><br><span class="line">header(<span class="string">&#x27;Access-Control-Allow-Methods:POST&#x27;</span>);</span><br><span class="line">header(<span class="string">&#x27;Access-Control-Allow-Headers:x-requested-with, content-type&#x27;</span>);</span><br></pre></td></tr></table></figure>]]></content>
-      <categories>
-        <category>后端</category>
-      </categories>
-      <tags>
-        <tag>php</tag>
       </tags>
   </entry>
   <entry>
@@ -968,6 +956,18 @@ return 44;
       </categories>
       <tags>
         <tag>面试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>解决php中跨域问题</title>
+    <url>/2021/01/15/%E8%A7%A3%E5%86%B3php%E4%B8%AD%E8%B7%A8%E5%9F%9F%E9%97%AE%E9%A2%98/</url>
+    <content><![CDATA[<p>由于同源策略，经常会出现跨域问题，只需要在php代码前加上下面这些代码即可</p>
+<figure class="highlight php"><table><tr><td class="code"><pre><span class="line">header(<span class="string">&quot;Access-Control-Allow-Origin:*&quot;</span>);</span><br><span class="line">header(<span class="string">&#x27;Access-Control-Allow-Methods:POST&#x27;</span>);</span><br><span class="line">header(<span class="string">&#x27;Access-Control-Allow-Headers:x-requested-with, content-type&#x27;</span>);</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>后端</category>
+      </categories>
+      <tags>
+        <tag>php</tag>
       </tags>
   </entry>
 </search>
